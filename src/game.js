@@ -16,7 +16,7 @@ import Cash from './cash.js';
 import Car from './car.js';
 import assets from './assets.js';
 
-import speed from './physics.js'
+import PhysicsSpeed from './physics.js'
 const fs = require('fs'); 
 const lifeImgFolder = "./assets/images/life/";
 const obstacleImgFolder = "./assets/images/obstacle/";
@@ -31,8 +31,8 @@ const obj_buf = 75+40; //constant for when object goes behind car (1/2 of car le
 const OBJECTTYPE = Object.freeze({ "obstacle": "O", "cash": "C", "life": "L" });
 const QUERYTYPE = Object.freeze({ "attention": "A", "environment": "E"});
 
-const MIN_BOX_DISTANCE_RATIO = 0.3; //It will get boxed at a maximum distance of 0.3*Canvas Height from start
-const MAX_BOX_DISTANCE_RATIO = 0.3; //It will get boxed at a maximum distance of 0.3*Canvas Height from start
+const MIN_BOX_DISTANCE_RATIO = 0.1; //It will get boxed at a maximum distance of 0.3*Canvas Height from start
+const MAX_BOX_DISTANCE_RATIO = 0.1; //It will get boxed at a maximum distance of 0.3*Canvas Height from start
 
 const NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY = 3000;// in milliseconds
 const ATT_QUERY_INTERVAL = 19000; // in milliseconds
@@ -124,7 +124,7 @@ class Game {
     this.queryTimeElapsed = false;
     this.queryUserResponded = false;
 
-
+    this.PhysicsReference = new Physics();
     var d = new Date();
 
     this.timeOfLastEnvQuery = d.getTime();
@@ -152,6 +152,7 @@ class Game {
     document.getElementById("obstacle").style["background-image"] = "url(\'" + this.rockImgSrc + "\')";
     document.getElementById("money").style["background-image"] = "url(\'" + this.moneyImgSrc + "\')";
     document.getElementById("life").style["background-image"] = "url(\'" + this.lifeImgSrc + "\')";
+
 
     
 
@@ -458,13 +459,16 @@ setRecognizedType(assetid,assetUserSpecifiedType){
       if(speed!=null){
         var d = new Date();
         
-        this.assets.car.physics.speed = (object_y - prev_object_y) / (0.001 * (curr_time - prev_time));
+        
+        //this.assets.car.physics.speed = (object_y - prev_object_y) / (0.001 * (curr_time - prev_time));
+        //this.assets.car.physics.speed = 60;
+        
         //Math in js is floating
-        var speed = this.assets.car.physics.speed; // TODO_ERIN: Automated code commented above. But it has jitter. Need to tie this to physics.speed
-        //speed = (((object_y - prev_object_y)*1000) / (curr_time - prev_time));
+        var speed = 60 * this.PhysicsReference.speed; //90; // TODO_ERIN: Automated code commented above. But it has jitter. Need to tie this to physics.speed
+        //var speed = (((object_y - prev_object_y)*1000) / (curr_time - prev_time));
         console.log("Speed is : " + speed);
         
-        max_time = car_y /speed;
+        max_time = car_y /speed; //TODO_ERIN: Needs to be update - aesthethic fix
         var time_bar_length = ((car_y) - (object_y+object_height))/speed;
         // console.log("Time bar length: "+Math.floor(time_bar_length) + ", Speed: "+speed
         //           + ", Car_y: "+car_y + ", Car_height: " +car_height
@@ -1149,15 +1153,15 @@ moveRandom(step){
             /*&& (d.getTime() - this.timeOfLastAttQuery) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY // if we have crossed a time window since last env query
             && (this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime()) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY; // if we are far away from time window of future env query
             */
-           console.log("Checking if env query: ", askEnvQuery);
+          console.log("Checking if env query: ", askEnvQuery, " and Box empty = " + boxEmpty + " at t = " + (d.getTime() - this.startTime));
           
             if (askEnvQuery) {
-              console.log("Asking Environment Query: " + (d.getTime() - this.timeOfLastEnvQuery).toString());
+              console.log("Asking Environment Query: " + (d.getTime() - this.timeOfLastEnvQuery).toString() + " at t = " + (d.getTime() - this.startTime));
               this.timeOfLastEnvQuery = d.getTime();
             }
 
             if (askAttQuery) {
-            console.log("Asking Attention Query:" + (d.getTime() - this.timeOfLastAttQuery).toString());
+              console.log("Asking Attention Query:" + (d.getTime() - this.timeOfLastAttQuery).toString() + " at t = " + (d.getTime() - this.startTime) );
             this.timeOfLastAttQuery = d.getTime();
           }
         

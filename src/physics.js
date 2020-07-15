@@ -4,7 +4,7 @@
 |                                           |
 ********************************************/
 
-//var speed = 1;
+var PhysicsSpeed = 1.5;
 class Physics {
   constructor(x, y, w = null, h = null) {
     this.x = x;
@@ -17,7 +17,7 @@ class Physics {
     this.dUp = 0;
     this.dx = this.dx.bind(this);
     this.dy = this.dy.bind(this);
-    this.speed = 1;//0.4;
+    this.speed = 1.5;//PhysicsSpeed;//0.4;
   }
 
   dx() {
