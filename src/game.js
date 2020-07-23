@@ -19,7 +19,7 @@ import assets from './assets.js';
 import PhysicsSpeed from './physics.js'
 
 const redBox = new Image();
-redBox.src = "./assets/images/redbox.png";  redBox.src = "./assets/images/redbox.png";
+redBox.src = "./assets/images/redbox.png";
 const blueBox = new Image();
 blueBox.src = "./assets/images/bluebox.png";
 const greenBox = new Image();
@@ -169,7 +169,7 @@ class Game {
   
 
 
-  holdCanvas(object, blinkDuration, color) {
+  holdCanvas(object, blinkDuration,color) {
     var interval = window.setInterval(function (object) {
       document.getElementById("canvas").style["border"] = "20px solid "+color;
       if (object.cash[0]) {
@@ -198,7 +198,26 @@ class Game {
       clearInterval(y);
     }, blinkDuration, interval);
   }
-  
+/*
+  // Added to change color of box around sprites
+  holdObjectBox(blinkDuration,color, correct, object) {
+    var interval = window.setInterval(function () {
+      if correct {
+
+      }
+      else {
+
+      }
+      this.
+      document.getElementById("canvas").style["border"] = "20px solid "+color;
+    }, 5);
+
+    setTimeout(function (y) {
+      document.getElementById("canvas").style["border"] = "20px solid black";
+      clearInterval(y);
+    }, blinkDuration, interval);
+  } 
+ */ 
   holdDistractorCanvas(blinkDuration, color) {
     var interval = window.setInterval(function () {
       document.getElementById("distractortask").style["border"] = "20px solid " + color;
@@ -362,6 +381,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
               //Blink green
             //document.getElementById("canvas").style["border"] = "20px solid green";
             this.holdCanvas(this, 2000, "green");
+            //this.holdObjectBox(this.boxed[0]);
             // Write functions to do whatever has to be done when user enteres correct response
             this.activeResponse = false;
             this.setRecognizedType(this.boxed[0], i);

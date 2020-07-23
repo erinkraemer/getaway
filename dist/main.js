@@ -320,15 +320,14 @@ var util_default = /*#__PURE__*/__webpack_require__.n(util);
 
 
 const rockImg = new Image();
-const obstacle_redBox = new Image();
-obstacle_redBox.src = "./assets/images/redbox.png";  obstacle_redBox.src = "./assets/images/redbox.png";
+const obstacle_scale = 1.5;
+//rockImg.src = "./assets/images/rock.png";
+const obstacle_redBox = new Image(); //DONE: Convert it to a bluebox
+obstacle_redBox.src = "./assets/images/redbox.png";
 const obstacle_blueBox = new Image();
 obstacle_blueBox.src = "./assets/images/bluebox.png";
 const obstacle_greenBox = new Image();
-obstacle_greenBox.src = "./assets/images/greenbox.png";
-const obstacle_scale = 1.5;
-//rockImg.src = "./assets/images/rock.png";
-
+obstacle_greenBox.src = "./assets/images/greenbox.png"; 
 class obstacle_Obstacle {
   constructor(physics,imgSrc,marked,assetid, distance=-1) {
     this.physics = physics;
@@ -502,7 +501,7 @@ const assets_assets = () => ({
 
 
 const game_redBox = new Image();
-game_redBox.src = "./assets/images/redbox.png";  game_redBox.src = "./assets/images/redbox.png";
+game_redBox.src = "./assets/images/redbox.png";
 const game_blueBox = new Image();
 game_blueBox.src = "./assets/images/bluebox.png";
 const game_greenBox = new Image();
@@ -652,7 +651,7 @@ class game_Game {
   
 
 
-  holdCanvas(object, blinkDuration, color) {
+  holdCanvas(object, blinkDuration,color) {
     var interval = window.setInterval(function (object) {
       document.getElementById("canvas").style["border"] = "20px solid "+color;
       if (object.cash[0]) {
@@ -661,6 +660,7 @@ class game_Game {
         } else {
           object.cash[0].box.img = game_greenBox;
         }
+        
       } else if (object.life[0]) {
         if (color == "red") {
           object.life[0].box.img = game_redBox;
@@ -681,7 +681,26 @@ class game_Game {
       clearInterval(y);
     }, blinkDuration, interval);
   }
-  
+/*
+  // Added to change color of box around sprites
+  holdObjectBox(blinkDuration,color, correct, object) {
+    var interval = window.setInterval(function () {
+      if correct {
+
+      }
+      else {
+
+      }
+      this.
+      document.getElementById("canvas").style["border"] = "20px solid "+color;
+    }, 5);
+
+    setTimeout(function (y) {
+      document.getElementById("canvas").style["border"] = "20px solid black";
+      clearInterval(y);
+    }, blinkDuration, interval);
+  } 
+ */ 
   holdDistractorCanvas(blinkDuration, color) {
     var interval = window.setInterval(function () {
       document.getElementById("distractortask").style["border"] = "20px solid " + color;
@@ -845,6 +864,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
               //Blink green
             //document.getElementById("canvas").style["border"] = "20px solid green";
             this.holdCanvas(this, 2000, "green");
+            //this.holdObjectBox(this.boxed[0]);
             // Write functions to do whatever has to be done when user enteres correct response
             this.activeResponse = false;
             this.setRecognizedType(this.boxed[0], i);
@@ -1952,7 +1972,7 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.height = 700;
   canvas.width = 500;
   let game = new src_game(canvas, ctx);
-  document.getElementById("how").innerHTML = `Identify objects by using the Q, W, and E keys. Collect as much points and lives as you can while avoiding the rocks!`;
+  document.getElementById("how").innerHTML = `v1 - Use directional arrows or WSAD to move your car around. Collect as much cash as you can to increase your points while avoiding the rocks!`;
   
   document.getElementById("play-btn").addEventListener("click", () => {
 

@@ -2,15 +2,14 @@ import Physics from "./physics";
 import Sprite from "./sprite";
 
 const rockImg = new Image();
-const redBox = new Image();
-redBox.src = "./assets/images/redbox.png";  redBox.src = "./assets/images/redbox.png";
+const scale = 1.5;
+//rockImg.src = "./assets/images/rock.png";
+const redBox = new Image(); //DONE: Convert it to a bluebox
+redBox.src = "./assets/images/redbox.png";
 const blueBox = new Image();
 blueBox.src = "./assets/images/bluebox.png";
 const greenBox = new Image();
-greenBox.src = "./assets/images/greenbox.png";
-const scale = 1.5;
-//rockImg.src = "./assets/images/rock.png";
-
+greenBox.src = "./assets/images/greenbox.png"; 
 class Obstacle {
   constructor(physics,imgSrc,marked,assetid, distance=-1) {
     this.physics = physics;
