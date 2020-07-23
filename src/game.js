@@ -161,7 +161,7 @@ class Game {
   
 
 
-  holdCanvas(blinkDuration,color) {
+  holdCanvas(assetid, blinkDuration,color) {
     var interval = window.setInterval(function () {
       document.getElementById("canvas").style["border"] = "20px solid "+color;
     }, 5);
@@ -171,7 +171,26 @@ class Game {
       clearInterval(y);
     }, blinkDuration, interval);
   }
-  
+/*
+  // Added to change color of box around sprites
+  holdObjectBox(blinkDuration,color, correct, object) {
+    var interval = window.setInterval(function () {
+      if correct {
+
+      }
+      else {
+
+      }
+      this.
+      document.getElementById("canvas").style["border"] = "20px solid "+color;
+    }, 5);
+
+    setTimeout(function (y) {
+      document.getElementById("canvas").style["border"] = "20px solid black";
+      clearInterval(y);
+    }, blinkDuration, interval);
+  } 
+ */ 
   holdDistractorCanvas(blinkDuration, color) {
     var interval = window.setInterval(function () {
       document.getElementById("distractortask").style["border"] = "20px solid " + color;
@@ -335,6 +354,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
               //Blink green
             //document.getElementById("canvas").style["border"] = "20px solid green";
             this.holdCanvas(2000, "green");
+            this.holdObjectBox(this.boxed[0]);
             // Write functions to do whatever has to be done when user enteres correct response
             this.activeResponse = false;
             this.setRecognizedType(this.boxed[0], i);
