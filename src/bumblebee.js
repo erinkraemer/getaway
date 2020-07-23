@@ -6,6 +6,10 @@ import Cash from './cash.js';
 
 const redBoxImg = new Image();
 redBoxImg.src = "./assets/images/redbox.png";
+const blueBoxImg = new Image();
+blueBoxImg.src = "./assets/images/bluebox.png";
+const greenBoxImg = new Image();
+greenBoxImg.src = "./assets/images/greenbox.png";
 const lifeImgFolder = "./assets/images/life/";
 const obstacleImgFolder = "./assets/images/obstacle/";
 const moneyImgFolder = "./assets/images/money/";
