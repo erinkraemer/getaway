@@ -276,6 +276,10 @@ const lifeImg = new Image();
 const scale = 1.5;
 const redBox = new Image();
 redBox.src = "./assets/images/redbox.png";
+const blueBox = new Image();
+blueBox.src = "./assets/images/bluebox.png";
+const greenBox = new Image();
+greenBox.src = "./assets/images/greenbox.png";
 
 class life_Life {
   constructor(physics, imgSrc, marked, assetid,distance = -1) {
@@ -284,7 +288,7 @@ class life_Life {
     lifeImg.src = imgSrc;
 
     this.sprite = new src_sprite(lifeImg, 50, 50, 1.0*scale, 1.0*scale);
-    this.box = new src_sprite(redBox, 40, 50, 1.0*scale, 1.3*scale)
+    this.box = new src_sprite(blueBox, 40, 50, 1.0*scale, 1.3*scale)
     this.marked = marked;
     this.assetid = assetid;
     this.recognizedType = this.marked? "U" : assetid[0];  
@@ -317,15 +321,20 @@ var util_default = /*#__PURE__*/__webpack_require__.n(util);
 
 const rockImg = new Image();
 const obstacle_redBox = new Image();
+obstacle_redBox.src = "./assets/images/redbox.png";  obstacle_redBox.src = "./assets/images/redbox.png";
+const obstacle_blueBox = new Image();
+obstacle_blueBox.src = "./assets/images/bluebox.png";
+const obstacle_greenBox = new Image();
+obstacle_greenBox.src = "./assets/images/greenbox.png";
 const obstacle_scale = 1.5;
 //rockImg.src = "./assets/images/rock.png";
-obstacle_redBox.src = "./assets/images/redbox.png"; //TODO_ERIN: Convert it to a bluebox
+
 class obstacle_Obstacle {
   constructor(physics,imgSrc,marked,assetid, distance=-1) {
     this.physics = physics;
     rockImg.src = imgSrc;
     this.sprite = new src_sprite(rockImg, 50, 50, 1.0 * obstacle_scale, 1.0 * obstacle_scale);
-    this.box = new src_sprite(obstacle_redBox, 40, 50, 1.0 * obstacle_scale, 1.3 * obstacle_scale)
+    this.box = new src_sprite(obstacle_blueBox, 40, 50, 1.0 * obstacle_scale, 1.3 * obstacle_scale)
     this.marked = marked;
     this.assetid = assetid;
     this.recognizedType = this.marked? "U" : assetid[0];  
@@ -357,13 +366,17 @@ const cashImg = new Image();
 const cash_scale = 1.5;
 const cash_redBox = new Image();
 cash_redBox.src = "./assets/images/redbox.png";
+const cash_blueBox = new Image();
+cash_blueBox.src = "./assets/images/bluebox.png";
+const cash_greenBox = new Image();
+cash_greenBox.src = "./assets/images/greenbox.png";
 class cash_Cash {
   constructor(physics, imgSrc, marked, assetid, distance = -1) {
     
     this.physics = physics;
     cashImg.src = imgSrc;
     this.sprite = new src_sprite(cashImg, 50, 50, 1.0 * cash_scale, 1.0 * cash_scale);
-    this.box = new src_sprite(cash_redBox, 40, 50, 1 * cash_scale, 1.3 * cash_scale)
+    this.box = new src_sprite(cash_blueBox, 40, 50, 1 * cash_scale, 1.3 * cash_scale)
     this.marked = marked;
     this.assetid = assetid;
     this.distance = distance;
@@ -486,6 +499,14 @@ const assets_assets = () => ({
 
 
 
+
+
+const game_redBox = new Image();
+game_redBox.src = "./assets/images/redbox.png";  game_redBox.src = "./assets/images/redbox.png";
+const game_blueBox = new Image();
+game_blueBox.src = "./assets/images/bluebox.png";
+const game_greenBox = new Image();
+game_greenBox.src = "./assets/images/greenbox.png";
 
 const fs = __webpack_require__(1); 
 const lifeImgFolder = "./assets/images/life/";
@@ -631,10 +652,29 @@ class game_Game {
   
 
 
-  holdCanvas(blinkDuration,color) {
-    var interval = window.setInterval(function () {
+  holdCanvas(object, blinkDuration, color) {
+    var interval = window.setInterval(function (object) {
       document.getElementById("canvas").style["border"] = "20px solid "+color;
-    }, 5);
+      if (object.cash[0]) {
+        if (color == "red") {
+          object.cash[0].box.img = game_redBox;
+        } else {
+          object.cash[0].box.img = game_greenBox;
+        }
+      } else if (object.life[0]) {
+        if (color == "red") {
+          object.life[0].box.img = game_redBox;
+        } else {
+          object.life[0].box.img = game_greenBox;
+        }
+      } else {
+        if (color == "red") {
+          object.rocks[0].box.img = game_redBox;
+        } else {
+          object.rocks[0].box.img = game_greenBox;
+        }
+      }
+    }, 5, object, color);
 
     setTimeout(function (y) {
       document.getElementById("canvas").style["border"] = "20px solid black";
@@ -804,7 +844,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
           if (this.boxed[0][0] == i) {
               //Blink green
             //document.getElementById("canvas").style["border"] = "20px solid green";
-            this.holdCanvas(2000, "green");
+            this.holdCanvas(this, 2000, "green");
             // Write functions to do whatever has to be done when user enteres correct response
             this.activeResponse = false;
             this.setRecognizedType(this.boxed[0], i);
@@ -814,7 +854,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
           else {
             //Blink red
             //document.getElementById("canvas").style["border"] = "20px solid red";
-            this.holdCanvas(2000, "red");
+            this.holdCanvas(this, 2000, "red");
             // Write functions to do whatever has to be done when user enteres wrong response
             this.activeResponse = false;
             this.setRecognizedType(this.boxed[0], i)
@@ -964,7 +1004,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
             // Makes the controller act EVIL
           }
           // Write code on what needs to be done after Query time is elapsed
-          this.holdCanvas(2000, "red");
+          this.holdCanvas(this, 2000, "red");
           this.activeResponse = false;
           this.queryTimeElapsed = true;
           this.logEvent(EVENTTYPE.TIMEOUT_BOXED_RESPONSE,  "U-"+this.boxed[0]);
@@ -1841,6 +1881,10 @@ const setupControlListeners = (game) => {
 
 const redBoxImg = new Image();
 redBoxImg.src = "./assets/images/redbox.png";
+const blueBoxImg = new Image();
+blueBoxImg.src = "./assets/images/bluebox.png";
+const greenBoxImg = new Image();
+greenBoxImg.src = "./assets/images/greenbox.png";
 const bumblebee_lifeImgFolder = "./assets/images/life/";
 const bumblebee_obstacleImgFolder = "./assets/images/obstacle/";
 const bumblebee_moneyImgFolder = "./assets/images/money/";
@@ -1908,7 +1952,7 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.height = 700;
   canvas.width = 500;
   let game = new src_game(canvas, ctx);
-  document.getElementById("how").innerHTML = `v1 - Use directional arrows or WSAD to move your car around. Collect as much cash as you can to increase your points while avoiding the rocks!`;
+  document.getElementById("how").innerHTML = `Identify objects by using the Q, W, and E keys. Collect as much points and lives as you can while avoiding the rocks!`;
   
   document.getElementById("play-btn").addEventListener("click", () => {
 
