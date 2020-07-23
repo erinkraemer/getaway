@@ -499,6 +499,14 @@ const assets_assets = () => ({
 
 
 
+
+const game_redBox = new Image();
+game_redBox.src = "./assets/images/redbox.png";
+const game_blueBox = new Image();
+game_blueBox.src = "./assets/images/bluebox.png";
+const game_greenBox = new Image();
+game_greenBox.src = "./assets/images/greenbox.png";
+
 const fs = __webpack_require__(1); 
 const lifeImgFolder = "./assets/images/life/";
 const obstacleImgFolder = "./assets/images/obstacle/";
@@ -643,10 +651,30 @@ class game_Game {
   
 
 
-  holdCanvas(blinkDuration,color) {
-    var interval = window.setInterval(function () {
+  holdCanvas(object, blinkDuration,color) {
+    var interval = window.setInterval(function (object) {
       document.getElementById("canvas").style["border"] = "20px solid "+color;
-    }, 5);
+      if (object.cash[0]) {
+        if (color == "red") {
+          object.cash[0].box.img = game_redBox;
+        } else {
+          object.cash[0].box.img = game_greenBox;
+        }
+        
+      } else if (object.life[0]) {
+        if (color == "red") {
+          object.life[0].box.img = game_redBox;
+        } else {
+          object.life[0].box.img = game_greenBox;
+        }
+      } else {
+        if (color == "red") {
+          object.rocks[0].box.img = game_redBox;
+        } else {
+          object.rocks[0].box.img = game_greenBox;
+        }
+      }
+    }, 5, object, color);
 
     setTimeout(function (y) {
       document.getElementById("canvas").style["border"] = "20px solid black";
@@ -835,8 +863,8 @@ setRecognizedType(assetid,assetUserSpecifiedType){
           if (this.boxed[0][0] == i) {
               //Blink green
             //document.getElementById("canvas").style["border"] = "20px solid green";
-            this.holdCanvas(2000, "green");
-            console.log(this.life);
+            this.holdCanvas(this, 2000, "green");
+            //this.holdObjectBox(this.boxed[0]);
             // Write functions to do whatever has to be done when user enteres correct response
             this.activeResponse = false;
             this.setRecognizedType(this.boxed[0], i);
@@ -846,7 +874,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
           else {
             //Blink red
             //document.getElementById("canvas").style["border"] = "20px solid red";
-            this.holdCanvas(2000, "red");
+            this.holdCanvas(this, 2000, "red");
             // Write functions to do whatever has to be done when user enteres wrong response
             this.activeResponse = false;
             this.setRecognizedType(this.boxed[0], i)
@@ -996,7 +1024,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
             // Makes the controller act EVIL
           }
           // Write code on what needs to be done after Query time is elapsed
-          this.holdCanvas(2000, "red");
+          this.holdCanvas(this, 2000, "red");
           this.activeResponse = false;
           this.queryTimeElapsed = true;
           this.logEvent(EVENTTYPE.TIMEOUT_BOXED_RESPONSE,  "U-"+this.boxed[0]);
