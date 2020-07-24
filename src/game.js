@@ -26,9 +26,9 @@ const greenBox = new Image();
 greenBox.src = "./assets/images/greenbox.png";
 
 const fs = require('fs'); 
-const lifeImgFolder = "static/assets/images/life/";
-const obstacleImgFolder = "static/assets/images/obstacle/";
-const moneyImgFolder = "static/assets/images/money/";
+const lifeImgFolder = "./assets/images/life/";
+const obstacleImgFolder = "./assets/images/obstacle/";
+const moneyImgFolder = "./assets/images/money/";
 var ctr = 0;
 const T_width = 80; //car width/2 + obstacle width/2 + small const: Used for avoiding obstacles
 const R_l = 150; // road lb in x; //100 pixels on each side for dead zone?
@@ -118,9 +118,9 @@ class Game {
     this.boxed = [];
     this.assets = assets();
     this.animate = null;
-    this.lifeImgSrc = "static/assets/images/life/life (1).png";
-    this.rockImgSrc = "static/assets/images/obstacle/obstacle (1).png";
-    this.moneyImgSrc = "static/assets/images/money/money (1).png";
+    this.lifeImgSrc = "./assets/images/life/life (1).png";
+    this.rockImgSrc = "./assets/images/obstacle/obstacle (1).png";
+    this.moneyImgSrc = "./assets/images/money/money (1).png";
     this.lifeImgLists = [];
     this.moneyImgLists = [];
     this.obstacleImgLists = [];
@@ -858,11 +858,8 @@ setRecognizedType(assetid,assetUserSpecifiedType){
     }
     if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
       console.log(this.dataLog);
-      psiTurk.recordUnstructuredData('logs', this.dataLog);
-      psiTurk.saveData();
-      datalogWritten = true;        
+      datalogWritten = true;
       //Code to write to a server data log file goes here
-      // TODO: auto transition to next page.
     }
   }
 

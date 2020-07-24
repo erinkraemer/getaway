@@ -4,12 +4,13 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "main.js",
-    path: path.resolve(__dirname, "static/js/dist")
+    path: path.resolve(__dirname, "dist")
   },
   node: {
     fs: "empty"
   },
-  optimization: {
-  	minimize: false
+  //erin add to not minify
+  optimization : {
+  	minimize: false,
   }
 };
