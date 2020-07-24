@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.height = 700;
   canvas.width = 500;
   let game = new Game(canvas, ctx);
-  document.getElementById("how").innerHTML = `Identify objects by using the Q, W, and E keys. Collect as much points and lives as you can while avoiding the rocks!`;
+  document.getElementById("how").innerHTML = `v1 - Use directional arrows or WSAD to move your car around. Collect as much cash as you can to increase your points while avoiding the rocks!`;
   
   document.getElementById("play-btn").addEventListener("click", () => {
 

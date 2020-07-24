@@ -1,9 +1,3 @@
-/********************************************
-|                                           |
-|            game.js                        |
-|                                           |
-********************************************/
-
 // import GameView from './game_view.js';
 // import Car from './car.js';
 // import { request } from 'http';
@@ -16,19 +10,11 @@ import Cash from './cash.js';
 import Car from './car.js';
 import assets from './assets.js';
 
-import PhysicsSpeed from './physics.js'
-
-const redBox = new Image();
-redBox.src = "./assets/images/redbox.png";
-const blueBox = new Image();
-blueBox.src = "./assets/images/bluebox.png";
-const greenBox = new Image();
-greenBox.src = "./assets/images/greenbox.png";
-
+import speed from './physics.js'
 const fs = require('fs'); 
-const lifeImgFolder = "static/assets/images/life/";
-const obstacleImgFolder = "static/assets/images/obstacle/";
-const moneyImgFolder = "static/assets/images/money/";
+const lifeImgFolder = "./assets/images/life/";
+const obstacleImgFolder = "./assets/images/obstacle/";
+const moneyImgFolder = "./assets/images/money/";
 var ctr = 0;
 const T_width = 80; //car width/2 + obstacle width/2 + small const: Used for avoiding obstacles
 const R_l = 150; // road lb in x; //100 pixels on each side for dead zone?
@@ -40,20 +26,18 @@ const OBJECTTYPE = Object.freeze({ "obstacle": "O", "cash": "C", "life": "L" });
 const QUERYTYPE = Object.freeze({ "attention": "A", "environment": "E"});
 
 const MIN_BOX_DISTANCE_RATIO = 0.1; //It will get boxed at a maximum distance of 0.3*Canvas Height from start
-const MAX_BOX_DISTANCE_RATIO = 0.1; //It will get boxed at a maximum distance of 0.3*Canvas Height from start
-
+const MAX_BOX_DISTANCE_RATIO = 0.4; //It will get boxed at a maximum distance of 0.3*Canvas Height from start
 const NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY = 3000;// in milliseconds
-const ATT_QUERY_INTERVAL = 19000; // in milliseconds
+const ATT_QUERY_INTERVAL = 10000; // in milliseconds
 const EXP_PROB_TIME_CONSTANT = 8500;// in milliseconds
 const QUERY_TIMEOUT = 4000; // in milliseconds 
-const OBJECT_CREATION_INTERVAL = 10000;
-const CONTROLLER_REACTION_TIME = 2000;
+const OBJECT_CREATION_INTERVAL = 2500;
 
 //Distractor task stuffs
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
 const DISTRACTOR_TASK_PAUSE = 1500;// in milliseconds
-const GAME_TIME = 5 * 60000;// in milliseconds
+const GAME_TIME = 2 * 60000;// in milliseconds
 
 const MIN_RES_WIDTH = 1280;
 const MIN_RES_HEIGHT = 800;
@@ -118,30 +102,29 @@ class Game {
     this.boxed = [];
     this.assets = assets();
     this.animate = null;
-    this.lifeImgSrc = "static/assets/images/life/life (1).png";
-    this.rockImgSrc = "static/assets/images/obstacle/obstacle (1).png";
-    this.moneyImgSrc = "static/assets/images/money/money (1).png";
+    this.lifeImgSrc = "./assets/images/life/life (1).png";
+    this.rockImgSrc = "./assets/images/obstacle/obstacle (1).png";
+    this.moneyImgSrc = "./assets/images/money/money (1).png";
     this.lifeImgLists = [];
     this.moneyImgLists = [];
     this.obstacleImgLists = [];
     this.numImgs = 16;
     this.assetidCounter = -1;
-    this.activeResponse = false; // For the main task
+    this.activeResponse = false;
     this.stopBlink = false;
     this.queryType = null;
     this.queryTimeElapsed = false;
     this.queryUserResponded = false;
 
-    this.PhysicsReference = new Physics();
+
     var d = new Date();
 
     this.timeOfLastEnvQuery = d.getTime();
     this.timeOfLastAttQuery = d.getTime();
     this.timeOfLastDistractorTask = d.getTime();
-   
     this.timeOfEnvQueryPlanning = -1; //Time at which env query's random interval duration was defined
     this.randomIthObjectForEnvQuery = 100000000; //Some high value //Pick the ith object starting this object creation cycle (0 this one)
-    
+    this.objectCounterForEnvQuery = -1;
     this.startTime = GAME_TIME*2; // Some high value greater than game time
     this.num2 = 0; // An integer between 0 to 99
     this.num3 = 0; // An integer between 0 to 9
@@ -161,7 +144,6 @@ class Game {
     document.getElementById("money").style["background-image"] = "url(\'" + this.moneyImgSrc + "\')";
     document.getElementById("life").style["background-image"] = "url(\'" + this.lifeImgSrc + "\')";
 
-
     
 
   }
@@ -169,46 +151,8 @@ class Game {
   
 
 
-  holdCanvas(object, blinkDuration,color) {
-    var interval = window.setInterval(function (object) {
-      document.getElementById("canvas").style["border"] = "20px solid "+color;
-      if (object.cash[0]) {
-        if (color == "red") {
-          object.cash[0].box.img = redBox;
-        } else {
-          object.cash[0].box.img = greenBox;
-        }
-      } else if (object.life[0]) {
-        if (color == "red") {
-          object.life[0].box.img = redBox;
-        } else {
-          object.life[0].box.img = greenBox;
-        }
-      } else {
-        if (color == "red") {
-          object.rocks[0].box.img = redBox;
-        } else {
-          object.rocks[0].box.img = greenBox;
-        }
-      }
-    }, 5, object, color);
-
-    setTimeout(function (y) {
-      document.getElementById("canvas").style["border"] = "20px solid black";
-      clearInterval(y);
-    }, blinkDuration, interval);
-  }
-/*
-  // Added to change color of box around sprites
-  holdObjectBox(blinkDuration,color, correct, object) {
+  holdCanvas(blinkDuration,color) {
     var interval = window.setInterval(function () {
-      if correct {
-
-      }
-      else {
-
-      }
-      this.
       document.getElementById("canvas").style["border"] = "20px solid "+color;
     }, 5);
 
@@ -216,8 +160,8 @@ class Game {
       document.getElementById("canvas").style["border"] = "20px solid black";
       clearInterval(y);
     }, blinkDuration, interval);
-  } 
- */ 
+  }
+  
   holdDistractorCanvas(blinkDuration, color) {
     var interval = window.setInterval(function () {
       document.getElementById("distractortask").style["border"] = "20px solid " + color;
@@ -278,26 +222,17 @@ askEnvironmentQueryBasedOnEnvironmentProbFunction_deprecated() {
   // var thresh = 1-Math.exp(-1 * (d.getTime() - this.timeOfLastAttQuery) / EXP_PROB_TIME_CONSTANT);
 if(this.timeOfEnvQueryPlanning<0 && this.timeOfLastAttQuery>this.timeOfLastEnvQuery){ //If this is negative that means that we are yet to plan the environment query
 
-  var NumObjectsBetweenWindows = Math.floor((ATT_QUERY_INTERVAL - 2*QUERY_TIMEOUT)/OBJECT_CREATION_INTERVAL) ; //(d.getTime() - this.timeOfLastAttQuery) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY 
-  console.log("Objects between attn queries ", NumObjectsBetweenWindows);
-  this.randomIthObjectForEnvQuery = Math.floor(Math.random() * NumObjectsBetweenWindows)+1;
-  console.log("Object Selected for env query ", this.randomIthObjectForEnvQuery);
-  this.timeOfEnvQueryPlanning = this.timeOfLastAttQuery;
-  // this.timeOfEnvQueryPlanning = d.getTime();
-  // return(false);
+  var NumObjectsBetweenWindows = floor((ATT_QUERY_INTERVAL - 2*QUERY_TIMEOUT)/OBJECT_CREATION_INTERVAL) ; //(d.getTime() - this.timeOfLastAttQuery) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY 
+  this.randomIthObjectForEnvQuery = floor(Math.random()*NumObjectsBetweenWindows)+1;
+  this.timeOfEnvQueryPlanning = d.getTime();
+  return(false);
 
 }
 
-   if (d.getTime() - this.timeOfEnvQueryPlanning > this.randomIthObjectForEnvQuery * OBJECT_CREATION_INTERVAL - 500 ||
-     d.getTime() - this.timeOfEnvQueryPlanning < this.randomIthObjectForEnvQuery * OBJECT_CREATION_INTERVAL + 500) //epsilon is 200 milliseconds
+if(d.getTime() - this.timeOfEnvQueryPlanning > this.randomIthObjectForEnvQuery*OBJECT_CREATION_INTERVAL - 200) //epsilon is 200 milliseconds
 {
     this.timeOfEnvQueryPlanning = -1;
     return(true);
-}
-else
-{ 
-    console.log("Uncharted waters");
-    return(false);
 }
   
 }
@@ -342,7 +277,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
     this.num1 = this.num2 + this.num3;
     document.getElementById("num1").innerHTML = this.num1.toString();
     document.getElementById("num2").innerHTML = this.num2.toString();
-    document.getElementById("num3").innerHTML = "?";
+    document.getElementById("num3").innerHTML = "???";
     this.timeOfLastDistractorTask = d.getTime();
 
     this.logEvent(EVENTTYPE.NEW_DIST_QUERY, this.num1.toString() + "-" + this.num2.toString() + " = ???");
@@ -380,8 +315,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
           if (this.boxed[0][0] == i) {
               //Blink green
             //document.getElementById("canvas").style["border"] = "20px solid green";
-            this.holdCanvas(this, 2000, "green");
-            //this.holdObjectBox(this.boxed[0]);
+            this.holdCanvas(2000, "green");
             // Write functions to do whatever has to be done when user enteres correct response
             this.activeResponse = false;
             this.setRecognizedType(this.boxed[0], i);
@@ -391,7 +325,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
           else {
             //Blink red
             //document.getElementById("canvas").style["border"] = "20px solid red";
-            this.holdCanvas(this, 2000, "red");
+            this.holdCanvas(2000, "red");
             // Write functions to do whatever has to be done when user enteres wrong response
             this.activeResponse = false;
             this.setRecognizedType(this.boxed[0], i)
@@ -459,7 +393,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
       var object_height = null;
       const car_y = this.assets.car.physics.y;
       const car_height = this.assets.car.physics.height ? this.assets.car.physics.height : this.assets.car.sprite.height*this.assets.car.sprite.height_scale;
-      var speed = 0; 
+      var speed = 0;
       var curr_time;
       if(objectType == 0){
         object_height = this.cash[0].physics.height ? this.cash[0].physics.height : this.cash[0].sprite.height*this.cash[0].sprite.height_scale;
@@ -476,7 +410,6 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         object_y = this.life[0].physics.y;
         curr_time = (new Date()).getTime();
       }
-
 
       
       if(prev_time == null)
@@ -506,16 +439,9 @@ setRecognizedType(assetid,assetUserSpecifiedType){
       if(speed!=null){
         var d = new Date();
         
-        
-        //this.assets.car.physics.speed = (object_y - prev_object_y) / (0.001 * (curr_time - prev_time));
-        //this.assets.car.physics.speed = 60;
-        
-        //Math in js is floating
-        var speed = 60 * this.PhysicsReference.speed; //90; // TODO_ERIN: Automated code commented above. But it has jitter. Need to tie this to physics.speed
-        //var speed = (((object_y - prev_object_y)*1000) / (curr_time - prev_time));
-        console.log("Speed is : " + speed);
-        
-        max_time = car_y /speed; //TODO_ERIN: Needs to be update - aesthethic fix
+        //speed = (object_y - prev_object_y) / (0.001*(curr_time - prev_time));
+        speed = 24;
+        max_time = car_y /speed;
         var time_bar_length = ((car_y) - (object_y+object_height))/speed;
         // console.log("Time bar length: "+Math.floor(time_bar_length) + ", Speed: "+speed
         //           + ", Car_y: "+car_y + ", Car_height: " +car_height
@@ -525,10 +451,10 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         prev_object_y = object_y;
         prev_time = curr_time;
         var elem = document.getElementById("myBar");
-        elem.style.width = (((time_bar_length-0.001*CONTROLLER_REACTION_TIME)/max_time)*100) + "%";
-        document.getElementById("myBarTime").innerHTML = `${Math.floor((time_bar_length - 0.001 * CONTROLLER_REACTION_TIME)*10)/10+"s"}`;
+        elem.style.width = (((time_bar_length-0.001*QUERY_TIMEOUT)/max_time)*100) + "%";
+        document.getElementById("myBarTime").innerHTML = `${Math.floor((time_bar_length-0.001*QUERY_TIMEOUT)*10)/10+"s"}`;
         //console.log(Math.floor(time_bar_length*10)/10+"s");
-        if (time_bar_length < 0.001 * CONTROLLER_REACTION_TIME && time_bar_length > 0.1
+        if (time_bar_length < 0.001*QUERY_TIMEOUT && time_bar_length > 0.1
           && !this.queryTimeElapsed
           && !this.queryUserResponded
         ) {
@@ -541,7 +467,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
             // Makes the controller act EVIL
           }
           // Write code on what needs to be done after Query time is elapsed
-          this.holdCanvas(this, 2000, "red");
+          this.holdCanvas(2000, "red");
           this.activeResponse = false;
           this.queryTimeElapsed = true;
           this.logEvent(EVENTTYPE.TIMEOUT_BOXED_RESPONSE,  "U-"+this.boxed[0]);
@@ -558,17 +484,17 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         car.hitObstacle();
         car.makeRed();
         array.splice(array.indexOf(object), 1);
-        /*console.log("Before removing");
+        console.log("Before removing");
         console.log(boxed);
-        console.log(object.assetid);*/
+        console.log(object.assetid);
         if (boxed.indexOf(object.assetid) != -1) {
           boxed.splice(boxed.indexOf(object.assetid), 1);
           _this.logEvent(EVENTTYPE.ASSET_CAR_COLLIDED, object.assetid);
           
         }
-        /*console.log("After removing");
+        console.log("After removing");
         console.log(boxed);
-        console.log(object.assetid);*/
+        console.log(object.assetid);
       }
     }
     if (object instanceof Life) {
@@ -576,17 +502,17 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         car.getLife();
         car.makeGreen();
         array.splice(array.indexOf(object), 1);
-        /*console.log("Before removing");
+        console.log("Before removing");
         console.log(boxed);
-        console.log(object.assetid);*/
+        console.log(object.assetid);
         if (boxed.indexOf(object.assetid) != -1) {
           boxed.splice(boxed.indexOf(object.assetid), 1);
           _this.logEvent(EVENTTYPE.ASSET_CAR_COLLIDED, object.assetid);
           
         }
-        /*console.log("After removing");
+        console.log("After removing");
         console.log(boxed);
-        console.log(object.assetid);*/
+        console.log(object.assetid);
       }
     }
     if (object instanceof Cash) {
@@ -594,17 +520,17 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         assets.road.score += 100;
         assets.road.makeGreen();
         array.splice(array.indexOf(object), 1);
-        /*console.log("Before removing");
+        console.log("Before removing");
         console.log(boxed);
-        console.log(object.assetid);*/
+        console.log(object.assetid);
         if (boxed.indexOf(object.assetid) != -1) {
           boxed.splice(boxed.indexOf(object.assetid), 1);
           _this.logEvent(EVENTTYPE.ASSET_CAR_COLLIDED, object.assetid);
           
         }
-        /*console.log("After removing");
+        console.log("After removing");
         console.log(boxed);
-        console.log(object.assetid);*/
+        console.log(object.assetid);
       }
     }
   }
@@ -858,11 +784,8 @@ setRecognizedType(assetid,assetUserSpecifiedType){
     }
     if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
       console.log(this.dataLog);
-      psiTurk.recordUnstructuredData('logs', this.dataLog);
-      psiTurk.saveData();
-      datalogWritten = true;        
+      datalogWritten = true;
       //Code to write to a server data log file goes here
-      // TODO: auto transition to next page.
     }
   }
 
@@ -1176,7 +1099,8 @@ moveRandom(step){
           var d = new Date();
           var boxEmpty = Array.isArray(this.boxed) && !this.boxed.length;
           
-                
+          
+          
           
           
           // var askEnvQuery = boxEmpty && ((d.getTime() - this.timeOfLastEnvQuery) > ENV_QUERY_INTERVAL);
@@ -1195,23 +1119,21 @@ moveRandom(step){
           var askAttQuery = boxEmpty && ((d.getTime() - this.timeOfLastAttQuery) > ATT_QUERY_INTERVAL);
           
           
+        
           var askEnvQuery = boxEmpty // If no query is currently active
-            && !askAttQuery // if Att query is not selected
+            && !askAttQuery // if Env query is not selected
             && this.askEnvironmentQueryBasedOnEnvironmentProbFunction() // if we need to ask env query based on probablity
-            && (this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime()) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY; // if we are far away from time window of future env query ?? ERIN_TODO: Do we need this?
-            // YP: Edited this code to try and mane att queries periodic
-            /*&& (d.getTime() - this.timeOfLastAttQuery) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY // if we have crossed a time window since last env query
+            && (d.getTime() - this.timeOfLastAttQuery) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY // if we have crossed a time window since last env query
             && (this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime()) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY; // if we are far away from time window of future env query
-            */
-          console.log("Checking if env query: ", askEnvQuery, " and Box empty = " + boxEmpty + " at t = " + (d.getTime() - this.startTime));
+          
           
             if (askEnvQuery) {
-              console.log("Asking Environment Query: " + (d.getTime() - this.timeOfLastEnvQuery).toString() + " at t = " + (d.getTime() - this.startTime));
+              console.log("Asking Environment Query: " + (d.getTime() - this.timeOfLastEnvQuery).toString());
               this.timeOfLastEnvQuery = d.getTime();
             }
 
             if (askAttQuery) {
-              console.log("Asking Attention Query:" + (d.getTime() - this.timeOfLastAttQuery).toString() + " at t = " + (d.getTime() - this.startTime) );
+            console.log("Asking Attention Query:" + (d.getTime() - this.timeOfLastAttQuery).toString());
             this.timeOfLastAttQuery = d.getTime();
           }
         
@@ -1306,7 +1228,6 @@ moveRandom(step){
       document.getElementById("slow").innerHTML = `You need a minimum display resolution of 1280x800 to take part in this study`;
       document.getElementById("how").style.visibility = "hidden";
       document.getElementById("welcome").style.display = null;
-      //this.LogIn the file (error) //TODO_ERIN
     }
   }
 
