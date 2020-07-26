@@ -21,11 +21,11 @@ import assets from './assets.js';
 import PhysicsSpeed from './physics.js'
 
 const redBox = new Image();
-redBox.src = "../../assets/images/redbox.png";
+redBox.src = "assets/images/redbox.png";
 const blueBox = new Image();
-blueBox.src = "../../assets/images/bluebox.png";
+blueBox.src = "assets/images/bluebox.png";
 const greenBox = new Image();
-greenBox.src = "../../assets/images/greenbox.png";
+greenBox.src = "assets/images/greenbox.png";
 
 const fs = require('fs'); 
 const lifeImgFolder = "./assets/images/life/";
