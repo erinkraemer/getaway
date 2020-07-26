@@ -5,11 +5,11 @@ import Obstacle from './obstacle.js';
 import Cash from './cash.js';
 
 const redBoxImg = new Image();
-redBoxImg.src = "./assets/images/redbox.png";
+redBoxImg.src = "static/assets/images/redbox.png";
 const blueBoxImg = new Image();
-blueBoxImg.src = "./assets/images/bluebox.png";
+blueBoxImg.src = "static/assets/images/bluebox.png";
 const greenBoxImg = new Image();
-greenBoxImg.src = "./assets/images/greenbox.png";
+greenBoxImg.src = "static/assets/images/greenbox.png";
 
 const lifeImgFolder = "./assets/images/life/";
 const obstacleImgFolder = "./assets/images/obstacle/";

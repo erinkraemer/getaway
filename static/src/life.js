@@ -4,11 +4,11 @@ const lifeImg = new Image();
 //lifeImg.src = "./assets/images/turbo.png";
 const scale = 1.5;
 const redBox = new Image();
-redBox.src = "./assets/images/redbox.png";
+redBox.src = "staticassets/images/redbox.png";
 const blueBox = new Image();
-blueBox.src = "./assets/images/bluebox.png";
+blueBox.src = "staticassets/images/bluebox.png";
 const greenBox = new Image();
-greenBox.src = "./assets/images/greenbox.png";
+greenBox.src = "staticassets/images/greenbox.png";
 
 class Life {
   constructor(physics, imgSrc, marked, assetid,distance = -1) {

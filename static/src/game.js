@@ -21,11 +21,11 @@ import assets from './assets.js';
 import PhysicsSpeed from './physics.js'
 
 const redBox = new Image();
-redBox.src = "./assets/images/redbox.png";
+redBox.src = "static/assets/images/redbox.png";
 const blueBox = new Image();
-blueBox.src = "./assets/images/bluebox.png";
+blueBox.src = "static/assets/images/bluebox.png";
 const greenBox = new Image();
-greenBox.src = "./assets/images/greenbox.png";
+greenBox.src = "static/assets/images/greenbox.png";
 
 const fs = require('fs'); 
 const lifeImgFolder = "./assets/images/life/";
@@ -520,7 +520,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
             // Makes the controller act EVIL
           }
           // Write code on what needs to be done after Query time is elapsed
-          this.holdCanvas(2000, "red");
+          this.holdCanvastatic/2000, "red");
           this.activeResponse = false;
           this.queryTimeElapsed = true;
           this.logEvent(EVENTTYPE.TIMEOUT_BOXED_RESPONSE,  "U-"+this.boxed[0]);
