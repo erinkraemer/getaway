@@ -3,7 +3,7 @@ import Sprite from "./sprite";
 
 const rockImg = new Image();
 const redBox = new Image();
-redBox.src = "./assets/images/redbox.png";  redBox.src = "./assets/images/redbox.png";
+redBox.src = "./assets/images/redbox.png";
 const blueBox = new Image();
 blueBox.src = "./assets/images/bluebox.png";
 const greenBox = new Image();
@@ -17,6 +17,7 @@ class Obstacle {
     rockImg.src = imgSrc;
     this.sprite = new Sprite(rockImg, 50, 50, 1.0 * scale, 1.0 * scale);
     this.box = new Sprite(blueBox, 40, 50, 1.0 * scale, 1.3 * scale)
+    this.box = new Sprite(redBox, 40, 50, 1.0 * scale, 1.3 * scale)
     this.marked = marked;
     this.assetid = assetid;
     this.recognizedType = this.marked? "U" : assetid[0];  

@@ -5,14 +5,14 @@ import Obstacle from './obstacle.js';
 import Cash from './cash.js';
 
 const redBoxImg = new Image();
-redBoxImg.src = "./assets/images/redbox.png";
+redBoxImg.src = "static/assets/images/redbox.png";
 const blueBoxImg = new Image();
-blueBoxImg.src = "./assets/images/bluebox.png";
+blueBoxImg.src = "static/assets/images/bluebox.png";
 const greenBoxImg = new Image();
-greenBoxImg.src = "./assets/images/greenbox.png";
-const lifeImgFolder = "./assets/images/life/";
-const obstacleImgFolder = "./assets/images/obstacle/";
-const moneyImgFolder = "./assets/images/money/";
+greenBoxImg.src = "static/assets/images/greenbox.png";
+const lifeImgFolder = "static/assets/images/life/";
+const obstacleImgFolder = "static/assets/images/obstacle/";
+const moneyImgFolder = "static/assets/images/money/";
 const numImgs = 16;
 window.lifeimgLst = ""
 window.obstacleimgLst = ""

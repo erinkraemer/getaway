@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.width = 500;
   let game = new Game(canvas, ctx);
   document.getElementById("how").innerHTML = `Identify objects by using the Q, W, and E keys. Collect as much points and lives as you can while avoiding the rocks!`;
-  
+
   document.getElementById("play-btn").addEventListener("click", () => {
 
     if (game.gameOver === true) {

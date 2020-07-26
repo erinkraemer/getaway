@@ -1,3 +1,4 @@
+
 /********************************************
 |                                           |
 |            physics.js                     |
@@ -5,6 +6,7 @@
 ********************************************/
 
 var PhysicsSpeed = 1.5;
+
 class Physics {
   constructor(x, y, w = null, h = null) {
     this.x = x;
@@ -18,6 +20,7 @@ class Physics {
     this.dx = this.dx.bind(this);
     this.dy = this.dy.bind(this);
     this.speed = 1.5;//PhysicsSpeed;//0.4;
+    // In psyturk this speed = 1 in case that makes a difference
   }
 
   dx() {

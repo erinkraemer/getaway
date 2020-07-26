@@ -1,8 +1,10 @@
+
 /********************************************
 |                                           |
 |            game.js                        |
 |                                           |
 ********************************************/
+
 
 // import GameView from './game_view.js';
 // import Car from './car.js';
@@ -40,6 +42,7 @@ const OBJECTTYPE = Object.freeze({ "obstacle": "O", "cash": "C", "life": "L" });
 const QUERYTYPE = Object.freeze({ "attention": "A", "environment": "E"});
 
 const MIN_BOX_DISTANCE_RATIO = 0.1; //It will get boxed at a maximum distance of 0.3*Canvas Height from start
+
 const MAX_BOX_DISTANCE_RATIO = 0.1; //It will get boxed at a maximum distance of 0.3*Canvas Height from start
 
 const NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY = 3000;// in milliseconds
@@ -49,11 +52,14 @@ const QUERY_TIMEOUT = 4000; // in milliseconds
 const OBJECT_CREATION_INTERVAL = 10000;
 const CONTROLLER_REACTION_TIME = 2000;
 
+
 //Distractor task stuffs
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
 const DISTRACTOR_TASK_PAUSE = 1500;// in milliseconds
+
 const GAME_TIME = 5 * 60000;// in milliseconds
+
 
 const MIN_RES_WIDTH = 1280;
 const MIN_RES_HEIGHT = 800;
@@ -131,8 +137,8 @@ class Game {
     this.queryType = null;
     this.queryTimeElapsed = false;
     this.queryUserResponded = false;
-
     this.PhysicsReference = new Physics();
+
     var d = new Date();
 
     this.timeOfLastEnvQuery = d.getTime();
@@ -161,14 +167,9 @@ class Game {
     document.getElementById("money").style["background-image"] = "url(\'" + this.moneyImgSrc + "\')";
     document.getElementById("life").style["background-image"] = "url(\'" + this.lifeImgSrc + "\')";
 
-
-    
-
   }
 
   
-
-
   holdCanvas(object, blinkDuration, color) {
     var interval = window.setInterval(function (object) {
       document.getElementById("canvas").style["border"] = "20px solid "+color;
@@ -456,8 +457,6 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         object_y = this.life[0].physics.y;
         curr_time = (new Date()).getTime();
       }
-
-
       
       if(prev_time == null)
       {
@@ -486,7 +485,6 @@ setRecognizedType(assetid,assetUserSpecifiedType){
       if(speed!=null){
         var d = new Date();
         
-        
         //this.assets.car.physics.speed = (object_y - prev_object_y) / (0.001 * (curr_time - prev_time));
         //this.assets.car.physics.speed = 60;
         
@@ -496,6 +494,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         console.log("Speed is : " + speed);
         
         max_time = car_y /speed; //TODO_ERIN: Needs to be update - aesthethic fix
+
         var time_bar_length = ((car_y) - (object_y+object_height))/speed;
         // console.log("Time bar length: "+Math.floor(time_bar_length) + ", Speed: "+speed
         //           + ", Car_y: "+car_y + ", Car_height: " +car_height
@@ -538,15 +537,15 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         car.hitObstacle();
         car.makeRed();
         array.splice(array.indexOf(object), 1);
-        /*console.log("Before removing");
+        /*console.log("Before removing");//UNKNOWN IF THIS NEEDS TO BE ADDED BACK IN FOR HEROKU
         console.log(boxed);
-        console.log(object.assetid);*/
+        console.log(object.assetid);*/ 
         if (boxed.indexOf(object.assetid) != -1) {
           boxed.splice(boxed.indexOf(object.assetid), 1);
           _this.logEvent(EVENTTYPE.ASSET_CAR_COLLIDED, object.assetid);
           
         }
-        /*console.log("After removing");
+        /*console.log("After removing");//UNKNOWN IF THIS NEEDS TO BE ADDED BACK IN FOR HEROKU
         console.log(boxed);
         console.log(object.assetid);*/
       }
@@ -556,7 +555,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         car.getLife();
         car.makeGreen();
         array.splice(array.indexOf(object), 1);
-        /*console.log("Before removing");
+        /*console.log("Before removing"); //UNKNOWN IF THIS NEEDS TO BE ADDED BACK IN FOR HEROKU
         console.log(boxed);
         console.log(object.assetid);*/
         if (boxed.indexOf(object.assetid) != -1) {
@@ -564,7 +563,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
           _this.logEvent(EVENTTYPE.ASSET_CAR_COLLIDED, object.assetid);
           
         }
-        /*console.log("After removing");
+        /*console.log("After removing"); //UNKNOWN IF THIS NEEDS TO BE ADDED BACK IN FOR HEROKU
         console.log(boxed);
         console.log(object.assetid);*/
       }
@@ -574,7 +573,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         assets.road.score += 100;
         assets.road.makeGreen();
         array.splice(array.indexOf(object), 1);
-        /*console.log("Before removing");
+        /*console.log("Before removing"); //UNKNOWN IF THIS NEEDS TO BE ADDED BACK IN FOR HEROKU
         console.log(boxed);
         console.log(object.assetid);*/
         if (boxed.indexOf(object.assetid) != -1) {
@@ -582,7 +581,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
           _this.logEvent(EVENTTYPE.ASSET_CAR_COLLIDED, object.assetid);
           
         }
-        /*console.log("After removing");
+        /*console.log("After removing");//UNKNOWN IF THIS NEEDS TO BE ADDED BACK IN FOR HEROKU
         console.log(boxed);
         console.log(object.assetid);*/
       }
@@ -1153,8 +1152,6 @@ moveRandom(step){
           var d = new Date();
           var boxEmpty = Array.isArray(this.boxed) && !this.boxed.length;
           
-                
-          
           
           // var askEnvQuery = boxEmpty && ((d.getTime() - this.timeOfLastEnvQuery) > ENV_QUERY_INTERVAL);
           // if (askEnvQuery) {
@@ -1283,6 +1280,7 @@ moveRandom(step){
       document.getElementById("slow").innerHTML = `You need a minimum display resolution of 1280x800 to take part in this study`;
       document.getElementById("how").style.visibility = "hidden";
       document.getElementById("welcome").style.display = null;
+
       //this.LogIn the file (error) //TODO_ERIN
     }
   }
