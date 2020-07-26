@@ -513,9 +513,9 @@ const game_greenBox = new Image();
 game_greenBox.src = "static/assets/images/greenbox.png";
 
 const fs = __webpack_require__(1); 
-const lifeImgFolder = "./assets/images/life/";
-const obstacleImgFolder = "./assets/images/obstacle/";
-const moneyImgFolder = "./assets/images/money/";
+const lifeImgFolder = "static/assets/images/life/";
+const obstacleImgFolder = "static/assets/images/obstacle/";
+const moneyImgFolder = "static/assets/images/money/";
 var ctr = 0;
 const T_width = 80; //car width/2 + obstacle width/2 + small const: Used for avoiding obstacles
 const R_l = 150; // road lb in x; //100 pixels on each side for dead zone?
