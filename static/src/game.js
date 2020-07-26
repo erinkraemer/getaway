@@ -21,7 +21,7 @@ import assets from './assets.js';
 import PhysicsSpeed from './physics.js'
 
 const redBox = new Image();
-redBox.src = "./assets/images/redbox.png";  redBox.src = "./assets/images/redbox.png";
+redBox.src = "./assets/images/redbox.png";
 const blueBox = new Image();
 blueBox.src = "./assets/images/bluebox.png";
 const greenBox = new Image();
@@ -362,7 +362,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
           if (this.boxed[0][0] == i) {
               //Blink green
             //document.getElementById("canvas").style["border"] = "20px solid green";
-            this.holdCanvas(this, 2000, "green");
+            this.holdCanvas(2000, "green");
             // Write functions to do whatever has to be done when user enteres correct response
             this.activeResponse = false;
             this.setRecognizedType(this.boxed[0], i);
@@ -372,7 +372,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
           else {
             //Blink red
             //document.getElementById("canvas").style["border"] = "20px solid red";
-            this.holdCanvas(this, 2000, "red");
+            this.holdCanvas(2000, "red");
             // Write functions to do whatever has to be done when user enteres wrong response
             this.activeResponse = false;
             this.setRecognizedType(this.boxed[0], i)
@@ -520,7 +520,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
             // Makes the controller act EVIL
           }
           // Write code on what needs to be done after Query time is elapsed
-          this.holdCanvas(this, 2000, "red");
+          this.holdCanvas(2000, "red");
           this.activeResponse = false;
           this.queryTimeElapsed = true;
           this.logEvent(EVENTTYPE.TIMEOUT_BOXED_RESPONSE,  "U-"+this.boxed[0]);
