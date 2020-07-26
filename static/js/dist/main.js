@@ -506,7 +506,7 @@ const assets_assets = () => ({
 
 
 const game_redBox = new Image();
-game_redBox.src = "static/assets/images/redbox.png";  game_redBox.src = "./assets/images/redbox.png";
+game_redBox.src = "static/assets/images/redbox.png";
 const game_blueBox = new Image();
 game_blueBox.src = "static/assets/images/bluebox.png";
 const game_greenBox = new Image();
