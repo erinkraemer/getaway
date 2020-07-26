@@ -4,11 +4,11 @@ const cashImg = new Image();
 //cashImg.src = "./assets/images/money.png";
 const scale = 1.5;
 const redBox = new Image();
-redBox.src = "static/assets/images/redbox.png";
+redBox.src = "../../assets/images/redbox.png";
 const blueBox = new Image();
-blueBox.src = "static/assets/images/bluebox.png";
+blueBox.src = "../../assets/images/bluebox.png";
 const greenBox = new Image();
-greenBox.src = "static/assets/images/greenbox.png";
+greenBox.src = "../../assets/images/greenbox.png";
 class Cash {
   constructor(physics, imgSrc, marked, assetid, distance = -1) {
     

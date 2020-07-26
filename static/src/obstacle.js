@@ -3,11 +3,11 @@ import Sprite from "./sprite";
 
 const rockImg = new Image();
 const redBox = new Image();
-redBox.src = "static/assets/images/redbox.png";
+redBox.src = "../../assets/images/redbox.png";
 const blueBox = new Image();
-blueBox.src = "static/assets/images/bluebox.png";
+blueBox.src = "../../assets/images/bluebox.png";
 const greenBox = new Image();
-greenBox.src = "static/assets/images/greenbox.png";
+greenBox.src = "../../assets/images/greenbox.png";
 const scale = 1.5;
 //rockImg.src = "./assets/images/rock.png";
 
