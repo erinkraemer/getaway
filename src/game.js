@@ -19,7 +19,7 @@ import assets from './assets.js';
 import PhysicsSpeed from './physics.js'
 
 const redBox = new Image();
-redBox.src = "static/assets/images/redbox.png";  redBox.src = "./assets/images/redbox.png";
+redBox.src = "static/assets/images/redbox.png";
 const blueBox = new Image();
 blueBox.src = "static/assets/images/bluebox.png";
 const greenBox = new Image();
