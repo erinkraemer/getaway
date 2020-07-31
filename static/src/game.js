@@ -837,6 +837,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
     }
     if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
       console.log(this.dataLog);
+      console.log("innersrc")
       datalogWritten = true;
       //Code to write to a server data log file goes here
     }
