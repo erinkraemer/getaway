@@ -1330,7 +1330,8 @@ setRecognizedType(assetid,assetUserSpecifiedType){
     }
     if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
       console.log(this.dataLog);
-      psiTurk.recordUnstructuredData('logs', this.dataLog);
+      //psiTurk.recordUnstructuredData('logs', this.dataLog);
+      console.log('outersouce')
       psiTurk.saveData();
       datalogWritten = true;        
       //Code to write to a server data log file goes here
@@ -1614,6 +1615,7 @@ objectGetter(x_ref) { //directly gets x ref to go to in order to collect object
     if (!this.gameOver) {
       var d = new Date();
       this.dataLog += (d.getTime()).toString() + "," + eventtype + "," + eventdata + '\n';
+      psiTurk.recordTrialData([d.getTime().toString(), eventtype, eventdata]);
     }
   
 }  
