@@ -12,6 +12,20 @@ html {
   margin-top: 16px;
 }
 
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  font-size: 30px;
+  font-family: Roboto Condensed, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 0px;
+  padding: 20px;
+  height: 100px;
+  width: 600px;
+}
+
 .obstacle-container {
   display: flex;
   flex-direction: column;

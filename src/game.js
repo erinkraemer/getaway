@@ -53,7 +53,7 @@ const CONTROLLER_REACTION_TIME = 2000;
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
 const DISTRACTOR_TASK_PAUSE = 1500;// in milliseconds
-const GAME_TIME = 5 * 60000;// in milliseconds
+const GAME_TIME = 600000;// 10 minutes in milliseconds
 
 const MIN_RES_WIDTH = 1280;
 const MIN_RES_HEIGHT = 800;
@@ -166,7 +166,28 @@ class Game {
 
   }
 
-  
+countdown( elementName, minutes, seconds ) {
+    var element, endTime, hours, mins, msLeft, time;
+    function twoDigits( n ){
+        return (n <= 9 ? "0" + n : n);
+    }
+    function updateTimer(){
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Time is up!";
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
 
 
   holdCanvas(object, blinkDuration, color) {
@@ -1156,6 +1177,7 @@ moveRandom(step){
     document.getElementById("welcome").style.display = "none";
     this.assets.car.resetLife();
     this.logEvent(EVENTTYPE.GAME_START, "");
+    countdown("ten-countdown", GAME_TIME, 0)
     //erin added
     this.timeOfLastEnvQuery = dstart.getTime();
     this.timeOfLastAttQuery = dstart.getTime();
