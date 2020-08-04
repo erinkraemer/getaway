@@ -1128,7 +1128,7 @@ objectGetter(x_ref) { //directly gets x ref to go to in order to collect object
     if (!this.gameOver) {
       var d = new Date();
       this.dataLog += (d.getTime()).toString() + "," + eventtype + "," + eventdata + '\n';
-      psiTurk.recordTrialData([d.getTime().toString(), eventtype, eventdata]);
+      psiTurk.recordTrialData([eventtype, eventdata]);
     }
   
 }  
