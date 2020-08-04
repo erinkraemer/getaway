@@ -17,7 +17,7 @@ table_name = participants
 
 [Server Parameters]
 host = 0.0.0.0
-port = 22362
+port = 5000
 cutoff_time = 30
 logfile = server.log
 loglevel = 2
@@ -36,10 +36,6 @@ num_counters = 1
 [Shell Parameters]
 launch_in_sandbox_mode = true
 bonus_message = "Thanks for participating!"
-
-# If you are not using the psiturk ad server, set `use_psiturk_ad_server` to `false` and point `ad_location` to your proxy server <host> and <port>. Format the ad_location like this:
-#
-#   https://<host>:<port>/ad
-
 use_psiturk_ad_server = false
 ad_location = https://{{ app_url }}/pub
+
