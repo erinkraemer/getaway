@@ -98,9 +98,8 @@ html {
 }
 
 .time-bar-container {
-  
   font-family: Roboto Condensed, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  
+  font-size: 24px;
 }
 
 .game-container {
