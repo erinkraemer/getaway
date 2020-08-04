@@ -1664,7 +1664,7 @@ moveRandom(step){
     document.getElementById("welcome").style.display = "none";
     this.assets.car.resetLife();
     this.logEvent(EVENTTYPE.GAME_START, "");
-    this.countdown("ten-countdown", GAME_TIME, 0)
+    this.countdown("countdown", GAME_TIME, 0);
     //erin added
     this.timeOfLastEnvQuery = dstart.getTime();
     this.timeOfLastAttQuery = dstart.getTime();
