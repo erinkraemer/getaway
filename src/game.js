@@ -133,11 +133,11 @@ class Game {
     this.queryUserResponded = false;
 
     this.PhysicsReference = new Physics();
-    /*var d = new Date();
+    var d = new Date();
 
     this.timeOfLastEnvQuery = d.getTime();
     this.timeOfLastAttQuery = d.getTime();
-    this.timeOfLastDistractorTask = d.getTime();*/
+    this.timeOfLastDistractorTask = d.getTime();
    
     this.timeOfEnvQueryPlanning = -1; //Time at which env query's random interval duration was defined
     this.randomIthObjectForEnvQuery = 100000000; //Some high value //Pick the ith object starting this object creation cycle (0 this one)
