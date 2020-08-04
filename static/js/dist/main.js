@@ -620,11 +620,11 @@ class game_Game {
     this.queryUserResponded = false;
 
     this.PhysicsReference = new src_physics();
-    var d = new Date();
+    /*var d = new Date();
 
     this.timeOfLastEnvQuery = d.getTime();
     this.timeOfLastAttQuery = d.getTime();
-    this.timeOfLastDistractorTask = d.getTime();
+    this.timeOfLastDistractorTask = d.getTime();*/
    
     this.timeOfEnvQueryPlanning = -1; //Time at which env query's random interval duration was defined
     this.randomIthObjectForEnvQuery = 100000000; //Some high value //Pick the ith object starting this object creation cycle (0 this one)
@@ -1643,6 +1643,10 @@ moveRandom(step){
     document.getElementById("welcome").style.display = "none";
     this.assets.car.resetLife();
     this.logEvent(EVENTTYPE.GAME_START, "");
+    //erin added
+    this.timeOfLastEnvQuery = dstart.getTime();
+    this.timeOfLastAttQuery = dstart.getTime();
+    this.timeOfLastDistractorTask = dstart.getTime();
     console.log("Screen Res - Width:" + screen.width + "Height:" + screen.height);
     if (screen.width >= MIN_RES_WIDTH-1 && screen.height >= MIN_RES_HEIGHT-1) {
       setInterval(() => {
