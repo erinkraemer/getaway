@@ -522,7 +522,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         console.log("Speed is : " + speed);
         
         max_time = 3; //TODO_ERIN: Needs to be update - aesthethic fix
-        var time_bar_length = ((car_y) - (object_y+object_height))/speed;
+        var time_bar_length = ((car_y) - (object_y+object_height))/speed*(3/5);
         // console.log("Time bar length: "+Math.floor(time_bar_length) + ", Speed: "+speed
         //           + ", Car_y: "+car_y + ", Car_height: " +car_height
         //           + ", Object_y: "+object_y + ", Object_height: " +object_height
@@ -531,10 +531,10 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         prev_object_y = object_y;
         prev_time = curr_time;
         var elem = document.getElementById("myBar");
-        elem.style.width = (((time_bar_length-0.001*CONTROLLER_REACTION_TIME)/max_time)*100) + "%";
-        document.getElementById("myBarTime").innerHTML = `${Math.floor((time_bar_length - 0.001 * CONTROLLER_REACTION_TIME)*10)/10+"s"}`;
+        elem.style.width = (((time_bar_length*(5/3)-0.001*CONTROLLER_REACTION_TIME)/max_time)*100) + "%";
+        document.getElementById("myBarTime").innerHTML = `${Math.floor((time_bar_length*(5/3) - 0.001 * CONTROLLER_REACTION_TIME)*10)/10+"s"}`;
         //console.log(Math.floor(time_bar_length*10)/10+"s");
-        if (time_bar_length < 0.001 * CONTROLLER_REACTION_TIME && time_bar_length > 0.1
+        if (time_bar_length*(5/3) < 0.001 * CONTROLLER_REACTION_TIME && time_bar_length*(5/3) > 0.1
           && !this.queryTimeElapsed
           && !this.queryUserResponded
         ) {
@@ -1208,8 +1208,8 @@ moveRandom(step){
           var askAttQuery = boxEmpty && (ctr%4 ==0 || ctr%4 == 1);//((d.getTime() - this.timeOfLastAttQuery) > ATT_QUERY_INTERVAL);
           
           
-          var askEnvQuery = boxEmpty; // If no query is currently active
-            && !askAttQuery // if Att query is not selected
+          var askEnvQuery = boxEmpty// If no query is currently active
+            && !askAttQuery; // if Att query is not selected
             //&& this.askEnvironmentQueryBasedOnEnvironmentProbFunction() // if we need to ask env query based on probablity
             //&& (this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime()) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY; // if we are far away from time window of future env query ?? ERIN_TODO: Do we need this?
             // YP: Edited this code to try and mane att queries periodic

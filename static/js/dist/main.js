@@ -1692,13 +1692,13 @@ moveRandom(step){
           //   && (d.getTime() - this.timeOfLastEnvQuery) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ATT_QUERY // if we have crossed a time window since last env query
           //   && (this.timeOfLastEnvQuery + ENV_QUERY_INTERVAL - d.getTime()) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ATT_QUERY; // if we are far away from time window of future env query
           
-          var askAttQuery = boxEmpty && ((d.getTime() - this.timeOfLastAttQuery) > ATT_QUERY_INTERVAL);
+          var askAttQuery = boxEmpty && (ctr%4 ==0 || ctr%4 == 1);//((d.getTime() - this.timeOfLastAttQuery) > ATT_QUERY_INTERVAL);
           
           
-          var askEnvQuery = boxEmpty // If no query is currently active
-            && !askAttQuery // if Att query is not selected
-            && this.askEnvironmentQueryBasedOnEnvironmentProbFunction() // if we need to ask env query based on probablity
-            && (this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime()) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY; // if we are far away from time window of future env query ?? ERIN_TODO: Do we need this?
+          var askEnvQuery = boxEmpty// If no query is currently active
+            && !askAttQuery; // if Att query is not selected
+            //&& this.askEnvironmentQueryBasedOnEnvironmentProbFunction() // if we need to ask env query based on probablity
+            //&& (this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime()) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY; // if we are far away from time window of future env query ?? ERIN_TODO: Do we need this?
             // YP: Edited this code to try and mane att queries periodic
             /*&& (d.getTime() - this.timeOfLastAttQuery) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY // if we have crossed a time window since last env query
             && (this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime()) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY; // if we are far away from time window of future env query
