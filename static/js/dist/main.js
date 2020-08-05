@@ -1100,7 +1100,6 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         console.log(object.assetid);*/
       }
     }
-    boxed = false;
   }
   obstacleProbablityFunction() {
     return (Math.random() > 0.5);
