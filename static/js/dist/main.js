@@ -1736,7 +1736,7 @@ moveRandom(step){
 
       setInterval(() => {
         this.randomizesprite();
-      }, 60000); //what is the right interval for this?
+      }, 65000); //what is the right interval for this?
     
       setInterval(() => {
         this.updateTimeBar();
