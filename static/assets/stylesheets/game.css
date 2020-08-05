@@ -20,10 +20,6 @@ html {
   width: 100%;
   font-size: 32px;
   font-family: Roboto Condensed, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  margin-top: 0px;
-  padding: 20px;
-  height: 100px;
-  width: 600px;
 }
 
 .obstacle-container {
@@ -84,7 +80,6 @@ html {
 }
 
 .key {
-  
   height: 35px;
   width: 35px;
   font-size: 32px;
@@ -105,9 +100,12 @@ html {
 .game-container {
   display: flex;
   align-items: center;
-  height: -webkit-fill-available;
-  height: fill-available;
+  height: 90vh;
   justify-content: space-around;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  min-width: 1200px;
+  min-height: 900px;
 }
 
 .instructions {
@@ -245,8 +243,8 @@ html {
   justify-content: center;
   flex-direction: column;
   align-items: bottom;
-  height: -webkit-fill-available;
-  height: fill-available;
+  /*height: -webkit-fill-available;
+  height: fill-available;*/
 }
 
 .github {
