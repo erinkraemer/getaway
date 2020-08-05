@@ -521,8 +521,8 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         //var speed = (((object_y - prev_object_y)*1000) / (curr_time - prev_time));
         console.log("Speed is : " + speed);
         
-        max_time = car_y /speed*(3/5); //TODO_ERIN: Needs to be update - aesthethic fix
-        var time_bar_length = ((car_y) - (object_y+object_height))/speed*(3/5);
+        max_time = 3; //TODO_ERIN: Needs to be update - aesthethic fix
+        var time_bar_length = ((car_y) - (object_y+object_height))/speed;
         // console.log("Time bar length: "+Math.floor(time_bar_length) + ", Speed: "+speed
         //           + ", Car_y: "+car_y + ", Car_height: " +car_height
         //           + ", Object_y: "+object_y + ", Object_height: " +object_height
