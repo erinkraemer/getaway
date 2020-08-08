@@ -13,9 +13,6 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 // All pages to be loaded
 var pages = [
-	"instructions/instruct-1.html",
-	"instructions/instruct-2.html",
-	"instructions/instruct-3.html",
 	"instructions/instruct-ready.html",
 	"stage.html",
 	"postquestionnaire.html"
@@ -24,9 +21,6 @@ var pages = [
 psiTurk.preloadPages(pages);
 
 var instructionPages = [ // add as a list as many pages as you like
-	"instructions/instruct-1.html",
-	"instructions/instruct-2.html",
-	"instructions/instruct-3.html",
 	"instructions/instruct-ready.html"
 ];
 
@@ -40,6 +34,12 @@ var instructionPages = [ // add as a list as many pages as you like
 * insert them into the document.
 *
 ********************/
+
+
+/********************
+* Game.js           *
+********************/
+import defaultExport from "/dist/main.js";
 
 /********************
 * STROOP TEST       *
@@ -222,6 +222,6 @@ var currentview;
 $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
-    	function() { currentview = new StroopExperiment(); } // what you want to do when you are done with instructions
+    	function() { currentview = main.Game; } // what you want to do when you are done with instructions
     );
 });
