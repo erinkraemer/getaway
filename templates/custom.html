@@ -1,16 +1,34 @@
-<!DOCTYPE html>
+<div id="container-instructions">
 
-<html>
-<head>
-        <meta charset="utf-8" />
-	<title>Custom Routes</title>
-	<link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css" />
-	<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="screen" />
-</head>
-<body>
-	<div style="text-align: center;" id="thanks">
-		<h1>Booyah, this is an example custom route you can add to your project</h1>
+	<h1>Instructions</h1>
+
+	<hr />
+
+	<div class="instructions well">
+
+	    <p>
+		    Please watch the following video for instructions.
+	    </p>
+	    <center>
+            <iframe width="1120" height="630" src="https://www.youtube.com/embed/2z3OQov5oiE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </center>
+
+	    <script type="text/javascript">
+	    //console.log(psiTurk.getInstructionIndicator())
+	    </script>
+
 	</div>
-</body>
 
-</html>
+	<hr />
+
+
+    <div class="instructionsnav">
+        <div class="row">
+            <center>
+              <button type="button" class="btn btn-primary btn-lg" onClick="window.location='/exp?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}'">
+                <span class="glyphicon glyphicon-ok"></span> I understand
+            </center>
+        </div>
+    </div>
+
+</div>
