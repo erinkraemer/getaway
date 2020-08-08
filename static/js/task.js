@@ -39,7 +39,6 @@ var instructionPages = [ // add as a list as many pages as you like
 /********************
 * Game.js           *
 ********************/
-import defaultExport from "/dist/main.js";
 
 /********************
 * STROOP TEST       *

@@ -1289,4 +1289,6 @@ moveRandom(step){
 
 }
 
+
+
 export default Game;
