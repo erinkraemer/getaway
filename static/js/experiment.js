@@ -162,8 +162,8 @@ async function initializeExperiment() {
   // so you don't have to click through them to test
   // the section you're working on.
   var timeline = [
-    // welcome_block,
-    // instructions_block,
+    welcome_block,
+    instructions_block,
     sorting,
     test_block,
     debrief_block,
