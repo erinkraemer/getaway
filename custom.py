@@ -72,7 +72,7 @@ def download_datafiles(codeversion, name):
 #----------------------------------------------
 # example custom route
 #----------------------------------------------
-@custom_code.route('/my_custom_view')
+@custom_code.route('/my_custom_view', methods=['GET'])
 def my_custom_view():
     current_app.logger.info("Reached /my_custom_view")  # Print message to server.log for debugging 
     try:
