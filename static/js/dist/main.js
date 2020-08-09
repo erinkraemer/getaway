@@ -135,7 +135,7 @@ module.exports = Util;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./src/physics.js
+// CONCATENATED MODULE: ./static/src/physics.js
 /********************************************
 |                                           |
 |            physics.js                     |
@@ -198,7 +198,7 @@ class Physics {
 }
 
 /* harmony default export */ var src_physics = (Physics);
-// CONCATENATED MODULE: ./src/sprite.js
+// CONCATENATED MODULE: ./static/src/sprite.js
 class Sprite {
   constructor(img, height, width,width_scale=1,height_scale=1) {
     this.img = img;
@@ -211,7 +211,7 @@ class Sprite {
 }
 
 /* harmony default export */ var src_sprite = (Sprite);
-// CONCATENATED MODULE: ./src/road.js
+// CONCATENATED MODULE: ./static/src/road.js
 /********************************************
 |                                           |
 |            road.js                        |
@@ -268,7 +268,7 @@ class road_Road {
 /* harmony default export */ var road = (road_Road);
 
 
-// CONCATENATED MODULE: ./src/life.js
+// CONCATENATED MODULE: ./static/src/life.js
 
 
 const lifeImg = new Image();
@@ -313,11 +313,11 @@ class life_Life {
 
 /* harmony default export */ var life = (life_Life);
 
-// EXTERNAL MODULE: ./src/util.js
+// EXTERNAL MODULE: ./static/src/util.js
 var util = __webpack_require__(0);
 var util_default = /*#__PURE__*/__webpack_require__.n(util);
 
-// CONCATENATED MODULE: ./src/obstacle.js
+// CONCATENATED MODULE: ./static/src/obstacle.js
 
 
 
@@ -361,7 +361,7 @@ class obstacle_Obstacle {
 
 /* harmony default export */ var obstacle = (obstacle_Obstacle);
 
-// CONCATENATED MODULE: ./src/cash.js
+// CONCATENATED MODULE: ./static/src/cash.js
 
 
 const cashImg = new Image();
@@ -404,7 +404,7 @@ class cash_Cash {
 
 /* harmony default export */ var cash = (cash_Cash);
 
-// CONCATENATED MODULE: ./src/car.js
+// CONCATENATED MODULE: ./static/src/car.js
 /********************************************
 |                                           |
 |            car.js                         |
@@ -466,7 +466,7 @@ class car_Car {
 
 /* harmony default export */ var src_car = (car_Car);
 
-// CONCATENATED MODULE: ./src/assets.js
+// CONCATENATED MODULE: ./static/src/assets.js
 /********************************************
 |                                           |
 |            assets.js                      |
@@ -484,7 +484,7 @@ const assets_assets = () => ({
 
 
 /* harmony default export */ var src_assets = (assets_assets);
-// CONCATENATED MODULE: ./src/game.js
+// CONCATENATED MODULE: ./static/src/game.js
 /********************************************
 |                                           |
 |            game.js                        |
@@ -1100,7 +1100,6 @@ setRecognizedType(assetid,assetUserSpecifiedType){
         console.log(object.assetid);*/
       }
     }
-    boxed = false;
   }
   obstacleProbablityFunction() {
     return (Math.random() > 0.5);
@@ -1816,7 +1815,7 @@ moveRandom(step){
 
 /* harmony default export */ var src_game = (game_Game);
 
-// CONCATENATED MODULE: ./src/car_controls.js
+// CONCATENATED MODULE: ./static/src/car_controls.js
 const KEY_UP_COLOR = "rgba(200,200,200, 0.6)";
 const KEY_DOWN_COLOR = "rgba(100,100,100, 0.8)";
 
@@ -1913,7 +1912,7 @@ const setupControlListeners = (game) => {
 }
 
 /* harmony default export */ var car_controls = (setupControlListeners);
-// CONCATENATED MODULE: ./src/bumblebee.js
+// CONCATENATED MODULE: ./static/src/bumblebee.js
 
 
 
@@ -1982,7 +1981,7 @@ class BumbleBee {
   /* harmony default export */ var bumblebee = (BumbleBee);
   
 
-// CONCATENATED MODULE: ./src/index.js
+// CONCATENATED MODULE: ./static/src/index.js
 
 // import assets from './assets.js';
 
