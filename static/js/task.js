@@ -4,6 +4,11 @@
  *     utils.js
  */
 
+import Game from "./game.js";
+// import assets from './assets.js';
+import setupControlListeners from './car_controls.js';
+import BumbleBee from "./bumblebee.js";
+
 // Initalize psiturk object
 var psiTurk = new PsiTurk(uniqueId, adServerLoc, mode);
 
@@ -43,25 +48,7 @@ var instructionPages = [ // add as a list as many pages as you like
 /********************
 * STROOP TEST       *
 ********************/
-var StroopExperiment = function() {
-
-	var wordon, // time word is presented
-	    listening = false;
-
-	// Stimuli for a basic Stroop experiment
-	var stims = [
-			["SHIP", "red", "unrelated"],
-			["MONKEY", "green", "unrelated"],
-			["ZAMBONI", "blue", "unrelated"],
-			["RED", "red", "congruent"],
-			["GREEN", "green", "congruent"],
-			["BLUE", "blue", "congruent"],
-			["GREEN", "red", "incongruent"],
-			["BLUE", "green", "incongruent"],
-			["RED", "blue", "incongruent"]
-		];
-
-	stims = _.shuffle(stims);
+var Experiment = function() {
 
 	var next = function() {
 		if (stims.length===0) {
@@ -76,78 +63,37 @@ var StroopExperiment = function() {
 		}
 	};
 	
-	var response_handler = function(e) {
-		if (!listening) return;
-
-		var keyCode = e.keyCode,
-			response;
-
-		switch (keyCode) {
-			case 82:
-				// "R"
-				response="red";
-				break;
-			case 71:
-				// "G"
-				response="green";
-				break;
-			case 66:
-				// "B"
-				response="blue";
-				break;
-			default:
-				response = "";
-				break;
-		}
-		if (response.length>0) {
-			listening = false;
-			var hit = response == stim[1];
-			var rt = new Date().getTime() - wordon;
-
-			psiTurk.recordTrialData({'phase':"TEST",
-                                     'word':stim[0],
-                                     'color':stim[1],
-                                     'relation':stim[2],
-                                     'response':response,
-                                     'hit':hit,
-                                     'rt':rt}
-                                   );
-			remove_word();
-			next();
-		}
-	};
 
 	var finish = function() {
 	    $("body").unbind("keydown", response_handler); // Unbind keys
 	    currentview = new Questionnaire();
-	};
-	
-	var show_word = function(text, color) {
-		d3.select("#stim")
-			.append("div")
-			.attr("id","word")
-			.style("color",color)
-			.style("text-align","center")
-			.style("font-size","150px")
-			.style("font-weight","400")
-			.style("margin","20px")
-			.text(text);
-	};
-
-	var remove_word = function() {
-		d3.select("#word").remove();
 	};
 
 	
 	// Load the stage.html snippet into the body of the page
 	psiTurk.showPage('stage.html');
 
-	// Register the response handler that is defined above to handle any
-	// key down events.
-	$("body").focus().keydown(response_handler); 
+	
+	const canvas = document.getElementById("canvas");
+	const ctx = canvas.getContext('2d');
+	canvas.height = 700;
+	canvas.width = 500;
+	let game = new Game(canvas, ctx);
+	document.getElementById("how").innerHTML = `Identify objects by using the Q, W, and E keys. Collect as much points and lives as you can while avoiding the obstacles! And answer some math questions along the way.`;
 
-	// Start the test
-	next();
+	document.getElementById("play-btn").addEventListener("click", () => {
+
+		if (game.gameOver === true) {
+			game.cleanUp();
+			currentview = new Questionnaire();
+		}
+
+		setupControlListeners(game);
+
+		game.start();
+
+	    
+	})
 };
 
 
@@ -212,6 +158,8 @@ var Questionnaire = function() {
 	
 };
 
+
+
 // Task object to keep track of the current phase
 var currentview;
 
@@ -221,6 +169,6 @@ var currentview;
 $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
-    	function() { currentview = main.Game; } // what you want to do when you are done with instructions
+    	function() { currentview = new Experiment(); } // what you want to do when you are done with instructions
     );
 });
