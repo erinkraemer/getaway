@@ -540,7 +540,7 @@ const CONTROLLER_REACTION_TIME = 2000;
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
 const DISTRACTOR_TASK_PAUSE = 1500;// in milliseconds
-const GAME_TIME = 600000;// 10 minutes in milliseconds
+const GAME_TIME = 600000/5;// 10 minutes in milliseconds
 const QUARTER_TIME = GAME_TIME/4;
 
 const MIN_RES_WIDTH = 1280;
@@ -641,8 +641,6 @@ class game_Game {
 		this.distractorTaskActive = true;
 
 		this.dataLog = "";
-
-		this.newDistractorTask();
 		
 		for (var i = 0; i < this.numImgs; i++) {
 			this.lifeImgLists.push(lifeImgFolder + "life (" + (i + 1).toString() + ").png");
@@ -836,7 +834,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
 
 newDistractorTask() {
 	var d = new Date();
-	if (d.getTime() - this.startTime > (this.currentQuarter * QUARTER_TIME)/2) {
+	if ((d.getTime() - this.startTime) > (this.currentQuarter * QUARTER_TIME)) {
 		this.currentQuarter += 1;
 		this.currentCondition = (this.currentCondition + 1) % 2;
 		this.logEvent(EVENTTYPE.TREATMENT, this.currentCondition)
@@ -1375,6 +1373,7 @@ newDistractorTask() {
 			//Code to write to a server data log file goes here
 			// TODO: auto transition to next page.
 		}
+		return;
 	}
 
 	createRock(bool_marked) {
@@ -1682,6 +1681,7 @@ start() {
 	this.assets.car.resetLife();
 	this.logEvent(EVENTTYPE.GAME_START, "");
 		this.countdown("countdown", GAME_TIME/60000, 0); //erin added
+		this.newDistractorTask();
 		this.timeOfLastEnvQuery = dstart.getTime();
 		this.timeOfLastAttQuery = dstart.getTime();
 		this.timeOfLastDistractorTask = dstart.getTime();
@@ -1707,6 +1707,7 @@ start() {
 					//   && this.askAttentionQueryBasedOnAttentionProbFunction() // if we need to ask attention query based on probablity
 					//   && (d.getTime() - this.timeOfLastEnvQuery) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ATT_QUERY // if we have crossed a time window since last env query
 					//   && (this.timeOfLastEnvQuery + ENV_QUERY_INTERVAL - d.getTime()) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ATT_QUERY; // if we are far away from time window of future env query
+					
 					
 					var askAttQuery = boxEmpty && ((d.getTime() - this.timeOfLastAttQuery) > ATT_QUERY_INTERVAL);
 					
@@ -2060,16 +2061,16 @@ var startGame = function() {
 var Questionnaire = function() {
 
   var error_message = "<h1>Oops!</h1><p>Something went wrong submitting your HIT. This might happen if you lose your internet connection. Press the button to resubmit.</p><button id='resubmit'>Resubmit</button>";
-
+  /****************
   record_responses = function() {
 
-    src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'submit'});
+    psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'submit'});
 
     $('textarea').each( function(i, val) {
-      src_psiTurk.recordUnstructuredData(this.id, this.value);
+      psiTurk.recordUnstructuredData(this.id, this.value);
     });
     $('select').each( function(i, val) {
-      src_psiTurk.recordUnstructuredData(this.id, this.value);    
+      psiTurk.recordUnstructuredData(this.id, this.value);    
     });
 
   };
@@ -2083,18 +2084,18 @@ var Questionnaire = function() {
     document.body.innerHTML = "<h1>Trying to resubmit...</h1>";
     reprompt = setTimeout(prompt_resubmit, 10000);
     
-    src_psiTurk.saveData({
+    psiTurk.saveData({
       success: function() {
           clearInterval(reprompt); 
-                src_psiTurk.computeBonus('compute_bonus', function(){
-                  src_psiTurk.completeHIT(); // when finished saving compute bonus, the quit
+                psiTurk.computeBonus('compute_bonus', function(){
+                  psiTurk.completeHIT(); // when finished saving compute bonus, the quit
                 }); 
 
 
       }, 
       error: prompt_resubmit
     });
-  };
+  };****************/
 
   // Load the questionnaire snippet 
   src_psiTurk.showPage('postquestionnaire.html');
