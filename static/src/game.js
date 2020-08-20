@@ -355,7 +355,7 @@ newDistractorTask() {
 		this.logEvent(EVENTTYPE.TREATMENT, this.currentCondition)
 	}
 	if (this.currentCondition){
-		document.getElementById("distractortask").style["visibility"] = "visible";
+		document.getElementById("distractorcontainer").style["visibility"] = "visible";
 		var d = new Date();
 		this.num2 = Math.floor(Math.random() * 100); // An integer between 0 to 99
 		this.num3 = Math.floor(Math.random() * 10); // An integer between 0 to 9
@@ -367,7 +367,7 @@ newDistractorTask() {
 		this.logEvent(EVENTTYPE.NEW_DIST_QUERY, this.num1.toString() + "-" + this.num2.toString() + " = ???");
 	}
 	else{
-		document.getElementById("distractortask").style["visibility"] = "hidden";
+		document.getElementById("distractorcontainer").style["visibility"] = "hidden";
 	}
 }
 	

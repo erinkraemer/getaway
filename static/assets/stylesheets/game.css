@@ -117,7 +117,6 @@ html {
   height: 250px;
   width: 600px;
   background-color: #B3B3B3;
-  visibility: hidden;
   
   font-size: 64px;
   display: flex;
@@ -125,6 +124,10 @@ html {
   align-items: center;
   font-family: Roboto Condensed, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   border: 20px solid black;
+}
+
+.distractorcontainer {
+  visibility: hidden;
 }
 
 
