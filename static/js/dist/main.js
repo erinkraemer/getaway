@@ -836,7 +836,7 @@ setRecognizedType(assetid,assetUserSpecifiedType){
 
 newDistractorTask() {
 	var d = new Date();
-	if (d.getTime() - this.startTime > this.currentQuarter * QUARTER_TIME) {
+	if (d.getTime() - this.startTime > (this.currentQuarter * QUARTER_TIME)/2) {
 		this.currentQuarter += 1;
 		this.currentCondition = (this.currentCondition + 1) % 2;
 		this.logEvent(EVENTTYPE.TREATMENT, this.currentCondition)
