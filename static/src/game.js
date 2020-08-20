@@ -888,7 +888,6 @@ newDistractorTask() {
 			//Code to write to a server data log file goes here
 			// TODO: auto transition to next page.
 		}
-		return;
 	}
 
 	createRock(bool_marked) {
@@ -1196,7 +1195,6 @@ start() {
 	this.assets.car.resetLife();
 	this.logEvent(EVENTTYPE.GAME_START, "");
 		this.countdown("countdown", GAME_TIME/60000, 0); //erin added
-		this.newDistractorTask();
 		this.timeOfLastEnvQuery = dstart.getTime();
 		this.timeOfLastAttQuery = dstart.getTime();
 		this.timeOfLastDistractorTask = dstart.getTime();
