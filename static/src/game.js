@@ -147,6 +147,8 @@ class Game {
 		this.timeOfEnvQueryPlanning = -1; //Time at which env query's random interval duration was defined
 		this.randomIthObjectForEnvQuery = 100000000; //Some high value //Pick the ith object starting this object creation cycle (0 this one)
 		
+		this.newDistractorTask();
+		
 		this.startTime = GAME_TIME*2; // Some high value greater than game time
 		this.num2 = 0; // An integer between 0 to 99
 		this.num3 = 0; // An integer between 0 to 9
