@@ -117,6 +117,7 @@ html {
   height: 250px;
   width: 600px;
   background-color: #B3B3B3;
+  visibility: hidden;
   
   font-size: 64px;
   display: flex;
