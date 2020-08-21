@@ -1681,7 +1681,7 @@ moveRandom(step){
 
 changeview(){
 	var currentview;
-	currentview = new index.Questionnaire;
+	currentview = new /* Cannot get final name for export "default" in "./static/src/index.js" (known exports: , known reexports: ) */ undefined;
 }
 
 start() {
@@ -1698,7 +1698,7 @@ start() {
 		this.timeOfLastDistractorTask = dstart.getTime();
 		console.log("Screen Res - Width:" + screen.width + "Height:" + screen.height);
 		if (screen.width >= MIN_RES_WIDTH-1 && screen.height >= MIN_RES_HEIGHT-1) {
-			setInterval(() => {
+			let whileGametime = setInterval(() => {
 				if (!this.gameOver) {
 					var d = new Date();
 					var boxEmpty = Array.isArray(this.boxed) && !this.boxed.length;
@@ -1742,19 +1742,20 @@ start() {
 					}
 			}, OBJECT_CREATION_INTERVAL); //20000
 
-			setInterval(() => {
+			let randomizer = setInterval(() => {
 				this.randomizesprite();
 			}, 84000); //what is the right interval for this?
 
-			setInterval(() => {
+			let updater = setInterval(() => {
 				this.updateTimeBar();
 			}, 50);
-			setInterval(() => {
+			
+			let distractorUpdater = setInterval(() => {
 				this.updateDistractorTimeBar();
 			}, 50);
 
 			//--------------------AI agent---------------------
-			setInterval(() => { //controls
+			let AIagent = setInterval(() => { //controls
 				this.releaseControls(); //zero-order hold (release key)
 				var closestObjectType;
 				
@@ -1785,6 +1786,11 @@ start() {
 		}
 		else {
 			this.gameOver = true;
+			clearInterval(whileGametime);
+			clearInterval(randomizer);
+			clearInterval(updater);
+			clearInterval(distractorUpdater);
+			clearInterval(AIagent);
 			document.getElementById("slow").innerHTML = `You need a minimum display resolution of 1280x800 to take part in this study`;
 			document.getElementById("how").style.visibility = "hidden";
 			document.getElementById("welcome").style.display = null;
@@ -2012,7 +2018,7 @@ var startGame = function() {
     game.start();
 
     if (game.gameOver) {
-      currentview = new Questionnaire();
+      src_currentview = new Questionnaire();
     }
 
     
@@ -2081,7 +2087,7 @@ var Questionnaire = function() {
 };
 
 // Task object to keep track of the current phase
-var currentview;
+var src_currentview;
 
 /*******************
  * Run Task
@@ -2089,7 +2095,7 @@ var currentview;
 $(window).load( function(){
     src_psiTurk.doInstructions(
       instructionPages, // a list of pages you want to display in sequence
-      function() { currentview = new startGame(); } // what you want to do when you are done with instructions
+      function() { src_currentview = new startGame(); } // what you want to do when you are done with instructions
     );
 });
 

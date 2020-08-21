@@ -1194,7 +1194,7 @@ moveRandom(step){
 
 changeview(){
 	var currentview;
-	currentview = new index.Questionnaire;
+	currentview = new Questionnaire;
 }
 
 start() {
@@ -1211,7 +1211,7 @@ start() {
 		this.timeOfLastDistractorTask = dstart.getTime();
 		console.log("Screen Res - Width:" + screen.width + "Height:" + screen.height);
 		if (screen.width >= MIN_RES_WIDTH-1 && screen.height >= MIN_RES_HEIGHT-1) {
-			setInterval(() => {
+			let whileGametime = setInterval(() => {
 				if (!this.gameOver) {
 					var d = new Date();
 					var boxEmpty = Array.isArray(this.boxed) && !this.boxed.length;
@@ -1255,19 +1255,20 @@ start() {
 					}
 			}, OBJECT_CREATION_INTERVAL); //20000
 
-			setInterval(() => {
+			let randomizer = setInterval(() => {
 				this.randomizesprite();
 			}, 84000); //what is the right interval for this?
 
-			setInterval(() => {
+			let updater = setInterval(() => {
 				this.updateTimeBar();
 			}, 50);
-			setInterval(() => {
+			
+			let distractorUpdater = setInterval(() => {
 				this.updateDistractorTimeBar();
 			}, 50);
 
 			//--------------------AI agent---------------------
-			setInterval(() => { //controls
+			let AIagent = setInterval(() => { //controls
 				this.releaseControls(); //zero-order hold (release key)
 				var closestObjectType;
 				
@@ -1298,6 +1299,11 @@ start() {
 		}
 		else {
 			this.gameOver = true;
+			clearInterval(whileGametime);
+			clearInterval(randomizer);
+			clearInterval(updater);
+			clearInterval(distractorUpdater);
+			clearInterval(AIagent);
 			document.getElementById("slow").innerHTML = `You need a minimum display resolution of 1280x800 to take part in this study`;
 			document.getElementById("how").style.visibility = "hidden";
 			document.getElementById("welcome").style.display = null;
