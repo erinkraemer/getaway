@@ -1352,8 +1352,10 @@ newDistractorTask() {
 				// document.getElementById("lives").innerHTML = `${this.assets.car.life}`;
 				this.end();
 			}
-
 			animate();
+		}
+		else {
+			clearInterval(animate);
 		}
 	}
 
