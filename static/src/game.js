@@ -1298,6 +1298,7 @@ start() {
 			//this.LogIn the file (error) //TODO_ERIN
 			return;
 		}
+		return;
 	}
 
 
