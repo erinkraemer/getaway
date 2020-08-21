@@ -226,8 +226,21 @@ html {
   cursor: pointer;
 }
 
+.gameOver {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#endMessage {
+  color: black;
+  font-size: 50px;
+  font-family: Roboto Condensed, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+
 #next {
-  visibility: hidden;
+  cursor: pointer;
 }
 
 #splash {

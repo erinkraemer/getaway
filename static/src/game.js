@@ -887,16 +887,9 @@ end() {
 			this.activeResponse = false;
 			this.distractorTaskActive = false;
 			//this.draw();
-			document.getElementById("welcome").style.display = "null";
-      document.getElementById("slow").innerHTML = `Game Over!`;
-      document.getElementById("welcome").style.visibility = "hidden";
-      document.getElementById("hider1").style.visibility = "hidden";
-      document.getElementById("how").style.visibility = "hidden";
-      document.getElementById("canvas").style.visibility = "hidden";
-      document.getElementById("distractorcontainer").style.visibility = "hidden";
-      document.getElementById("coundowncontainer").style.visibility = "hidden";
-      document.getElementById("next").style.textAlign = "center";
-      document.getElementById("next").style.visibility = "visible";
+			document.getElementById("gameOver").style.display = "block";
+      document.getElementById("endMessage").innerHTML = `Game Over!`;
+      document.getElementById("game-container").style.visibility = "hidden";
 		}
 		if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 			console.log(this.dataLog);
