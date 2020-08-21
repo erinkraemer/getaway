@@ -1374,6 +1374,8 @@ end() {
 			this.distractorTaskActive = false;
 			//this.draw();
       document.getElementById("slow").innerHTML = `Game Over!`;
+      document.getElementById("welcome").style.visibility = "hidden";
+      document.getElementById("hider1").style.visibility = "hidden";
       document.getElementById("next").style.visibility = "visible";
 		}
 		if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
@@ -1799,8 +1801,8 @@ start() {
 			clearInterval(distractorUpdater);
 			clearInterval(AIagent);
 			document.getElementById("slow").innerHTML = `You need a minimum display resolution of 1280x800 to take part in this study`;
-			document.getElementById("how").style.visibility = "hidden";
-			document.getElementById("welcome").style.display = null;
+			//document.getElementById("how").style.visibility = "hidden";
+			//document.getElementById("welcome").style.display = null;
 			//this.LogIn the file (error) //TODO_ERIN
 		}
 		return;
