@@ -887,8 +887,7 @@ end() {
 			this.distractorTaskActive = false;
 			this.draw();
       document.getElementById("slow").innerHTML = `Game Over!`;
-      document.getElementById("how").style.visibility = "hidden";
-      document.getElementById("welcome").style.display = null;
+      document.getElementById("how").style.visibility = "visible";
 		}
 		if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 			console.log(this.dataLog);

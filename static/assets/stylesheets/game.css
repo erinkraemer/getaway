@@ -226,6 +226,10 @@ html {
   cursor: pointer;
 }
 
+#next {
+  visibility: hidden;
+}
+
 #splash {
   display: flex;
   justify-content: center;

@@ -43,13 +43,11 @@ var startGame = function() {
     setupControlListeners(game);
     
     game.start();
+  });
 
-    if (game.gameOver) {
-      currentview = new Questionnaire();
-    }
-
-    
-  })
+  document.getElementById("next").addEventListener("click", () => {
+    currentview = new Questionnaire();
+  });
 };
 
 /****************
