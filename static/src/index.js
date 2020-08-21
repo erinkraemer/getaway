@@ -44,7 +44,7 @@ var startGame = function() {
     
     game.start();
 
-    if (game.gameOver === true) {
+    if (game.gameOver == true) {
       currentview = new Questionnaire();
     }
 
