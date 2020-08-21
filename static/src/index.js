@@ -40,14 +40,13 @@ var startGame = function() {
   
   document.getElementById("play-btn").addEventListener("click", () => {
 
-    if (game.gameOver === true) {
-      game.cleanUp();
-      currentview = new Questionnaire();
-    }
-    
     setupControlListeners(game);
     
     game.start();
+
+    if (game.gameOver === true) {
+      currentview = new Questionnaire();
+    }
 
     
   })

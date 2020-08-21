@@ -2041,14 +2041,13 @@ var startGame = function() {
   
   document.getElementById("play-btn").addEventListener("click", () => {
 
-    if (game.gameOver === true) {
-      game.cleanUp();
-      currentview = new Questionnaire();
-    }
-    
     car_controls(game);
     
     game.start();
+
+    if (game.gameOver === true) {
+      currentview = new Questionnaire();
+    }
 
     
   })
