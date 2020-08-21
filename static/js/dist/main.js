@@ -1768,9 +1768,13 @@ start() {
 			}, CONTROLLER_SAMPLING_TIME); //every 100ms
 
 			//-----------------end AI agent code---------------
-
-			this.draw();
-			this.assets.road.move();
+			if (!this.gameOver){
+				this.draw();
+				this.assets.road.move();
+			}
+			else {
+				return;
+			}
 
 		}
 		else {
@@ -1779,6 +1783,7 @@ start() {
 			document.getElementById("how").style.visibility = "hidden";
 			document.getElementById("welcome").style.display = null;
 			//this.LogIn the file (error) //TODO_ERIN
+			return;
 		}
 	}
 
