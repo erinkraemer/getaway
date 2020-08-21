@@ -15,7 +15,7 @@ import Physics from './physics.js';
 import Cash from './cash.js';
 import Car from './car.js';
 import assets from './assets.js';
-import Questionnaire from './index.js'
+import * as index from './index.js'
 
 import PhysicsSpeed from './physics.js'
 
@@ -866,7 +866,7 @@ checkDistractorTaskAnswer(i) {
 				this.end();
 			}
 			else {
-				this.index.Questionnaire();
+				index.Questionnaire();
 			}
 		}
 		animate();
@@ -890,7 +890,7 @@ checkDistractorTaskAnswer(i) {
 			console.log('outersouce')
 			psiTurk.saveData();
 			datalogWritten = true;   
-			this.index.Questionnaire();   
+			index.Questionnaire();   
 			//Code to write to a server data log file goes here
 			// TODO: auto transition to next page.
 		}
@@ -1192,62 +1192,6 @@ moveRandom(step){
 		}
 } //end move random
 
-Questionnaire() {
-
-  var error_message = "<h1>Oops!</h1><p>Something went wrong submitting your HIT. This might happen if you lose your internet connection. Press the button to resubmit.</p><button id='resubmit'>Resubmit</button>";
-
-  record_responses = function() {
-
-    psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'submit'});
-
-    $('textarea').each( function(i, val) {
-      psiTurk.recordUnstructuredData(this.id, this.value);
-    });
-    $('select').each( function(i, val) {
-      psiTurk.recordUnstructuredData(this.id, this.value);    
-    });
-
-  };
-
-  prompt_resubmit = function() {
-    document.body.innerHTML = error_message;
-    $("#resubmit").click(resubmit);
-  };
-
-  resubmit = function() {
-    document.body.innerHTML = "<h1>Trying to resubmit...</h1>";
-    reprompt = setTimeout(prompt_resubmit, 10000);
-    
-    psiTurk.saveData({
-      success: function() {
-          clearInterval(reprompt); 
-                psiTurk.computeBonus('compute_bonus', function(){
-                  psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-                }); 
-
-
-      }, 
-      error: prompt_resubmit
-    });
-  };
-
-  // Load the questionnaire snippet 
-  psiTurk.showPage('postquestionnaire.html');
-  psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'begin'});
-  
-  $("#next").click(function () {
-      record_responses();
-      psiTurk.saveData({
-            success: function(){
-                psiTurk.computeBonus('compute_bonus', function() { 
-                  psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-                }); 
-            }, 
-            error: prompt_resubmit});
-  });
-    
-  
-};
 
 start() {
 
