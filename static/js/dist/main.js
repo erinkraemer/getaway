@@ -1377,6 +1377,7 @@ end() {
 			document.getElementById("gameOver").style.display = "block";
       document.getElementById("endMessage").innerHTML = `Game Over!`;
       document.getElementById("game-container").style.visibility = "hidden";
+      document.getElementById("hider1").style.visibility = "hidden";
 		}
 		if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 			console.log(this.dataLog);
@@ -2039,43 +2040,6 @@ var startGame = function() {
 
 var Questionnaire = function() {
 
-  var error_message = "<h1>Oops!</h1><p>Something went wrong submitting your HIT. This might happen if you lose your internet connection. Press the button to resubmit.</p><button id='resubmit'>Resubmit</button>";
-
-  record_responses = function() {
-
-    src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'submit'});
-
-    $('textarea').each( function(i, val) {
-      src_psiTurk.recordUnstructuredData(this.id, this.value);
-    });
-    $('select').each( function(i, val) {
-      src_psiTurk.recordUnstructuredData(this.id, this.value);    
-    });
-
-  };
-
-  prompt_resubmit = function() {
-    document.body.innerHTML = error_message;
-    $("#resubmit").click(resubmit);
-  };
-
-  resubmit = function() {
-    document.body.innerHTML = "<h1>Trying to resubmit...</h1>";
-    reprompt = setTimeout(prompt_resubmit, 10000);
-    
-    src_psiTurk.saveData({
-      success: function() {
-          clearInterval(reprompt); 
-                src_psiTurk.computeBonus('compute_bonus', function(){
-                  src_psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-                }); 
-
-
-      }, 
-      error: prompt_resubmit
-    });
-  };
-
   // Load the questionnaire snippet 
   src_psiTurk.showPage('postquestionnaire.html');
   src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'begin'});
@@ -2090,8 +2054,6 @@ var Questionnaire = function() {
             }, 
             error: prompt_resubmit});
   });
-    
-  
 };
 
 // Task object to keep track of the current phase

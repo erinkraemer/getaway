@@ -890,6 +890,7 @@ end() {
 			document.getElementById("gameOver").style.display = "block";
       document.getElementById("endMessage").innerHTML = `Game Over!`;
       document.getElementById("game-container").style.visibility = "hidden";
+      document.getElementById("hider1").style.visibility = "hidden";
 		}
 		if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 			console.log(this.dataLog);
