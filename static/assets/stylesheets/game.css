@@ -241,6 +241,7 @@ html {
 
 #next {
   cursor: pointer;
+  justify-content: center;
 }
 
 #splash {
