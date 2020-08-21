@@ -1372,7 +1372,7 @@ end() {
 			this.assets.road.stop();
 			this.activeResponse = false;
 			this.distractorTaskActive = false;
-			this.draw();
+			//this.draw();
       document.getElementById("slow").innerHTML = `Game Over!`;
       document.getElementById("next").style.visibility = "visible";
 		}
