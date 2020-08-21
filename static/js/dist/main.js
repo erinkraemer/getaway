@@ -1991,18 +1991,18 @@ var startGame = function() {
   canvas.height = 700;
   canvas.width = 500;
   const condition = Math.floor(Math.random()*100)%2;
-  let gamee = new src_game(canvas, ctx, condition, currentview);
+  let game = new src_game(canvas, ctx, condition);
   document.getElementById("how").innerHTML = `Identify objects by using the Q, W, and E keys. Collect as much points and lives as you can while avoiding the rocks!`;
   
   document.getElementById("play-btn").addEventListener("click", () => {
 
     car_controls(game);
     
-    gamee.start();
+    game.start();
 
-    
-    currentview = new Questionnaire();
-
+    if (game.gameOver) {
+      currentview = new Questionnaire();
+    }
 
     
   })
