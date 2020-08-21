@@ -839,7 +839,7 @@ newDistractorTask() {
 	var elapsedTime = d.getTime() - this.startTime;
 	console.log("Elapsed time: " + elapsedTime)
 	var quarterOverElapsedTime = (this.currentQuarter * QUARTER_TIME)/2;
-	console.log("Quarter over at: " + elapsedTime)
+	console.log("Quarter over at: " + quarterOverElapsedTime)
 	if (elapsedTime > quarterOverElapsedTime) {
 		this.currentQuarter += 1;
 		this.currentCondition = (this.currentCondition + 1) % 2;
