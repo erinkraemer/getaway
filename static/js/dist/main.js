@@ -1352,7 +1352,9 @@ newDistractorTask() {
 				// document.getElementById("lives").innerHTML = `${this.assets.car.life}`;
 				this.end();
 			}
-			animate();
+			if (!this.gameOver) {
+				animate();
+			}
 		}
 		else {
 			clearInterval(animate);
@@ -1375,7 +1377,7 @@ newDistractorTask() {
 			console.log('outersouce')
 			psiTurk.saveData();
 			datalogWritten = true;   
-			changeview();   
+			this.changeview();   
 			//Code to write to a server data log file goes here
 			// TODO: auto transition to next page.
 		}
