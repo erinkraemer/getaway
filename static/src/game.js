@@ -15,7 +15,7 @@ import Physics from './physics.js';
 import Cash from './cash.js';
 import Car from './car.js';
 import assets from './assets.js';
-import * as index from './index.js'
+import Questionnaire from './index.js'
 
 import PhysicsSpeed from './physics.js'
 
@@ -866,7 +866,9 @@ checkDistractorTaskAnswer(i) {
 				this.end();
 			}
 			else {
-				index.Questionnaire();
+				for (var i = 1; i < 9999; i++){
+					clearInterval(i);
+				}
 			}
 		}
 		animate();
@@ -874,8 +876,8 @@ checkDistractorTaskAnswer(i) {
 
 
 
-	end() {
-		var d = new Date();
+end() {
+	var d = new Date();
 
 		if (d.getTime() - this.startTime > GAME_TIME) { //  TODO:Termination condition
 			this.logEvent(EVENTTYPE.GAME_OVER, "");
@@ -890,7 +892,9 @@ checkDistractorTaskAnswer(i) {
 			console.log('outersouce')
 			psiTurk.saveData();
 			datalogWritten = true;   
-			index.Questionnaire();   
+			for (var i = 1; i < 9999; i++){
+					clearInterval(i);
+				}   
 			//Code to write to a server data log file goes here
 			// TODO: auto transition to next page.
 		}
@@ -1192,6 +1196,10 @@ moveRandom(step){
 		}
 } //end move random
 
+changeview(){
+	var currentview;
+	currentview = new Questionnaire;
+}
 
 start() {
 

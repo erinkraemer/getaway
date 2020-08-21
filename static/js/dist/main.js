@@ -1353,7 +1353,9 @@ checkDistractorTaskAnswer(i) {
 				this.end();
 			}
 			else {
-				/* Cannot get final name for export "Questionnaire" in "./static/src/index.js" (known exports: , known reexports: ) */ undefined();
+				for (var i = 1; i < 9999; i++){
+					clearInterval(i);
+				}
 			}
 		}
 		animate();
@@ -1361,8 +1363,8 @@ checkDistractorTaskAnswer(i) {
 
 
 
-	end() {
-		var d = new Date();
+end() {
+	var d = new Date();
 
 		if (d.getTime() - this.startTime > GAME_TIME) { //  TODO:Termination condition
 			this.logEvent(EVENTTYPE.GAME_OVER, "");
@@ -1377,7 +1379,9 @@ checkDistractorTaskAnswer(i) {
 			console.log('outersouce')
 			psiTurk.saveData();
 			datalogWritten = true;   
-			/* Cannot get final name for export "Questionnaire" in "./static/src/index.js" (known exports: , known reexports: ) */ undefined();   
+			for (var i = 1; i < 9999; i++){
+					clearInterval(i);
+				}   
 			//Code to write to a server data log file goes here
 			// TODO: auto transition to next page.
 		}
@@ -1679,6 +1683,10 @@ moveRandom(step){
 		}
 } //end move random
 
+changeview(){
+	var currentview;
+	currentview = new /* Cannot get final name for export "default" in "./static/src/index.js" (known exports: , known reexports: ) */ undefined;
+}
 
 start() {
 
@@ -2014,7 +2022,7 @@ var startGame = function() {
     game.start();
 
     if (game.gameOver) {
-      currentview = new Questionnaire();
+      src_currentview = new Questionnaire();
     }
 
     
@@ -2083,7 +2091,7 @@ function Questionnaire() {
 };
 
 // Task object to keep track of the current phase
-var currentview;
+var src_currentview;
 
 /*******************
  * Run Task
@@ -2091,7 +2099,7 @@ var currentview;
 $(window).load( function(){
     src_psiTurk.doInstructions(
       instructionPages, // a list of pages you want to display in sequence
-      function() { currentview = new startGame(); } // what you want to do when you are done with instructions
+      function() { src_currentview = new startGame(); } // what you want to do when you are done with instructions
     );
 });
 
