@@ -2043,14 +2043,14 @@ var startGame = function() {
 
     if (game.gameOver === true) {
       game.cleanUp();
-      game = new src_game(canvas, ctx);
+      currentview = new Questionnaire();
     }
     
     car_controls(game);
     
     game.start();
 
-    currentview = new Questionnaire();
+    
   })
 };
 

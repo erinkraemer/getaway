@@ -42,14 +42,14 @@ var startGame = function() {
 
     if (game.gameOver === true) {
       game.cleanUp();
-      game = new Game(canvas, ctx);
+      currentview = new Questionnaire();
     }
     
     setupControlListeners(game);
     
     game.start();
 
-    currentview = new Questionnaire();
+    
   })
 };
 
