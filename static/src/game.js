@@ -890,7 +890,7 @@ checkDistractorTaskAnswer(i) {
 			console.log('outersouce')
 			psiTurk.saveData();
 			datalogWritten = true;   
-			this.index.Questionnaire;   
+			this.index.Questionnaire();   
 			//Code to write to a server data log file goes here
 			// TODO: auto transition to next page.
 		}
