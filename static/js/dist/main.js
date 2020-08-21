@@ -1356,6 +1356,7 @@ checkDistractorTaskAnswer(i) {
 				for (var i = 1; i < 9999; i++){
 					clearInterval(i);
 				}
+				return;
 			}
 		}
 		animate();
@@ -1389,7 +1390,8 @@ end() {
 			datalogWritten = true;   
 			for (var i = 1; i < 9999; i++){
 					clearInterval(i);
-				}   
+				}
+			return;   
 			//Code to write to a server data log file goes here
 			// TODO: auto transition to next page.
 		}
