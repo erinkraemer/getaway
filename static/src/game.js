@@ -815,8 +815,8 @@ newDistractorTask() {
 	}
 
 	draw() {
-		if (!this.gameOver) {
-			const animate = () => {
+		const animate = () => {
+			if (!this.gameOver) {
 				const assets = Object.values(this.assets);
 				this.animate = requestAnimationFrame(animate);
 				this.ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -865,14 +865,13 @@ newDistractorTask() {
 				// document.getElementById("lives").innerHTML = `${this.assets.car.life}`;
 				this.end();
 			}
-			if (!this.gameOver) {
-				animate();
-			}
-		}
 		else {
 			clearInterval(animate);
 		}
 	}
+}
+
+
 
 	end() {
 		var d = new Date();
