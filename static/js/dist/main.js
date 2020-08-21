@@ -541,7 +541,7 @@ const CONTROLLER_REACTION_TIME = 2000;
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
 const DISTRACTOR_TASK_PAUSE = 1500;// in milliseconds
-const GAME_TIME = 600000/5;// 10 minutes in milliseconds
+const GAME_TIME = 600000/2;// 10 minutes in milliseconds
 const QUARTER_TIME = GAME_TIME/4;
 
 const MIN_RES_WIDTH = 1280;
@@ -839,9 +839,9 @@ newDistractorTask() {
 	var d = new Date();
 	var elapsedTime = d.getTime() - this.startTime;
 	console.log("Elapsed time: " + elapsedTime)
-	var quarterOverElapsedTime = (this.currentQuarter * QUARTER_TIME)/2;
-	console.log("Quarter over at: " + quarterOverElapsedTime)
-	if (elapsedTime > quarterOverElapsedTime) {
+	var quarterOverat = this.startTime + (this.currentQuarter * QUARTER_TIME);
+	console.log("Quarter over at: " + quarterOverat)
+	if (elapsedTime > quarterOverat) {
 		this.currentQuarter += 1;
 		this.currentCondition = (this.currentCondition + 1) % 2;
 		this.logEvent(EVENTTYPE.TREATMENT, this.currentCondition)
@@ -1378,6 +1378,7 @@ end() {
       document.getElementById("endMessage").innerHTML = `Game Over!`;
       document.getElementById("game-container").style.visibility = "hidden";
       document.getElementById("hider1").style.visibility = "hidden";
+      document.getElementById("distractorcontainer").style.visibility = "hidden";
 		}
 		if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 			console.log(this.dataLog);
