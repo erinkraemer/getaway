@@ -102,11 +102,11 @@ var prev_time = null;
 var prev_object_y = null;
 var max_time = 15;
 function indexOfSmallest(a) {
- var lowest = 0;
- for (var i = 1; i < a.length; i++) {
-	if (a[i] < a[lowest]) lowest = i;
-}
-return lowest;
+	var lowest = 0;
+	for (var i = 1; i < a.length; i++) {
+		if (a[i] < a[lowest]) lowest = i;
+	}
+	return lowest;
 }
 
 class Game {
@@ -260,9 +260,9 @@ class Game {
 			this.timeOfLastAttQuery>this.timeOfLastEnvQuery &&
 	(d.getTime() - this.timeOfLastAttQuery) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY ){ //If this is negative that means that we are yet to plan the environment query
 
-		 var durationLeft =  this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime() - 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY;
-	 if(durationLeft >0 )
-	 {
+			var durationLeft =  this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime() - 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY;
+		if(durationLeft >0 )
+		{
 			this.randomTimeIntervalEnvQuery = Math.random() * durationLeft; //Uniform sampling
 			console.log("Random time interval is "+this.randomTimeIntervalEnvQuery*0.001+" seconds.");
 			this.timeOfEnvQueryPlanning = d.getTime();
@@ -374,9 +374,9 @@ newDistractorTask() {
 		document.getElementById("distractorcontainer").style["visibility"] = "hidden";
 	}
 }
-	
 
-	checkDistractorTaskAnswer(i) {
+
+checkDistractorTaskAnswer(i) {
 
 		if(this.num3>=0){ // if num3 is greater than 0 then , then the distractor task is active
 			if (i == this.num3) {
@@ -864,8 +864,9 @@ newDistractorTask() {
 				// document.getElementById("lives").innerHTML = `${this.assets.car.life}`;
 				this.end();
 			}
-
-			animate();
+			if (!this.gameOver){
+				animate();
+			}
 		}
 	}
 
@@ -879,17 +880,13 @@ newDistractorTask() {
 			this.activeResponse = false;
 			this.distractorTaskActive = false;
 			this.draw();
-			document.getElementById("slow").innerHTML = `Game Over!`;
-			document.getElementById("how").style.visibility = "hidden";
-			document.getElementById("welcome").style.display = null;
 		}
 		if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 			console.log(this.dataLog);
 			//psiTurk.recordUnstructuredData('logs', this.dataLog);
 			console.log('outersouce')
 			psiTurk.saveData();
-			datalogWritten = true;   
-			return;     
+			datalogWritten = true;       
 			//Code to write to a server data log file goes here
 			// TODO: auto transition to next page.
 		}
@@ -1032,11 +1029,11 @@ closestObject() {
 		{          
 				if(this.rocks[0].recognizedType != "U") //and if recognized
 				{
-				 y_rocks = this.rocks[0].physics.y;
-				 identified_type = (this.rocks[0].recognizedType=="O")? 1 : ((this.rocks[0].recognizedType=="C") ? 0 : 2);
-				 object_x = this.rocks[0].physics.x;      
-			 }
-		 }
+					y_rocks = this.rocks[0].physics.y;
+					identified_type = (this.rocks[0].recognizedType=="O")? 1 : ((this.rocks[0].recognizedType=="C") ? 0 : 2);
+					object_x = this.rocks[0].physics.x;      
+				}
+			}
 			else {y_rocks = -10000;} //a number that places it far away
 
 		if(this.life && this.life.length>0) //check life
@@ -1044,11 +1041,11 @@ closestObject() {
 				//console.info("Closest is life");       
 				if(this.life[0].recognizedType != "U") //and if recogd
 				{
-				 y_life = this.life[0].physics.y;     
-				 identified_type = (this.life[0].recognizedType=="L")? 2 : ((this.life[0].recognizedType=="C") ? 0 : 1);
-				 object_x = this.life[0].physics.x; 
-			 }
-		 }
+					y_life = this.life[0].physics.y;     
+					identified_type = (this.life[0].recognizedType=="L")? 2 : ((this.life[0].recognizedType=="C") ? 0 : 1);
+					object_x = this.life[0].physics.x; 
+				}
+			}
 			else {y_life = -10000;} //a number that places it far away
 
 			var y_car = this.assets.car.physics.y;
@@ -1183,12 +1180,12 @@ moveRandom(step){
 	{
 		 //console.info("Controls: ","Random Left");
 		 this.moveLeft(step);
-	 }
-	 else
-	 {
+		}
+		else
+		{
 		 //console.info("Controls: ","Random Right");
 		 this.moveRight(step);
-	 }
+		}
 } //end move random
 
 start() {
@@ -1209,34 +1206,15 @@ start() {
 				if (!this.gameOver) {
 					var d = new Date();
 					var boxEmpty = Array.isArray(this.boxed) && !this.boxed.length;
-					
 
-					
-					
-					// var askEnvQuery = boxEmpty && ((d.getTime() - this.timeOfLastEnvQuery) > ENV_QUERY_INTERVAL);
-					// if (askEnvQuery) {
-					//   console.log("Asking Environment Query: " + (d.getTime() - this.timeOfLastEnvQuery).toString());
-					//   this.timeOfLastEnvQuery = d.getTime();
-					// }
-					
-
-					// var askAttQuery = boxEmpty // If no query is currently active
-					//   && !askEnvQuery // if Env query is not selected
-					//   && this.askAttentionQueryBasedOnAttentionProbFunction() // if we need to ask attention query based on probablity
-					//   && (d.getTime() - this.timeOfLastEnvQuery) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ATT_QUERY // if we have crossed a time window since last env query
-					//   && (this.timeOfLastEnvQuery + ENV_QUERY_INTERVAL - d.getTime()) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ATT_QUERY; // if we are far away from time window of future env query
-					
 					var askAttQuery = boxEmpty && ((d.getTime() - this.timeOfLastAttQuery) > ATT_QUERY_INTERVAL);
-					
 					
 					var askEnvQuery = boxEmpty // If no query is currently active
 						&& !askAttQuery // if Att query is not selected
 						&& this.askEnvironmentQueryBasedOnEnvironmentProbFunction() // if we need to ask env query based on probablity
 						&& (this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime()) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY; // if we are far away from time window of future env query ?? ERIN_TODO: Do we need this?
 						// YP: Edited this code to try and mane att queries periodic
-						/*&& (d.getTime() - this.timeOfLastAttQuery) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY // if we have crossed a time window since last env query
-						&& (this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime()) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY; // if we are far away from time window of future env query
-						*/
+						
 						console.log("Checking if env query: ", askEnvQuery, " and Box empty = " + boxEmpty + " at t = " + (d.getTime() - this.startTime));
 
 						if (askEnvQuery) {
@@ -1279,24 +1257,13 @@ start() {
 				this.updateDistractorTimeBar();
 			}, 50);
 
-
-			// setInterval(() => {
-			//   console.log(this.dataLog);
-			// }, 50000);
-
 			//--------------------AI agent---------------------
 			setInterval(() => { //controls
 				this.releaseControls(); //zero-order hold (release key)
 				var closestObjectType;
-				//closestObjectType = this.closestObject(); //get type of object that is closest
-				//console.info("Controls: Closest object type = ",closestObjectType);
-
-				// test new closestObjectCode
+				
 				var returns;
 				returns = this.closestObjectAndLocation();
-				// console.info("True type of closest obj= ",returns[0]);
-				// console.info("Id'd type of closest obj= ",returns[1]);
-				// console.info("x coordinate of closest obj = ",returns[2]); 
 
 
 				// control based on identified object
@@ -1309,24 +1276,8 @@ start() {
 					this.objectGetter(returns[2]);
 				}
 				else {
-					//do nothing //this.moveRandom(0.5);
+					//do nothing
 				}
-
-
-
-				//rock  avoider
-				/*if(closestObjectType==1) //obstacle
-				{
-					this.rockAvoider();
-				}
-				else if(closestObjectType==0 || closestObjectType==2) //object to get
-				{
-					this.objectGetter(closestObjectType);
-				}
-				else
-				{
-					this.moveRandom(0.5);
-				}*/
 			}, CONTROLLER_SAMPLING_TIME); //every 100ms
 
 			//-----------------end AI agent code---------------

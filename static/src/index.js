@@ -35,18 +35,18 @@ var startGame = function() {
   canvas.height = 700;
   canvas.width = 500;
   const condition = Math.floor(Math.random()*100)%2;
-  let game = new Game(canvas, ctx, condition);
+  let gamee = new Game(canvas, ctx, condition, currentview);
   document.getElementById("how").innerHTML = `Identify objects by using the Q, W, and E keys. Collect as much points and lives as you can while avoiding the rocks!`;
   
   document.getElementById("play-btn").addEventListener("click", () => {
 
     setupControlListeners(game);
     
-    game.start();
+    gamee.start();
 
-    if (game.gameOver == true) {
-      currentview = new Questionnaire();
-    }
+    
+    currentview = new Questionnaire();
+
 
     
   })
