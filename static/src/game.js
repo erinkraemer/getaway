@@ -53,7 +53,7 @@ const CONTROLLER_REACTION_TIME = 2000;
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
 const DISTRACTOR_TASK_PAUSE = 1500;// in milliseconds
-const GAME_TIME = 600000;// 10 minutes in milliseconds
+const GAME_TIME = 600000/5;// 10 minutes in milliseconds
 const QUARTER_TIME = GAME_TIME/4;
 
 const MIN_RES_WIDTH = 1280;
@@ -884,7 +884,8 @@ newDistractorTask() {
 			//psiTurk.recordUnstructuredData('logs', this.dataLog);
 			console.log('outersouce')
 			psiTurk.saveData();
-			datalogWritten = true;        
+			datalogWritten = true;   
+			return;     
 			//Code to write to a server data log file goes here
 			// TODO: auto transition to next page.
 		}
