@@ -505,6 +505,7 @@ const assets_assets = () => ({
 
 
 
+
 const game_redBox = new Image();
 game_redBox.src = "static/assets/images/redbox.png";
 const game_blueBox = new Image();
@@ -589,11 +590,11 @@ var prev_time = null;
 var prev_object_y = null;
 var max_time = 15;
 function indexOfSmallest(a) {
-	var lowest = 0;
-	for (var i = 1; i < a.length; i++) {
-		if (a[i] < a[lowest]) lowest = i;
-	}
-	return lowest;
+ var lowest = 0;
+ for (var i = 1; i < a.length; i++) {
+	if (a[i] < a[lowest]) lowest = i;
+}
+return lowest;
 }
 
 class game_Game {
@@ -747,9 +748,9 @@ class game_Game {
 			this.timeOfLastAttQuery>this.timeOfLastEnvQuery &&
 	(d.getTime() - this.timeOfLastAttQuery) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY ){ //If this is negative that means that we are yet to plan the environment query
 
-			var durationLeft =  this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime() - 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY;
-		if(durationLeft >0 )
-		{
+		 var durationLeft =  this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime() - 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY;
+	 if(durationLeft >0 )
+	 {
 			this.randomTimeIntervalEnvQuery = Math.random() * durationLeft; //Uniform sampling
 			console.log("Random time interval is "+this.randomTimeIntervalEnvQuery*0.001+" seconds.");
 			this.timeOfEnvQueryPlanning = d.getTime();
@@ -861,9 +862,9 @@ newDistractorTask() {
 		document.getElementById("distractorcontainer").style["visibility"] = "hidden";
 	}
 }
+	
 
-
-checkDistractorTaskAnswer(i) {
+	checkDistractorTaskAnswer(i) {
 
 		if(this.num3>=0){ // if num3 is greater than 0 then , then the distractor task is active
 			if (i == this.num3) {
@@ -1351,9 +1352,8 @@ checkDistractorTaskAnswer(i) {
 				// document.getElementById("lives").innerHTML = `${this.assets.car.life}`;
 				this.end();
 			}
-			if (!this.gameOver){
-				animate();
-			}
+
+			animate();
 		}
 	}
 
@@ -1366,14 +1366,14 @@ checkDistractorTaskAnswer(i) {
 			this.assets.road.stop();
 			this.activeResponse = false;
 			this.distractorTaskActive = false;
-			this.draw();
 		}
 		if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 			console.log(this.dataLog);
 			//psiTurk.recordUnstructuredData('logs', this.dataLog);
 			console.log('outersouce')
 			psiTurk.saveData();
-			datalogWritten = true;       
+			datalogWritten = true;   
+			changeview();   
 			//Code to write to a server data log file goes here
 			// TODO: auto transition to next page.
 		}
@@ -1516,11 +1516,11 @@ closestObject() {
 		{          
 				if(this.rocks[0].recognizedType != "U") //and if recognized
 				{
-					y_rocks = this.rocks[0].physics.y;
-					identified_type = (this.rocks[0].recognizedType=="O")? 1 : ((this.rocks[0].recognizedType=="C") ? 0 : 2);
-					object_x = this.rocks[0].physics.x;      
-				}
-			}
+				 y_rocks = this.rocks[0].physics.y;
+				 identified_type = (this.rocks[0].recognizedType=="O")? 1 : ((this.rocks[0].recognizedType=="C") ? 0 : 2);
+				 object_x = this.rocks[0].physics.x;      
+			 }
+		 }
 			else {y_rocks = -10000;} //a number that places it far away
 
 		if(this.life && this.life.length>0) //check life
@@ -1528,11 +1528,11 @@ closestObject() {
 				//console.info("Closest is life");       
 				if(this.life[0].recognizedType != "U") //and if recogd
 				{
-					y_life = this.life[0].physics.y;     
-					identified_type = (this.life[0].recognizedType=="L")? 2 : ((this.life[0].recognizedType=="C") ? 0 : 1);
-					object_x = this.life[0].physics.x; 
-				}
-			}
+				 y_life = this.life[0].physics.y;     
+				 identified_type = (this.life[0].recognizedType=="L")? 2 : ((this.life[0].recognizedType=="C") ? 0 : 1);
+				 object_x = this.life[0].physics.x; 
+			 }
+		 }
 			else {y_life = -10000;} //a number that places it far away
 
 			var y_car = this.assets.car.physics.y;
@@ -1667,13 +1667,18 @@ moveRandom(step){
 	{
 		 //console.info("Controls: ","Random Left");
 		 this.moveLeft(step);
-		}
-		else
-		{
+	 }
+	 else
+	 {
 		 //console.info("Controls: ","Random Right");
 		 this.moveRight(step);
-		}
+	 }
 } //end move random
+
+changeview(){
+	var currentview;
+	currentview = new index.Questionnaire;
+}
 
 start() {
 
@@ -1693,7 +1698,7 @@ start() {
 				if (!this.gameOver) {
 					var d = new Date();
 					var boxEmpty = Array.isArray(this.boxed) && !this.boxed.length;
-
+				
 					var askAttQuery = boxEmpty && ((d.getTime() - this.timeOfLastAttQuery) > ATT_QUERY_INTERVAL);
 					
 					var askEnvQuery = boxEmpty // If no query is currently active
@@ -1763,18 +1768,15 @@ start() {
 					this.objectGetter(returns[2]);
 				}
 				else {
-					//do nothing
+					//do nothing //this.moveRandom(0.5);
 				}
+
 			}, CONTROLLER_SAMPLING_TIME); //every 100ms
 
 			//-----------------end AI agent code---------------
-			if (!this.gameOver){
-				this.draw();
-				this.assets.road.move();
-			}
-			else {
-				return;
-			}
+
+			this.draw();
+			this.assets.road.move();
 
 		}
 		else {
@@ -1783,7 +1785,6 @@ start() {
 			document.getElementById("how").style.visibility = "hidden";
 			document.getElementById("welcome").style.display = null;
 			//this.LogIn the file (error) //TODO_ERIN
-			return;
 		}
 		return;
 	}
