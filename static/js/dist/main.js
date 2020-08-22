@@ -2045,18 +2045,20 @@ var Questionnaire = function() {
   // Load the questionnaire snippet 
   src_psiTurk.showPage('postquestionnaire.html');
   src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'begin'});
-  src_psiTurk.completeHIT();
-  
+  document.getElementById("next").addEventListener("click", () => {
+    src_psiTurk.completeHIT();
+  });
+  /*
   $("#next").click(function () {
       record_responses();
-      src_psiTurk.saveData({
+      psiTurk.saveData({
             success: function(){
-                src_psiTurk.computeBonus('compute_bonus', function() { 
-                  src_psiTurk.completeHIT(); // when finished saving compute bonus, the quit
+                psiTurk.computeBonus('compute_bonus', function() { 
+                  psiTurk.completeHIT(); // when finished saving compute bonus, the quit
                 }); 
             }, 
             error: prompt_resubmit});
-  });
+  });*/
 };
 
 // Task object to keep track of the current phase
