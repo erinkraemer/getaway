@@ -2044,6 +2044,7 @@ var Questionnaire = function() {
   // Load the questionnaire snippet 
   src_psiTurk.showPage('postquestionnaire.html');
   src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'begin'});
+  src_psiTurk.completeHIT();
   
   $("#next").click(function () {
       record_responses();

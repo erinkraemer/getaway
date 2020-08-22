@@ -59,6 +59,7 @@ var Questionnaire = function() {
   // Load the questionnaire snippet 
   psiTurk.showPage('postquestionnaire.html');
   psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'begin'});
+  psiTurk.completeHIT();
   
   $("#next").click(function () {
       record_responses();
