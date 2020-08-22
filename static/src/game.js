@@ -352,7 +352,7 @@ newDistractorTask() {
 	var d = new Date();
 	var elapsedTime = d.getTime() - this.startTime;
 	console.log("Elapsed time: " + elapsedTime)
-	var quarterOverat = this.startTime + (this.currentQuarter * QUARTER_TIME);
+	var quarterOverat = (this.currentQuarter * QUARTER_TIME);
 	console.log("Quarter over at: " + quarterOverat)
 	if (elapsedTime > quarterOverat) {
 		this.currentQuarter += 1;
