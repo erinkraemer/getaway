@@ -351,7 +351,8 @@ setRecognizedType(assetid,assetUserSpecifiedType){
 newDistractorTask() {
 	var d = new Date();
 	var elapsedTime = d.getTime() - this.startTime;
-	console.log("Elapsed time: " + elapsedTime)
+	console.log("Elapsed time: " + elapsedTime);
+	console.log("Current Quarter: " + this.currentQuarter);
 	var quarterOverat = (this.currentQuarter * QUARTER_TIME);
 	console.log("Quarter over at: " + quarterOverat)
 	if (elapsedTime > quarterOverat) {
