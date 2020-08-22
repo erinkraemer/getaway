@@ -116,7 +116,7 @@ class Game {
 		this.ctx = ctx;
 		this.startingCondition = condition;
 		this.currentCondition = condition;
-		this.currentQuarter = 1;
+		this.currentQuarter = 0;
 		this.gameOver = false;
 		this.rocks = [];
 		this.life = [];
