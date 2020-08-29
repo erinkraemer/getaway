@@ -2000,7 +2000,8 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 var pages = [
   "instructions/instruct-ready.html",
   "stage.html",
-  "postquestionnaire.html"
+  "postquestionnaire.html",
+  "closepopup.html"
 ];
 
 src_psiTurk.preloadPages(pages);
@@ -2052,9 +2053,9 @@ var Questionnaire = function() {
   // add the all-important message event listener
   window.addEventListener('message', function(event){
     
-    if (event.origin !== "https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ"){
+    /*if (event.origin !== "https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ"){
       return;
-    }
+    }*/
     
     if (event.data) {
         if (typeof event.data === 'string') {
