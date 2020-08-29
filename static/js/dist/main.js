@@ -2044,7 +2044,7 @@ var startGame = function() {
 var Questionnaire = function() {
   src_psiTurk.showPage('postquestionnaire.html');
   // load your iframe with a url specific to your participant
-  $('#iframe').attr('src','https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ&UID=' + uniqueId);
+  $('#iframe').attr('src','https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ?UID=' + uniqueId);
 
   // add the all-important message event listener
   window.addEventListener('message', function(event){
@@ -2059,12 +2059,13 @@ var Questionnaire = function() {
             if (q_message_array[0] == 'QualtricsEOS') {
                 src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
                 src_psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
-                 // display the 'continue' button, which takes them to the next page
-              $('#next').show();
+                $('#next').show();
             }
         }
     }
-})
+    // display the 'continue' button, which takes them to the next page
+    //
+});
 document.getElementById("next").addEventListener("click", () => {
   src_currentview = new Complete();
 });
@@ -2087,11 +2088,11 @@ $(window).load( function(){
     src_psiTurk.doInstructions(
       instructionPages, // a list of pages you want to display in sequence
       //only show the play game button once they have finished the video
-      /*player.addEventListener("onStateChange", function(state){
+      player.addEventListener("onStateChange", function(state){
         if(state === 0){
             getElementById("next").style.visibility = "visible";
         }
-      }),*/
+      }),
       function() { src_currentview = new startGame(); } // what you want to do when you are done with instructions
     );
 });
