@@ -2032,12 +2032,8 @@ var startGame = function() {
     game.start();
   });
 
-  document.getElementById("next2").addEventListener("click", () => {
-    src_currentview = new Questionnaire();
-  });
-
   document.getElementById("next").addEventListener("click", () => {
-    src_currentview = new Complete();
+    src_currentview = new Questionnaire();
   });
 };
 
@@ -2068,6 +2064,9 @@ var Questionnaire = function() {
     }
     // display the 'continue' button, which takes them to the next page
     $('#next').show();
+});
+document.getElementById("next").addEventListener("click", () => {
+  src_currentview = new Complete();
 });
 };
 

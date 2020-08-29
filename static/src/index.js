@@ -46,12 +46,8 @@ var startGame = function() {
     game.start();
   });
 
-  document.getElementById("next2").addEventListener("click", () => {
-    currentview = new Questionnaire();
-  });
-
   document.getElementById("next").addEventListener("click", () => {
-    currentview = new Complete();
+    currentview = new Questionnaire();
   });
 };
 
@@ -82,6 +78,9 @@ var Questionnaire = function() {
     }
     // display the 'continue' button, which takes them to the next page
     $('#next').show();
+});
+document.getElementById("next").addEventListener("click", () => {
+  currentview = new Complete();
 });
 };
 
