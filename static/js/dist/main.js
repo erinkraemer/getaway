@@ -2087,11 +2087,11 @@ $(window).load( function(){
     src_psiTurk.doInstructions(
       instructionPages, // a list of pages you want to display in sequence
       //only show the play game button once they have finished the video
-      player.addEventListener("onStateChange", function(state){
+      /*player.addEventListener("onStateChange", function(state){
         if(state === 0){
             getElementById("next").style.visibility = "visible";
         }
-      }),
+      }),*/
       function() { src_currentview = new startGame(); } // what you want to do when you are done with instructions
     );
 });
