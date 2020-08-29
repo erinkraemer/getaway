@@ -95,28 +95,42 @@ var Complete = function() {
 // Task object to keep track of the current phase
 var currentview;
 
+
 /*******************
 * Run Task
 ******************/
+
 $(window).load( function(){
-  psiTurk.doInstructions(instructionPages);
-  var tag = document.createElement('script');
-    tag.id = 'iframe-demo';
-    tag.src = 'https://www.youtube.com/iframe_api';
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    
-    var player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('existing-iframe-example', {});
-    }
-    player.addEventListener("onStateChange", function(state){
+  psiTurk.doInstructions(
+    instructionPages, // a list of pages you want to display in sequence
+    //only show the play game button once they have finished the video
+    /*player.addEventListener("onStateChange", function(state){
       if(state === 0){
         getElementById("next").style.visibility = "visible";
       }
-    }),
-    
-    document.getElementById("next").addEventListener("click", () => {
-      currentview = new startGame();
-    }); // what you want to do when you are done with instructions
-});
+    }),*/
+    function() { 
+      var tag = document.createElement('script')
+      tag.id = 'iframe-demo';
+      tag.src = 'https://www.youtube.com/iframe_api';
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('existing-iframe-example', {});
+      }
+      player.addEventListener("onStateChange", function(state){
+        if(state === 0){
+          getElementById("next").style.visibility = "visible";
+        }
+      }),
+      
+      document.getElementById("next").addEventListener("click", () => {
+        currentview = new startGame();
+      });
+    } // what you want to do when you are done with instructions
+    );
+  });
+  
+  
