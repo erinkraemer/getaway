@@ -48,6 +48,10 @@ var startGame = function() {
   document.getElementById("next").addEventListener("click", () => {
     currentview = new Questionnaire();
   });
+
+  document.getElementById("next").addEventListener("click", () => {
+    currentview = new Complete();
+  });
 };
 
 /****************
@@ -55,24 +59,36 @@ var startGame = function() {
 ****************/
 
 var Questionnaire = function() {
-
-  // Load the questionnaire snippet 
   psiTurk.showPage('postquestionnaire.html');
-  psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'begin'});
-  document.getElementById("next").addEventListener("click", () => {
-    psiTurk.completeHIT();
-  });
-  /*
-  $("#next").click(function () {
-      record_responses();
-      psiTurk.saveData({
-            success: function(){
-                psiTurk.computeBonus('compute_bonus', function() { 
-                  psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-                }); 
-            }, 
-            error: prompt_resubmit});
-  });*/
+  // load your iframe with a url specific to your participant
+  $('#iframe').attr('src','https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ&UID=' + uniqueId);
+
+  // add the all-important message event listener
+  window.addEventListener('message', function(event){
+    
+    if (event.origin !== "https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ"){
+      return;
+    }
+    
+    if (event.data) {
+        if (typeof event.data === 'string') {
+            q_message_array = event.data.split('|');
+            if (q_message_array[0] == 'QualtricsEOS') {
+                psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
+                psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
+            }
+        }
+    }
+    // display the 'continue' button, which takes them to the next page
+    $('#next').show();
+});
+};
+
+/****************
+* Complete      *
+****************/
+var Complete = function() {
+  psiTurk.showPage('closepopup.html');
 };
 
 // Task object to keep track of the current phase
@@ -84,8 +100,12 @@ var currentview;
 $(window).load( function(){
     psiTurk.doInstructions(
       instructionPages, // a list of pages you want to display in sequence
+      //only show the play game button once they have finished the video
+      player.addEventListener("onStateChange", function(state){
+        if(state === 0){
+            getElementById("next").style.visibility = "visible";
+        }
+      }),
       function() { currentview = new startGame(); } // what you want to do when you are done with instructions
     );
 });
-
-

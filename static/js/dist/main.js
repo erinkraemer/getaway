@@ -541,8 +541,8 @@ const CONTROLLER_REACTION_TIME = 2000;
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
 const DISTRACTOR_TASK_PAUSE = 1500;// in milliseconds
-const GAME_TIME = 300000;// 5 minutes in milliseconds
-const QUARTER_TIME = 75000;
+const GAME_TIME = 600;// 5 minutes in milliseconds
+const QUARTER_TIME = 150;
 
 const MIN_RES_WIDTH = 1280;
 const MIN_RES_HEIGHT = 800;
@@ -2034,6 +2034,10 @@ var startGame = function() {
   document.getElementById("next").addEventListener("click", () => {
     src_currentview = new Questionnaire();
   });
+
+  document.getElementById("next").addEventListener("click", () => {
+    src_currentview = new Complete();
+  });
 };
 
 /****************
@@ -2041,24 +2045,36 @@ var startGame = function() {
 ****************/
 
 var Questionnaire = function() {
-
-  // Load the questionnaire snippet 
   src_psiTurk.showPage('postquestionnaire.html');
-  src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'begin'});
-  document.getElementById("next").addEventListener("click", () => {
-    src_psiTurk.completeHIT();
-  });
-  /*
-  $("#next").click(function () {
-      record_responses();
-      psiTurk.saveData({
-            success: function(){
-                psiTurk.computeBonus('compute_bonus', function() { 
-                  psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-                }); 
-            }, 
-            error: prompt_resubmit});
-  });*/
+  // load your iframe with a url specific to your participant
+  $('#iframe').attr('src','https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ&UID=' + uniqueId);
+
+  // add the all-important message event listener
+  window.addEventListener('message', function(event){
+    
+    if (event.origin !== "https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ"){
+      return;
+    }
+    
+    if (event.data) {
+        if (typeof event.data === 'string') {
+            q_message_array = event.data.split('|');
+            if (q_message_array[0] == 'QualtricsEOS') {
+                src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
+                src_psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
+            }
+        }
+    }
+    // display the 'continue' button, which takes them to the next page
+    $('#next').show();
+});
+};
+
+/****************
+* Complete      *
+****************/
+var Complete = function() {
+  src_psiTurk.showPage('closepopup.html');
 };
 
 // Task object to keep track of the current phase
@@ -2070,12 +2086,15 @@ var src_currentview;
 $(window).load( function(){
     src_psiTurk.doInstructions(
       instructionPages, // a list of pages you want to display in sequence
+      //only show the play game button once they have finished the video
+      player.addEventListener("onStateChange", function(state){
+        if(state === 0){
+            getElementById("next").style.visibility = "visible";
+        }
+      }),
       function() { src_currentview = new startGame(); } // what you want to do when you are done with instructions
     );
 });
-
-
-
 
 /***/ })
 /******/ ]);
