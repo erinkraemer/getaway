@@ -46,7 +46,7 @@ var startGame = function() {
     game.start();
   });
 
-  document.getElementById("next").addEventListener("click", () => {
+  document.getElementById("next2").addEventListener("click", () => {
     currentview = new Questionnaire();
   });
 

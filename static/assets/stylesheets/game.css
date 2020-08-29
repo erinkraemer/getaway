@@ -244,6 +244,11 @@ html {
   justify-content: center;
 }
 
+#next2 {
+  cursor: pointer;
+  justify-content: center;
+}
+
 #splash {
   display: flex;
   justify-content: center;
