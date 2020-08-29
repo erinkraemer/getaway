@@ -40,12 +40,12 @@ var startGame = function() {
   document.getElementById("how").innerHTML = `Identify objects by using the Q, W, and E keys. Collect as much points and lives as you can while avoiding the rocks!`;
   
   document.getElementById("play-btn").addEventListener("click", () => {
-
+    
     setupControlListeners(game);
     
     game.start();
   });
-
+  
   document.getElementById("next").addEventListener("click", () => {
     currentview = new Questionnaire();
   });
@@ -59,26 +59,26 @@ var Questionnaire = function() {
   psiTurk.showPage('postquestionnaire.html');
   // load your iframe with a url specific to your participant
   $('#iframe').attr('src','https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ?UID=' + uniqueId);
-
+  
   // add the all-important message event listener
   window.addEventListener('message', function(event){
     
     /*if (event.origin !== "https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ"){
-      return;
-    }*/
-    
-    if (event.data) {
-        if (typeof event.data === 'string') {
-            q_message_array = event.data.split('|');
-            if (q_message_array[0] == 'QualtricsEOS') {
-                psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
-                psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
-                $('#next').show();
-            }
-        }
+    return;
+  }*/
+  
+  if (event.data) {
+    if (typeof event.data === 'string') {
+      q_message_array = event.data.split('|');
+      if (q_message_array[0] == 'QualtricsEOS') {
+        psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
+        psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
+        $('#next').show();
+      }
     }
-    // display the 'continue' button, which takes them to the next page
-    //
+  }
+  // display the 'continue' button, which takes them to the next page
+  //
 });
 document.getElementById("next").addEventListener("click", () => {
   currentview = new Complete();
@@ -96,17 +96,27 @@ var Complete = function() {
 var currentview;
 
 /*******************
- * Run Task
- ******************/
+* Run Task
+******************/
 $(window).load( function(){
-    psiTurk.doInstructions(
-      instructionPages, // a list of pages you want to display in sequence
-      //only show the play game button once they have finished the video
-      player.addEventListener("onStateChange", function(state){
-        if(state === 0){
-            getElementById("next").style.visibility = "visible";
-        }
-      }),
-      function() { currentview = new startGame(); } // what you want to do when you are done with instructions
-    );
+  psiTurk.doInstructions(instructionPages);
+  var tag = document.createElement('script');
+    tag.id = 'iframe-demo';
+    tag.src = 'https://www.youtube.com/iframe_api';
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('existing-iframe-example', {});
+    }
+    player.addEventListener("onStateChange", function(state){
+      if(state === 0){
+        getElementById("next").style.visibility = "visible";
+      }
+    }),
+    
+    document.getElementById("next").addEventListener("click", () => {
+      currentview = new startGame();
+    }); // what you want to do when you are done with instructions
 });
