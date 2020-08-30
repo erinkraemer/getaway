@@ -2058,7 +2058,7 @@ var Questionnaire = function() {
   
   if (event.data) {
     if (typeof event.data === 'string') {
-      q_message_array = event.data.split('|');
+      var q_message_array = event.data.split('|');
       if (q_message_array[0] == 'QualtricsEOS') {
         src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
         src_psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
