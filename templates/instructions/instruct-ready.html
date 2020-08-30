@@ -32,7 +32,7 @@
             }
             
             function onPlayerStateChange(event) {
-                if (state === 0) {
+                if (event.data === YT.PlayerState.ENDED) {
                     getElementById("next").style.visibility = "visible";
                 }
             }
