@@ -2037,6 +2037,8 @@ var startGame = function() {
   });
 };
 
+window.onYouTubeIframeAPIReady = function() {}
+
 /****************
 * Questionnaire *
 ****************/
@@ -2096,21 +2098,35 @@ $(window).load( function(){
       }
     }),*/
     function() { 
-      var tag = document.createElement('script')
-      tag.id = 'iframe-demo';
+      var tag = document.createElement('script');
+      //tag.id = 'iframe-demo';
       tag.src = 'https://www.youtube.com/iframe_api';
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
       
       var player;
       function onYouTubeIframeAPIReady() {
-        player = new YT.Player('existing-iframe-example', {});
+          player = new YT.Player('player', {
+            width : '850',
+            height : '458',
+            videoId: '2z3OQov5oiE',
+            controls : 1,
+            events: {
+              'onReady': onPlayerReady,
+              'onStateChange': onPlayerStateChange
+            }
+        });
       }
-      player.addEventListener("onStateChange", function(state){
-        if(state === 0){
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      function onPlayerStateChange(event) {
+        if (state === 0) {
           getElementById("next").style.visibility = "visible";
         }
-      }),
+      }
       
       document.getElementById("next").addEventListener("click", () => {
         src_currentview = new startGame();
