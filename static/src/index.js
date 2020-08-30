@@ -15,6 +15,7 @@ var pages = [
   "instructions/instruct-ready.html",
   "stage.html",
   "postquestionnaire.html",
+  "thanks-mturksubmit.html",
   "closepopup.html"
 ];
 
@@ -83,16 +84,29 @@ var Questionnaire = function() {
   //
 });
 document.getElementById("next").addEventListener("click", () => {
+  currentview = new mthanks();
+});
+
+document.getElementById("next").addEventListener("click", () => {
   currentview = new Complete();
 });
 };
 
 /****************
-* Complete      *
+* Close popup      *
+****************/
+var mthanks = function() {
+  psiTurk.showPage('thanks-mturksubmit.html');
+};
+
+/****************
+* Close popup      *
 ****************/
 var Complete = function() {
   psiTurk.showPage('closepopup.html');
 };
+
+
 
 // Task object to keep track of the current phase
 var currentview;
