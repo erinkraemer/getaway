@@ -2002,6 +2002,7 @@ var pages = [
   "stage.html",
   "postquestionnaire.html",
   "thanks-mturksubmit.html",
+  "complete.html",
   "closepopup.html"
 ];
 
@@ -2088,6 +2089,16 @@ var mthanks = function() {
 * Close popup      *
 ****************/
 var Complete = function() {
+  src_psiTurk.showPage('complete.html');
+  document.getElementById("next").addEventListener("click", () => {
+    src_currentview = new Closepage();
+  });
+};
+
+/****************
+* Close popup      *
+****************/
+var Closepage = function() {
   src_psiTurk.showPage('closepopup.html');
 };
 
