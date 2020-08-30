@@ -60,7 +60,7 @@ window.onYouTubeIframeAPIReady = function() {}
 var Questionnaire = function() {
   psiTurk.showPage('postquestionnaire.html');
   // load your iframe with a url specific to your participant
-  $('#iframe').attr('src','https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ?UID=' + uniqueId);
+  $('#questionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ?UID=' + uniqueId));
   
   // add the all-important message event listener
   window.addEventListener('message', function(event){
