@@ -2062,7 +2062,7 @@ var Questionnaire = function() {
       if (q_message_array[0] == 'QualtricsEOS') {
         src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
         src_psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
-          document.getElementById("next").style.visibility = "visible";
+        document.getElementById("next").style.visibility = "visible";
       }
     }
   }
@@ -2072,10 +2072,6 @@ var Questionnaire = function() {
 document.getElementById("next").addEventListener("click", () => {
   src_currentview = new mthanks();
 });
-
-document.getElementById("next").addEventListener("click", () => {
-  src_currentview = new Complete();
-});
 };
 
 /****************
@@ -2083,6 +2079,9 @@ document.getElementById("next").addEventListener("click", () => {
 ****************/
 var mthanks = function() {
   src_psiTurk.showPage('thanks-mturksubmit.html');
+  document.getElementById("next").addEventListener("click", () => {
+    src_currentview = new Complete();
+  });
 };
 
 /****************
