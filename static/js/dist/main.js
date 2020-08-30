@@ -2062,7 +2062,7 @@ var Questionnaire = function() {
       if (q_message_array[0] == 'QualtricsEOS') {
         src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
         src_psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
-        $('#next').show();
+          document.getElementById("next").style.visibility = "visible";
       }
     }
   }
