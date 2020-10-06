@@ -541,7 +541,7 @@ const CONTROLLER_REACTION_TIME = 2000;
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
 const DISTRACTOR_TASK_PAUSE = 1500;// in milliseconds
-const GAME_TIME = 600;// 5 minutes in milliseconds
+const GAME_TIME = 600000;// 10 minutes in milliseconds
 const QUARTER_TIME = 150;
 
 const MIN_RES_WIDTH = 1280;
@@ -2005,7 +2005,7 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 // All pages to be loaded
 var pages = [
-  "instructions/instruct-ready.html",
+  //"instructions/instruct-ready.html",
   "stage.html",
   "postquestionnaire.html",
   "thanks-mturksubmit.html",
@@ -2120,20 +2120,20 @@ var src_currentview;
 ******************/
 
 $(window).load( function(){
-  src_psiTurk.doInstructions(
-    instructionPages, // a list of pages you want to display in sequence
-    //only show the play game button once they have finished the video
-    /*player.addEventListener("onStateChange", function(state){
-      if(state === 0){
-        getElementById("next").style.visibility = "visible";
-      }
-    }),*/
-    function() {
+  // psiTurk.doInstructions(
+  //   instructionPages, // a list of pages you want to display in sequence
+  //   //only show the play game button once they have finished the video
+  //   /*player.addEventListener("onStateChange", function(state){
+  //     if(state === 0){
+  //       getElementById("next").style.visibility = "visible";
+  //     }
+  //   }),*/
+    //function() {
       document.getElementById("next").addEventListener("click", () => {
         src_currentview = new startGame();
       });
-    } // what you want to do when you are done with instructions
-    );
+    //} // what you want to do when you are done with instructions
+    //);
   })
   
   

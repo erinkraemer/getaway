@@ -142,11 +142,11 @@ $(window).load( function(){
   //       getElementById("next").style.visibility = "visible";
   //     }
   //   }),*/
-    function() {
+    //function() {
       document.getElementById("next").addEventListener("click", () => {
         currentview = new startGame();
       });
-    } // what you want to do when you are done with instructions
+    //} // what you want to do when you are done with instructions
     //);
   })
   
