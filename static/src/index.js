@@ -19,7 +19,7 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 // All pages to be loaded
 var pages = [
-  "instructions/instruct-ready.html",
+  //"instructions/instruct-ready.html",
   "stage.html",
   "postquestionnaire.html",
   "thanks-mturksubmit.html",
@@ -134,20 +134,20 @@ var currentview;
 ******************/
 
 $(window).load( function(){
-  psiTurk.doInstructions(
-    instructionPages, // a list of pages you want to display in sequence
-    //only show the play game button once they have finished the video
-    /*player.addEventListener("onStateChange", function(state){
-      if(state === 0){
-        getElementById("next").style.visibility = "visible";
-      }
-    }),*/
+  // psiTurk.doInstructions(
+  //   instructionPages, // a list of pages you want to display in sequence
+  //   //only show the play game button once they have finished the video
+  //   /*player.addEventListener("onStateChange", function(state){
+  //     if(state === 0){
+  //       getElementById("next").style.visibility = "visible";
+  //     }
+  //   }),*/
     function() {
       document.getElementById("next").addEventListener("click", () => {
         currentview = new startGame();
       });
     } // what you want to do when you are done with instructions
-    );
+    //);
   })
   
   
