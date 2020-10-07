@@ -280,9 +280,9 @@ class Game {
 			
 	// 	}
 		
-		askEnvironmentQueryBasedOnEnvironmentProbFunction() {
+		askAttentionQueryBasedOnEnvironmentProbFunction() {
 			//GAME_LOGIC:
-			var a = Math.random();
+			var a = Math.random()*10;
 
 			if (a%3==0 || a%3==1) {
 				return true;
@@ -1243,12 +1243,31 @@ class Game {
 											var d = new Date();
 											var boxEmpty = Array.isArray(this.boxed) && !this.boxed.length;
 											
+											console.log("assetidCounter: " + this.assetidCounter);
 											//GAME_LOGIC_CHANGE:
 											// OLD: var askAttQuery = boxEmpty && ((d.getTime() - this.timeOfLastAttQuery) > ATT_QUERY_INTERVAL);
-											var askAttQuery = boxEmpty && (this.assetidCounter%4) == 0;
+											var N_QUERY_PER_ENV_QUERY = 3;
+											var askEnvQuery = boxEmpty && (this.assetidCounter%N_QUERY_PER_ENV_QUERY) == 0;
+
+											if(askEnvQuery)
+											{
+												console.log("Dtermining when to ask attention query!");
+												idToAskAttQuery = Math.floor(Math.random()*N_QUERY_PER_ENV_QUERY)-1; // -1 to N_QUERY_PER_ENV_QUERY-2 || -1 to 1 || For value 3 -> E 0 1 E 0 1 E  
+												idToAskAttQuery = idToAskAttQuery == -1? -100: idToAskAttQuery;
+												postEnvQueryCounter = -1;
+											}
 											
+											var askAttQuery = false;
+											//************* */
+												if(postEnvQueryCounter == idToAskAttQuery){
+														askAttQuery = true && boxEmpty;
+												}
+												postEnvQueryCounter++;
+											
+											//********************** */
+
 											//GAME_LOGIC_CHANGE:
-											var askEnvQuery = boxEmpty && !askAttQuery && this.askEnvironmentQueryBasedOnEnvironmentProbFunction(); // If no query is currently active
+											//var askAttQuery = boxEmpty && !askEnvQuery && this.askAttentionQueryBasedOnEnvironmentProbFunction(); // If no query is currently active
 											
 											//OLD: && this.askEnvironmentQueryBasedOnEnvironmentProbFunction() // if we need to ask env query based on probablity
 											//OLD && (this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime()) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY; // if we are far away from time window of future env query ?? ERIN_TODO: Do we need this?
