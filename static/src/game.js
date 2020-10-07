@@ -99,6 +99,9 @@ const EVENTTYPE = Object.freeze({
 	"GAME_START":"GAME_START"
 });
 
+var idToAskAttQuery = -200; 
+var postEnvQueryCounter= -403;
+
 var prev_time = null;
 var prev_object_y = null;
 var max_time = 15;
@@ -1251,10 +1254,11 @@ class Game {
 
 											if(askEnvQuery)
 											{
-												console.log("Dtermining when to ask attention query!");
+												
 												idToAskAttQuery = Math.floor(Math.random()*N_QUERY_PER_ENV_QUERY)-1; // -1 to N_QUERY_PER_ENV_QUERY-2 || -1 to 1 || For value 3 -> E 0 1 E 0 1 E  
 												idToAskAttQuery = idToAskAttQuery == -1? -100: idToAskAttQuery;
 												postEnvQueryCounter = -1;
+												console.log("Going to ask attention query at position:"+idToAskAttQuery);
 											}
 											
 											var askAttQuery = false;
