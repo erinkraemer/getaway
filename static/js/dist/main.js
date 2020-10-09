@@ -854,10 +854,10 @@ class game_Game {
 		newDistractorTask() {
 			var d = new Date();
 			var elapsedTime = d.getTime() - this.startTime;
-			console.log("Elapsed time: " + elapsedTime);
-			console.log("Current Quarter: " + this.currentQuarter);
+			//console.log("Elapsed time: " + elapsedTime);
+			//console.log("Current Quarter: " + this.currentQuarter);
 			var quarterOverat = (this.currentQuarter * QUARTER_TIME);
-			console.log("Quarter over at: " + quarterOverat)
+			//console.log("Quarter over at: " + quarterOverat)
 			if (elapsedTime > quarterOverat) {
 				this.currentQuarter += 1;
 				this.currentCondition = (this.currentCondition + 1) % 2;
@@ -1741,7 +1741,6 @@ class game_Game {
 
 											if(askEnvQuery)
 											{
-												
 												idToAskAttQuery = Math.floor(Math.random()*N_QUERY_PER_ENV_QUERY)-1; // -1 to N_QUERY_PER_ENV_QUERY-2 || -1 to 1 || For value 3 -> E 0 1 E 0 1 E  
 												idToAskAttQuery = idToAskAttQuery == -1? -100: idToAskAttQuery;
 												postEnvQueryCounter = -1;
@@ -1767,7 +1766,7 @@ class game_Game {
 											//GAME_LOGIC_CHANGE:
 											var noResponseObject = !askEnvQuery && !askAttQuery;
 											
-											console.log("Checking if env query: ", askEnvQuery, " and Box empty = " + boxEmpty + " at t = " + (d.getTime() - this.startTime));
+											//console.log("Checking if env query: ", askEnvQuery, " and Box empty = " + boxEmpty + " at t = " + (d.getTime() - this.startTime));
 											
 											if (askEnvQuery) {
 												console.log("Asking Environment Query: " + (d.getTime() - this.timeOfLastEnvQuery).toString() + " at t = " + (d.getTime() - this.startTime));
