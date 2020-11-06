@@ -377,6 +377,7 @@ class Game {
 				this.logEvent(EVENTTYPE.TREATMENT, this.currentCondition)
 			}
 			if (this.currentCondition){
+				document.getElementById("distractorWrapper").style.visibility = "hidden";
 				document.getElementById("distractorcontainer").style["visibility"] = "visible";
 				var d = new Date();
 				this.num2 = Math.floor(Math.random() * 100); // An integer between 0 to 99
@@ -390,6 +391,7 @@ class Game {
 			}
 			else{
 				document.getElementById("distractorcontainer").style["visibility"] = "hidden";
+				document.getElementById("distractorWrapper").style.visibility = "visible";
 			}
 		}
 		
@@ -776,6 +778,7 @@ class Game {
 							//console.log("Boxed Object Reconized Type: "+asset.recognizedType);
 							
 							if (this.boxed.indexOf(asset.assetid) == -1) {
+								//CHANGES: THIS.BOXED.LENGTH CHANGE remove and log behavior
 								// console.log("After adding");
 								// GAME_LOGIC:
 								if (this.boxed.length == 0 && (this.queryType == QUERYTYPE.environment || this.queryType == QUERYTYPE.attention)){ // Ensures that only one object is queried upon at a time, even if multiple objects are unrecognized

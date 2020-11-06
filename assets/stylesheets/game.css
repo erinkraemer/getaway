@@ -123,7 +123,18 @@ html {
   height: 250px;
   width: 600px;
   background-color: #B3B3B3;
-  
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto Condensed, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border: 20px solid black;
+}
+
+.distractorWrapper {
+  height: 250px;
+  width: 600px;
+  background-color: #B3B3B3;
   font-size: 64px;
   display: flex;
   justify-content: center;
