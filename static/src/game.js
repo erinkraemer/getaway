@@ -737,8 +737,8 @@ class Game {
 			
 			drawAsset(asset) {
 				const { physics, sprite, box, marked, distance } = asset;
-				console.log("sprite height: " + str(sprite.height))
-				console.log("canvas height: " + str(canvas.height))
+				console.log("sprite height: " + toString(sprite.height))
+				console.log("canvas height: " + toString(canvas.height))
 				
 				// redraw road
 				if (asset instanceof Road && asset.physics.y >= 0) {
