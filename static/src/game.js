@@ -133,7 +133,7 @@ class Game {
 		this.lifeImgLists = [];
 		this.moneyImgLists = [];
 		this.obstacleImgLists = [];
-		this.numImgs = 16;
+		this.numImgs = 6;
 		this.assetidCounter = -1;
 		this.activeResponse = false; // For the main task
 		this.stopBlink = false;
