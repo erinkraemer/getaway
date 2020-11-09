@@ -139,6 +139,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-style: black;
   font-family: Roboto Condensed, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   border: 20px solid black;
 }
