@@ -745,13 +745,13 @@ class game_Game {
 	
 	// askEnvironmentQueryBasedOnEnvironmentProbFunction_deprecated() {
 	// 	var d = new Date();
-		
+	
 	// 	// var a = Math.random();
 	// 	// var thresh = 1-Math.exp(-1 * (d.getTime() - this.timeOfLastAttQuery) / EXP_PROB_TIME_CONSTANT);
 	// 	if(this.timeOfEnvQueryPlanning<0 && 
 	// 		this.timeOfLastAttQuery>this.timeOfLastEnvQuery &&
 	// 		(d.getTime() - this.timeOfLastAttQuery) > 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY ){ //If this is negative that means that we are yet to plan the environment query
-				
+		
 	// 			var durationLeft =  this.timeOfLastAttQuery + ATT_QUERY_INTERVAL - d.getTime() - 0.5 * NO_QUERY_TIME_WINDOW_FOR_ENV_QUERY;
 	// 			if(durationLeft >0 )
 	// 			{
@@ -761,16 +761,16 @@ class game_Game {
 	// 			}
 	// 			return(false);
 	// 		}
-			
+	
 	// 		if(d.getTime() - this.timeOfEnvQueryPlanning > this.randomTimeIntervalEnvQuery)
 	// 		{
 	// 			this.timeOfEnvQueryPlanning = -1;
 	// 			return(true);
 	// 		}
-			
+	
 	// 	}
-		
-		askAttentionQueryBasedOnEnvironmentProbFunction() {
+	
+	askAttentionQueryBasedOnEnvironmentProbFunction() {
 			//GAME_LOGIC:
 			var a = Math.random()*10;
 
@@ -1066,8 +1066,8 @@ class game_Game {
 						&& !this.queryTimeElapsed
 						&& !this.queryUserResponded
 						) {
-							if (this.queryType == QUERYTYPE.attention) {
-								this.setRecognizedType(this.boxed[0], this.boxed[0][0]);
+						if (this.queryType == QUERYTYPE.attention) {
+							this.setRecognizedType(this.boxed[0], this.boxed[0][0]);
 								// Makes the controller act SAFE
 							}
 							else if(this.queryType == QUERYTYPE.environment) {
@@ -1169,11 +1169,11 @@ class game_Game {
 				var a = Math.random();
 				
 				if (a > 0 && a < 0.33)
-				return (OBJECTTYPE.obstacle);
+					return (OBJECTTYPE.obstacle);
 				else if (a >= 0.33 && a < 0.66)
-				return (OBJECTTYPE.life);
+					return (OBJECTTYPE.life);
 				else
-				return (OBJECTTYPE.cash);
+					return (OBJECTTYPE.cash);
 			}
 			
 			boxDistanceProbablityFunction() {
@@ -1261,8 +1261,8 @@ class game_Game {
 					// draw everything else
 					this.ctx.drawImage(sprite.img, 0, 0, sprite.width, sprite.height,
 						physics.x, physics.y, sprite.width * sprite.width_scale, sprite.height * sprite.height_scale);
-						if (marked &&  physics.y>distance*this.canvas.height) {
-							
+					if (marked &&  physics.y>distance*this.canvas.height) {
+						
 							//this.ctx.drawImage(box.img, 0, 0, box.width, box.height, physics.x, physics.y, box.width*sprite.width_scale, box.height*sprite.height_scale);
 							
 							//console.log("Boxed Object Reconized Type: "+asset.recognizedType);
@@ -1424,8 +1424,8 @@ class game_Game {
 					this.rocks.push(new obstacle(new src_physics(
 						Math.floor(Math.random() * 310) + 80,
 						-20),this.rockImgSrc,bool_marked,(OBJECTTYPE.obstacle+(++this.assetidCounter).toString()), boxDist
-						));
-						
+					));
+					
 						//DATA_LOG
 						this.logEvent(EVENTTYPE.CREATE_ASSET, OBJECTTYPE.obstacle + this.assetidCounter.toString());
 						if (this.queryType == QUERYTYPE.environment) {
@@ -1441,7 +1441,7 @@ class game_Game {
 						this.life.push(new life(new src_physics(
 							Math.floor(Math.random() * 310) + 80,
 							-20), this.lifeImgSrc, bool_marked, (OBJECTTYPE.life + (++this.assetidCounter).toString()), boxDist
-							));
+						));
 							//DATA_LOG
 							this.logEvent(EVENTTYPE.CREATE_ASSET, OBJECTTYPE.life + this.assetidCounter.toString());
 							if (this.queryType == QUERYTYPE.environment) {
@@ -1457,8 +1457,8 @@ class game_Game {
 							this.cash.push(new cash(new src_physics(
 								Math.floor(Math.random() * 310) + 80,
 								-20), this.moneyImgSrc, bool_marked, (OBJECTTYPE.cash + (++this.assetidCounter).toString()), boxDist
-								));
-								
+							));
+							
 								//DATA_LOG
 								this.logEvent(EVENTTYPE.CREATE_ASSET, OBJECTTYPE.cash + this.assetidCounter.toString());
 								if (this.queryType == QUERYTYPE.environment) {
@@ -1507,24 +1507,24 @@ class game_Game {
 								else {y_cash = -10000;} //a number that places it far away
 								
 								if(this.rocks && this.rocks.length>0)// && this.rocks[0].recognizedType != "U") //check Rock
-								{          y_rocks = this.rocks[0].physics.y;     }
+									{          y_rocks = this.rocks[0].physics.y;     }
 								else {y_rocks = -10000;} //a number that places it far away
 								
 								if(this.life && this.life.length>0)// && this.life[0].recognizedType != "U") //check life
-								{          y_life = this.life[0].physics.y;     }
+									{          y_life = this.life[0].physics.y;     }
 								else {y_life = -10000;} //a number that places it far away
 								
 								var y_car = this.assets.car.physics.y;
 								var dists_y = [10000*((y_car-y_cash)<=-obj_buf)+(y_car-y_cash)*((y_car-y_cash)>-obj_buf),
-									10000*((y_car-y_rocks)<=-obj_buf)+(y_car-y_rocks)*((y_car-y_rocks)>-obj_buf),
-									10000*((y_car-y_life)<=-obj_buf)+(y_car-y_life)*((y_car-y_life)>-obj_buf),
+								10000*((y_car-y_rocks)<=-obj_buf)+(y_car-y_rocks)*((y_car-y_rocks)>-obj_buf),
+								10000*((y_car-y_life)<=-obj_buf)+(y_car-y_life)*((y_car-y_life)>-obj_buf),
 								]; //if object is behind var, make this a large positive value
 								var ix_min = indexOfSmallest(dists_y);
 								//console.info("Controls: Closest type: ",ix_min);
 								//console.info("Controls: Distance in y = ",dists_y[ix_min]);
 								
 								if(dists_y[ix_min]>10000) //no spawned object ahead
-								{ix_min = 3; }
+									{ix_min = 3; }
 								return ix_min;
 								
 							} //end of closestObject
@@ -1576,8 +1576,8 @@ class game_Game {
 								
 								var y_car = this.assets.car.physics.y;
 								var dists_y = [10000*((y_car-y_cash)<=-obj_buf)+(y_car-y_cash)*((y_car-y_cash)>-obj_buf),
-									10000*((y_car-y_rocks)<=-obj_buf)+(y_car-y_rocks)*((y_car-y_rocks)>-obj_buf),
-									10000*((y_car-y_life)<=-obj_buf)+(y_car-y_life)*((y_car-y_life)>-obj_buf),
+								10000*((y_car-y_rocks)<=-obj_buf)+(y_car-y_rocks)*((y_car-y_rocks)>-obj_buf),
+								10000*((y_car-y_life)<=-obj_buf)+(y_car-y_life)*((y_car-y_life)>-obj_buf),
 								]; //if object is behind var, make this a large positive value
 								var ix_min = indexOfSmallest(dists_y);
 								actual_type = ix_min;  
@@ -1586,7 +1586,7 @@ class game_Game {
 								
 								if(dists_y[ix_min]>10000) //no spawned object ahead
 								{ix_min = 3; object_x = 0;}//or whatever, not to be used }
-								
+							
 								/*  not correct as even unidentified objects get a type to them!
 								if(ix_min==0) //if closest object was a cash             
 								{ 
@@ -1755,10 +1755,10 @@ class game_Game {
 											
 											var askAttQuery = false;
 											//************* */
-												if(postEnvQueryCounter == idToAskAttQuery){
-														askAttQuery =  true && boxEmpty;
-												}
-												postEnvQueryCounter++;
+											if(postEnvQueryCounter == idToAskAttQuery){
+												askAttQuery =  true && boxEmpty;
+											}
+											postEnvQueryCounter++;
 											
 											//********************** */
 
@@ -1788,11 +1788,11 @@ class game_Game {
 											}
 											
 											if (askAttQuery)
-											this.queryType = QUERYTYPE.attention;
+												this.queryType = QUERYTYPE.attention;
 											else if (askEnvQuery)
-											this.queryType = QUERYTYPE.environment;
+												this.queryType = QUERYTYPE.environment;
 											else
-											this.queryType = null;
+												this.queryType = null;
 											
 											switch (this.objectTypeProbablityFunction()) {
 												case OBJECTTYPE.obstacle: this.createRock(askEnvQuery || askAttQuery);
