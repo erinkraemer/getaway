@@ -1224,6 +1224,8 @@ class game_Game {
 			
 			drawAsset(asset) {
 				const { physics, sprite, box, marked, distance } = asset;
+				console.log("sprite height: " + str(sprite.height))
+				console.log("canvas height: " + str(canvas.height))
 				
 				// redraw road
 				if (asset instanceof road && asset.physics.y >= 0) {
@@ -1231,7 +1233,7 @@ class game_Game {
 						if (asset.physics.y > (canvas.height)) {
 							asset.physics.y = canvas.height - sprite.height;
 						}
-						
+						console.log("break into road conditional")
 						this.ctx.drawImage(sprite.img, 0, 0, sprite.width, sprite.height, asset.physics.x, asset.physics.y - sprite.height + 1, sprite.width, sprite.height);
 					}
 				}
@@ -1239,6 +1241,7 @@ class game_Game {
 				// draw more rocks
 				if (asset instanceof obstacle && asset.physics.y >= 0) {
 					if (asset.physics.y > canvas.height) {
+						console.log("break into obstacle conditional")
 						this.ctx.drawImage(sprite.img, 0, 0, sprite.width, sprite.height, asset.physics.x, asset.physics.y - 900, sprite.width * sprite.width_scale, sprite.height * sprite.height_scale);
 						//console.log("Drawing rock");
 						
