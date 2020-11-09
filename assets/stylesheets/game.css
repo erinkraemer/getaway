@@ -131,7 +131,7 @@ html {
   border: 20px solid black;
 }
 
-.distractorWrapper {
+#distractorWrapper {
   height: 250px;
   width: 600px;
   background-color: #B3B3B3;
