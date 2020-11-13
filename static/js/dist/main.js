@@ -898,17 +898,17 @@ class game_Game {
 				}
 				document.getElementById("num3").innerHTML = i.toString();
 				//this.num3 = -1; // set to inactive
+				//this.newDistractorTask();
+				this.distractorTaskActive = false;
+				var _this = this;
+				console.log("before timeout")
+				setTimeout(function () {
+					console.log("in timeout")
+					_this.newDistractorTask(_this.currentCondition);
+					_this.distractorTaskActive = true;
+				}, DISTRACTOR_TASK_PAUSE);
+				//setTimeout(this.newDistractorTask, DISTRACTOR_TASK_TIMEOUT);
 			}
-			//this.newDistractorTask();
-			this.distractorTaskActive = false;
-			var _this = this;
-			console.log("before timeout")
-			setTimeout(function () {
-				console.log("in timeout")
-				_this.newDistractorTask(_this.currentCondition);
-				_this.distractorTaskActive = true;
-			}, DISTRACTOR_TASK_PAUSE);
-			//setTimeout(this.newDistractorTask, DISTRACTOR_TASK_TIMEOUT);
 		}
 		checkUserResponse(i) {
 			
