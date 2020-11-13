@@ -53,7 +53,7 @@ const CONTROLLER_REACTION_TIME = 2000;
 //Distractor task stuffs
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
-const DISTRACTOR_TASK_PAUSE = 5000;// in milliseconds
+const DISTRACTOR_TASK_PAUSE = 1500;// in milliseconds
 const GAME_TIME = 600000;// 10 minutes in milliseconds
 const QUARTER_TIME = 150000;
 
@@ -377,7 +377,6 @@ class Game {
 				this.logEvent(EVENTTYPE.TREATMENT, this.currentCondition)
 			}
 			if (this.currentCondition){
-
 				document.getElementById("distractorWrapper").style.visibility = "hidden";
 				document.getElementById("distractorcontainer").style["visibility"] = "visible";
 				var d = new Date();
@@ -399,7 +398,7 @@ class Game {
 		
 		checkDistractorTaskAnswer(i) {
 			
-			if(this.num3>=0){ // if num3 is greater than 0 then , then the distractor task is active
+			if(this.num3>=0 && this.distractorTaskActive){ // if num3 is greater than 0 then , then the distractor task is active
 				if (i == this.num3) {
 					this.holdDistractorCanvas(DISTRACTOR_TASK_PAUSE, "green");
 					// Code to do things on correct answer to distractor task
@@ -414,6 +413,7 @@ class Game {
 				//this.num3 = -1; // set to inactive
 			}
 			//this.newDistractorTask();
+			this.distractorTaskActive = false;
 			var _this = this;
 			setTimeout(function () {
 				_this.newDistractorTask(_this.currentCondition);
