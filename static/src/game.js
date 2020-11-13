@@ -53,7 +53,7 @@ const CONTROLLER_REACTION_TIME = 2000;
 //Distractor task stuffs
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
-const DISTRACTOR_TASK_PAUSE = 1500;// in milliseconds
+const DISTRACTOR_TASK_PAUSE = 5000;// in milliseconds
 const GAME_TIME = 600000;// 10 minutes in milliseconds
 const QUARTER_TIME = 150000;
 
@@ -415,7 +415,9 @@ class Game {
 			//this.newDistractorTask();
 			this.distractorTaskActive = false;
 			var _this = this;
+			console.log("before timeout")
 			setTimeout(function () {
+				console.log("in timeout")
 				_this.newDistractorTask(_this.currentCondition);
 				_this.distractorTaskActive = true;
 			}, DISTRACTOR_TASK_PAUSE);
@@ -737,8 +739,8 @@ class Game {
 			
 			drawAsset(asset) {
 				const { physics, sprite, box, marked, distance } = asset;
-				console.log("sprite height: " + toString(sprite.height))
-				console.log("canvas height: " + toString(canvas.height))
+				//console.log("sprite height: " + toString(sprite.height))
+				//console.log("canvas height: " + toString(canvas.height))
 				
 				// redraw road
 				if (asset instanceof Road && asset.physics.y >= 0) {
