@@ -548,6 +548,11 @@ const MIN_RES_WIDTH = 1280;
 const MIN_RES_HEIGHT = 800;
 
 var datalogWritten = false;
+
+var distCorrectCount = 0
+var distCount = 0
+var mainCorrectCount = 0
+var mainCount = 0
 //Event types
 
 
@@ -644,6 +649,11 @@ class game_Game {
 		this.num3 = 0; // An integer between 0 to 9
 		this.num1 = 0;
 		this.distractorTaskActive = true;
+
+		this.distCorrectCount = 0
+		this.distCount = 0
+		this.mainCorrectCount = 0
+		this.mainCount = 0
 		
 		this.dataLog = "";
 		
@@ -875,6 +885,7 @@ class game_Game {
 				document.getElementById("num3").innerHTML = "?";
 				this.timeOfLastDistractorTask = d.getTime();
 				this.logEvent(EVENTTYPE.NEW_DIST_QUERY, this.num1.toString() + "-" + this.num2.toString() + " = ???");
+				this.distCount += 1
 			}
 			else{
 				document.getElementById("distractorcontainer").style["visibility"] = "hidden";
@@ -890,6 +901,7 @@ class game_Game {
 					this.holdDistractorCanvas(DISTRACTOR_TASK_PAUSE, "green");
 					// Code to do things on correct answer to distractor task
 					this.logEvent(EVENTTYPE.CORRECT_DIST_RESPONSE, this.num1.toString()+"-"+this.num2.toString()+"="+i.toString());
+					this.distCorrectCount += 1 
 				}
 				else {
 					this.holdDistractorCanvas(DISTRACTOR_TASK_PAUSE, "red");
@@ -922,6 +934,7 @@ class game_Game {
 					this.activeResponse = false;
 					this.setRecognizedType(this.boxed[0], i);
 					this.logEvent(EVENTTYPE.CORRECT_BOXED_RESPONSE, i+"-"+this.boxed[0]);
+					this.mainCorrectCount += 1;
 					
 				}
 				else {
@@ -1279,7 +1292,9 @@ class game_Game {
 									this.activeResponse = true;
 									this.queryTimeElapsed = false;
 									this.queryUserResponded = false;
-									this.logEvent(EVENTTYPE.NEW_MAIN_QUERY, asset.assetid);	
+									this.logEvent(EVENTTYPE.NEW_MAIN_QUERY, asset.assetid);
+									this.mainCount += 1
+
 								} 
 								// console.log(this.boxed);
 							}
@@ -1404,8 +1419,29 @@ class game_Game {
 						document.getElementById("game-container").style.visibility = "hidden";
 						document.getElementById("hider1").style.visibility = "hidden";
 						document.getElementById("distractorcontainer").style.visibility = "hidden";
+						
+						// Compute bonus #to-do: put this is custom.py so that users may not alter the javascript
+						// bonus = a + b*exp(-C*cumulative_x), 
+        				// where: cumulative_x = alpha*fraction_primary + (1-alpha)*fraction_distractor, 
+        				// and alpha>0.5 (must be <1) means we weigh the primary queries more; 
+        				// C is a constant that decides how quickly the payoff rises, 
+        				// and a, b are constants that keep the payoff between a prescribed minimum and maximum 
+        				// (1 and 5 in this example).
+        				// (alpha = 0.7, C = 1.5, min payoff = 1, max payoff = 5) 
+        				alpha = .7
+        				c = 1.5
+        				// a is payoff min
+        				a = 1
+        				// b is payoff max
+        				b = 5
+        				fraction_primary = this.mainCorrectCount / this.mainCount
+        				fraction_distractor = this.distCorrectCount / this.distCount
+        				cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
+        				bonus = a + b * math.exp(-c * cumulative_x)
+        				console.log('bonus is: ', bonus)
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
+						
 						console.log(this.dataLog);
 						//psiTurk.recordUnstructuredData('logs', this.dataLog);
 						console.log('outersouce')
@@ -1415,8 +1451,6 @@ class game_Game {
 							clearInterval(i);
 						}
 						return;   
-						//Code to write to a server data log file goes here
-						// TODO: auto transition to next page.
 					}
 				}
 				

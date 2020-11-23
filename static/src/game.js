@@ -932,8 +932,29 @@ class Game {
 						document.getElementById("game-container").style.visibility = "hidden";
 						document.getElementById("hider1").style.visibility = "hidden";
 						document.getElementById("distractorcontainer").style.visibility = "hidden";
+						
+						// Compute bonus #to-do: put this is custom.py so that users may not alter the javascript
+						// bonus = a + b*exp(-C*cumulative_x), 
+        				// where: cumulative_x = alpha*fraction_primary + (1-alpha)*fraction_distractor, 
+        				// and alpha>0.5 (must be <1) means we weigh the primary queries more; 
+        				// C is a constant that decides how quickly the payoff rises, 
+        				// and a, b are constants that keep the payoff between a prescribed minimum and maximum 
+        				// (1 and 5 in this example).
+        				// (alpha = 0.7, C = 1.5, min payoff = 1, max payoff = 5) 
+        				alpha = .7
+        				c = 1.5
+        				// a is payoff min
+        				a = 1
+        				// b is payoff max
+        				b = 5
+        				fraction_primary = this.mainCorrectCount / this.mainCount
+        				fraction_distractor = this.distCorrectCount / this.distCount
+        				cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
+        				bonus = a + b * math.exp(-c * cumulative_x)
+        				console.log('bonus is: ', bonus)
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
+						
 						console.log(this.dataLog);
 						//psiTurk.recordUnstructuredData('logs', this.dataLog);
 						console.log('outersouce')
@@ -943,8 +964,6 @@ class Game {
 							clearInterval(i);
 						}
 						return;   
-						//Code to write to a server data log file goes here
-						// TODO: auto transition to next page.
 					}
 				}
 				

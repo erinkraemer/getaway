@@ -116,7 +116,7 @@ def compute_bonus():
         raise ExperimentError('improper_inputs')  # i don't like returning HTML to JSON requests...  maybe should change this
     uniqueId = request.args['uniqueId']
 
-    try:
+    try: 
         # lookup user in database
         user = Participant.query.\
                filter(Participant.uniqueid == uniqueId).\
@@ -128,7 +128,24 @@ def compute_bonus():
             trial = record['trialdata']
             if trial['phase']=='TEST':
                 if trial['hit']==True:
-                    bonus += 0.02
+        # bonus = a + b*exp(-C*cumulative_x), 
+        # where: cumulative_x = alpha*fraction_primary + (1-alpha)*fraction_distractor, 
+        # and alpha>0.5 (must be <1) means we weigh the primary queries more; 
+        # C is a constant that decides how quickly the payoff rises, 
+        # and a, b are constants that keep the payoff between a prescribed minimum and maximum 
+        # (1 and 5 in this example).
+        # (alpha = 0.7, C = 1.5, min payoff = 1, max payoff = 5) 
+        # alpha = 
+        # c = 
+        # # a is payoff min
+        # a = 1
+        # # b is payoff max
+        # b = 5
+        # fraction_primary = 
+        # fraction_distractor = 
+        # cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
+        # bonus = a + b * math.exp(-C * cumulative_x)
+
         user.bonus = bonus
         db_session.add(user)
         db_session.commit()
