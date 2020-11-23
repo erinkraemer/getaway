@@ -61,6 +61,11 @@ const MIN_RES_WIDTH = 1280;
 const MIN_RES_HEIGHT = 800;
 
 var datalogWritten = false;
+
+var distCorrectCount = 0
+var distCount = 0
+var mainCorrectCount = 0
+var mainCount = 0
 //Event types
 
 
@@ -157,6 +162,11 @@ class Game {
 		this.num3 = 0; // An integer between 0 to 9
 		this.num1 = 0;
 		this.distractorTaskActive = true;
+
+		this.distCorrectCount = 0
+		this.distCount = 0
+		this.mainCorrectCount = 0
+		this.mainCount = 0
 		
 		this.dataLog = "";
 		
@@ -388,6 +398,7 @@ class Game {
 				document.getElementById("num3").innerHTML = "?";
 				this.timeOfLastDistractorTask = d.getTime();
 				this.logEvent(EVENTTYPE.NEW_DIST_QUERY, this.num1.toString() + "-" + this.num2.toString() + " = ???");
+				this.distCount += 1
 			}
 			else{
 				document.getElementById("distractorcontainer").style["visibility"] = "hidden";
@@ -403,6 +414,7 @@ class Game {
 					this.holdDistractorCanvas(DISTRACTOR_TASK_PAUSE, "green");
 					// Code to do things on correct answer to distractor task
 					this.logEvent(EVENTTYPE.CORRECT_DIST_RESPONSE, this.num1.toString()+"-"+this.num2.toString()+"="+i.toString());
+					this.distCorrectCount += 1 
 				}
 				else {
 					this.holdDistractorCanvas(DISTRACTOR_TASK_PAUSE, "red");
@@ -435,6 +447,7 @@ class Game {
 					this.activeResponse = false;
 					this.setRecognizedType(this.boxed[0], i);
 					this.logEvent(EVENTTYPE.CORRECT_BOXED_RESPONSE, i+"-"+this.boxed[0]);
+					this.mainCorrectCount += 1;
 					
 				}
 				else {
@@ -792,7 +805,9 @@ class Game {
 									this.activeResponse = true;
 									this.queryTimeElapsed = false;
 									this.queryUserResponded = false;
-									this.logEvent(EVENTTYPE.NEW_MAIN_QUERY, asset.assetid);	
+									this.logEvent(EVENTTYPE.NEW_MAIN_QUERY, asset.assetid);
+									this.mainCount += 1
+
 								} 
 								// console.log(this.boxed);
 							}
