@@ -19,9 +19,11 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 // All pages to be loaded
 var pages = [
-  //"instructions/instruct-ready.html",
+  "instructions/instruct-ready.html",
   "stage.html",
   "postquestionnaire.html",
+  "continueToBonusQuestionnnaire.html",
+  "bonusquestionnaire.html",
   "thanks-mturksubmit.html",
   "complete.html",
   "closepopup.html"
@@ -63,13 +65,61 @@ var startGame = function() {
 window.onYouTubeIframeAPIReady = function() {}
 
 /****************
-* Questionnaire *
+* First Questionnaire *
 ****************/
 
 var Questionnaire = function() {
   psiTurk.showPage('postquestionnaire.html');
   // load your iframe with a url specific to your participant
   $('#questionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ?UID=' + uniqueId));
+  
+  // add the all-important message event listener
+  window.addEventListener('message', function(event){
+    
+    /*if (event.origin !== "https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ"){
+    return;
+  }*/
+  
+  if (event.data) {
+    if (typeof event.data === 'string') {
+      var q_message_array = event.data.split('|');
+      if (q_message_array[0] == 'QualtricsEOS') {
+        psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
+        psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
+        document.getElementById("next").style.visibility = "visible";
+      }
+    }
+  }
+  // display the 'continue' button, which takes them to the next page
+  //
+});
+document.getElementById("next").addEventListener("click", () => {
+  currentview = new continueToBonusQuestionnnaire();
+});
+};
+
+/****************
+* Continue to Bonus Questionnaire      *
+****************/
+var continueToBonusQuestionnnaire = function() {
+  psiTurk.showPage('continueToBonusQuestionnnaire.html');
+  document.getElementById("next").addEventListener("click", () => {
+    currentview = new mthanks();
+  });
+  psiTurk.showPage('continueToBonusQuestionnnaire.html');
+  document.getElementById("next").addEventListener("click", () => {
+    currentview = new BonusQuestionnaire();
+  });
+};
+
+/****************
+* Bonus Questionnaire *
+****************/
+
+var BonusQuestionnaire = function() {
+  psiTurk.showPage('bonusquestionnaire.html');
+  // load your iframe with a url specific to your participant
+  $('#bonusquestionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_8c3Klzuagw3jdhb?UID=' + uniqueId));
   
   // add the all-important message event listener
   window.addEventListener('message', function(event){
