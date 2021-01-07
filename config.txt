@@ -37,5 +37,5 @@ num_counters = 1
 launch_in_sandbox_mode = true
 bonus_message = "Thanks for participating!"
 use_psiturk_ad_server = false
-ad_location = https://handoff-exp.herokuapp.com//pub
+ad_location = https://handoff-exp.herokuapp.com/pub
 
