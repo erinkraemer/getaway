@@ -128,6 +128,11 @@ def compute_bonus():
             trial = record['trialdata']
             if trial['phase']=='TEST':
                 if trial['hit']==True:
+        user.bonus = bonus
+        db_session.add(user)
+        db_session.commit()
+        resp = {"bonusComputed": "success"}
+        return jsonify(**resp)
         # bonus = a + b*exp(-C*cumulative_x), 
         # where: cumulative_x = alpha*fraction_primary + (1-alpha)*fraction_distractor, 
         # and alpha>0.5 (must be <1) means we weigh the primary queries more; 
@@ -146,11 +151,7 @@ def compute_bonus():
         # cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
         # bonus = a + b * math.exp(-C * cumulative_x)
 
-        user.bonus = bonus
-        db_session.add(user)
-        db_session.commit()
-        resp = {"bonusComputed": "success"}
-        return jsonify(**resp)
+        
     except:
         abort(404)  # again, bad to display HTML, but...
 
