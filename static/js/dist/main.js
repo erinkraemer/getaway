@@ -2267,7 +2267,6 @@ $(window).load( function(){
       }
     }),*/
     function() {
-      getElementById("next").style.visibility = "visible"
       document.getElementById("next").addEventListener("click", () => {
         src_currentview = new startGame();
       });
