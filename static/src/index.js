@@ -185,20 +185,21 @@ var currentview;
 
 $(window).load( function(){
   currentview = new startGame();
-  // psiTurk.doInstructions(
-  //   instructionPages, // a list of pages you want to display in sequence
-  //   //only show the play game button once they have finished the video
-  //   /*player.addEventListener("onStateChange", function(state){
-  //     if(state === 0){
-  //       getElementById("next").style.visibility = "visible";
-  //     }
-  //   }),*/
-    //function() {
-      //document.getElementById("next").addEventListener("click", () => {
-        //currentview = new startGame();
-      //});
-    //} // what you want to do when you are done with instructions
-    //);
+  psiTurk.doInstructions(
+    instructionPages, // a list of pages you want to display in sequence
+    //only show the play game button once they have finished the video
+    /*player.addEventListener("onStateChange", function(state){
+      if(state === 0){
+        getElementById("next").style.visibility = "visible";
+      }
+    }),*/
+    function() {
+      getElementById("next").style.visibility = "visible"
+      document.getElementById("next").addEventListener("click", () => {
+        currentview = new startGame();
+      });
+    } // what you want to do when you are done with instructions
+    );
   })
   
   
