@@ -2195,7 +2195,7 @@ var continueToBonusQuestionnaire = function() {
 var BonusQuestionnaire = function() {
   src_psiTurk.showPage('bonusquestionnaire.html');
   // load your iframe with a url specific to your participant
-  $('#bonusquestionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_8c3Klzuagw3jdhb?UID=' + uniqueId));
+  $('#questionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_8c3Klzuagw3jdhb?UID=' + uniqueId));
   
   // add the all-important message event listener
   window.addEventListener('message', function(event){
@@ -2208,7 +2208,7 @@ var BonusQuestionnaire = function() {
     if (typeof event.data === 'string') {
       var q_message_array = event.data.split('|');
       if (q_message_array[0] == 'QualtricsEOS') {
-        src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
+        src_psiTurk.recordTrialData({'phase':'bonusquestionnaire', 'status':'back_from_qualtrics'});
         src_psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
         document.getElementById("next").style.visibility = "visible";
       }
