@@ -408,18 +408,18 @@ class Game {
 		}
 		
 		
-		checkDistractorTaskAnswer(i) {
+		checkDistractorTaskAnswer(i, encoding) {
 			
 			if(this.num3>=0 && this.distractorTaskActive){ // if num3 is greater than 0 then , then the distractor task is active
 				if (i == this.num3) {
 					this.holdDistractorCanvas(DISTRACTOR_TASK_PAUSE, "green");
 					// Code to do things on correct answer to distractor task
-					this.logEvent(EVENTTYPE.CORRECT_DIST_RESPONSE, this.num1.toString()+"-"+this.num2.toString()+"="+i.toString());
+					this.logEvent(EVENTTYPE.CORRECT_DIST_RESPONSE, this.num1.toString()+"-"+this.num2.toString()+"="+i.toString(), encoding);
 					this.distCorrectCount += 1 
 				}
 				else {
 					this.holdDistractorCanvas(DISTRACTOR_TASK_PAUSE, "red");
-					this.logEvent(EVENTTYPE.WRONG_DIST_RESPONSE, this.num1.toString() + "-" + this.num2.toString() + "=" + i.toString());
+					this.logEvent(EVENTTYPE.WRONG_DIST_RESPONSE, this.num1.toString() + "-" + this.num2.toString() + "=" + i.toString(), encoding);
 					// Code to do things on wrong answer to distractor task
 				}
 				document.getElementById("num3").innerHTML = i.toString();

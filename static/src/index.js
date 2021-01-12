@@ -97,11 +97,11 @@ document.getElementById("next").addEventListener("click", () => {
 ****************/
 var continueToBonusQuestionnaire = function() {
   psiTurk.showPage('continueToBonusQuestionnaire.html');
-  document.getElementById("next").addEventListener("click", () => {
+  document.getElementById("continueToExit").addEventListener("click", () => {
     currentview = new mthanks();
   });
   psiTurk.showPage('continueToBonusQuestionnaire.html');
-  document.getElementById("next").addEventListener("click", () => {
+  document.getElementById("continueToAdditionalSurvey").addEventListener("click", () => {
     currentview = new BonusQuestionnaire();
   });
 };

@@ -895,18 +895,18 @@ class game_Game {
 		}
 		
 		
-		checkDistractorTaskAnswer(i) {
+		checkDistractorTaskAnswer(i, encoding) {
 			
 			if(this.num3>=0 && this.distractorTaskActive){ // if num3 is greater than 0 then , then the distractor task is active
 				if (i == this.num3) {
 					this.holdDistractorCanvas(DISTRACTOR_TASK_PAUSE, "green");
 					// Code to do things on correct answer to distractor task
-					this.logEvent(EVENTTYPE.CORRECT_DIST_RESPONSE, this.num1.toString()+"-"+this.num2.toString()+"="+i.toString());
+					this.logEvent(EVENTTYPE.CORRECT_DIST_RESPONSE, this.num1.toString()+"-"+this.num2.toString()+"="+i.toString(), encoding);
 					this.distCorrectCount += 1 
 				}
 				else {
 					this.holdDistractorCanvas(DISTRACTOR_TASK_PAUSE, "red");
-					this.logEvent(EVENTTYPE.WRONG_DIST_RESPONSE, this.num1.toString() + "-" + this.num2.toString() + "=" + i.toString());
+					this.logEvent(EVENTTYPE.WRONG_DIST_RESPONSE, this.num1.toString() + "-" + this.num2.toString() + "=" + i.toString(), encoding);
 					// Code to do things on wrong answer to distractor task
 				}
 				document.getElementById("num3").innerHTML = i.toString();
@@ -1939,36 +1939,41 @@ const setupControlListeners = (game) => {
       game.checkUserResponse("L");
       document.getElementById("keyE").style["background-color"] = KEY_DOWN_COLOR;
     }
-
+    if (e.keyCode >= 96 && e.keyCode <= 105){
+      encoding = "numPad"
+    }
+    else if (e.keyCode >= 48 && e.keyCode <= 57){
+      encoding = "NOTnumPad"
+    }
     if (e.key === "1") {
-      game.checkDistractorTaskAnswer(1);
+      game.checkDistractorTaskAnswer(1, encoding);
     }
     if (e.key === "2") {
-      game.checkDistractorTaskAnswer(2);
+      game.checkDistractorTaskAnswer(2, encoding);
     }
     if (e.key === "3") {
-      game.checkDistractorTaskAnswer(3);
+      game.checkDistractorTaskAnswer(3, encoding);
     }
     if (e.key === "4") {
-      game.checkDistractorTaskAnswer(4);
+      game.checkDistractorTaskAnswer(4, encoding);
     }
     if (e.key === "5") {
-      game.checkDistractorTaskAnswer(5);
+      game.checkDistractorTaskAnswer(5, encoding);
     }
     if (e.key === "6") {
-      game.checkDistractorTaskAnswer(6);
+      game.checkDistractorTaskAnswer(6, encoding);
     }
     if (e.key === "7") {
-      game.checkDistractorTaskAnswer(7);
+      game.checkDistractorTaskAnswer(7, encoding);
     }
     if (e.key === "8") {
-      game.checkDistractorTaskAnswer(8);
+      game.checkDistractorTaskAnswer(8, encoding);
     }
     if (e.key === "9") {
-      game.checkDistractorTaskAnswer(9);
+      game.checkDistractorTaskAnswer(9, encoding);
     }
     if (e.key === "0") {
-      game.checkDistractorTaskAnswer(0);
+      game.checkDistractorTaskAnswer(0, encoding);
     }
 
   })
@@ -2174,11 +2179,11 @@ document.getElementById("next").addEventListener("click", () => {
 ****************/
 var continueToBonusQuestionnaire = function() {
   src_psiTurk.showPage('continueToBonusQuestionnaire.html');
-  document.getElementById("next").addEventListener("click", () => {
+  document.getElementById("continueToExit").addEventListener("click", () => {
     src_currentview = new mthanks();
   });
   src_psiTurk.showPage('continueToBonusQuestionnaire.html');
-  document.getElementById("next").addEventListener("click", () => {
+  document.getElementById("continueToAdditionalSurvey").addEventListener("click", () => {
     src_currentview = new BonusQuestionnaire();
   });
 };
