@@ -1,10 +1,4 @@
 
-
-
-// yes questionnnaire has three ns plz do not be mad
-
-
-
 import Game from "./game.js";
 // import assets from './assets.js';
 import setupControlListeners from './car_controls.js';
@@ -22,7 +16,7 @@ var pages = [
   "instructions/instruct-ready.html",
   "stage.html",
   "postquestionnaire.html",
-  "continueToBonusQuestionnnaire.html",
+  "continueToBonusQuestionnaire.html",
   "bonusquestionnaire.html",
   "thanks-mturksubmit.html",
   "complete.html",
@@ -94,19 +88,19 @@ var Questionnaire = function() {
   //
 });
 document.getElementById("next").addEventListener("click", () => {
-  currentview = new continueToBonusQuestionnnaire();
+  currentview = new continueToBonusQuestionnaire();
 });
 };
 
 /****************
 * Continue to Bonus Questionnaire      *
 ****************/
-var continueToBonusQuestionnnaire = function() {
-  psiTurk.showPage('continueToBonusQuestionnnaire.html');
+var continueToBonusQuestionnaire = function() {
+  psiTurk.showPage('continueToBonusQuestionnaire.html');
   document.getElementById("next").addEventListener("click", () => {
     currentview = new mthanks();
   });
-  psiTurk.showPage('continueToBonusQuestionnnaire.html');
+  psiTurk.showPage('continueToBonusQuestionnaire.html');
   document.getElementById("next").addEventListener("click", () => {
     currentview = new BonusQuestionnaire();
   });

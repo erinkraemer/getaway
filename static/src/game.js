@@ -101,7 +101,8 @@ const EVENTTYPE = Object.freeze({
 	"NEW_DIST_QUERY": "NEW_DIST_QUERY",
 	"TREATMENT": "TREATMENT",
 	"GAME_OVER": "GAME_OVER",
-	"GAME_START":"GAME_START"
+	"GAME_START":"GAME_START",
+	"BONUS": "BONUS"
 });
 
 var idToAskAttQuery = -200; 
@@ -932,6 +933,8 @@ class Game {
 						document.getElementById("game-container").style.visibility = "hidden";
 						document.getElementById("hider1").style.visibility = "hidden";
 						document.getElementById("distractorcontainer").style.visibility = "hidden";
+						document.getElementById("distractorTaskPaused").style.visibility = "hidden";
+						
 						
 						// Compute bonus #to-do: put this is custom.py so that users may not alter the javascript
 						// bonus = a + b*exp(-C*cumulative_x), 
@@ -941,7 +944,7 @@ class Game {
         				// and a, b are constants that keep the payoff between a prescribed minimum and maximum 
         				// (1 and 5 in this example).
         				// (alpha = 0.7, C = 1.5, min payoff = 1, max payoff = 5) 
-        				alpha = .7
+        				alpha = 0.7
         				c = 1.5
         				// a is payoff min
         				a = 1
@@ -951,6 +954,7 @@ class Game {
         				fraction_distractor = this.distCorrectCount / this.distCount
         				cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
         				bonus = a + b * math.exp(-c * cumulative_x)
+        				this.logEvent(EVENTTYPE.BONUS, bonus);
         				console.log('bonus is: ', bonus)
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
