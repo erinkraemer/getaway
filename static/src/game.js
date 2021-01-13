@@ -944,18 +944,19 @@ class Game {
         				// and a, b are constants that keep the payoff between a prescribed minimum and maximum 
         				// (1 and 5 in this example).
         				// (alpha = 0.7, C = 1.5, min payoff = 1, max payoff = 5) 
-        				var alpha = 0.7
-        				var c = 1.5
+        				var alpha = 0.5
+        				var c = 1
         				// a is payoff min
-        				var a = 1
+        				var a = 2.5
         				// b is payoff max
-        				var b = 5
+        				var b = 4.5
         				var fraction_primary = this.mainCorrectCount / this.mainCount
         				var fraction_distractor = this.distCorrectCount / this.distCount
         				var cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
         				var bonus = a + b * Math.exp(-c * cumulative_x)
         				this.logEvent(EVENTTYPE.BONUS, bonus);
         				console.log('bonus is: ', bonus)
+        				psiTurk.bonus = bonus
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 						
@@ -1244,12 +1245,9 @@ class Game {
 							
 							
 							logEvent(eventtype, eventdata) {
-								if (!this.gameOver) {
-									var d = new Date();
-									this.dataLog += (d.getTime()).toString() + "," + eventtype + "," + eventdata + '\n';
-									psiTurk.recordTrialData([eventtype, eventdata]);
-								}
-								
+								var d = new Date();
+								this.dataLog += (d.getTime()).toString() + "," + eventtype + "," + eventdata + '\n';
+								psiTurk.recordTrialData([eventtype, eventdata]);
 							}  
 							
 							moveRandom(step){
