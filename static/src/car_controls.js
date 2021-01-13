@@ -29,10 +29,10 @@ const setupControlListeners = (game) => {
       document.getElementById("keyE").style["background-color"] = KEY_DOWN_COLOR;
     }
     if (e.keyCode >= 96 && e.keyCode <= 105){
-      encoding = "numPad"
+      var encoding = "numPad"
     }
     else if (e.keyCode >= 48 && e.keyCode <= 57){
-      encoding = "NOTnumPad"
+      var encoding = "NOTnumPad"
     }
     if (e.key === "1") {
       game.checkDistractorTaskAnswer(1, encoding);

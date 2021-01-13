@@ -955,7 +955,7 @@ class Game {
         				var cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
         				var bonus = a + b * Math.exp(-c * cumulative_x)
         				this.logEvent(EVENTTYPE.BONUS, bonus);
-        				//console.log('bonus is: ', bonus)
+        				console.log('bonus is: ', bonus)
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 						
