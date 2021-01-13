@@ -2195,8 +2195,12 @@ var continueToBonusQuestionnaire = function() {
 var BonusQuestionnaire = function() {
   src_psiTurk.showPage('bonusquestionnaire.html');
   // load your iframe with a url specific to your participant
-  $('#questionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_8c3Klzuagw3jdhb?UID=' + uniqueId));
-  
+  try{
+    $('#bonusquestionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_8c3Klzuagw3jdhb?UID=' + uniqueId));
+  }
+  catch (err) {
+    console.log(err)
+  }
   // add the all-important message event listener
   window.addEventListener('message', function(event){
     
