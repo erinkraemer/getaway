@@ -950,10 +950,10 @@ class Game {
         				var a = 1
         				// b is payoff max
         				var b = 5
-        				fraction_primary = this.mainCorrectCount / this.mainCount
-        				fraction_distractor = this.distCorrectCount / this.distCount
-        				cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
-        				bonus = a + b * math.exp(-c * cumulative_x)
+        				var fraction_primary = this.mainCorrectCount / this.mainCount
+        				var fraction_distractor = this.distCorrectCount / this.distCount
+        				var cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
+        				var bonus = a + b * math.exp(-c * cumulative_x)
         				this.logEvent(EVENTTYPE.BONUS, bonus);
         				//console.log('bonus is: ', bonus)
 					}
