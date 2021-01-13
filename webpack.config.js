@@ -1,4 +1,9 @@
+// webpack.config.js
+'use strict';
+
+
 const path = require("path");
+
 
 module.exports = {
   entry: "./static/src/index.js",
