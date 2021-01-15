@@ -962,7 +962,7 @@ class Game {
 						
 						//console.log(this.dataLog);
 						//psiTurk.recordUnstructuredData('logs', this.dataLog);
-						//console.log('outersouce')
+						console.log('outersouce')
 						psiTurk.saveData();
 						datalogWritten = true;   
 						for (var i = 1; i < 9999; i++){

@@ -161,6 +161,7 @@ var mthanks = function() {
 var Complete = function() {
   psiTurk.showPage('complete.html');
   document.getElementById("next").addEventListener("click", () => {
+    psiTurk.completeHIT();
     currentview = new Closepage();
   });
 };
