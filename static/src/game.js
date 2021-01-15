@@ -961,12 +961,11 @@ class Game {
         				print("distractortask fraction: ", fraction_primary)
         				this.logEvent(EVENTTYPE.BONUS, bonus);
         				console.log('bonus is: ', bonus)
-        				this.bonus
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 						
 						console.log(this.dataLog);
-						psiTurk.recordUnstructuredData('logs', this.dataLog);
+						//psiTurk.recordUnstructuredData('logs', this.dataLog);
 						console.log('outersouce')
 						psiTurk.saveData();
 						datalogWritten = true;   

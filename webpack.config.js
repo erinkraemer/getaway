@@ -13,5 +13,9 @@ module.exports = {
   },
   node: {
     fs: "empty"
+  }, 
+  //erin add to not minify
+  optimization : {
+    minimize: false,
   }
 };
