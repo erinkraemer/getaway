@@ -136,6 +136,7 @@ var BonusQuestionnaire = function() {
       }
     }
   }
+  
   // display the 'continue' button, which takes them to the next page
   //
 });

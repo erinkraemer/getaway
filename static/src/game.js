@@ -54,7 +54,7 @@ const CONTROLLER_REACTION_TIME = 2000;
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
 const DISTRACTOR_TASK_PAUSE = 5000;// in milliseconds
-const GAME_TIME = 600000;// 10 minutes in milliseconds
+const GAME_TIME = 60000;// 10 minutes in milliseconds
 const QUARTER_TIME = 150000;
 
 const MIN_RES_WIDTH = 1280;
@@ -1245,9 +1245,15 @@ class Game {
 							
 							
 							logEvent(eventtype, eventdata) {
-								var d = new Date();
-								this.dataLog += (d.getTime()).toString() + "," + eventtype + "," + eventdata + '\n';
-								psiTurk.recordTrialData([eventtype, eventdata]);
+								try{
+									var d = new Date();
+									this.dataLog += (d.getTime()).toString() + "," + eventtype + "," + eventdata + '\n';
+									psiTurk.recordTrialData([eventtype, eventdata]);
+								}
+								catch{
+									console.log("error in LogEvent")
+								}
+								
 							}  
 							
 							moveRandom(step){
