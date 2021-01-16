@@ -28,7 +28,7 @@ psiTurk.preloadPages(pages);
 var instructionPages = [ // add as a list as many pages as you like
   "instructions/instruct-ready.html"
 ];
-
+var game;
 /****************
 * Start the game*
 ****************/
@@ -41,7 +41,7 @@ var startGame = function() {
   canvas.height = 700;
   canvas.width = 500;
   const condition = Math.floor(Math.random()*100)%2;
-  let game = new Game(canvas, ctx, condition);
+  game = new Game(canvas, ctx, condition);
   document.getElementById("how").innerHTML = `Identify objects by using the Q, W, and E keys. Collect as much points and lives as you can while avoiding the rocks!`;
   
   document.getElementById("play-btn").addEventListener("click", () => {

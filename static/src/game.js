@@ -170,7 +170,7 @@ class Game {
 		this.mainCount = 0
 		
 		this.dataLog = "";
-		
+		this.bonusPayout = 0;
 		this.newDistractorTask();
 		
 		for (var i = 0; i < this.numImgs; i++) {
@@ -943,24 +943,21 @@ class Game {
         				// C is a constant that decides how quickly the payoff rises, 
         				// and a, b are constants that keep the payoff between a prescribed minimum and maximum 
         				// (1 and 5 in this example).
-        				// (alpha = 0.7, C = 1.5, min payoff = 1, max payoff = 5) 
-        				var alpha = 0.7
-        				var c = 1.5
+						// (alpha = 0.7, C = 1.5, min payoff = 1, max payoff = 5) 
+						//TOFIX : Correct bonus
+						var alpha = 0.7;
+						var c = 1.5;
         				// a is payoff min
-        				var a = 2.5
+						var a = 2.5;
         				// b is payoff max
-        				var b = 4.5
-        				var fraction_primary = this.mainCorrectCount / this.mainCount
-        				var fraction_distractor = this.distCorrectCount / this.distCount
-        				var cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
-        				var bonus = a + b * Math.exp(-c * cumulative_x)
-        				print("primary query: ", this.mainCount)
-        				print("primary query correct: ", this.mainCorrectCount)
-        				print("distractortask query: ", this.distCount)
-        				print("distractortask correct: ", this.distCorrectCount)
-        				print("distractortask fraction: ", fraction_primary)
-        				this.logEvent(EVENTTYPE.BONUS, bonus);
-        				console.log('bonus is: ', bonus)
+						var b = 4.5;
+						var fraction_primary = this.mainCorrectCount / this.mainCount;
+						var fraction_distractor = this.distCorrectCount / this.distCount;
+						var cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor;
+						//var bonus = b * Math.exp(-c * cumulative_x);
+						this.bonusPayout = 222;
+        				this.logEvent(EVENTTYPE.BONUS, this.bonusPayout);
+						console.log('bonus is: ', this.bonusPayout);
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 						
