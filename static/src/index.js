@@ -49,13 +49,18 @@ var startGame = function() {
     setupControlListeners(game);
     
     game.start();
+  
   });
   
-  document.getElementById("next").addEventListener("click", () => {
+  document.getElementById("doneWithGame").addEventListener("click", () => {
     currentview = new Questionnaire();
   });
 };
-
+//
+  //<button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" style="visibility: visible;"> <!---style="visibility: hidden;" --->
+//                        Done <span class="glyphicon glyphicon-arrow-right"></span>
+//                    </button>
+  //
 window.onYouTubeIframeAPIReady = function() {}
 
 /****************
@@ -133,7 +138,7 @@ var BonusQuestionnaire = function() {
       if (q_message_array[0] == 'QualtricsEOS') {
         psiTurk.recordTrialData({'phase':'bonusquestionnaire', 'status':'back_from_qualtrics'});
         psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
-        document.getElementById("next").style.visibility = "visible";
+        document.getElementById("doneWithBonusQuestionnaire").style.visibility = "visible";
       }
     }
   }
@@ -141,7 +146,7 @@ var BonusQuestionnaire = function() {
   // display the 'continue' button, which takes them to the next page
   //
 });
-document.getElementById("next").addEventListener("click", () => {
+document.getElementById("doneWithBonusQuestionnaire").addEventListener("click", () => {
   currentview = new mthanks();
 });
 };
@@ -151,18 +156,7 @@ document.getElementById("next").addEventListener("click", () => {
 ****************/
 var mthanks = function() {
   psiTurk.showPage('thanks-mturksubmit.html');
-  document.getElementById("next").addEventListener("click", () => {
-    currentview = new Complete();
-  });
-};
-
-/****************
-* Close popup      *
-****************/
-var Complete = function() {
-  psiTurk.showPage('complete.html');
-  document.getElementById("next").addEventListener("click", () => {
-    psiTurk.completeHIT();
+  document.getElementById("completeHitButton").addEventListener("click", () => {
     currentview = new Closepage();
   });
 };
@@ -172,6 +166,13 @@ var Complete = function() {
 ****************/
 var Closepage = function() {
   psiTurk.showPage('closepopup.html');
+  psiTurk.saveData({
+    success: function(){
+    psiTurk.computeBonus('compute_bonus', function() { 
+      psiTurk.completeHIT(); // when finished saving compute bonus, the quit
+    }); 
+  }, 
+  error: prompt_resubmit});
 };
 
 
@@ -185,7 +186,7 @@ var currentview;
 ******************/
 
 $(window).load( function(){
-  currentview = new startGame();
+  //currentview = new startGame();
   psiTurk.doInstructions(
     instructionPages, // a list of pages you want to display in sequence
     //only show the play game button once they have finished the video
@@ -201,5 +202,7 @@ $(window).load( function(){
     } // what you want to do when you are done with instructions
     );
   })
+  
+  
   
   
