@@ -541,7 +541,7 @@ const CONTROLLER_REACTION_TIME = 2000;
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
 const DISTRACTOR_TASK_PAUSE = 5000;// in milliseconds
-const GAME_TIME = 600000;// 10 minutes in milliseconds
+const GAME_TIME = 60000;// 10 minutes in milliseconds
 const QUARTER_TIME = 150000;
 
 const MIN_RES_WIDTH = 1280;
@@ -632,6 +632,7 @@ class game_Game {
 		this.queryType = null;
 		this.queryTimeElapsed = false;
 		this.queryUserResponded = false;
+		this.bonus = 0;
 		
 		this.PhysicsReference = new src_physics();
 		var d = new Date();
@@ -894,18 +895,18 @@ class game_Game {
 		}
 		
 		
-		checkDistractorTaskAnswer(i) {
+		checkDistractorTaskAnswer(i, encoding) {
 			
 			if(this.num3>=0 && this.distractorTaskActive){ // if num3 is greater than 0 then , then the distractor task is active
 				if (i == this.num3) {
 					this.holdDistractorCanvas(DISTRACTOR_TASK_PAUSE, "green");
 					// Code to do things on correct answer to distractor task
-					this.logEvent(EVENTTYPE.CORRECT_DIST_RESPONSE, this.num1.toString()+"-"+this.num2.toString()+"="+i.toString());
+					this.logEvent(EVENTTYPE.CORRECT_DIST_RESPONSE, this.num1.toString()+"-"+this.num2.toString()+"="+i.toString()+ ' encoding: '+ encoding);
 					this.distCorrectCount += 1 
 				}
 				else {
 					this.holdDistractorCanvas(DISTRACTOR_TASK_PAUSE, "red");
-					this.logEvent(EVENTTYPE.WRONG_DIST_RESPONSE, this.num1.toString() + "-" + this.num2.toString() + "=" + i.toString());
+					this.logEvent(EVENTTYPE.WRONG_DIST_RESPONSE, this.num1.toString() + "-" + this.num2.toString() + "=" + i.toString() + ' encoding: '+ encoding);
 					// Code to do things on wrong answer to distractor task
 				}
 				document.getElementById("num3").innerHTML = i.toString();
@@ -1408,6 +1409,18 @@ class game_Game {
 					var d = new Date();
 					
 					if (d.getTime() - this.startTime > GAME_TIME) { //  TODO:Termination condition
+						var alpha = 0.5
+						var mx = 4.5
+						var mn = 2.5
+						var C = 1.5;
+						var b = (mx-mn)/(-1+Math.exp(-C));
+						var a = mn-b;
+						var fraction_primary = this.mainCorrectCount / this.mainCount
+        				var fraction_distractor = this.distCorrectCount / this.distCount
+						var cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
+						// -mn removes the 2.5 and total payout is 2.5 + bonus
+						this.bonus = a + b*exp(-C*cumulative_x) - mn
+						this.logEvent("Final BONUS", this.bonus.toString());
 						this.logEvent(EVENTTYPE.GAME_OVER, "");
 						this.gameOver = true;
 						this.assets.road.stop();
@@ -1419,33 +1432,12 @@ class game_Game {
 						document.getElementById("game-container").style.visibility = "hidden";
 						document.getElementById("hider1").style.visibility = "hidden";
 						document.getElementById("distractorcontainer").style.visibility = "hidden";
-						
-						// Compute bonus #to-do: put this is custom.py so that users may not alter the javascript
-						// bonus = a + b*exp(-C*cumulative_x), 
-        				// where: cumulative_x = alpha*fraction_primary + (1-alpha)*fraction_distractor, 
-        				// and alpha>0.5 (must be <1) means we weigh the primary queries more; 
-        				// C is a constant that decides how quickly the payoff rises, 
-        				// and a, b are constants that keep the payoff between a prescribed minimum and maximum 
-        				// (1 and 5 in this example).
-        				// (alpha = 0.7, C = 1.5, min payoff = 1, max payoff = 5) 
-        				alpha = .7
-        				c = 1.5
-        				// a is payoff min
-        				a = 1
-        				// b is payoff max
-        				b = 5
-        				fraction_primary = this.mainCorrectCount / this.mainCount
-        				fraction_distractor = this.distCorrectCount / this.distCount
-        				cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
-        				bonus = a + b * math.exp(-c * cumulative_x)
-        				console.log('bonus is: ', bonus)
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
-						
 						console.log(this.dataLog);
 						//psiTurk.recordUnstructuredData('logs', this.dataLog);
 						console.log('outersouce')
-						psiTurk.saveData();
+						//psiTurk.saveData();
 						datalogWritten = true;   
 						for (var i = 1; i < 9999; i++){
 							clearInterval(i);
@@ -1936,35 +1928,51 @@ const setupControlListeners = (game) => {
       document.getElementById("keyE").style["background-color"] = KEY_DOWN_COLOR;
     }
 
+    if (e.keyCode >= 96 && e.keyCode <= 105){
+      var encoding = "numPad"
+    }
+    else if (e.keyCode >= 48 && e.keyCode <= 57){
+      var encoding = "NOTnumPad"
+    }
     if (e.key === "1") {
       game.checkDistractorTaskAnswer(1);
+      game.checkDistractorTaskAnswer(1, encoding);
     }
     if (e.key === "2") {
       game.checkDistractorTaskAnswer(2);
+      game.checkDistractorTaskAnswer(2, encoding);
     }
     if (e.key === "3") {
       game.checkDistractorTaskAnswer(3);
+      game.checkDistractorTaskAnswer(3, encoding);
     }
     if (e.key === "4") {
       game.checkDistractorTaskAnswer(4);
+      game.checkDistractorTaskAnswer(4, encoding);
     }
     if (e.key === "5") {
       game.checkDistractorTaskAnswer(5);
+      game.checkDistractorTaskAnswer(5, encoding);
     }
     if (e.key === "6") {
       game.checkDistractorTaskAnswer(6);
+      game.checkDistractorTaskAnswer(6, encoding);
     }
     if (e.key === "7") {
       game.checkDistractorTaskAnswer(7);
+      game.checkDistractorTaskAnswer(7, encoding);
     }
     if (e.key === "8") {
       game.checkDistractorTaskAnswer(8);
+      game.checkDistractorTaskAnswer(8, encoding);
     }
     if (e.key === "9") {
       game.checkDistractorTaskAnswer(9);
+      game.checkDistractorTaskAnswer(9, encoding);
     }
     if (e.key === "0") {
       game.checkDistractorTaskAnswer(0);
+      game.checkDistractorTaskAnswer(0, encoding);
     }
 
   })
@@ -2001,87 +2009,15 @@ const setupControlListeners = (game) => {
 }
 
 /* harmony default export */ var car_controls = (setupControlListeners);
-// CONCATENATED MODULE: ./static/src/bumblebee.js
-
-
-
-
-
-
-const redBoxImg = new Image();
-redBoxImg.src = "static/assets/images/redbox.png";
-const blueBoxImg = new Image();
-blueBoxImg.src = "static/assets/images/bluebox.png";
-const greenBoxImg = new Image();
-greenBoxImg.src = "static/assets/images/greenbox.png";
-const bumblebee_lifeImgFolder = "static/assets/images/life/";
-const bumblebee_obstacleImgFolder = "static/assets/images/obstacle/";
-const bumblebee_moneyImgFolder = "static/assets/images/money/";
-const numImgs = 16;
-window.lifeimgLst = ""
-window.obstacleimgLst = ""
-window.moneyImgLst = ""
-const bumblebee_fs = __webpack_require__(1)
-class BumbleBee {
-    constructor(game) {
-        var _this = this;
-       this.game = game;
-       console.log(bumblebee_fs);
-       this.lifeImgLists = [];
-       this.moneyImgLists = [];
-       this.obstacleImgLists = [];
-       for (var i = 0; i < numImgs; i++){
-           this.lifeImgLists.push(bumblebee_lifeImgFolder + "life (" + (i + 1).toString() + ").png");    
-           this.moneyImgLists.push(bumblebee_moneyImgFolder + "money (" + (i + 1).toString() + ").png");    
-           this.obstacleImgLists.push(bumblebee_obstacleImgFolder + "obstacle (" + (i + 1).toString() + ").png");    
-       }
-       console.log(this.lifeImgLists);
-       
-    }
-    
-
-    randomizesprite() {
-        var rnd1 = Math.floor(Math.random() * Math.floor(numImgs));
-        var rnd2 = Math.floor(Math.random() * Math.floor(numImgs));
-        var rnd3 = Math.floor(Math.random() * Math.floor(numImgs));
-        // this.game.lifeImgSrc = this.lifeImgLists[rnd1];
-        // this.game.moneyImgSrc = this.moneyImgLists[rnd2];
-        // this.game.rockImgSrc = this.obstacleImgLists[rnd3];
-        console.log(this.game.lifeImgSrc);
-        
-    }
-    
-    
-
-   static MarkObstacle(){
-       var obstacle_count = this.game.rocks.length;
-       var i;
-       for(i=0;i<obstacle_count; i++){
-           
-       }
-
-    }
-    
-    
-
-   
-  }
-  
-  /* harmony default export */ var bumblebee = (BumbleBee);
-  
-
 // CONCATENATED MODULE: ./static/src/index.js
-
-
-
-
-
-
+/****************
+* Index.js      *
+****************/
 
 
 // import assets from './assets.js';
 
-
+//import BumbleBee from "./bumblebee.js";
 
 // Initalize psiturk object
 var src_psiTurk = new PsiTurk(uniqueId, adServerLoc, mode);
@@ -2092,9 +2028,10 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 // All pages to be loaded
 var pages = [
-  //"instructions/instruct-ready.html",
   "stage.html",
   "postquestionnaire.html",
+  "continueToBonusQuestionnaire.html",
+  "bonusQuestionnaire.html",
   "thanks-mturksubmit.html",
   "complete.html",
   "closepopup.html"
@@ -2109,7 +2046,6 @@ var instructionPages = [ // add as a list as many pages as you like
 /****************
 * Start the game*
 ****************/
-
 var startGame = function() {
   // Load the stage.html snippet into the body of the page
   src_psiTurk.showPage('stage.html');
@@ -2122,13 +2058,14 @@ var startGame = function() {
   document.getElementById("how").innerHTML = `Identify objects by using the Q, W, and E keys. Collect as much points and lives as you can while avoiding the rocks!`;
   
   document.getElementById("play-btn").addEventListener("click", () => {
-    
     car_controls(game);
-    
     game.start();
   });
   
-  document.getElementById("next").addEventListener("click", () => {
+  document.getElementById("exitExperiment").addEventListener("click", () => {
+    src_psiTurk.recordTrialData(game.dataLog);
+    src_psiTurk.bonus = game.bonus;
+    src_psiTurk.saveData();
     src_currentview = new Questionnaire();
   });
 };
@@ -2138,7 +2075,6 @@ window.onYouTubeIframeAPIReady = function() {}
 /****************
 * Questionnaire *
 ****************/
-
 var Questionnaire = function() {
   src_psiTurk.showPage('postquestionnaire.html');
   // load your iframe with a url specific to your participant
@@ -2147,84 +2083,104 @@ var Questionnaire = function() {
   // add the all-important message event listener
   window.addEventListener('message', function(event){
     
-    /*if (event.origin !== "https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ"){
-    return;
-  }*/
-  
-  if (event.data) {
-    if (typeof event.data === 'string') {
-      var q_message_array = event.data.split('|');
-      if (q_message_array[0] == 'QualtricsEOS') {
-        src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
-        src_psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
-        document.getElementById("next").style.visibility = "visible";
+    if (event.data) {
+      if (typeof event.data === 'string') {
+        var q_message_array = event.data.split('|');
+        if (q_message_array[0] == 'QualtricsEOS') {
+          src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
+          src_psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
+          document.getElementById("exitQuestionnaire").style.visibility = "visible";
+        }
       }
     }
-  }
-  // display the 'continue' button, which takes them to the next page
-  //
-});
-document.getElementById("next").addEventListener("click", () => {
-  src_currentview = new mthanks();
-});
-};
-
-/****************
-* Close popup      *
-****************/
-var mthanks = function() {
-  src_psiTurk.showPage('thanks-mturksubmit.html');
-  document.getElementById("next").addEventListener("click", () => {
-    src_currentview = new Complete();
+  });
+  document.getElementById("exitQuestionnaire").addEventListener("click", () => {
+    src_currentview = new continueToBonusQuestionnnaire();
   });
 };
 
-/****************
-* Close popup      *
-****************/
-var Complete = function() {
+
+/*******************************
+* continueToBonusQuestionnaire *
+********************************/
+var continueToBonusQuestionnnaire = function() {
+  src_psiTurk.showPage('continueToBonusQuestionnaire.html');
+  document.getElementById("goToExit").addEventListener("click", () => {
+    src_currentview = new mthanks();
+  });
+  document.getElementById("goToBonusQuestionnaire").addEventListener("click", () => {
+    src_currentview = new BonusQuestionnaire();
+  });
+};
+
+
+/**********************
+* Bonus Questionnaire *
+***********************/
+var BonusQuestionnaire = function() {
+  src_psiTurk.showPage('bonusQuestionnaire.html');
+  // load your iframe with a url specific to your participant
+  $('#bonusquestionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_8c3Klzuagw3jdhb?UID=' + uniqueId));
+  
+  // add the all-important message event listener
+  window.addEventListener('message', function(event){
+    if (event.data) {
+      if (typeof event.data === 'string') {
+        var q_message_array = event.data.split('|');
+        if (q_message_array[0] == 'QualtricsEOS') {
+          src_psiTurk.recordTrialData({'phase':'bonusquestionnaire', 'status':'back_from_qualtrics'});
+          src_psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
+          document.getElementById("continueToFinish").style.visibility = "visible";
+        }
+      }
+    }
+  });
+  document.getElementById("continueToFinish").addEventListener("click", () => {
+    src_psiTurk.bonus = src_psiTurk.bonus + 1.5
+    src_currentview = new mthanks();
+  });
+}
+  
+  /****************
+  * Thanks        *
+  ****************/
+  var mthanks = function() {
+      src_psiTurk.showPage('thanks-mturksubmit.html');
+      document.getElementById("completeHitButton").addEventListener("click", () => {
+        src_currentview = new Closepage();
+      });
+  };
+
+  /**********************
+  * Debug Close popup   *
+  ***********************/
+ var Complete = function() {
   src_psiTurk.showPage('complete.html');
   document.getElementById("next").addEventListener("click", () => {
     src_currentview = new Closepage();
   });
 };
-
-/****************
-* Close popup      *
-****************/
-var Closepage = function() {
-  src_psiTurk.showPage('closepopup.html');
-};
-
-
-
-// Task object to keep track of the current phase
-var src_currentview;
-
-
-/*******************
-* Run Task
-******************/
-
-$(window).load( function(){
-  src_currentview = new startGame();
-  // psiTurk.doInstructions(
-  //   instructionPages, // a list of pages you want to display in sequence
-  //   //only show the play game button once they have finished the video
-  //   /*player.addEventListener("onStateChange", function(state){
-  //     if(state === 0){
-  //       getElementById("next").style.visibility = "visible";
-  //     }
-  //   }),*/
-    //function() {
-      //document.getElementById("next").addEventListener("click", () => {
-        //currentview = new startGame();
-      //});
-    //} // what you want to do when you are done with instructions
-    //);
+  
+  /********************************
+  * Sandbox or Live Close popup   *
+  *********************************/
+  var Closepage = function() {
+    src_psiTurk.showPage('closepopup.html');
+  };
+  
+  
+  
+  // Task object to keep track of the current phase
+  var src_currentview;
+  
+  
+  /*******************
+  * Run Task
+  ******************/
+  
+  $(window).load( function(){
+    src_currentview = new startGame();
   })
-  
-  
 
 /***/ })
 /******/ ]);

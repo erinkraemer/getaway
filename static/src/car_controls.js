@@ -29,35 +29,51 @@ const setupControlListeners = (game) => {
       document.getElementById("keyE").style["background-color"] = KEY_DOWN_COLOR;
     }
 
+    if (e.keyCode >= 96 && e.keyCode <= 105){
+      var encoding = "numPad"
+    }
+    else if (e.keyCode >= 48 && e.keyCode <= 57){
+      var encoding = "NOTnumPad"
+    }
     if (e.key === "1") {
       game.checkDistractorTaskAnswer(1);
+      game.checkDistractorTaskAnswer(1, encoding);
     }
     if (e.key === "2") {
       game.checkDistractorTaskAnswer(2);
+      game.checkDistractorTaskAnswer(2, encoding);
     }
     if (e.key === "3") {
       game.checkDistractorTaskAnswer(3);
+      game.checkDistractorTaskAnswer(3, encoding);
     }
     if (e.key === "4") {
       game.checkDistractorTaskAnswer(4);
+      game.checkDistractorTaskAnswer(4, encoding);
     }
     if (e.key === "5") {
       game.checkDistractorTaskAnswer(5);
+      game.checkDistractorTaskAnswer(5, encoding);
     }
     if (e.key === "6") {
       game.checkDistractorTaskAnswer(6);
+      game.checkDistractorTaskAnswer(6, encoding);
     }
     if (e.key === "7") {
       game.checkDistractorTaskAnswer(7);
+      game.checkDistractorTaskAnswer(7, encoding);
     }
     if (e.key === "8") {
       game.checkDistractorTaskAnswer(8);
+      game.checkDistractorTaskAnswer(8, encoding);
     }
     if (e.key === "9") {
       game.checkDistractorTaskAnswer(9);
+      game.checkDistractorTaskAnswer(9, encoding);
     }
     if (e.key === "0") {
       game.checkDistractorTaskAnswer(0);
+      game.checkDistractorTaskAnswer(0, encoding);
     }
 
   })

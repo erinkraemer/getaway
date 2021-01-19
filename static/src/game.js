@@ -54,7 +54,7 @@ const CONTROLLER_REACTION_TIME = 2000;
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
 const DISTRACTOR_TASK_PAUSE = 5000;// in milliseconds
-const GAME_TIME = 600000;// 10 minutes in milliseconds
+const GAME_TIME = 60000;// 10 minutes in milliseconds
 const QUARTER_TIME = 150000;
 
 const MIN_RES_WIDTH = 1280;
@@ -145,6 +145,7 @@ class Game {
 		this.queryType = null;
 		this.queryTimeElapsed = false;
 		this.queryUserResponded = false;
+		this.bonus = 0;
 		
 		this.PhysicsReference = new Physics();
 		var d = new Date();
@@ -407,18 +408,18 @@ class Game {
 		}
 		
 		
-		checkDistractorTaskAnswer(i) {
+		checkDistractorTaskAnswer(i, encoding) {
 			
 			if(this.num3>=0 && this.distractorTaskActive){ // if num3 is greater than 0 then , then the distractor task is active
 				if (i == this.num3) {
 					this.holdDistractorCanvas(DISTRACTOR_TASK_PAUSE, "green");
 					// Code to do things on correct answer to distractor task
-					this.logEvent(EVENTTYPE.CORRECT_DIST_RESPONSE, this.num1.toString()+"-"+this.num2.toString()+"="+i.toString());
+					this.logEvent(EVENTTYPE.CORRECT_DIST_RESPONSE, this.num1.toString()+"-"+this.num2.toString()+"="+i.toString()+ ' encoding: '+ encoding);
 					this.distCorrectCount += 1 
 				}
 				else {
 					this.holdDistractorCanvas(DISTRACTOR_TASK_PAUSE, "red");
-					this.logEvent(EVENTTYPE.WRONG_DIST_RESPONSE, this.num1.toString() + "-" + this.num2.toString() + "=" + i.toString());
+					this.logEvent(EVENTTYPE.WRONG_DIST_RESPONSE, this.num1.toString() + "-" + this.num2.toString() + "=" + i.toString() + ' encoding: '+ encoding);
 					// Code to do things on wrong answer to distractor task
 				}
 				document.getElementById("num3").innerHTML = i.toString();
@@ -921,6 +922,18 @@ class Game {
 					var d = new Date();
 					
 					if (d.getTime() - this.startTime > GAME_TIME) { //  TODO:Termination condition
+						var alpha = 0.5
+						var mx = 4.5
+						var mn = 2.5
+						var C = 1.5;
+						var b = (mx-mn)/(-1+Math.exp(-C));
+						var a = mn-b;
+						var fraction_primary = this.mainCorrectCount / this.mainCount
+        				var fraction_distractor = this.distCorrectCount / this.distCount
+						var cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
+						// -mn removes the 2.5 and total payout is 2.5 + bonus
+						this.bonus = a + b*exp(-C*cumulative_x) - mn
+						this.logEvent("Final BONUS", this.bonus.toString());
 						this.logEvent(EVENTTYPE.GAME_OVER, "");
 						this.gameOver = true;
 						this.assets.road.stop();
@@ -932,33 +945,12 @@ class Game {
 						document.getElementById("game-container").style.visibility = "hidden";
 						document.getElementById("hider1").style.visibility = "hidden";
 						document.getElementById("distractorcontainer").style.visibility = "hidden";
-						
-						// Compute bonus #to-do: put this is custom.py so that users may not alter the javascript
-						// bonus = a + b*exp(-C*cumulative_x), 
-        				// where: cumulative_x = alpha*fraction_primary + (1-alpha)*fraction_distractor, 
-        				// and alpha>0.5 (must be <1) means we weigh the primary queries more; 
-        				// C is a constant that decides how quickly the payoff rises, 
-        				// and a, b are constants that keep the payoff between a prescribed minimum and maximum 
-        				// (1 and 5 in this example).
-        				// (alpha = 0.7, C = 1.5, min payoff = 1, max payoff = 5) 
-        				alpha = .7
-        				c = 1.5
-        				// a is payoff min
-        				a = 1
-        				// b is payoff max
-        				b = 5
-        				fraction_primary = this.mainCorrectCount / this.mainCount
-        				fraction_distractor = this.distCorrectCount / this.distCount
-        				cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
-        				bonus = a + b * math.exp(-c * cumulative_x)
-        				console.log('bonus is: ', bonus)
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
-						
 						console.log(this.dataLog);
 						//psiTurk.recordUnstructuredData('logs', this.dataLog);
 						console.log('outersouce')
-						psiTurk.saveData();
+						//psiTurk.saveData();
 						datalogWritten = true;   
 						for (var i = 1; i < 9999; i++){
 							clearInterval(i);

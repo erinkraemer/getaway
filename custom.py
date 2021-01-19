@@ -108,7 +108,7 @@ def list_my_data():
 #----------------------------------------------
 
 @custom_code.route('/compute_bonus', methods=['GET'])
-def compute_bonus():
+def compute_bonus(fraction_primary, fraction_distractor):
     # check that user provided the correct keys
     # errors will not be that gracefull here if being
     # accessed by the Javascrip client
