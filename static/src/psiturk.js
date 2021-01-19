@@ -65,10 +65,6 @@ var PsiTurk = function(uniqueId, adServerLoc, mode) {
             this.set('data', data);
             this.set({"currenttrial": this.get("currenttrial")+1});
         },
-
-        addBonusAmount: function(amount){
-            this.set("bonus", amount);
-        },
         
         addUnstructuredData: function(field, response) {
             var qd = this.get("questiondata");
@@ -229,8 +225,8 @@ var PsiTurk = function(uniqueId, adServerLoc, mode) {
         };
         return self.pages[pagename];
     };
-
-
+    
+    
     // Add a line of data with any number of columns
     self.recordTrialData = function(trialdata) {
         taskdata.addTrialData(trialdata);
@@ -255,10 +251,12 @@ var PsiTurk = function(uniqueId, adServerLoc, mode) {
     };
 
     // Add bonus to task data
-    self.computeBonus = function(amount) {
-        var total = taskdata.bonus + amount;
-        taskdata.addBonusAmount(total);
-        
+    self.computeBonus = function(url, callback) {
+        $.ajax(url, {
+                    type: "GET",
+                    data: {uniqueId: self.taskdata.id},
+                    success: callback
+                });
     };
     
     // Save data to server

@@ -948,9 +948,9 @@ class Game {
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 						console.log(this.dataLog);
-						//psiTurk.recordUnstructuredData('logs', this.dataLog);
+						psiTurk.recordUnstructuredData('logs', this.dataLog);
 						console.log('outersouce')
-						//psiTurk.saveData();
+						psiTurk.saveData();
 						datalogWritten = true;   
 						for (var i = 1; i < 9999; i++){
 							clearInterval(i);
@@ -1234,7 +1234,7 @@ class Game {
 							logEvent(eventtype, eventdata) {
 								if (!this.gameOver) {
 									var d = new Date();
-									this.dataLog += (d.getTime()).toString() + "," + eventtype + "," + eventdata + '\n';
+									this.dataLog += "['datetime': " + (d.getTime()).toString() + ", 'eventtype': " + eventtype + ", 'eventdata': " + eventdata + "], ";
 									psiTurk.recordTrialData([eventtype, eventdata]);
 								}
 								
@@ -1260,7 +1260,7 @@ class Game {
 								currentview = new Questionnaire;
 							}
 							
-							start() {
+							start(psiTurk) {
 								
 								var dstart = new Date();
 								this.gameOver = false;

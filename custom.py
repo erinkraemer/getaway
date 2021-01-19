@@ -108,52 +108,82 @@ def list_my_data():
 #----------------------------------------------
 
 @custom_code.route('/compute_bonus', methods=['GET'])
-def compute_bonus(fraction_primary, fraction_distractor):
+def compute_bonus():
     # check that user provided the correct keys
     # errors will not be that gracefull here if being
     # accessed by the Javascrip client
-    if not request.args.has_key('uniqueId'):
-        raise ExperimentError('improper_inputs')  # i don't like returning HTML to JSON requests...  maybe should change this
+    if not 'uniqueId' in request.args:
+        # i don't like returning HTML to JSON requests...  maybe should change this
+        raise ExperimentError('improper_inputs')
     uniqueId = request.args['uniqueId']
 
-    #try: 
+    try:
         # lookup user in database
-        # user = Participant.query.\
-        #        filter(Participant.uniqueid == uniqueId).\
-        #        one()
-        # user_data = loads(user.datastring) # load datastring from JSON
-        # bonus = 0
+        user = Participant.query.\
+            filter(Participant.uniqueid == uniqueId).\
+            one()
+        user_data = loads(user.datastring)  # load datastring from JSON
+        bonus = 0
 
-        # for record in user_data['data']: # for line in data file
-        #     trial = record['trialdata']
-        #     if trial['phase']=='TEST':
-        #         if trial['hit']==True:
+        for record in user_data['data']:  # for line in data file
+            trial = record['trialdata']
+            if trial['phase'] == 'TEST':
+                if trial['hit'] == True:
+                    bonus += 0.02
+        user.bonus = bonus
+        db_session.add(user)
+        db_session.commit()
+        resp = {"bonusComputed": "success"}
+        return jsonify(**resp)
+    except:
+        abort(404)  # again, bad to display HTML, but...
+# @custom_code.route('/compute_bonus', methods=['GET'])
+# def compute_bonus(fraction_primary, fraction_distractor):
+#     # check that user provided the correct keys
+#     # errors will not be that gracefull here if being
+#     # accessed by the Javascrip client
+#     if not request.args.has_key('uniqueId'):
+#         raise ExperimentError('improper_inputs')  # i don't like returning HTML to JSON requests...  maybe should change this
+#     uniqueId = request.args['uniqueId']
 
-    #     user.bonus = bonus
-    #     db_session.add(user)
-    #     db_session.commit()
-    #     resp = {"bonusComputed": "success"}
-    #     return jsonify(**resp)
-    # except:
-    #     abort(404)  # again, bad to display HTML, but...
+#     #try: 
+#         # lookup user in database
+#         # user = Participant.query.\
+#         #        filter(Participant.uniqueid == uniqueId).\
+#         #        one()
+#         # user_data = loads(user.datastring) # load datastring from JSON
+#         # bonus = 0
+
+#         # for record in user_data['data']: # for line in data file
+#         #     trial = record['trialdata']
+#         #     if trial['phase']=='TEST':
+#         #         if trial['hit']==True:
+
+#     #     user.bonus = bonus
+#     #     db_session.add(user)
+#     #     db_session.commit()
+#     #     resp = {"bonusComputed": "success"}
+#     #     return jsonify(**resp)
+#     # except:
+#     #     abort(404)  # again, bad to display HTML, but...
                     
-        # bonus = a + b*exp(-C*cumulative_x), 
-        # where: cumulative_x = alpha*fraction_primary + (1-alpha)*fraction_distractor, 
-        # and alpha>0.5 (must be <1) means we weigh the primary queries more; 
-        # C is a constant that decides how quickly the payoff rises, 
-        # and a, b are constants that keep the payoff between a prescribed minimum and maximum 
-        # (1 and 5 in this example).
-        # (alpha = 0.7, C = 1.5, min payoff = 1, max payoff = 5) 
-        # alpha = 
-        # c = 
-        # # a is payoff min
-        # a = 1
-        # # b is payoff max
-        # b = 5
-        # fraction_primary = 
-        # fraction_distractor = 
-        # cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
-        # bonus = a + b * math.exp(-C * cumulative_x)
+#         # bonus = a + b*exp(-C*cumulative_x), 
+#         # where: cumulative_x = alpha*fraction_primary + (1-alpha)*fraction_distractor, 
+#         # and alpha>0.5 (must be <1) means we weigh the primary queries more; 
+#         # C is a constant that decides how quickly the payoff rises, 
+#         # and a, b are constants that keep the payoff between a prescribed minimum and maximum 
+#         # (1 and 5 in this example).
+#         # (alpha = 0.7, C = 1.5, min payoff = 1, max payoff = 5) 
+#         # alpha = 
+#         # c = 
+#         # # a is payoff min
+#         # a = 1
+#         # # b is payoff max
+#         # b = 5
+#         # fraction_primary = 
+#         # fraction_distractor = 
+#         # cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
+#         # bonus = a + b * math.exp(-C * cumulative_x)
 
         
 

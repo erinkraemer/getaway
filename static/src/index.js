@@ -47,14 +47,21 @@ var startGame = function() {
   
   document.getElementById("play-btn").addEventListener("click", () => {
     setupControlListeners(game);
-    game.start();
+    game.start(psiTurk);
   });
   
   document.getElementById("exitExperiment").addEventListener("click", () => {
     psiTurk.recordTrialData(game.dataLog);
-    //psiTurk.bonus = game.bonus;
-    psiTurk.computeBonus(game.bonus);
-    psiTurk.saveData();
+    psiTurk.taskdata.set('bonus', game.bonus)
+    // psiTurk.saveData({
+		// 	success: function() {
+		// 	    clearInterval(reprompt); 
+    //             psiTurk.computeBonus('compute_bonus', function(){
+    //             	psiTurk.completeHIT(); // when finished saving compute bonus, the quit
+    //             }); 
+		// 	}, 
+		// 	error: prompt_resubmit
+		// });
     currentview = new Questionnaire();
   });
 };
@@ -125,7 +132,9 @@ var BonusQuestionnaire = function() {
     }
   });
   document.getElementById("continueToFinish").addEventListener("click", () => {
-    psiTurk.computeBonus(1.5)
+    var currentBonus = psiTurk.taskdata.get('bonus')
+    var updatedBonus = currentBonus + 1.5
+    psiTurk.taskdata.set('bonus', updatedBonus)
     currentview = new mthanks();
   });
 }

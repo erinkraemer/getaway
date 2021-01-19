@@ -1435,9 +1435,9 @@ class game_Game {
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 						console.log(this.dataLog);
-						//psiTurk.recordUnstructuredData('logs', this.dataLog);
+						psiTurk.recordUnstructuredData('logs', this.dataLog);
 						console.log('outersouce')
-						//psiTurk.saveData();
+						psiTurk.saveData();
 						datalogWritten = true;   
 						for (var i = 1; i < 9999; i++){
 							clearInterval(i);
@@ -1721,7 +1721,7 @@ class game_Game {
 							logEvent(eventtype, eventdata) {
 								if (!this.gameOver) {
 									var d = new Date();
-									this.dataLog += (d.getTime()).toString() + "," + eventtype + "," + eventdata + '\n';
+									this.dataLog += "['datetime': " + (d.getTime()).toString() + ", 'eventtype': " + eventtype + ", 'eventdata': " + eventdata + "], ";
 									psiTurk.recordTrialData([eventtype, eventdata]);
 								}
 								
@@ -1747,7 +1747,7 @@ class game_Game {
 								currentview = new /* Cannot get final name for export "default" in "./static/src/index.js" (known exports: , known reexports: ) */ undefined;
 							}
 							
-							start() {
+							start(psiTurk) {
 								
 								var dstart = new Date();
 								this.gameOver = false;
@@ -2059,14 +2059,21 @@ var startGame = function() {
   
   document.getElementById("play-btn").addEventListener("click", () => {
     car_controls(game);
-    game.start();
+    game.start(src_psiTurk);
   });
   
   document.getElementById("exitExperiment").addEventListener("click", () => {
     src_psiTurk.recordTrialData(game.dataLog);
-    //psiTurk.bonus = game.bonus;
-    src_psiTurk.computeBonus(game.bonus);
-    src_psiTurk.saveData();
+    src_psiTurk.taskdata.set('bonus', game.bonus)
+    // psiTurk.saveData({
+		// 	success: function() {
+		// 	    clearInterval(reprompt); 
+    //             psiTurk.computeBonus('compute_bonus', function(){
+    //             	psiTurk.completeHIT(); // when finished saving compute bonus, the quit
+    //             }); 
+		// 	}, 
+		// 	error: prompt_resubmit
+		// });
     src_currentview = new Questionnaire();
   });
 };
@@ -2137,7 +2144,9 @@ var BonusQuestionnaire = function() {
     }
   });
   document.getElementById("continueToFinish").addEventListener("click", () => {
-    src_psiTurk.computeBonus(1.5)
+    var currentBonus = src_psiTurk.taskdata.get('bonus')
+    var updatedBonus = currentBonus + 1.5
+    src_psiTurk.taskdata.set('bonus', updatedBonus)
     src_currentview = new mthanks();
   });
 }
