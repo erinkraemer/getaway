@@ -2137,7 +2137,7 @@ var BonusQuestionnaire = function() {
     }
   });
   document.getElementById("continueToFinish").addEventListener("click", () => {
-    src_psiTurk.recordBonusAmount()
+    src_psiTurk.recordBonusAmount(1.5)
     src_currentview = new mthanks();
   });
 }
