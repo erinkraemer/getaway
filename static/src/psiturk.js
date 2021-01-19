@@ -65,6 +65,10 @@ var PsiTurk = function(uniqueId, adServerLoc, mode) {
             this.set('data', data);
             this.set({"currenttrial": this.get("currenttrial")+1});
         },
+
+        setbonusamount: function(amount){
+            this.set("bonus", amount);
+        },
         
         addUnstructuredData: function(field, response) {
             var qd = this.get("questiondata");
@@ -251,7 +255,7 @@ var PsiTurk = function(uniqueId, adServerLoc, mode) {
     };
 
     // Add bonus to task data
-    self.computeBonus = function(url, callback) {
+    self.computeBonus(amount) = function(url, callback) {
         $.ajax(url, {
                     type: "GET",
                     data: {uniqueId: self.taskdata.id},

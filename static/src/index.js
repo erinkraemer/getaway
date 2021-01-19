@@ -52,7 +52,8 @@ var startGame = function() {
   
   document.getElementById("exitExperiment").addEventListener("click", () => {
     psiTurk.recordTrialData(game.dataLog);
-    psiTurk.bonus = game.bonus;
+    //psiTurk.bonus = game.bonus;
+    psiTurk.setbonusamount(game.bonus);
     psiTurk.saveData();
     currentview = new Questionnaire();
   });
