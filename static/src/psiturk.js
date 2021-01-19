@@ -229,11 +229,7 @@ var PsiTurk = function(uniqueId, adServerLoc, mode) {
         };
         return self.pages[pagename];
     };
-    
-    self.recordBonusAmount = function(amount){
-        var total = taskdata.bonus + amount
-        taskdata.addBonusAmount(total);
-    };
+
 
     // Add a line of data with any number of columns
     self.recordTrialData = function(trialdata) {
@@ -259,12 +255,10 @@ var PsiTurk = function(uniqueId, adServerLoc, mode) {
     };
 
     // Add bonus to task data
-    self.computeBonus(amount) = function(url, callback) {
-        $.ajax(url, {
-                    type: "GET",
-                    data: {uniqueId: self.taskdata.id},
-                    success: callback
-                });
+    self.computeBonus = function(amount) {
+        var total = taskdata.bonus + amount;
+        taskdata.addBonusAmount(total);
+        
     };
     
     // Save data to server
