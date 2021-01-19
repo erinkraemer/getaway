@@ -66,7 +66,7 @@ var PsiTurk = function(uniqueId, adServerLoc, mode) {
             this.set({"currenttrial": this.get("currenttrial")+1});
         },
 
-        setbonusamount: function(amount){
+        addBonusAmount: function(amount){
             this.set("bonus", amount);
         },
         
@@ -230,7 +230,11 @@ var PsiTurk = function(uniqueId, adServerLoc, mode) {
         return self.pages[pagename];
     };
     
-    
+    self.recordBonusAmount = function(amount){
+        var total = taskdata.bonus + amount
+        taskdata.addBonusAmount(total);
+    };
+
     // Add a line of data with any number of columns
     self.recordTrialData = function(trialdata) {
         taskdata.addTrialData(trialdata);

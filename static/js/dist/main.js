@@ -2065,7 +2065,7 @@ var startGame = function() {
   document.getElementById("exitExperiment").addEventListener("click", () => {
     src_psiTurk.recordTrialData(game.dataLog);
     //psiTurk.bonus = game.bonus;
-    src_psiTurk.setbonusamount(game.bonus);
+    src_psiTurk.recordBonusAmount(game.bonus);
     src_psiTurk.saveData();
     src_currentview = new Questionnaire();
   });
@@ -2137,7 +2137,7 @@ var BonusQuestionnaire = function() {
     }
   });
   document.getElementById("continueToFinish").addEventListener("click", () => {
-    src_psiTurk.bonus = src_psiTurk.bonus + 1.5
+    src_psiTurk.recordBonusAmount()
     src_currentview = new mthanks();
   });
 }
