@@ -1419,7 +1419,7 @@ class game_Game {
         				var fraction_distractor = this.distCorrectCount / this.distCount
 						var cumulative_x = alpha * fraction_primary + (1 - alpha) * fraction_distractor
 						// -mn removes the 2.5 and total payout is 2.5 + bonus
-						this.bonus = a + b*exp(-C*cumulative_x) - mn
+						this.bonus = a + b * Math.exp(-C*cumulative_x) - mn
 						this.logEvent("Final BONUS", this.bonus.toString());
 						this.logEvent(EVENTTYPE.GAME_OVER, "");
 						this.gameOver = true;
