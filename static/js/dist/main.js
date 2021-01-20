@@ -2161,7 +2161,6 @@ var mthanks = function() {
     
     src_psiTurk.saveData({
       success: function() {
-        //clearInterval(reprompt); 
         src_psiTurk.computeBonus('compute_bonus', function(){
           src_psiTurk.completeHIT(); // when finished saving compute bonus, the quit
         }); 
@@ -2178,7 +2177,6 @@ var mthanks = function() {
   document.getElementById("completeHitButton").addEventListener("click", () => {
     src_psiTurk.saveData({ //move
       success: function() {
-        clearInterval(reprompt); 
         src_psiTurk.computeBonus('compute_bonus', function(){
           src_psiTurk.completeHIT(); // when finished saving compute bonus, the quit
         }); 
