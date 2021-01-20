@@ -146,6 +146,7 @@ var BonusQuestionnaire = function() {
       psiTurk.showPage('thanks-mturksubmit.html');
       document.getElementById("completeHitButton").addEventListener("click", () => {
         currentview = new Closepage();
+        //boo
       });
   };
 
