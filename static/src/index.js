@@ -157,7 +157,6 @@ var mthanks = function() {
 ***********************/
 var Complete = function() {
   psiTurk.showPage('complete.html');
-  //boo
   document.getElementById("next").addEventListener("click", () => {
     currentview = new Closepage();
   });
