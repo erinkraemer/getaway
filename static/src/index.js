@@ -54,15 +54,6 @@ var startGame = function() {
   document.getElementById("exitExperiment").addEventListener("click", () => {
     psiTurk.recordTrialData(game.dataLog);
     psiTurk.taskdata.set('bonus', game.bonus)
-    // psiTurk.saveData({
-    // 	success: function() {
-    // 	    clearInterval(reprompt); 
-    //             psiTurk.computeBonus('compute_bonus', function(){
-    //             	psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-    //             }); 
-    // 	}, 
-    // 	error: prompt_resubmit
-    // });
     currentview = new Questionnaire();
   });
 };
@@ -149,7 +140,9 @@ var mthanks = function() {
   psiTurk.showPage('thanks-mturksubmit.html');
   document.getElementById("completeHitButton").addEventListener("click", () => {
     psiTurk.saveData();
-    psiTurk.completeHIT();
+    psiTurk.computeBonus('compute_bonus', function(){
+      psiTurk.completeHIT(); // when finished saving compute bonus, the quit
+    });
     currentview = new Closepage();
     //boo
   });
