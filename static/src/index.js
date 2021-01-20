@@ -138,38 +138,13 @@ var BonusQuestionnaire = function() {
 * Thanks and complete     *
 ****************/
 var mthanks = function() {
-  var prompt_resubmit = function() {
-    document.body.innerHTML = error_message;
-    $("#resubmit").click(resubmit);
-  };
-  
-  var resubmit = function() {
-    document.body.innerHTML = "<h1>Trying to resubmit...</h1>";
-    var reprompt = setTimeout(prompt_resubmit, 10000);
-    
-    psiTurk.saveData({
-      success: function() {
-        psiTurk.computeBonus('compute_bonus', function(){
-          psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-        }); 
-        
-        
-      }, 
-      error: prompt_resubmit
-    });
-  };
-  
   // Load thank you page
   psiTurk.showPage('thanks-mturksubmit.html');
   
   document.getElementById("completeHitButton").addEventListener("click", () => {
-    psiTurk.saveData({ //move
-      success: function() {
-        psiTurk.computeBonus('compute_bonus', function(){
-          psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-        }); 
-      }, 
-      error: prompt_resubmit
+    psiTurk.saveData();
+    psiTurk.computeBonus('compute_bonus', function(){
+      psiTurk.completeHIT(); // when finished saving compute bonus, the quit
     });
     currentview = new Closepage();
   });
