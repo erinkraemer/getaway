@@ -140,9 +140,8 @@ var mthanks = function() {
   psiTurk.showPage('thanks-mturksubmit.html');
   document.getElementById("completeHitButton").addEventListener("click", () => {
     psiTurk.saveData();
-    psiTurk.computeBonus('compute_bonus', function(){
-      psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-    });
+    psiTurk.computeBonus('compute_bonus');
+    psiTurk.completeHIT();
     currentview = new Closepage();
     //boo
   });
