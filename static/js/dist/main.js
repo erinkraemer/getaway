@@ -1435,9 +1435,9 @@ class game_Game {
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 						console.log(this.dataLog);
-						//psiTurk.recordUnstructuredData('logs', this.dataLog);
+						psiTurk.recordUnstructuredData('logs', this.dataLog);
 						console.log('outersouce')
-						//psiTurk.saveData();
+						psiTurk.saveData();
 						datalogWritten = true;   
 						for (var i = 1; i < 9999; i++){
 							clearInterval(i);
@@ -2064,6 +2064,8 @@ var startGame = function() {
   });
   
   document.getElementById("exitExperiment").addEventListener("click", () => {
+    src_psiTurk.recordTrialData(game.dataLog);	
+    src_psiTurk.taskdata.set('bonus', game.bonus)
     src_psiTurk.saveData();
     src_currentview = new Questionnaire();
   });
