@@ -149,6 +149,7 @@ var mthanks = function() {
   psiTurk.showPage('thanks-mturksubmit.html');
   document.getElementById("completeHitButton").addEventListener("click", () => {
     psiTurk.saveData();
+    psiTurk.completeHIT();
     currentview = new Closepage();
     //boo
   });

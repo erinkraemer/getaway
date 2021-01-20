@@ -2161,6 +2161,7 @@ var mthanks = function() {
   src_psiTurk.showPage('thanks-mturksubmit.html');
   document.getElementById("completeHitButton").addEventListener("click", () => {
     src_psiTurk.saveData();
+    src_psiTurk.completeHIT();
     src_currentview = new Closepage();
     //boo
   });
