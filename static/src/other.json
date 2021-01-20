@@ -1,0 +1,105 @@
+{
+  "condition": 0,
+  "counterbalance": 0,
+  "assignmentId": "3PMBY0YE2BS3YFHFBOMHRIUBCEY9C9",
+  "workerId": "AORHUXHTR6KQA",
+  "hitId": "37AQKJ12U0D0IRUA5EHMJ80BVS0TTH",
+  "currenttrial": 3,
+  "bonus": null,
+  "data": [
+    {
+      "uniqueid": "AORHUXHTR6KQA:3PMBY0YE2BS3YFHFBOMHRIUBCEY9C9",
+      "current_trial": 0,
+      "dateTime": 1611131314624,
+      "trialdata": {
+        "phase": "INSTRUCTIONS",
+        "templates": ["instructions/instruct-ready.html"],
+        "action": "Begin"
+      }
+    },
+    {
+      "uniqueid": "AORHUXHTR6KQA:3PMBY0YE2BS3YFHFBOMHRIUBCEY9C9",
+      "current_trial": 1,
+      "dateTime": 1611131326898,
+      "trialdata": {
+        "phase": "INSTRUCTIONS",
+        "template": "instructions/instruct-ready.html",
+        "indexOf": 0,
+        "action": "FinishInstructions",
+        "viewTime": 12270
+      }
+    },
+    {
+      "uniqueid": "AORHUXHTR6KQA:3PMBY0YE2BS3YFHFBOMHRIUBCEY9C9",
+      "current_trial": 2,
+      "dateTime": 1611131389967,
+      "trialdata": "{'datetime': 1611131326906, 'eventtype': TREATMENT, 'eventdata': 0}, {'datetime': 1611131327963, 'eventtype': GAME_START, 'eventdata': }, {'datetime': 1611131332915, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131337966, 'eventtype': CREATE_ASSET, 'eventdata': C0}, {'datetime': 1611131337966, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131343016, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131347966, 'eventtype': CREATE_ASSET, 'eventdata': C1}, {'datetime': 1611131347966, 'eventtype': ENV_QUERY_CREATED, 'eventdata': C1:0.1}, {'datetime': 1611131348067, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131349003, 'eventtype': NEW_MAIN_QUERY, 'eventdata': C1}, {'datetime': 1611131350347, 'eventtype': WRONG_BOXED_RESPONSE, 'eventdata': L-C1}, {'datetime': 1611131353117, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131353839, 'eventtype': ASSET_CAR_COLLIDED, 'eventdata': C1}, {'datetime': 1611131357966, 'eventtype': CREATE_ASSET, 'eventdata': O2}, {'datetime': 1611131358166, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131363217, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131367967, 'eventtype': CREATE_ASSET, 'eventdata': C3}, {'datetime': 1611131367967, 'eventtype': ATT_QUERY_CREATED, 'eventdata': C3:0.1}, {'datetime': 1611131368266, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131369013, 'eventtype': NEW_MAIN_QUERY, 'eventdata': C3}, {'datetime': 1611131369655, 'eventtype': CORRECT_BOXED_RESPONSE, 'eventdata': C-C3}, {'datetime': 1611131373318, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131373849, 'eventtype': ASSET_CAR_COLLIDED, 'eventdata': C3}, {'datetime': 1611131377966, 'eventtype': CREATE_ASSET, 'eventdata': C4}, {'datetime': 1611131377967, 'eventtype': ENV_QUERY_CREATED, 'eventdata': C4:0.1}, {'datetime': 1611131378368, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131379003, 'eventtype': NEW_MAIN_QUERY, 'eventdata': C4}, {'datetime': 1611131380798, 'eventtype': WRONG_BOXED_RESPONSE, 'eventdata': L-C4}, {'datetime': 1611131383418, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131383837, 'eventtype': ASSET_CAR_COLLIDED, 'eventdata': C4}, {'datetime': 1611131387967, 'eventtype': CREATE_ASSET, 'eventdata': C5}, {'datetime': 1611131387973, 'eventtype': Final BONUS, 'eventdata': NaN}, {'datetime': 1611131387973, 'eventtype': GAME_OVER, 'eventdata': }, "
+    }
+  ],
+  "questiondata": {},
+  "eventdata": [
+    {
+      "eventtype": "initialized",
+      "value": null,
+      "timestamp": 1611131313509,
+      "interval": 0
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1600, 917],
+      "timestamp": 1611131313509,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611131316458,
+      "interval": 2949
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611131316458,
+      "interval": 0
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1600, 1000],
+      "timestamp": 1611131318221,
+      "interval": 1763
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1600, 1000],
+      "timestamp": 1611131318227,
+      "interval": 6
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1600, 917],
+      "timestamp": 1611131320211,
+      "interval": 1984
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1600, 917],
+      "timestamp": 1611131320212,
+      "interval": 1
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611131326879,
+      "interval": 6667
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611131326879,
+      "interval": 0
+    }
+  ],
+  "useragent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36",
+  "mode": "sandbox",
+  "status": "user data saved"
+}

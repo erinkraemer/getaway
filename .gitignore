@@ -103,6 +103,8 @@ ENV/
 # mypy
 .mypy_cache/
 
+#config
+
 .pytest_cache/
 
 \#.*

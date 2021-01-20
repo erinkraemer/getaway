@@ -52,7 +52,7 @@ var startGame = function() {
   });
   
   document.getElementById("exitExperiment").addEventListener("click", () => {
-    psiTurk.recordTrialData(game.dataLog);
+    //psiTurk.recordTrialData(game.dataLog);
     psiTurk.taskdata.set('bonus', game.bonus)
     currentview = new Questionnaire();
   });
@@ -68,7 +68,7 @@ var Questionnaire = function() {
   // load your iframe with a url specific to your participant
   $('#questionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ?UID=' + uniqueId));
   
-  document.getElementById("exitQuestionnaire").style.visibility = "visible";//remove before deploy
+  //document.getElementById("exitQuestionnaire").style.visibility = "visible";//remove before deploy
   // add the all-important message event listener
   window.addEventListener('message', function(event){
     
@@ -111,7 +111,7 @@ var BonusQuestionnaire = function() {
   // load your iframe with a url specific to your participant
   $('#bonusquestionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_8c3Klzuagw3jdhb?UID=' + uniqueId));
   
-  document.getElementById("continueToFinish").style.visibility = "visible"; // Remove before deploy
+  //document.getElementById("continueToFinish").style.visibility = "visible"; // Remove before deploy
   // add the all-important message event listener
   window.addEventListener('message', function(event){
     if (event.data) {
@@ -142,7 +142,7 @@ var mthanks = function() {
     psiTurk.saveData();
     psiTurk.computeBonus('compute_bonus');
     psiTurk.completeHIT();
-    currentview = new Closepage();
+    //currentview = new Closepage();
     //boo
   });
 };
