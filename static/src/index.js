@@ -138,14 +138,14 @@ var BonusQuestionnaire = function() {
 * Thanks and complete     *
 ****************/
 var mthanks = function() {
-  prompt_resubmit = function() {
+  var prompt_resubmit = function() {
     document.body.innerHTML = error_message;
     $("#resubmit").click(resubmit);
   };
   
-  resubmit = function() {
+  var resubmit = function() {
     document.body.innerHTML = "<h1>Trying to resubmit...</h1>";
-    reprompt = setTimeout(prompt_resubmit, 10000);
+    var reprompt = setTimeout(prompt_resubmit, 10000);
     
     psiTurk.saveData({
       success: function() {
