@@ -16,6 +16,7 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 // All pages to be loaded
 var pages = [
+  "instructions/instruct-ready.html",
   "stage.html",
   "postquestionnaire.html",
   "continueToBonusQuestionnaire.html",
@@ -51,17 +52,6 @@ var startGame = function() {
   });
   
   document.getElementById("exitExperiment").addEventListener("click", () => {
-    psiTurk.recordTrialData(game.dataLog);
-    psiTurk.taskdata.set('bonus', game.bonus)
-    // psiTurk.saveData({
-		// 	success: function() {
-		// 	    clearInterval(reprompt); 
-    //             psiTurk.computeBonus('compute_bonus', function(){
-    //             	psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-    //             }); 
-		// 	}, 
-		// 	error: prompt_resubmit
-		// });
     currentview = new Questionnaire();
   });
 };
@@ -101,9 +91,12 @@ var Questionnaire = function() {
 ********************************/
 var continueToBonusQuestionnnaire = function() {
   psiTurk.showPage('continueToBonusQuestionnaire.html');
+  // button to exit the experiment
   document.getElementById("goToExit").addEventListener("click", () => {
+    psiTurk.recordTrialData( ['bonusquestionnaire', 0])
     currentview = new mthanks();
   });
+  // button to continue to bonus questionnaire
   document.getElementById("goToBonusQuestionnaire").addEventListener("click", () => {
     currentview = new BonusQuestionnaire();
   });
@@ -132,19 +125,26 @@ var BonusQuestionnaire = function() {
     }
   });
   document.getElementById("continueToFinish").addEventListener("click", () => {
-    var currentBonus = psiTurk.taskdata.get('bonus')
-    var updatedBonus = currentBonus + 1.5
-    psiTurk.taskdata.set('bonus', updatedBonus)
+    psiTurk.recordTrialData( ['bonusquestionnaire', 1.5])
     currentview = new mthanks();
   });
 }
   
   /****************
-  * Thanks        *
+  * Thanks and complete     *
   ****************/
   var mthanks = function() {
       psiTurk.showPage('thanks-mturksubmit.html');
       document.getElementById("completeHitButton").addEventListener("click", () => {
+        psiTurk.saveData({ //move
+          success: function() {
+              clearInterval(reprompt); 
+                    psiTurk.computeBonus('compute_bonus', function(){
+                      psiTurk.completeHIT(); // when finished saving compute bonus, the quit
+                    }); 
+          }, 
+          error: prompt_resubmit
+        });
         currentview = new Closepage();
       });
   };

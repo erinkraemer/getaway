@@ -1435,9 +1435,9 @@ class game_Game {
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 						console.log(this.dataLog);
-						psiTurk.recordUnstructuredData('logs', this.dataLog);
+						//psiTurk.recordUnstructuredData('logs', this.dataLog);
 						console.log('outersouce')
-						psiTurk.saveData();
+						//psiTurk.saveData();
 						datalogWritten = true;   
 						for (var i = 1; i < 9999; i++){
 							clearInterval(i);
@@ -2028,6 +2028,7 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 // All pages to be loaded
 var pages = [
+  "instructions/instruct-ready.html",
   "stage.html",
   "postquestionnaire.html",
   "continueToBonusQuestionnaire.html",
@@ -2063,17 +2064,6 @@ var startGame = function() {
   });
   
   document.getElementById("exitExperiment").addEventListener("click", () => {
-    src_psiTurk.recordTrialData(game.dataLog);
-    src_psiTurk.taskdata.set('bonus', game.bonus)
-    // psiTurk.saveData({
-		// 	success: function() {
-		// 	    clearInterval(reprompt); 
-    //             psiTurk.computeBonus('compute_bonus', function(){
-    //             	psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-    //             }); 
-		// 	}, 
-		// 	error: prompt_resubmit
-		// });
     src_currentview = new Questionnaire();
   });
 };
@@ -2113,9 +2103,12 @@ var Questionnaire = function() {
 ********************************/
 var continueToBonusQuestionnnaire = function() {
   src_psiTurk.showPage('continueToBonusQuestionnaire.html');
+  // button to exit the experiment
   document.getElementById("goToExit").addEventListener("click", () => {
+    src_psiTurk.recordTrialData( ['bonusquestionnaire', 0])
     src_currentview = new mthanks();
   });
+  // button to continue to bonus questionnaire
   document.getElementById("goToBonusQuestionnaire").addEventListener("click", () => {
     src_currentview = new BonusQuestionnaire();
   });
@@ -2144,19 +2137,26 @@ var BonusQuestionnaire = function() {
     }
   });
   document.getElementById("continueToFinish").addEventListener("click", () => {
-    var currentBonus = src_psiTurk.taskdata.get('bonus')
-    var updatedBonus = currentBonus + 1.5
-    src_psiTurk.taskdata.set('bonus', updatedBonus)
+    src_psiTurk.recordTrialData( ['bonusquestionnaire', 1.5])
     src_currentview = new mthanks();
   });
 }
   
   /****************
-  * Thanks        *
+  * Thanks and complete     *
   ****************/
   var mthanks = function() {
       src_psiTurk.showPage('thanks-mturksubmit.html');
       document.getElementById("completeHitButton").addEventListener("click", () => {
+        src_psiTurk.saveData({ //move
+          success: function() {
+              clearInterval(reprompt); 
+                    src_psiTurk.computeBonus('compute_bonus', function(){
+                      src_psiTurk.completeHIT(); // when finished saving compute bonus, the quit
+                    }); 
+          }, 
+          error: prompt_resubmit
+        });
         src_currentview = new Closepage();
       });
   };
