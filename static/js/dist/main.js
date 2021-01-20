@@ -2028,6 +2028,7 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 // All pages to be loaded
 var pages = [
+  "instructions/instruct-ready.html",
   "stage.html",
   "postquestionnaire.html",
   "continueToBonusQuestionnaire.html",
@@ -2063,17 +2064,9 @@ var startGame = function() {
   });
   
   document.getElementById("exitExperiment").addEventListener("click", () => {
-    src_psiTurk.recordTrialData(game.dataLog);
+    src_psiTurk.recordTrialData(game.dataLog);	
     src_psiTurk.taskdata.set('bonus', game.bonus)
-    // psiTurk.saveData({
-		// 	success: function() {
-		// 	    clearInterval(reprompt); 
-    //             psiTurk.computeBonus('compute_bonus', function(){
-    //             	psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-    //             }); 
-		// 	}, 
-		// 	error: prompt_resubmit
-		// });
+    src_psiTurk.saveData();
     src_currentview = new Questionnaire();
   });
 };
@@ -2088,6 +2081,7 @@ var Questionnaire = function() {
   // load your iframe with a url specific to your participant
   $('#questionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ?UID=' + uniqueId));
   
+  document.getElementById("exitQuestionnaire").style.visibility = "visible";//remove before deploy
   // add the all-important message event listener
   window.addEventListener('message', function(event){
     
@@ -2097,7 +2091,7 @@ var Questionnaire = function() {
         if (q_message_array[0] == 'QualtricsEOS') {
           src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
           src_psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
-          document.getElementById("exitQuestionnaire").style.visibility = "visible";
+          //document.getElementById("exitQuestionnaire").style.visibility = "visible";
         }
       }
     }
@@ -2113,9 +2107,12 @@ var Questionnaire = function() {
 ********************************/
 var continueToBonusQuestionnnaire = function() {
   src_psiTurk.showPage('continueToBonusQuestionnaire.html');
+  // button to exit the experiment
   document.getElementById("goToExit").addEventListener("click", () => {
+    src_psiTurk.recordTrialData( ['bonusquestionnaire', 0])
     src_currentview = new mthanks();
   });
+  // button to continue to bonus questionnaire
   document.getElementById("goToBonusQuestionnaire").addEventListener("click", () => {
     src_currentview = new BonusQuestionnaire();
   });
@@ -2130,6 +2127,8 @@ var BonusQuestionnaire = function() {
   // load your iframe with a url specific to your participant
   $('#bonusquestionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_8c3Klzuagw3jdhb?UID=' + uniqueId));
   
+  document.getElementById("continueToFinish").style.visibility = "visible"; // Remove before deploy
+
   // add the all-important message event listener
   window.addEventListener('message', function(event){
     if (event.data) {
@@ -2144,53 +2143,59 @@ var BonusQuestionnaire = function() {
     }
   });
   document.getElementById("continueToFinish").addEventListener("click", () => {
-    var currentBonus = src_psiTurk.taskdata.get('bonus')
-    var updatedBonus = currentBonus + 1.5
-    src_psiTurk.taskdata.set('bonus', updatedBonus)
+    src_psiTurk.recordTrialData( ['bonusquestionnaire', 1.5])
     src_currentview = new mthanks();
   });
 }
-  
-  /****************
-  * Thanks        *
-  ****************/
-  var mthanks = function() {
-      src_psiTurk.showPage('thanks-mturksubmit.html');
-      document.getElementById("completeHitButton").addEventListener("click", () => {
-        src_currentview = new Closepage();
-      });
-  };
 
-  /**********************
-  * Debug Close popup   *
-  ***********************/
- var Complete = function() {
+/****************
+* Thanks and complete     *
+****************/
+var mthanks = function() {
+  // Load thank you page
+  src_psiTurk.showPage('thanks-mturksubmit.html');
+  
+  document.getElementById("completeHitButton").addEventListener("click", () => {
+    src_psiTurk.saveData();
+    src_psiTurk.computeBonus('compute_bonus', function(){
+      src_psiTurk.completeHIT(); // when finished saving compute bonus, the quit
+    });
+    src_currentview = new Closepage();
+  });
+};
+
+/**********************
+* Debug Close popup   *
+***********************/
+var Complete = function() {
   src_psiTurk.showPage('complete.html');
   document.getElementById("next").addEventListener("click", () => {
     src_currentview = new Closepage();
   });
 };
-  
-  /********************************
-  * Sandbox or Live Close popup   *
-  *********************************/
-  var Closepage = function() {
-    src_psiTurk.showPage('closepopup.html');
-  };
-  
-  
-  
-  // Task object to keep track of the current phase
-  var src_currentview;
-  
-  
-  /*******************
-  * Run Task
-  ******************/
-  
-  $(window).load( function(){
-    src_currentview = new startGame();
-  })
+
+/********************************
+* Sandbox or Live Close popup   *
+*********************************/
+var Closepage = function() {
+  src_psiTurk.showPage('closepopup.html');
+};
+
+
+
+// Task object to keep track of the current phase
+var src_currentview;
+
+
+/*******************
+* Run Task
+******************/
+$(window).load( function(){
+  src_psiTurk.doInstructions(
+    instructionPages, // a list of pages you want to display in sequence
+    function() { src_currentview = new startGame(); } // what you want to do when you are done with instructions
+  );
+});
 
 /***/ })
 /******/ ]);

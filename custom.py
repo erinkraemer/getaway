@@ -123,14 +123,10 @@ def compute_bonus():
             filter(Participant.uniqueid == uniqueId).\
             one()
         user_data = loads(user.datastring)  # load datastring from JSON
-        bonus = 0
-
-        for record in user_data['data']:  # for line in data file
-            trial = record['trialdata']
-            if trial['phase'] == 'TEST':
-                if trial['hit'] == True:
-                    bonus += 0.02
-        user.bonus = bonus
+        # bonus = 0
+        bonus = user_data['data'][-3]['trialdata'][1] # Is the regualar bonus
+        additionalBonus = user_data['data'][-1]['trialdata'][1] #is the bonus from the bonus questionnaire
+        user.bonus = bonus + additionalBonus
         db_session.add(user)
         db_session.commit()
         resp = {"bonusComputed": "success"}
