@@ -149,7 +149,7 @@ var mthanks = function() {
     
     psiTurk.saveData({
       success: function() {
-        clearInterval(reprompt); 
+        //clearInterval(reprompt); 
         psiTurk.computeBonus('compute_bonus', function(){
           psiTurk.completeHIT(); // when finished saving compute bonus, the quit
         }); 
