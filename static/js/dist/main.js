@@ -2034,7 +2034,8 @@ var pages = [
   "postquestionnaire.html",
   "continueToBonusQuestionnaire.html",
   "bonusQuestionnaire.html",
-  "thanks-mturksubmit.html"
+  "thanks-mturksubmit.html",
+  "closepopup.html"
 ];
 
 src_psiTurk.preloadPages(pages);
@@ -2148,14 +2149,16 @@ var BonusQuestionnaire = function() {
 * Thanks        *
 ****************/
 var mthanks = function() {
-  src_psiTurk.showPage('thanks-mturksubmit.html');
-  document.getElementById("completeHitButton").addEventListener("click", () => {
-    src_psiTurk.saveData();
-    src_psiTurk.computeBonus('compute_bonus');
-    src_psiTurk.completeHIT();
+  src_psiTurk.computeBonus('compute_bonus');
+  src_psiTurk.saveData();
+  src_psiTurk.completeHIT();
+  //psiTurk.saveData();
+  //psiTurk.showPage('closepopup.html');
+  //document.getElementById("completeHitButton").addEventListener("click", () => {
+    
     //currentview = new Closepage();
     //boo
-  });
+  // });
 };
 
 // /**********************
