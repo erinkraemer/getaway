@@ -54,8 +54,8 @@ const CONTROLLER_REACTION_TIME = 2000;
 const CONTROLLER_SAMPLING_TIME = 500;// in milliseconds
 const DISTRACTOR_TASK_TIME = 5000; //Also the timeout for distractor tasl // in milliseconds
 const DISTRACTOR_TASK_PAUSE = 5000;// in milliseconds
-const GAME_TIME = 60000;// 10 minutes in milliseconds
-const QUARTER_TIME = 15000;
+const GAME_TIME = 600000;// 10 minutes in milliseconds
+const QUARTER_TIME = 150000;
 
 const MIN_RES_WIDTH = 1280;
 const MIN_RES_HEIGHT = 800;
@@ -371,7 +371,7 @@ class Game {
 				}
 				break;
 				default:
-				console.log("Unrecognized asset type");
+				//console.log("Unrecognized asset type");
 			}
 		}
 		
@@ -427,9 +427,9 @@ class Game {
 				//this.newDistractorTask();
 				this.distractorTaskActive = false;
 				var _this = this;
-				console.log("before timeout")
+				//console.log("before timeout")
 				setTimeout(function () {
-					console.log("in timeout")
+					//console.log("in timeout")
 					_this.newDistractorTask(_this.currentCondition);
 					_this.distractorTaskActive = true;
 				}, DISTRACTOR_TASK_PAUSE);
@@ -576,7 +576,7 @@ class Game {
 					//Math in js is floating
 					var speed = 60 * this.PhysicsReference.speed; //90; // TODO_ERIN: Automated code commented above. But it has jitter. Need to tie this to physics.speed
 					//var speed = (((object_y - prev_object_y)*1000) / (curr_time - prev_time));
-					console.log("Speed is : " + speed);
+					//console.log("Speed is : " + speed);
 					
 					max_time = 3; //TODO_ERIN: Needs to be update - aesthethic fix
 					var time_bar_length = ((car_y) - (object_y+object_height))/speed;
@@ -762,7 +762,7 @@ class Game {
 						if (asset.physics.y > (canvas.height)) {
 							asset.physics.y = canvas.height - sprite.height;
 						}
-						console.log("break into road conditional")
+						//console.log("break into road conditional")
 						this.ctx.drawImage(sprite.img, 0, 0, sprite.width, sprite.height, asset.physics.x, asset.physics.y - sprite.height + 1, sprite.width, sprite.height);
 					}
 				}
@@ -770,7 +770,7 @@ class Game {
 				// draw more rocks
 				if (asset instanceof Obstacle && asset.physics.y >= 0) {
 					if (asset.physics.y > canvas.height) {
-						console.log("break into obstacle conditional")
+						//console.log("break into obstacle conditional")
 						this.ctx.drawImage(sprite.img, 0, 0, sprite.width, sprite.height, asset.physics.x, asset.physics.y - 900, sprite.width * sprite.width_scale, sprite.height * sprite.height_scale);
 						//console.log("Drawing rock");
 						
@@ -948,9 +948,9 @@ class Game {
 						document.getElementById("distractorTaskPaused").style.visibility = "hidden";
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
-						console.log(this.dataLog);
+						//console.log(this.dataLog);
 						psiTurk.recordUnstructuredData('logs', this.dataLog);
-						console.log('outersouce')
+						//console.log('outersouce')
 						psiTurk.saveData();
 						datalogWritten = true;   
 						for (var i = 1; i < 9999; i++){
@@ -1274,14 +1274,14 @@ class Game {
 								this.timeOfLastAttQuery = dstart.getTime();
 								this.timeOfLastNoResponseObject = dstart.getTime();
 								this.timeOfLastDistractorTask = dstart.getTime();
-								console.log("Screen Res - Width:" + screen.width + "Height:" + screen.height);
+								//console.log("Screen Res - Width:" + screen.width + "Height:" + screen.height);
 								if (screen.width >= MIN_RES_WIDTH-1 && screen.height >= MIN_RES_HEIGHT-1) {
 									let whileGametime = setInterval(() => {
 										if (!this.gameOver) {
 											var d = new Date();
 											var boxEmpty = Array.isArray(this.boxed) && !this.boxed.length;
 											
-											console.log("assetidCounter: " + this.assetidCounter);
+											//console.log("assetidCounter: " + this.assetidCounter);
 											//GAME_LOGIC_CHANGE:
 											// OLD: var askAttQuery = boxEmpty && ((d.getTime() - this.timeOfLastAttQuery) > ATT_QUERY_INTERVAL);
 											var N_QUERY_PER_ENV_QUERY = 3;
@@ -1292,7 +1292,7 @@ class Game {
 												idToAskAttQuery = Math.floor(Math.random()*N_QUERY_PER_ENV_QUERY)-1; // -1 to N_QUERY_PER_ENV_QUERY-2 || -1 to 1 || For value 3 -> E 0 1 E 0 1 E  
 												idToAskAttQuery = idToAskAttQuery == -1? -100: idToAskAttQuery;
 												postEnvQueryCounter = -1;
-												console.log("Going to ask attention query at position:"+idToAskAttQuery);
+												//console.log("Going to ask attention query at position:"+idToAskAttQuery);
 											}
 											
 											var askAttQuery = false;
@@ -1317,15 +1317,15 @@ class Game {
 											//console.log("Checking if env query: ", askEnvQuery, " and Box empty = " + boxEmpty + " at t = " + (d.getTime() - this.startTime));
 											
 											if (askEnvQuery) {
-												console.log("Asking Environment Query: " + (d.getTime() - this.timeOfLastEnvQuery).toString() + " at t = " + (d.getTime() - this.startTime));
+												//console.log("Asking Environment Query: " + (d.getTime() - this.timeOfLastEnvQuery).toString() + " at t = " + (d.getTime() - this.startTime));
 												this.timeOfLastEnvQuery = d.getTime();
 											}
 											else if (askAttQuery) {
-												console.log("Asking Attention Query:" + (d.getTime() - this.timeOfLastAttQuery).toString() + " at t = " + (d.getTime() - this.startTime) );
+												//console.log("Asking Attention Query:" + (d.getTime() - this.timeOfLastAttQuery).toString() + " at t = " + (d.getTime() - this.startTime) );
 												this.timeOfLastAttQuery = d.getTime();
 											}
 											else {
-												console.log("Creating No Response object:" + (d.getTime() - this.timeOfLastAttQuery).toString() + " at t = " + (d.getTime() - this.startTime) );
+												//console.log("Creating No Response object:" + (d.getTime() - this.timeOfLastAttQuery).toString() + " at t = " + (d.getTime() - this.startTime) );
 												this.timeOfLastNoResponseObject = d.getTime();
 											}
 											

@@ -1,16 +1,16 @@
 {
   "condition": 0,
   "counterbalance": 0,
-  "assignmentId": "3C6FJU71TUIELA6N5RZXK598SNSYUZ",
+  "assignmentId": "379J5II41S5DWF22WCV2MFL9XKVLEE",
   "workerId": "AZ1LWLJ16X9OK",
-  "hitId": "371QPA24D5DZ97I13VXCD2HG39X1T4",
-  "currenttrial": 4,
-  "bonus": 1.6273525535483042,
+  "hitId": "3D0LPO3EBEOGMLOWJ3IMXFM3BMQOY4",
+  "currenttrial": 3,
+  "bonus": 1.1964387021892962,
   "data": [
     {
-      "uniqueid": "AZ1LWLJ16X9OK:3C6FJU71TUIELA6N5RZXK598SNSYUZ",
+      "uniqueid": "AZ1LWLJ16X9OK:379J5II41S5DWF22WCV2MFL9XKVLEE",
       "current_trial": 0,
-      "dateTime": 1611217197592,
+      "dateTime": 1611223484235,
       "trialdata": {
         "phase": "INSTRUCTIONS",
         "templates": ["instructions/instruct-ready.html"],
@@ -18,97 +18,76 @@
       }
     },
     {
-      "uniqueid": "AZ1LWLJ16X9OK:3C6FJU71TUIELA6N5RZXK598SNSYUZ",
+      "uniqueid": "AZ1LWLJ16X9OK:379J5II41S5DWF22WCV2MFL9XKVLEE",
       "current_trial": 1,
-      "dateTime": 1611217204220,
+      "dateTime": 1611223492090,
       "trialdata": {
         "phase": "INSTRUCTIONS",
         "template": "instructions/instruct-ready.html",
         "indexOf": 0,
         "action": "FinishInstructions",
-        "viewTime": 6625
+        "viewTime": 7852
       }
     },
     {
-      "uniqueid": "AZ1LWLJ16X9OK:3C6FJU71TUIELA6N5RZXK598SNSYUZ",
+      "uniqueid": "AZ1LWLJ16X9OK:379J5II41S5DWF22WCV2MFL9XKVLEE",
       "current_trial": 2,
-      "dateTime": 1611217267814,
-      "trialdata": "{'datetime': 1611217204229, 'eventtype': TREATMENT, 'eventdata': 0}, {'datetime': 1611217205336, 'eventtype': GAME_START, 'eventdata': }, {'datetime': 1611217210290, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611217215339, 'eventtype': CREATE_ASSET, 'eventdata': L0}, {'datetime': 1611217215339, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611217220340, 'eventtype': TREATMENT, 'eventdata': 1}, {'datetime': 1611217220340, 'eventtype': NEW_DIST_QUERY, 'eventdata': 50-44 = ???}, {'datetime': 1611217221803, 'eventtype': CORRECT_DIST_RESPONSE, 'eventdata': 50-44=6 encoding: undefined}, {'datetime': 1611217225341, 'eventtype': CREATE_ASSET, 'eventdata': L1}, {'datetime': 1611217225341, 'eventtype': ENV_QUERY_CREATED, 'eventdata': L1:0.1}, {'datetime': 1611217226384, 'eventtype': NEW_MAIN_QUERY, 'eventdata': L1}, {'datetime': 1611217226809, 'eventtype': NEW_DIST_QUERY, 'eventdata': 27-27 = ???}, {'datetime': 1611217228016, 'eventtype': CORRECT_BOXED_RESPONSE, 'eventdata': L-L1}, {'datetime': 1611217229746, 'eventtype': CORRECT_DIST_RESPONSE, 'eventdata': 27-27=0 encoding: undefined}, {'datetime': 1611217231238, 'eventtype': ASSET_CAR_COLLIDED, 'eventdata': L1}, {'datetime': 1611217234747, 'eventtype': NEW_DIST_QUERY, 'eventdata': 22-19 = ???}, {'datetime': 1611217235340, 'eventtype': CREATE_ASSET, 'eventdata': O2}, {'datetime': 1611217235340, 'eventtype': ATT_QUERY_CREATED, 'eventdata': O2:0.1}, {'datetime': 1611217236372, 'eventtype': NEW_MAIN_QUERY, 'eventdata': O2}, {'datetime': 1611217236426, 'eventtype': WRONG_DIST_RESPONSE, 'eventdata': 22-19=7 encoding: undefined}, {'datetime': 1611217239239, 'eventtype': TIMEOUT_BOXED_RESPONSE, 'eventdata': U-O2}, {'datetime': 1611217241427, 'eventtype': TREATMENT, 'eventdata': 0}, {'datetime': 1611217241441, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 22-19 = ???}, {'datetime': 1611217243376, 'eventtype': ASSET_PASSED_CANVAS, 'eventdata': O2}, {'datetime': 1611217245339, 'eventtype': CREATE_ASSET, 'eventdata': O3}, {'datetime': 1611217246489, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 22-19 = ???}, {'datetime': 1611217251489, 'eventtype': TREATMENT, 'eventdata': 1}, {'datetime': 1611217251489, 'eventtype': NEW_DIST_QUERY, 'eventdata': 93-85 = ???}, {'datetime': 1611217253249, 'eventtype': CORRECT_DIST_RESPONSE, 'eventdata': 93-85=8 encoding: undefined}, {'datetime': 1611217255339, 'eventtype': CREATE_ASSET, 'eventdata': C4}, {'datetime': 1611217255339, 'eventtype': ENV_QUERY_CREATED, 'eventdata': C4:0.1}, {'datetime': 1611217256382, 'eventtype': NEW_MAIN_QUERY, 'eventdata': C4}, {'datetime': 1611217257678, 'eventtype': CORRECT_BOXED_RESPONSE, 'eventdata': C-C4}, {'datetime': 1611217258252, 'eventtype': NEW_DIST_QUERY, 'eventdata': 38-31 = ???}, {'datetime': 1611217260116, 'eventtype': CORRECT_DIST_RESPONSE, 'eventdata': 38-31=7 encoding: undefined}, {'datetime': 1611217261220, 'eventtype': ASSET_CAR_COLLIDED, 'eventdata': C4}, {'datetime': 1611217265117, 'eventtype': NEW_DIST_QUERY, 'eventdata': 15-14 = ???}, {'datetime': 1611217265340, 'eventtype': Final BONUS, 'eventdata': 1.6273525535483042}, {'datetime': 1611217265340, 'eventtype': GAME_OVER, 'eventdata': }, "
-    },
-    {
-      "uniqueid": "AZ1LWLJ16X9OK:3C6FJU71TUIELA6N5RZXK598SNSYUZ",
-      "current_trial": 3,
-      "dateTime": 1611217309428,
-      "trialdata": {
-        "phase": "postquestionnaire",
-        "status": "back_from_qualtrics"
-      }
+      "dateTime": 1611223556591,
+      "trialdata": "{'datetime': '1611223492121', 'eventtype': 'TREATMENT', 'eventdata': '1'}, {'datetime': '1611223492121', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '47-42 = ???'}, {'datetime': '1611223493730', 'eventtype': 'GAME_START', 'eventdata': ''}, {'datetime': '1611223495672', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '47-42=5 encoding: undefined'}, {'datetime': '1611223500674', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '72-71 = ???'}, {'datetime': '1611223503735', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L0'}, {'datetime': '1611223505663', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '72-71 = ???'}, {'datetime': '1611223510663', 'eventtype': 'TREATMENT', 'eventdata': '0'}, {'datetime': '1611223510675', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '72-71 = ???'}, {'datetime': '1611223513735', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L1'}, {'datetime': '1611223513735', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'L1:0.1'}, {'datetime': '1611223514784', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L1'}, {'datetime': '1611223515689', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '72-71 = ???'}, {'datetime': '1611223515927', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'L-L1'}, {'datetime': '1611223519619', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'L1'}, {'datetime': '1611223520715', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '72-71 = ???'}, {'datetime': '1611223523736', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O2'}, {'datetime': '1611223525716', 'eventtype': 'TREATMENT', 'eventdata': '1'}, {'datetime': '1611223525716', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '48-46 = ???'}, {'datetime': '1611223528365', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '48-46=2 encoding: undefined'}, {'datetime': '1611223533366', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '75-67 = ???'}, {'datetime': '1611223533737', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C3'}, {'datetime': '1611223533737', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'C3:0.1'}, {'datetime': '1611223534781', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C3'}, {'datetime': '1611223537623', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-C3'}, {'datetime': '1611223538341', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '75-67 = ???'}, {'datetime': '1611223539665', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C3'}, {'datetime': '1611223543343', 'eventtype': 'TREATMENT', 'eventdata': '0'}, {'datetime': '1611223543353', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '75-67 = ???'}, {'datetime': '1611223543738', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C4'}, {'datetime': '1611223543738', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C4:0.1'}, {'datetime': '1611223544782', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C4'}, {'datetime': '1611223547610', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-C4'}, {'datetime': '1611223548373', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '75-67 = ???'}, {'datetime': '1611223551802', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'C4'}, {'datetime': '1611223553394', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '75-67 = ???'}, {'datetime': '1611223553736', 'eventtype': 'Final BONUS', 'eventdata': '1.1964387021892962'}, {'datetime': '1611223553736', 'eventtype': 'GAME_OVER', 'eventdata': ''}, "
     }
   ],
-  "questiondata": { "qualtrics_session_id": "FS_SQdIvuZTlaA2tX3" },
+  "questiondata": {},
   "eventdata": [
     {
       "eventtype": "initialized",
       "value": null,
-      "timestamp": 1611217196396,
+      "timestamp": 1611223483390,
       "interval": 0
     },
     {
       "eventtype": "window_resize",
-      "value": [1422, 806],
-      "timestamp": 1611217196396,
-      "interval": 0
-    },
-    {
-      "eventtype": "focus",
-      "value": "off",
-      "timestamp": 1611217202385,
-      "interval": 5989
-    },
-    {
-      "eventtype": "focus",
-      "value": "off",
-      "timestamp": 1611217202385,
+      "value": [1920, 998],
+      "timestamp": 1611223483390,
       "interval": 0
     },
     {
       "eventtype": "focus",
       "value": "on",
-      "timestamp": 1611217204111,
-      "interval": 1726
+      "timestamp": 1611223484229,
+      "interval": 839
     },
     {
       "eventtype": "focus",
       "value": "on",
-      "timestamp": 1611217204111,
+      "timestamp": 1611223484229,
       "interval": 0
     },
     {
       "eventtype": "focus",
       "value": "off",
-      "timestamp": 1611217269695,
-      "interval": 65584
+      "timestamp": 1611223486913,
+      "interval": 2684
     },
     {
       "eventtype": "focus",
       "value": "off",
-      "timestamp": 1611217269695,
+      "timestamp": 1611223486913,
       "interval": 0
     },
     {
       "eventtype": "focus",
       "value": "on",
-      "timestamp": 1611217310687,
-      "interval": 40992
+      "timestamp": 1611223491994,
+      "interval": 5081
     },
     {
       "eventtype": "focus",
       "value": "on",
-      "timestamp": 1611217310687,
+      "timestamp": 1611223491994,
       "interval": 0
     }
   ],
-  "useragent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36",
+  "useragent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:84.0) Gecko/20100101 Firefox/84.0",
   "mode": "sandbox",
   "status": "user data saved"
 }
