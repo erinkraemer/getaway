@@ -1722,7 +1722,7 @@ class game_Game {
 							logEvent(eventtype, eventdata) {
 								if (!this.gameOver) {
 									var d = new Date();
-									this.dataLog += "{'datetime': " + (d.getTime()).toString() + ", 'eventtype': " + eventtype.toString() + ", 'eventdata': " + eventdata.toString() + "}, ";
+									this.dataLog += "{'datetime': '" + (d.getTime()).toString() + "', 'eventtype': '" + eventtype.toString() + "', 'eventdata': '" + eventdata.toString() + "'}, ";
 									psiTurk.recordTrialData([eventtype, eventdata]);
 								}
 								
@@ -2034,9 +2034,7 @@ var pages = [
   "postquestionnaire.html",
   "continueToBonusQuestionnaire.html",
   "bonusQuestionnaire.html",
-  "thanks-mturksubmit.html",
-  "complete.html",
-  "closepopup.html"
+  "thanks-mturksubmit.html"
 ];
 
 src_psiTurk.preloadPages(pages);
@@ -2155,28 +2153,28 @@ var mthanks = function() {
     src_psiTurk.saveData();
     src_psiTurk.computeBonus('compute_bonus');
     src_psiTurk.completeHIT();
-    src_currentview = new Closepage();
+    //currentview = new Closepage();
     //boo
   });
 };
 
-/**********************
-* Debug Close popup   *
-***********************/
-var Complete = function() {
-  src_psiTurk.showPage('complete.html');
-  document.getElementById("next").addEventListener("click", () => {
-    src_psiTurk.completeHIT();
-    src_currentview = new Closepage();
-  });
-};
+// /**********************
+// * Debug Close popup   *
+// ***********************/
+// var Complete = function() {
+//   psiTurk.showPage('complete.html');
+//   document.getElementById("next").addEventListener("click", () => {
+//     psiTurk.completeHIT();
+//     currentview = new Closepage();
+//   });
+// };
 
-/********************************
-* Sandbox or Live Close popup   *
-*********************************/
-var Closepage = function() {
-  src_psiTurk.showPage('closepopup.html');
-};
+// /********************************
+// * Sandbox or Live Close popup   *
+// *********************************/
+// var Closepage = function() {
+//   psiTurk.showPage('closepopup.html');
+// };
 
 
 

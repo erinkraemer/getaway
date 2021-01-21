@@ -1235,7 +1235,7 @@ class Game {
 							logEvent(eventtype, eventdata) {
 								if (!this.gameOver) {
 									var d = new Date();
-									this.dataLog += "{'datetime': " + (d.getTime()).toString() + ", 'eventtype': " + eventtype.toString() + ", 'eventdata': " + eventdata.toString() + "}, ";
+									this.dataLog += "{'datetime': '" + (d.getTime()).toString() + "', 'eventtype': '" + eventtype.toString() + "', 'eventdata': '" + eventdata.toString() + "'}, ";
 									psiTurk.recordTrialData([eventtype, eventdata]);
 								}
 								

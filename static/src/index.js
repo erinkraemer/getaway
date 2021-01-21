@@ -21,9 +21,7 @@ var pages = [
   "postquestionnaire.html",
   "continueToBonusQuestionnaire.html",
   "bonusQuestionnaire.html",
-  "thanks-mturksubmit.html",
-  "complete.html",
-  "closepopup.html"
+  "thanks-mturksubmit.html"
 ];
 
 psiTurk.preloadPages(pages);
@@ -142,28 +140,28 @@ var mthanks = function() {
     psiTurk.saveData();
     psiTurk.computeBonus('compute_bonus');
     psiTurk.completeHIT();
-    currentview = new Closepage();
+    //currentview = new Closepage();
     //boo
   });
 };
 
-/**********************
-* Debug Close popup   *
-***********************/
-var Complete = function() {
-  psiTurk.showPage('complete.html');
-  document.getElementById("next").addEventListener("click", () => {
-    psiTurk.completeHIT();
-    currentview = new Closepage();
-  });
-};
+// /**********************
+// * Debug Close popup   *
+// ***********************/
+// var Complete = function() {
+//   psiTurk.showPage('complete.html');
+//   document.getElementById("next").addEventListener("click", () => {
+//     psiTurk.completeHIT();
+//     currentview = new Closepage();
+//   });
+// };
 
-/********************************
-* Sandbox or Live Close popup   *
-*********************************/
-var Closepage = function() {
-  psiTurk.showPage('closepopup.html');
-};
+// /********************************
+// * Sandbox or Live Close popup   *
+// *********************************/
+// var Closepage = function() {
+//   psiTurk.showPage('closepopup.html');
+// };
 
 
 
