@@ -1,0 +1,2138 @@
+{
+  "condition": 0,
+  "counterbalance": 0,
+  "assignmentId": "3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+  "workerId": "A3FSDH6HUZPNQ8",
+  "hitId": "3UY4PIS8RUA1EUDH6ZFORDS1LW31N6",
+  "currenttrial": 332,
+  "bonus": 0,
+  "data": [
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 0,
+      "dateTime": 1610590028239,
+      "trialdata": ["TREATMENT", 1]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 1,
+      "dateTime": 1610590028239,
+      "trialdata": ["NEW_DIST_QUERY", "49-46 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 2,
+      "dateTime": 1610590293516,
+      "trialdata": ["TREATMENT", 1]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 3,
+      "dateTime": 1610590293516,
+      "trialdata": ["NEW_DIST_QUERY", "44-35 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 4,
+      "dateTime": 1610590309298,
+      "trialdata": ["GAME_START", ""]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 5,
+      "dateTime": 1610590314292,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-35 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 6,
+      "dateTime": 1610590319312,
+      "trialdata": ["NEW_DIST_QUERY", "22-13 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 7,
+      "dateTime": 1610590319312,
+      "trialdata": ["CREATE_ASSET", "C0"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 8,
+      "dateTime": 1610590324307,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "22-13 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 9,
+      "dateTime": 1610590329321,
+      "trialdata": ["NEW_DIST_QUERY", "56-53 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 10,
+      "dateTime": 1610590329322,
+      "trialdata": ["CREATE_ASSET", "O1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 11,
+      "dateTime": 1610590329322,
+      "trialdata": ["ENV_QUERY_CREATED", "O1:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 12,
+      "dateTime": 1610590329755,
+      "trialdata": ["NEW_MAIN_QUERY", "O1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 13,
+      "dateTime": 1610590330942,
+      "trialdata": ["TIMEOUT_BOXED_RESPONSE", "U-O1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 14,
+      "dateTime": 1610590331769,
+      "trialdata": ["ASSET_CAR_COLLIDED", "O1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 15,
+      "dateTime": 1610590334291,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "56-53 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 16,
+      "dateTime": 1610590339291,
+      "trialdata": ["NEW_DIST_QUERY", "94-92 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 17,
+      "dateTime": 1610590339331,
+      "trialdata": ["CREATE_ASSET", "O2"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 18,
+      "dateTime": 1610590339331,
+      "trialdata": ["ATT_QUERY_CREATED", "O2:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 19,
+      "dateTime": 1610590339762,
+      "trialdata": ["NEW_MAIN_QUERY", "O2"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 20,
+      "dateTime": 1610590340946,
+      "trialdata": ["TIMEOUT_BOXED_RESPONSE", "U-O2"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 21,
+      "dateTime": 1610590342679,
+      "trialdata": ["ASSET_PASSED_CANVAS", "O2"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 22,
+      "dateTime": 1610590344246,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "94-92 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 23,
+      "dateTime": 1610590349256,
+      "trialdata": ["NEW_DIST_QUERY", "43-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 24,
+      "dateTime": 1610590349336,
+      "trialdata": ["CREATE_ASSET", "O3"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 25,
+      "dateTime": 1610590354256,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "43-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 26,
+      "dateTime": 1610590359261,
+      "trialdata": ["NEW_DIST_QUERY", "90-89 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 27,
+      "dateTime": 1610590359341,
+      "trialdata": ["CREATE_ASSET", "L4"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 28,
+      "dateTime": 1610590359341,
+      "trialdata": ["ENV_QUERY_CREATED", "L4:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 29,
+      "dateTime": 1610590359777,
+      "trialdata": ["NEW_MAIN_QUERY", "L4"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 30,
+      "dateTime": 1610590360877,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "L-L4"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 31,
+      "dateTime": 1610590361791,
+      "trialdata": ["ASSET_CAR_COLLIDED", "L4"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 32,
+      "dateTime": 1610590364261,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "90-89 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 33,
+      "dateTime": 1610590369261,
+      "trialdata": ["NEW_DIST_QUERY", "91-87 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 34,
+      "dateTime": 1610590369361,
+      "trialdata": ["CREATE_ASSET", "C5"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 35,
+      "dateTime": 1610590374260,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "91-87 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 36,
+      "dateTime": 1610590379271,
+      "trialdata": ["NEW_DIST_QUERY", "57-52 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 37,
+      "dateTime": 1610590379371,
+      "trialdata": ["CREATE_ASSET", "O6"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 38,
+      "dateTime": 1610590381780,
+      "trialdata": ["WRONG_DIST_RESPONSE", "57-52=3"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 39,
+      "dateTime": 1610590386786,
+      "trialdata": ["NEW_DIST_QUERY", "10-6 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 40,
+      "dateTime": 1610590388265,
+      "trialdata": ["CORRECT_DIST_RESPONSE", "10-6=4"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 41,
+      "dateTime": 1610590389381,
+      "trialdata": ["CREATE_ASSET", "L7"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 42,
+      "dateTime": 1610590389381,
+      "trialdata": ["ENV_QUERY_CREATED", "L7:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 43,
+      "dateTime": 1610590389812,
+      "trialdata": ["NEW_MAIN_QUERY", "L7"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 44,
+      "dateTime": 1610590390599,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "L-L7"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 45,
+      "dateTime": 1610590391826,
+      "trialdata": ["ASSET_CAR_COLLIDED", "L7"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 46,
+      "dateTime": 1610590393281,
+      "trialdata": ["NEW_DIST_QUERY", "52-46 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 47,
+      "dateTime": 1610590393301,
+      "trialdata": [
+        "RANDOMIZE_ICON",
+        "static/assets/images/life/life (4).png:static/assets/images/money/money (1).png:static/assets/images/obstacle/obstacle (1).png"
+      ]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 48,
+      "dateTime": 1610590398241,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "52-46 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 49,
+      "dateTime": 1610590399381,
+      "trialdata": ["CREATE_ASSET", "L8"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 50,
+      "dateTime": 1610590403261,
+      "trialdata": ["NEW_DIST_QUERY", "10-1 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 51,
+      "dateTime": 1610590404961,
+      "trialdata": ["CORRECT_DIST_RESPONSE", "10-1=9"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 52,
+      "dateTime": 1610590409391,
+      "trialdata": ["CREATE_ASSET", "C9"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 53,
+      "dateTime": 1610590409971,
+      "trialdata": ["NEW_DIST_QUERY", "69-65 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 54,
+      "dateTime": 1610590414966,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "69-65 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 55,
+      "dateTime": 1610590419397,
+      "trialdata": ["CREATE_ASSET", "L10"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 56,
+      "dateTime": 1610590419397,
+      "trialdata": ["ENV_QUERY_CREATED", "L10:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 57,
+      "dateTime": 1610590419828,
+      "trialdata": ["NEW_MAIN_QUERY", "L10"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 58,
+      "dateTime": 1610590419976,
+      "trialdata": ["NEW_DIST_QUERY", "83-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 59,
+      "dateTime": 1610590421008,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "L-L10"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 60,
+      "dateTime": 1610590421842,
+      "trialdata": ["ASSET_CAR_COLLIDED", "L10"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 61,
+      "dateTime": 1610590424946,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "83-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 62,
+      "dateTime": 1610590429406,
+      "trialdata": ["CREATE_ASSET", "O11"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 63,
+      "dateTime": 1610590429946,
+      "trialdata": ["NEW_DIST_QUERY", "82-80 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 64,
+      "dateTime": 1610590432199,
+      "trialdata": ["CORRECT_DIST_RESPONSE", "82-80=2"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 65,
+      "dateTime": 1610590437201,
+      "trialdata": ["NEW_DIST_QUERY", "76-67 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 66,
+      "dateTime": 1610590439421,
+      "trialdata": ["CREATE_ASSET", "L12"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 67,
+      "dateTime": 1610590442182,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "76-67 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 68,
+      "dateTime": 1610590447192,
+      "trialdata": ["NEW_DIST_QUERY", "21-14 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 69,
+      "dateTime": 1610590449421,
+      "trialdata": ["CREATE_ASSET", "O13"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 70,
+      "dateTime": 1610590449421,
+      "trialdata": ["ENV_QUERY_CREATED", "O13:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 71,
+      "dateTime": 1610590449856,
+      "trialdata": ["NEW_MAIN_QUERY", "O13"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 72,
+      "dateTime": 1610590450996,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "O-O13"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 73,
+      "dateTime": 1610590452166,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "21-14 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 74,
+      "dateTime": 1610590452773,
+      "trialdata": ["ASSET_PASSED_CANVAS", "O13"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 75,
+      "dateTime": 1610590457171,
+      "trialdata": ["NEW_DIST_QUERY", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 76,
+      "dateTime": 1610590459441,
+      "trialdata": ["CREATE_ASSET", "O14"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 77,
+      "dateTime": 1610590462151,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 78,
+      "dateTime": 1610590467161,
+      "trialdata": ["TREATMENT", 0]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 79,
+      "dateTime": 1610590467221,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 80,
+      "dateTime": 1610590469456,
+      "trialdata": ["CREATE_ASSET", "L15"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 81,
+      "dateTime": 1610590472251,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 82,
+      "dateTime": 1610590477291,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 83,
+      "dateTime": 1610590477311,
+      "trialdata": [
+        "RANDOMIZE_ICON",
+        "static/assets/images/life/life (5).png:static/assets/images/money/money (4).png:static/assets/images/obstacle/obstacle (1).png"
+      ]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 84,
+      "dateTime": 1610590479466,
+      "trialdata": ["CREATE_ASSET", "L16"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 85,
+      "dateTime": 1610590479466,
+      "trialdata": ["ENV_QUERY_CREATED", "L16:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 86,
+      "dateTime": 1610590479899,
+      "trialdata": ["NEW_MAIN_QUERY", "L16"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 87,
+      "dateTime": 1610590480562,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "L-L16"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 88,
+      "dateTime": 1610590481913,
+      "trialdata": ["ASSET_CAR_COLLIDED", "L16"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 89,
+      "dateTime": 1610590482326,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 90,
+      "dateTime": 1610590487357,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 91,
+      "dateTime": 1610590489471,
+      "trialdata": ["CREATE_ASSET", "C17"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 92,
+      "dateTime": 1610590492416,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 93,
+      "dateTime": 1610590497446,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 94,
+      "dateTime": 1610590499481,
+      "trialdata": ["CREATE_ASSET", "O18"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 95,
+      "dateTime": 1610590499482,
+      "trialdata": ["ATT_QUERY_CREATED", "O18:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 96,
+      "dateTime": 1610590499913,
+      "trialdata": ["NEW_MAIN_QUERY", "O18"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 97,
+      "dateTime": 1610590501043,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "O-O18"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 98,
+      "dateTime": 1610590502475,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 99,
+      "dateTime": 1610590502831,
+      "trialdata": ["ASSET_PASSED_CANVAS", "O18"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 100,
+      "dateTime": 1610590507501,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 101,
+      "dateTime": 1610590509491,
+      "trialdata": ["CREATE_ASSET", "O19"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 102,
+      "dateTime": 1610590509491,
+      "trialdata": ["ENV_QUERY_CREATED", "O19:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 103,
+      "dateTime": 1610590509928,
+      "trialdata": ["NEW_MAIN_QUERY", "O19"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 104,
+      "dateTime": 1610590510848,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "O-O19"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 105,
+      "dateTime": 1610590512521,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 106,
+      "dateTime": 1610590512844,
+      "trialdata": ["ASSET_PASSED_CANVAS", "O19"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 107,
+      "dateTime": 1610590517561,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 108,
+      "dateTime": 1610590519501,
+      "trialdata": ["CREATE_ASSET", "L20"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 109,
+      "dateTime": 1610590522581,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 110,
+      "dateTime": 1610590527651,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 111,
+      "dateTime": 1610590529505,
+      "trialdata": ["CREATE_ASSET", "C21"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 112,
+      "dateTime": 1610590532676,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 113,
+      "dateTime": 1610590537702,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 114,
+      "dateTime": 1610590539516,
+      "trialdata": ["CREATE_ASSET", "C22"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 115,
+      "dateTime": 1610590539516,
+      "trialdata": ["ENV_QUERY_CREATED", "C22:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 116,
+      "dateTime": 1610590539950,
+      "trialdata": ["NEW_MAIN_QUERY", "C22"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 117,
+      "dateTime": 1610590540658,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "C-C22"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 118,
+      "dateTime": 1610590541963,
+      "trialdata": ["ASSET_CAR_COLLIDED", "C22"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 119,
+      "dateTime": 1610590542736,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 120,
+      "dateTime": 1610590547756,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 121,
+      "dateTime": 1610590549516,
+      "trialdata": ["CREATE_ASSET", "O23"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 122,
+      "dateTime": 1610590552781,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 123,
+      "dateTime": 1610590557810,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 124,
+      "dateTime": 1610590559531,
+      "trialdata": ["CREATE_ASSET", "L24"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 125,
+      "dateTime": 1610590561311,
+      "trialdata": [
+        "RANDOMIZE_ICON",
+        "static/assets/images/life/life (2).png:static/assets/images/money/money (2).png:static/assets/images/obstacle/obstacle (4).png"
+      ]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 126,
+      "dateTime": 1610590562846,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 127,
+      "dateTime": 1610590567876,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 128,
+      "dateTime": 1610590569532,
+      "trialdata": ["CREATE_ASSET", "O25"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 129,
+      "dateTime": 1610590569532,
+      "trialdata": ["ENV_QUERY_CREATED", "O25:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 130,
+      "dateTime": 1610590569964,
+      "trialdata": ["NEW_MAIN_QUERY", "O25"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 131,
+      "dateTime": 1610590570440,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "O-O25"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 132,
+      "dateTime": 1610590572882,
+      "trialdata": ["ASSET_PASSED_CANVAS", "O25"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 133,
+      "dateTime": 1610590572901,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 134,
+      "dateTime": 1610590577936,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 135,
+      "dateTime": 1610590579536,
+      "trialdata": ["CREATE_ASSET", "C26"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 136,
+      "dateTime": 1610590582977,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 137,
+      "dateTime": 1610590588006,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 138,
+      "dateTime": 1610590589542,
+      "trialdata": ["CREATE_ASSET", "O27"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 139,
+      "dateTime": 1610590589542,
+      "trialdata": ["ATT_QUERY_CREATED", "O27:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 140,
+      "dateTime": 1610590589972,
+      "trialdata": ["NEW_MAIN_QUERY", "O27"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 141,
+      "dateTime": 1610590590708,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "O-O27"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 142,
+      "dateTime": 1610590592889,
+      "trialdata": ["ASSET_PASSED_CANVAS", "O27"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 143,
+      "dateTime": 1610590593072,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 144,
+      "dateTime": 1610590598101,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 145,
+      "dateTime": 1610590599556,
+      "trialdata": ["CREATE_ASSET", "C28"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 146,
+      "dateTime": 1610590599556,
+      "trialdata": ["ENV_QUERY_CREATED", "C28:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 147,
+      "dateTime": 1610590599993,
+      "trialdata": ["NEW_MAIN_QUERY", "C28"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 148,
+      "dateTime": 1610590600710,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "C-C28"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 149,
+      "dateTime": 1610590602007,
+      "trialdata": ["ASSET_CAR_COLLIDED", "C28"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 150,
+      "dateTime": 1610590603125,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 151,
+      "dateTime": 1610590608141,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-74 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 152,
+      "dateTime": 1610590609561,
+      "trialdata": ["CREATE_ASSET", "C29"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 153,
+      "dateTime": 1610590613151,
+      "trialdata": ["TREATMENT", 1]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 154,
+      "dateTime": 1610590613151,
+      "trialdata": ["NEW_DIST_QUERY", "4-1 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 155,
+      "dateTime": 1610590614393,
+      "trialdata": ["CORRECT_DIST_RESPONSE", "4-1=3"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 156,
+      "dateTime": 1610590619401,
+      "trialdata": ["NEW_DIST_QUERY", "74-66 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 157,
+      "dateTime": 1610590619576,
+      "trialdata": ["CREATE_ASSET", "L30"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 158,
+      "dateTime": 1610590619576,
+      "trialdata": ["ATT_QUERY_CREATED", "L30:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 159,
+      "dateTime": 1610590620008,
+      "trialdata": ["NEW_MAIN_QUERY", "L30"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 160,
+      "dateTime": 1610590620980,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "L-L30"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 161,
+      "dateTime": 1610590622022,
+      "trialdata": ["ASSET_CAR_COLLIDED", "L30"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 162,
+      "dateTime": 1610590624411,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "74-66 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 163,
+      "dateTime": 1610590629411,
+      "trialdata": ["NEW_DIST_QUERY", "41-32 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 164,
+      "dateTime": 1610590629591,
+      "trialdata": ["CREATE_ASSET", "O31"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 165,
+      "dateTime": 1610590629591,
+      "trialdata": ["ENV_QUERY_CREATED", "O31:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 166,
+      "dateTime": 1610590630022,
+      "trialdata": ["NEW_MAIN_QUERY", "O31"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 167,
+      "dateTime": 1610590630813,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "O-O31"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 168,
+      "dateTime": 1610590632939,
+      "trialdata": ["ASSET_PASSED_CANVAS", "O31"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 169,
+      "dateTime": 1610590634421,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "41-32 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 170,
+      "dateTime": 1610590639431,
+      "trialdata": ["NEW_DIST_QUERY", "84-82 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 171,
+      "dateTime": 1610590639592,
+      "trialdata": ["CREATE_ASSET", "C32"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 172,
+      "dateTime": 1610590639592,
+      "trialdata": ["ATT_QUERY_CREATED", "C32:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 173,
+      "dateTime": 1610590640023,
+      "trialdata": ["NEW_MAIN_QUERY", "C32"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 174,
+      "dateTime": 1610590641098,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "C-C32"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 175,
+      "dateTime": 1610590641102,
+      "trialdata": ["CORRECT_DIST_RESPONSE", "84-82=2"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 176,
+      "dateTime": 1610590642037,
+      "trialdata": ["ASSET_CAR_COLLIDED", "C32"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 177,
+      "dateTime": 1610590645331,
+      "trialdata": [
+        "RANDOMIZE_ICON",
+        "static/assets/images/life/life (5).png:static/assets/images/money/money (6).png:static/assets/images/obstacle/obstacle (4).png"
+      ]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 178,
+      "dateTime": 1610590646110,
+      "trialdata": ["NEW_DIST_QUERY", "72-69 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 179,
+      "dateTime": 1610590649601,
+      "trialdata": ["CREATE_ASSET", "C33"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 180,
+      "dateTime": 1610590651101,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "72-69 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 181,
+      "dateTime": 1610590656107,
+      "trialdata": ["NEW_DIST_QUERY", "16-11 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 182,
+      "dateTime": 1610590659601,
+      "trialdata": ["CREATE_ASSET", "O34"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 183,
+      "dateTime": 1610590659601,
+      "trialdata": ["ENV_QUERY_CREATED", "O34:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 184,
+      "dateTime": 1610590660037,
+      "trialdata": ["NEW_MAIN_QUERY", "O34"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 185,
+      "dateTime": 1610590661096,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "16-11 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 186,
+      "dateTime": 1610590661216,
+      "trialdata": ["TIMEOUT_BOXED_RESPONSE", "U-O34"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 187,
+      "dateTime": 1610590662051,
+      "trialdata": ["ASSET_CAR_COLLIDED", "O34"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 188,
+      "dateTime": 1610590666111,
+      "trialdata": ["NEW_DIST_QUERY", "100-97 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 189,
+      "dateTime": 1610590667152,
+      "trialdata": ["CORRECT_DIST_RESPONSE", "100-97=3"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 190,
+      "dateTime": 1610590669606,
+      "trialdata": ["CREATE_ASSET", "O35"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 191,
+      "dateTime": 1610590669606,
+      "trialdata": ["ATT_QUERY_CREATED", "O35:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 192,
+      "dateTime": 1610590670037,
+      "trialdata": ["NEW_MAIN_QUERY", "O35"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 193,
+      "dateTime": 1610590670659,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "O-O35"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 194,
+      "dateTime": 1610590672162,
+      "trialdata": ["NEW_DIST_QUERY", "50-50 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 195,
+      "dateTime": 1610590672954,
+      "trialdata": ["ASSET_PASSED_CANVAS", "O35"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 196,
+      "dateTime": 1610590673589,
+      "trialdata": ["CORRECT_DIST_RESPONSE", "50-50=0"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 197,
+      "dateTime": 1610590678591,
+      "trialdata": ["NEW_DIST_QUERY", "27-25 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 198,
+      "dateTime": 1610590679611,
+      "trialdata": ["CREATE_ASSET", "L36"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 199,
+      "dateTime": 1610590682579,
+      "trialdata": ["CORRECT_DIST_RESPONSE", "27-25=2"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 200,
+      "dateTime": 1610590687596,
+      "trialdata": ["NEW_DIST_QUERY", "81-80 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 201,
+      "dateTime": 1610590689342,
+      "trialdata": ["CORRECT_DIST_RESPONSE", "81-80=1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 202,
+      "dateTime": 1610590689626,
+      "trialdata": ["CREATE_ASSET", "O37"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 203,
+      "dateTime": 1610590689626,
+      "trialdata": ["ENV_QUERY_CREATED", "O37:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 204,
+      "dateTime": 1610590690059,
+      "trialdata": ["NEW_MAIN_QUERY", "O37"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 205,
+      "dateTime": 1610590690646,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "O-O37"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 206,
+      "dateTime": 1610590692976,
+      "trialdata": ["ASSET_PASSED_CANVAS", "O37"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 207,
+      "dateTime": 1610590694351,
+      "trialdata": ["NEW_DIST_QUERY", "63-54 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 208,
+      "dateTime": 1610590698783,
+      "trialdata": ["WRONG_DIST_RESPONSE", "63-54=4"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 209,
+      "dateTime": 1610590699641,
+      "trialdata": ["CREATE_ASSET", "O38"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 210,
+      "dateTime": 1610590699641,
+      "trialdata": ["ATT_QUERY_CREATED", "O38:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 211,
+      "dateTime": 1610590700073,
+      "trialdata": ["NEW_MAIN_QUERY", "O38"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 212,
+      "dateTime": 1610590700703,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "O-O38"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 213,
+      "dateTime": 1610590702990,
+      "trialdata": ["ASSET_PASSED_CANVAS", "O38"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 214,
+      "dateTime": 1610590703791,
+      "trialdata": ["NEW_DIST_QUERY", "100-95 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 215,
+      "dateTime": 1610590705017,
+      "trialdata": ["CORRECT_DIST_RESPONSE", "100-95=5"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 216,
+      "dateTime": 1610590709641,
+      "trialdata": ["CREATE_ASSET", "O39"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 217,
+      "dateTime": 1610590710021,
+      "trialdata": ["NEW_DIST_QUERY", "81-75 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 218,
+      "dateTime": 1610590715031,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "81-75 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 219,
+      "dateTime": 1610590719646,
+      "trialdata": ["CREATE_ASSET", "L40"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 220,
+      "dateTime": 1610590719646,
+      "trialdata": ["ENV_QUERY_CREATED", "L40:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 221,
+      "dateTime": 1610590720046,
+      "trialdata": ["NEW_DIST_QUERY", "11-7 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 222,
+      "dateTime": 1610590720081,
+      "trialdata": ["NEW_MAIN_QUERY", "L40"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 223,
+      "dateTime": 1610590721193,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "L-L40"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 224,
+      "dateTime": 1610590722095,
+      "trialdata": ["ASSET_CAR_COLLIDED", "L40"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 225,
+      "dateTime": 1610590725036,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "11-7 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 226,
+      "dateTime": 1610590729341,
+      "trialdata": [
+        "RANDOMIZE_ICON",
+        "static/assets/images/life/life (4).png:static/assets/images/money/money (2).png:static/assets/images/obstacle/obstacle (1).png"
+      ]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 227,
+      "dateTime": 1610590729656,
+      "trialdata": ["CREATE_ASSET", "L41"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 228,
+      "dateTime": 1610590730051,
+      "trialdata": ["NEW_DIST_QUERY", "72-72 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 229,
+      "dateTime": 1610590732625,
+      "trialdata": ["CORRECT_DIST_RESPONSE", "72-72=0"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 230,
+      "dateTime": 1610590737626,
+      "trialdata": ["NEW_DIST_QUERY", "100-95 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 231,
+      "dateTime": 1610590738510,
+      "trialdata": ["CORRECT_DIST_RESPONSE", "100-95=5"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 232,
+      "dateTime": 1610590739666,
+      "trialdata": ["CREATE_ASSET", "C42"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 233,
+      "dateTime": 1610590739666,
+      "trialdata": ["ATT_QUERY_CREATED", "C42:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 234,
+      "dateTime": 1610590740102,
+      "trialdata": ["NEW_MAIN_QUERY", "C42"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 235,
+      "dateTime": 1610590740837,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "C-C42"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 236,
+      "dateTime": 1610590742116,
+      "trialdata": ["ASSET_CAR_COLLIDED", "C42"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 237,
+      "dateTime": 1610590743521,
+      "trialdata": ["NEW_DIST_QUERY", "70-67 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 238,
+      "dateTime": 1610590745326,
+      "trialdata": ["CORRECT_DIST_RESPONSE", "70-67=3"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 239,
+      "dateTime": 1610590749680,
+      "trialdata": ["CREATE_ASSET", "L43"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 240,
+      "dateTime": 1610590749680,
+      "trialdata": ["ENV_QUERY_CREATED", "L43:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 241,
+      "dateTime": 1610590750116,
+      "trialdata": ["NEW_MAIN_QUERY", "L43"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 242,
+      "dateTime": 1610590750341,
+      "trialdata": ["NEW_DIST_QUERY", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 243,
+      "dateTime": 1610590750823,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "L-L43"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 244,
+      "dateTime": 1610590752130,
+      "trialdata": ["ASSET_CAR_COLLIDED", "L43"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 245,
+      "dateTime": 1610590755321,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 246,
+      "dateTime": 1610590759681,
+      "trialdata": ["CREATE_ASSET", "L44"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 247,
+      "dateTime": 1610590760321,
+      "trialdata": ["TREATMENT", 0]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 248,
+      "dateTime": 1610590760341,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 249,
+      "dateTime": 1610590765371,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 250,
+      "dateTime": 1610590769691,
+      "trialdata": ["CREATE_ASSET", "C45"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 251,
+      "dateTime": 1610590770391,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 252,
+      "dateTime": 1610590775421,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 253,
+      "dateTime": 1610590779701,
+      "trialdata": ["CREATE_ASSET", "C46"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 254,
+      "dateTime": 1610590779701,
+      "trialdata": ["ENV_QUERY_CREATED", "C46:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 255,
+      "dateTime": 1610590780138,
+      "trialdata": ["NEW_MAIN_QUERY", "C46"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 256,
+      "dateTime": 1610590780461,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 257,
+      "dateTime": 1610590780855,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "C-C46"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 258,
+      "dateTime": 1610590782152,
+      "trialdata": ["ASSET_CAR_COLLIDED", "C46"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 259,
+      "dateTime": 1610590785530,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 260,
+      "dateTime": 1610590789706,
+      "trialdata": ["CREATE_ASSET", "L47"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 261,
+      "dateTime": 1610590789706,
+      "trialdata": ["ATT_QUERY_CREATED", "L47:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 262,
+      "dateTime": 1610590790138,
+      "trialdata": ["NEW_MAIN_QUERY", "L47"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 263,
+      "dateTime": 1610590790561,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 264,
+      "dateTime": 1610590790683,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "L-L47"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 265,
+      "dateTime": 1610590792153,
+      "trialdata": ["ASSET_CAR_COLLIDED", "L47"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 266,
+      "dateTime": 1610590795581,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 267,
+      "dateTime": 1610590799721,
+      "trialdata": ["CREATE_ASSET", "C48"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 268,
+      "dateTime": 1610590800611,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 269,
+      "dateTime": 1610590805631,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 270,
+      "dateTime": 1610590809722,
+      "trialdata": ["CREATE_ASSET", "O49"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 271,
+      "dateTime": 1610590809722,
+      "trialdata": ["ENV_QUERY_CREATED", "O49:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 272,
+      "dateTime": 1610590810153,
+      "trialdata": ["NEW_MAIN_QUERY", "O49"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 273,
+      "dateTime": 1610590810661,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 274,
+      "dateTime": 1610590810819,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "O-O49"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 275,
+      "dateTime": 1610590813070,
+      "trialdata": ["ASSET_PASSED_CANVAS", "O49"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 276,
+      "dateTime": 1610590813356,
+      "trialdata": [
+        "RANDOMIZE_ICON",
+        "static/assets/images/life/life (5).png:static/assets/images/money/money (3).png:static/assets/images/obstacle/obstacle (3).png"
+      ]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 277,
+      "dateTime": 1610590815691,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 278,
+      "dateTime": 1610590819741,
+      "trialdata": ["CREATE_ASSET", "L50"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 279,
+      "dateTime": 1610590819741,
+      "trialdata": ["ATT_QUERY_CREATED", "L50:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 280,
+      "dateTime": 1610590820174,
+      "trialdata": ["NEW_MAIN_QUERY", "L50"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 281,
+      "dateTime": 1610590820721,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 282,
+      "dateTime": 1610590821072,
+      "trialdata": ["WRONG_BOXED_RESPONSE", "O-L50"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 283,
+      "dateTime": 1610590823091,
+      "trialdata": ["ASSET_PASSED_CANVAS", "L50"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 284,
+      "dateTime": 1610590825746,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 285,
+      "dateTime": 1610590829751,
+      "trialdata": ["CREATE_ASSET", "C51"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 286,
+      "dateTime": 1610590830791,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 287,
+      "dateTime": 1610590835831,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 288,
+      "dateTime": 1610590839761,
+      "trialdata": ["CREATE_ASSET", "L52"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 289,
+      "dateTime": 1610590839761,
+      "trialdata": ["ENV_QUERY_CREATED", "L52:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 290,
+      "dateTime": 1610590840196,
+      "trialdata": ["NEW_MAIN_QUERY", "L52"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 291,
+      "dateTime": 1610590840861,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 292,
+      "dateTime": 1610590840991,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "L-L52"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 293,
+      "dateTime": 1610590842210,
+      "trialdata": ["ASSET_CAR_COLLIDED", "L52"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 294,
+      "dateTime": 1610590845881,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 295,
+      "dateTime": 1610590849762,
+      "trialdata": ["CREATE_ASSET", "L53"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 296,
+      "dateTime": 1610590849762,
+      "trialdata": ["ATT_QUERY_CREATED", "L53:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 297,
+      "dateTime": 1610590850196,
+      "trialdata": ["NEW_MAIN_QUERY", "L53"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 298,
+      "dateTime": 1610590850794,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "L-L53"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 299,
+      "dateTime": 1610590850916,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 300,
+      "dateTime": 1610590852210,
+      "trialdata": ["ASSET_CAR_COLLIDED", "L53"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 301,
+      "dateTime": 1610590855945,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 302,
+      "dateTime": 1610590859777,
+      "trialdata": ["CREATE_ASSET", "C54"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 303,
+      "dateTime": 1610590861011,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 304,
+      "dateTime": 1610590866041,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 305,
+      "dateTime": 1610590869796,
+      "trialdata": ["CREATE_ASSET", "L55"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 306,
+      "dateTime": 1610590869796,
+      "trialdata": ["ENV_QUERY_CREATED", "L55:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 307,
+      "dateTime": 1610590870232,
+      "trialdata": ["NEW_MAIN_QUERY", "L55"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 308,
+      "dateTime": 1610590870761,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "L-L55"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 309,
+      "dateTime": 1610590871076,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 310,
+      "dateTime": 1610590872245,
+      "trialdata": ["ASSET_CAR_COLLIDED", "L55"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 311,
+      "dateTime": 1610590876101,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 312,
+      "dateTime": 1610590879811,
+      "trialdata": ["CREATE_ASSET", "C56"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 313,
+      "dateTime": 1610590881131,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 314,
+      "dateTime": 1610590886161,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 315,
+      "dateTime": 1610590889826,
+      "trialdata": ["CREATE_ASSET", "L57"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 316,
+      "dateTime": 1610590889826,
+      "trialdata": ["ATT_QUERY_CREATED", "L57:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 317,
+      "dateTime": 1610590890260,
+      "trialdata": ["NEW_MAIN_QUERY", "L57"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 318,
+      "dateTime": 1610590890815,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "L-L57"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 319,
+      "dateTime": 1610590891181,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 320,
+      "dateTime": 1610590892274,
+      "trialdata": ["ASSET_CAR_COLLIDED", "L57"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 321,
+      "dateTime": 1610590896211,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 322,
+      "dateTime": 1610590897371,
+      "trialdata": [
+        "RANDOMIZE_ICON",
+        "static/assets/images/life/life (3).png:static/assets/images/money/money (3).png:static/assets/images/obstacle/obstacle (3).png"
+      ]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 323,
+      "dateTime": 1610590899827,
+      "trialdata": ["CREATE_ASSET", "C58"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 324,
+      "dateTime": 1610590899827,
+      "trialdata": ["ENV_QUERY_CREATED", "C58:0.1"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 325,
+      "dateTime": 1610590900261,
+      "trialdata": ["NEW_MAIN_QUERY", "C58"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 326,
+      "dateTime": 1610590901241,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 327,
+      "dateTime": 1610590901283,
+      "trialdata": ["CORRECT_BOXED_RESPONSE", "C-C58"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 328,
+      "dateTime": 1610590902274,
+      "trialdata": ["ASSET_CAR_COLLIDED", "C58"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 329,
+      "dateTime": 1610590906266,
+      "trialdata": ["TIMEOUT_DIST_RESPONSE", "44-39 = ???"]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 330,
+      "dateTime": 1610590909303,
+      "trialdata": ["GAME_OVER", ""]
+    },
+    {
+      "uniqueid": "A3FSDH6HUZPNQ8:3NJM2BJS40VOQ2XMSDM21ICAO2CPC1",
+      "current_trial": 331,
+      "dateTime": 1610590909303,
+      "trialdata": ["BONUS", 4.912981478894353]
+    }
+  ],
+  "questiondata": {},
+  "eventdata": [
+    {
+      "eventtype": "initialized",
+      "value": null,
+      "timestamp": 1610590026942,
+      "interval": 0
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1920, 938],
+      "timestamp": 1610590026942,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1610590028233,
+      "interval": 1291
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1610590028233,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1610590034707,
+      "interval": 6474
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1610590034707,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1610590045032,
+      "interval": 10325
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1610590045032,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1610590051866,
+      "interval": 6834
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1610590051866,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1610590284065,
+      "interval": 232199
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1610590284065,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1610590922896,
+      "interval": 638831
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1610590922896,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1610591210018,
+      "interval": 287122
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1610591210018,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1610591233020,
+      "interval": 23002
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1610591233020,
+      "interval": 0
+    }
+  ],
+  "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0",
+  "mode": "live",
+  "status": "user data saved"
+}
