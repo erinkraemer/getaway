@@ -1432,6 +1432,7 @@ class game_Game {
 						document.getElementById("game-container").style.visibility = "hidden";
 						document.getElementById("hider1").style.visibility = "hidden";
 						document.getElementById("distractorcontainer").style.visibility = "hidden";
+						document.getElementById("distractorTaskPaused").style.visibility = "hidden";
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 						console.log(this.dataLog);
@@ -1721,7 +1722,7 @@ class game_Game {
 							logEvent(eventtype, eventdata) {
 								if (!this.gameOver) {
 									var d = new Date();
-									this.dataLog += "{'datetime': " + (d.getTime()).toString() + ", 'eventtype': " + eventtype + ", 'eventdata': " + eventdata + "}, ";
+									this.dataLog += "{'datetime': " + (d.getTime()).toString() + ", 'eventtype': " + eventtype.toString() + ", 'eventdata': " + eventdata.toString() + "}, ";
 									psiTurk.recordTrialData([eventtype, eventdata]);
 								}
 								
