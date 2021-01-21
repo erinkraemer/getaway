@@ -1723,7 +1723,7 @@ class game_Game {
 								if (!this.gameOver) {
 									var d = new Date();
 									this.dataLog += "{'datetime': '" + (d.getTime()).toString() + "', 'eventtype': '" + eventtype.toString() + "', 'eventdata': '" + eventdata.toString() + "'}, ";
-									psiTurk.recordTrialData([eventtype, eventdata]);
+									psiTurk.recordTrialData({eventtype, eventdata});
 								}
 								
 							}  
@@ -2066,6 +2066,7 @@ var startGame = function() {
   document.getElementById("exitExperiment").addEventListener("click", () => {
     src_psiTurk.recordTrialData(game.dataLog);
     src_psiTurk.taskdata.set('bonus', game.bonus)
+    src_psiTurk.saveData()
     src_currentview = new Questionnaire();
   });
 };
@@ -2090,6 +2091,7 @@ var Questionnaire = function() {
         if (q_message_array[0] == 'QualtricsEOS') {
           src_psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
           src_psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
+          src_psiTurk.saveData()
           document.getElementById("exitQuestionnaire").style.visibility = "visible";
         }
       }
@@ -2132,6 +2134,7 @@ var BonusQuestionnaire = function() {
         if (q_message_array[0] == 'QualtricsEOS') {
           src_psiTurk.recordTrialData({'phase':'bonusquestionnaire', 'status':'back_from_qualtrics'});
           src_psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
+          src_psiTurk.saveData();
           document.getElementById("continueToFinish").style.visibility = "visible";
         }
       }
@@ -2141,6 +2144,7 @@ var BonusQuestionnaire = function() {
     var currentBonus = src_psiTurk.taskdata.get('bonus')
     var updatedBonus = currentBonus + 1.5
     src_psiTurk.taskdata.set('bonus', updatedBonus)
+    src_psiTurk.saveData();
     src_currentview = new mthanks();
   });
 }
@@ -2192,6 +2196,7 @@ $(window).load( function(){
   src_psiTurk.doInstructions(
     instructionPages,
     function() { 
+      src_psiTurk.saveData();
       src_currentview = new startGame(); 
     }
     ) // a list of pages you want to display in sequence

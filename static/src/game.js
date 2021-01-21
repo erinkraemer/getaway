@@ -1236,7 +1236,7 @@ class Game {
 								if (!this.gameOver) {
 									var d = new Date();
 									this.dataLog += "{'datetime': '" + (d.getTime()).toString() + "', 'eventtype': '" + eventtype.toString() + "', 'eventdata': '" + eventdata.toString() + "'}, ";
-									psiTurk.recordTrialData([eventtype, eventdata]);
+									psiTurk.recordTrialData({eventtype, eventdata});
 								}
 								
 							}  

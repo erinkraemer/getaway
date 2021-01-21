@@ -53,6 +53,7 @@ var startGame = function() {
   document.getElementById("exitExperiment").addEventListener("click", () => {
     psiTurk.recordTrialData(game.dataLog);
     psiTurk.taskdata.set('bonus', game.bonus)
+    psiTurk.saveData()
     currentview = new Questionnaire();
   });
 };
@@ -77,6 +78,7 @@ var Questionnaire = function() {
         if (q_message_array[0] == 'QualtricsEOS') {
           psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
           psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
+          psiTurk.saveData()
           document.getElementById("exitQuestionnaire").style.visibility = "visible";
         }
       }
@@ -119,6 +121,7 @@ var BonusQuestionnaire = function() {
         if (q_message_array[0] == 'QualtricsEOS') {
           psiTurk.recordTrialData({'phase':'bonusquestionnaire', 'status':'back_from_qualtrics'});
           psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
+          psiTurk.saveData();
           document.getElementById("continueToFinish").style.visibility = "visible";
         }
       }
@@ -128,6 +131,7 @@ var BonusQuestionnaire = function() {
     var currentBonus = psiTurk.taskdata.get('bonus')
     var updatedBonus = currentBonus + 1.5
     psiTurk.taskdata.set('bonus', updatedBonus)
+    psiTurk.saveData();
     currentview = new mthanks();
   });
 }
@@ -179,6 +183,7 @@ $(window).load( function(){
   psiTurk.doInstructions(
     instructionPages,
     function() { 
+      psiTurk.saveData();
       currentview = new startGame(); 
     }
     ) // a list of pages you want to display in sequence
