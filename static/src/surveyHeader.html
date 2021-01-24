@@ -1,0 +1,73 @@
+<script>
+    Qualtrics.SurveyEngine.addOnReady(function () {
+        //below hides all answers
+        //jQuery("[class='QuestionBody question-body q-slider desktop']").hide()
+        var counter = 0;
+        var active = [];
+        var inactive = Qualtrics.SurveyEngine.QuestionInfo;
+        //this.hideChoices();
+        // hide answers for all
+        
+        for (question of Object.keys(inactive)){
+            //inactive[question].hideChoices();
+            console.log(inactive[question]);
+            if (counter < 1){
+              var drop = inactive.shift()
+              counter = counter+1
+            }
+            else {
+              //var banana = jQuery("[id='"+question+"']")
+              //jQuery("#"+question).hideChoices();
+            }
+            // question.hideChoices();
+            // inactive.push(question);
+        }
+
+        
+        // Pop front
+        for (question in Qualtrics.SurveyEngine.QuestionInfo){
+            var newActive = inactive.shift();
+        }
+        this.hideNextButton();
+        var that = this;
+        (function(){that.clickNextButton();}).delay(5);
+    });
+</script>
+
+<script>
+    Qualtrics.SurveyEngine.addOnload(function () {
+        console.log(this)
+        //below hides all answers
+        //jQuery("[class='QuestionBody question-body q-slider desktop']").hide()
+        var counter = 0;
+        var active = [];
+        var inactive = Qualtrics.SurveyEngine.QuestionInfo;
+        //this.hideChoices();
+        // hide answers for all
+        console.log(inactive)
+        
+        for (question of Object.keys(inactive)){
+            //inactive[question].hideChoices();
+            console.log(inactive[question]);
+            if (counter < 1){
+              //var drop = inactive.shift()
+              counter = counter+1
+            }
+            else {
+              //var banana = jQuery("[id='"+question+"']")
+              //jQuery("#"+question).hideChoices();
+            }
+            // question.hideChoices();
+            // inactive.push(question);
+        }
+
+        
+        // Pop front
+        for (question in Qualtrics.SurveyEngine.QuestionInfo){
+            var newActive = inactive.shift();
+        }
+        this.hideNextButton();
+        var that = this;
+        (function(){that.clickNextButton();}).delay(5);
+    });
+</script>
