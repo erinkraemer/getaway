@@ -46,6 +46,12 @@ See comments throughout for hints
           margin: 30px;
         }
 
+        .exampleImages {
+          width: 400px;
+          padding: 10px;
+          display: block;
+        }
+
         h1 {
           margin-top: 0px;
         }
@@ -73,19 +79,16 @@ See comments throughout for hints
        <p> How to use this:
          <ol>
            <li>Click begin Compatibility Test</li>
-           <li>See if a driving game loads</li>
+           <li>See if a driving game loads. The start screen will look similar to this</li>
+              <ul>
+                <li><img id="startScreenNoDistractor" class="exampleImages" src="{{ server_location }}/static/images/startScreenNoDistractor.png" alt="Lab Logo" /></li>
+                <li><img id="startScreenDistractor" class="exampleImages" src="{{ server_location }}/static/images/startScreenWithDistractor.png" alt="Lab Logo" /></li>
+              </ul>
+            <li>If that works, please return to the hit in the mturk interface and click continue Experiment</li>
+            <li>If that does <strong>not</strong> work, please return to the hit in the mturk interface and <strong>return the hit.</strong></li>
           </ol>
        </p>
 
-         <p>WARNING: The surveys will not work on the latest release of Firefox. Please use a difference browser.</p>
-
-       <p>The requirements for participation are:</p>
-
-       <ul>
-          <li>You are at least 18 years old,</li>
-          <li>You have normal vision or wear corrective lenses, and</li>
-          <li>You are a fluent English speaker.</li>
-      </ul>
 
       <p>Note: the experiment will only work in recent browsers, and
        may have difficulty loading on slower connections.</p>
@@ -116,29 +119,35 @@ See comments throughout for hints
                  to work.
              -->
 
-             <h1>Thank you for accepting this HIT!</h1>
+             <p>THIS IS NOT THE ACTUAL HIT!</p>
+       <p>IT IS TO BE USED ONLY TO CHECK FOR COMPATIBILITY ISSUES BEFORE COMPLETEING THE ACTUAL HIT. </p>
+       <p> How to use this:
+         <ol>
+           <li>Click begin Compatibility Test</li>
+           <li>See if a driving game loads. The start screen will look similar to this</li>
+              <ul>
+                <li><img id="startScreenNoDistractor" class="exampleImages" src="{{ server_location }}/static/images/startScreenNoDistractor.png" alt="Lab Logo" /></li>
+                <li><img id="startScreenDistractor" class="exampleImages" src="{{ server_location }}/static/images/startScreenWithDistractor.png" alt="Lab Logo" /></li>
+              </ul>
+            <li>If that works, please return to the hit in the mturk interface and click continue Experiment</li>
+            <li>If that does <strong>not</strong> work, please return to the hit in the mturk interface and <strong>return the hit.</strong></li>
+          </ol>
+       </p>
 
-            <p>The study will take anywhere from <strong>20 to 30 minutes</strong> minutes and it must be done in <strong>one sitting</strong>.
-              If you cannot do this, please return the hit and feel free to try later.
-            </p>
-            
-            <p>The study requires participants to watch a 4-minute video and then play a driving game
-            for 10 minutes and finally fill out a brief survey. There is an optional
-            additional survey for a bonus of $1.50.
-            </p>
-            <p>You can earn up to a total of $5.50 if you earn all the bonuses.</p>
-            <p>Bonuses are earned from performance in the driving game and completion of
-            the additional survey. </p>
-            <p>Eligibility for the bonus is contingent on your behavior. Please keep the game as your primary
-            window and read the surveys carefully.
-             </p>
 
-            </br>
-            <p>WARNING: The surveys will not work on the latest release of Firefox. Please use a difference browser.</p>
-             <p>
-                 By clicking the following URL link, you will be taken to the experiment,
-                 including complete instructions and an informed consent agreement.
-             </p>
+      <p>Note: the experiment will only work in recent browsers, and
+       may have difficulty loading on slower connections.</p>
+
+       <div class="alert alert-warning">
+         <strong>This task can only be completed once.</strong>
+         If you have already started or completed this task the system will not
+         allow you to run again. If you have previously accepted a HIT
+         with the same title as this one, please return this HIT.
+     </div>
+     <p>
+         Otherwise, please click the "Accept HIT" button on the Amazon site
+         above to begin the task.
+     </p>
              <script type="text/javascript">
              function openwindow() {
                  popup = window.open('{{ server_location }}/exp?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+screen.width+',height='+screen.height+'');
@@ -147,6 +156,9 @@ See comments throughout for hints
              <div class="alert alert-warning">
                  <b>Warning</b>: Please disable pop-up blockers before continuing.
              </div>
+             <div class="alert alert-warning">
+              <b>Warning</b>: The surveys will not work on the latest release of Firefox. Please use a differenct browser.
+          </div>
 
              <button type="button" class="btn btn-primary btn-lg" onClick="openwindow();">
                  Begin Compatibility Test
