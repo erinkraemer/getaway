@@ -180,12 +180,10 @@ var currentview;
 * Run Task
 ******************/
 $(window).load( function(){	  
-  psiTurk.doInstructions(
-    instructionPages,
-    function() { 
-      psiTurk.saveData();
-      currentview = new startGame(); 
-    }
-    ) // a list of pages you want to display in sequence
-  } // what you want to do when you are done with instructions
+   
+    psiTurk.saveData();
+    currentview = new startGame(); 
+  }
+  // a list of pages you want to display in sequence
+   // what you want to do when you are done with instructions
 ); 
