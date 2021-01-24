@@ -180,7 +180,6 @@ var currentview;
 * Run Task
 ******************/
 $(window).load( function(){	  
-   
     psiTurk.saveData();
     currentview = new startGame(); 
   }
