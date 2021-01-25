@@ -71,8 +71,6 @@ See comments throughout for hints
        <h1>Call for participants</h1>
        <p>A lab studying Human-Computer Interaction at <b>University of California, Berkeley</b> is looking for online
         participants for a brief experiment on attention.</p>
-        <h3>Before you begin</h3>
-             <p>Please complete the compatibility test which can be found at <a href="https://test-handoff-exp.herokuapp.com/">https://test-handoff-exp.herokuapp.com/</a>. If the compatibility test fails, <strong>please return the hit</strong></p>
 
              <h3>Study Information</h3>
             <p>The study will take anywhere from <strong>20 to 30 minutes</strong> minutes and it must be done in <strong>one sitting</strong>.
@@ -165,16 +163,30 @@ See comments throughout for hints
                  popup = window.open('{{ server_location }}/consent?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+screen.width+',height='+screen.height+'');
              }
              </script>
+             <script type="text/javascript">
+              function checkCompatibility() {
+                  popup = window.open('https://test-handoff-exp.herokuapp.com/ad?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+screen.width+',height='+screen.height+'');
+              }
+              </script>
              <div class="alert alert-warning">
                  <b>Warning</b>: Please disable pop-up blockers before continuing.
              </div>
              <div class="alert alert-warning">
               <b>Warning</b>: The surveys will not work on the latest release of Firefox. Please use a different browser.
           </div>
+        </br>
+          <div class="alert alert-warning">
+            <b>Compatibility</b>: Please complete the 30 second <b>compatibility test</b> by pressing the button below. (This is optional but highly encouraged)
+          </div>
 
-             <button type="button" class="btn btn-primary btn-lg" onClick="openwindow();">
+          <button type="button" class="btn btn-primary btn-lg" style="background-color: lightsalmon; border: chocolate solid 2px; color: black;" onClick="checkCompatibility();">
+            30 Second Compatibility Test 
+          </button>
+
+          <button type="button" class="btn btn-primary btn-lg" onClick="openwindow();">
                  Begin Experiment
              </button>
+             
 
         {% endif %}
       <!--
