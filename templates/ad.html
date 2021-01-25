@@ -154,10 +154,7 @@ See comments throughout for hints
 
             </br>
            
-             <p>
-                 By clicking the following URL link, you will be taken to the experiment,
-                 including complete instructions and an informed consent agreement.
-             </p>
+            
              <script type="text/javascript">
              function openwindow() {
                  popup = window.open('{{ server_location }}/consent?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+screen.width+',height='+screen.height+'');
@@ -166,6 +163,9 @@ See comments throughout for hints
              <script type="text/javascript">
               function checkCompatibility() {
                   popup = window.open('https://test-handoff-exp.herokuapp.com/ad?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+screen.width+',height='+screen.height+'');
+                  setTimeout (function(){
+                      beginexperimentdiv.style.display ='visible';
+                    },5000);
               }
               </script>
              <div class="alert alert-warning">
@@ -176,17 +176,24 @@ See comments throughout for hints
           </div>
         </br>
           <div class="alert alert-warning">
-            <b>Compatibility</b>: Please complete the 30 second <b>compatibility test</b> by pressing the button below. (This is optional but highly encouraged)
+            <b>Compatibility</b>: Please complete the 30 second <b>compatibility test</b> by pressing the button below. The begin experiment button will appear shortly after.
           </div>
 
           <button type="button" class="btn btn-primary btn-lg" style="background-color: lightsalmon; border: chocolate solid 2px; color: black;" onClick="checkCompatibility();">
             30 Second Compatibility Test 
           </button>
 
-          <button type="button" class="btn btn-primary btn-lg" onClick="openwindow();">
+
+        <div id="beginexperimentdiv" style="display: hidden;">
+          <p>
+            By clicking the following URL link, you will be taken to the experiment,
+            including complete instructions and an informed consent agreement.
+          </p>
+
+          <button type="button" id="beginbutton"  class="btn btn-primary btn-lg" onClick="openwindow();">
                  Begin Experiment
              </button>
-             
+            </div>    
 
         {% endif %}
       <!--
