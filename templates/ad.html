@@ -159,20 +159,29 @@ See comments throughout for hints
              function openwindow() {
                  popup = window.open('{{ server_location }}/consent?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+screen.width+',height='+screen.height+'');
              }
-             </script>
-             <script type="text/javascript">
-              function checkCompatibility() {
-                  popup = window.open('https://test-handoff-exp.herokuapp.com/ad?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+screen.width+',height='+screen.height+'');
+             function checkCompatibility() {
+                  comppopup = window.open('https://test-handoff-exp.herokuapp.com/ad?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+screen.width+',height='+screen.height+'');
                   setTimeout (function(){
                       beginexperimentdiv.style.visibility ='visible';
-                    },5000);
-              }
-              </script>
+                    },5000);}
+             </script>
+             
              <div class="alert alert-warning">
                  <b>Warning</b>: Please disable pop-up blockers before continuing.
              </div>
              <div class="alert alert-warning">
               <b>Warning</b>: The surveys will not work on the latest release of Firefox. Please use a different browser.
+          </div>
+        </br>
+          <div id="beginexperimentdiv" style="visibility: hidden;">
+            <p>
+              By clicking the following URL link, you will be taken to the experiment,
+              including complete instructions and an informed consent agreement.
+            </p>
+  
+            <button type="button" id="beginbutton"  class="btn btn-primary btn-lg" onClick="openwindow();">
+                   Begin Experiment
+               </button>
           </div>
         </br>
           <div class="alert alert-warning">
@@ -184,16 +193,7 @@ See comments throughout for hints
           </button>
 
 
-        <div id="beginexperimentdiv" style="visibility: hidden;">
-          <p>
-            By clicking the following URL link, you will be taken to the experiment,
-            including complete instructions and an informed consent agreement.
-          </p>
-
-          <button type="button" id="beginbutton"  class="btn btn-primary btn-lg" onClick="openwindow();">
-                 Begin Experiment
-             </button>
-        </div>    
+            
 
         {% endif %}
       <!--
