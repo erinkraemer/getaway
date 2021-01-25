@@ -79,7 +79,7 @@ var Questionnaire = function() {
           psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
           psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
           psiTurk.saveData()
-          document.getElementById("exitQuestionnaire").style.visibility = "visible";
+          document.getElementById("beginexperimentdiv").style.visibility = "visible";
         }
       }
     }
