@@ -164,7 +164,7 @@ See comments throughout for hints
               function checkCompatibility() {
                   popup = window.open('https://test-handoff-exp.herokuapp.com/ad?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+screen.width+',height='+screen.height+'');
                   setTimeout (function(){
-                      beginexperimentdiv.style.display ='visible';
+                      beginexperimentdiv.style.visibility ='visible';
                     },5000);
               }
               </script>
