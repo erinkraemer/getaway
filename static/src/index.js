@@ -19,10 +19,6 @@ var pages = [
   //"instructions/instruct-ready.html",
   "stage.html",
   "postquestionnaire.html",
-  "continueToBonusQuestionnaire.html",
-  "bonusQuestionnaire.html",
-  "thanks-mturksubmit.html",
-  "closepopup.html"
 ];
 
 psiTurk.preloadPages(pages);
@@ -66,7 +62,7 @@ window.onYouTubeIframeAPIReady = function() {}
 var Questionnaire = function() {
   psiTurk.showPage('postquestionnaire.html');
   // load your iframe with a url specific to your participant
-  $('#questionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_7W2jYeop6Bo0kYZ?UID=' + uniqueId));
+  $('#questionnaire').attr('src',('https://berkeley.qualtrics.com/jfe/form/SV_bkHML2ikmo3crOK?UID=' + uniqueId));
   
   //document.getElementById("exitQuestionnaire").style.visibility = "visible";//remove before deploy
   // add the all-important message event listener
@@ -83,9 +79,6 @@ var Questionnaire = function() {
         }
       }
     }
-  });
-  document.getElementById("exitQuestionnaire").addEventListener("click", () => {
-    currentview = new continueToBonusQuestionnnaire();
   });
 };
 
