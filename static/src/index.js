@@ -49,7 +49,7 @@ var startGame = function() {
   document.getElementById("exitExperiment").addEventListener("click", () => {
     psiTurk.recordTrialData(game.dataLog);
     psiTurk.taskdata.set('bonus', game.bonus)
-    psiTurk.saveData()
+    //psiTurk.saveData()
     currentview = new Questionnaire();
   });
 };
@@ -75,7 +75,7 @@ var Questionnaire = function() {
           psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'back_from_qualtrics'});
           psiTurk.recordUnstructuredData('qualtrics_session_id', q_message_array[2]);
           psiTurk.saveData()
-          document.getElementById("exitQuestionnaire").style.visibility = "visible";
+          //document.getElementById("exitQuestionnaire").style.visibility = "visible";
         }
       }
     }

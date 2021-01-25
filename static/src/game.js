@@ -949,10 +949,10 @@ class Game {
 					}
 					if (d.getTime() - this.startTime > GAME_TIME && !datalogWritten) {
 						//console.log(this.dataLog);
-						psiTurk.recordUnstructuredData('logs', this.dataLog);
+						//psiTurk.recordUnstructuredData('logs', this.dataLog);
 						//console.log('outersouce')
-						psiTurk.saveData();
-						datalogWritten = true;   
+						//psiTurk.saveData();
+						//datalogWritten = true;   
 						for (var i = 1; i < 9999; i++){
 							clearInterval(i);
 						}
