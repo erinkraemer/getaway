@@ -21,7 +21,7 @@ See comments throughout for hints
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Psychology Experiment</title>
+    <title>Handoff Experiment</title>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css" />
     <style type="text/css">
         /* these tyles need to be defined locally */
@@ -120,7 +120,7 @@ See comments throughout for hints
              </p>
              <script type="text/javascript">
              function openwindow() {
-                 popup = window.open('{{ server_location }}/consent?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+1024+',height='+768+'');
+                 popup = window.open('{{ server_location }}/consent?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+screen.width+',height='+screen.height+'');
              }
              </script>
              <div class="alert alert-warning">

@@ -1,28 +1,36 @@
 {
-  "name": "getaway",
-  "version": "1.0.0",
-  "description": "## Overview Get Away is a driving game full of obstacles. The game functions by pressing left and right to avoid these obstacles and collect as much money as you can. Be careful though, by hitting three obstacles the police will catch up to you in no time.",
-  "main": "index.js",
-  "dependencies": {
-    "lodash": "^4.17.15"
-  },
-  "devDependencies": {
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch --mode=development"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/le-s/getaway.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/le-s/getaway/issues"
-  },
-  "homepage": "https://github.com/le-s/getaway#readme",
-  "keywords": []
+    "name": "handoff-exp",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "engines": {
+        "npm": "6.x",
+        "node": "12.x"
+    },
+    "dependencies": {
+        "lodash": "^4.17.15",
+        "pg": "^8.3.0",
+        "serve": "^10.0.1"
+    },
+    "devDependencies": {
+        "javascript-obfuscator": "^2.10.1",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-obfuscator": "^3.2.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "serve"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/le-s/getaway.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/le-s/getaway/issues"
+    },
+    "homepage": "https://github.com/le-s/getaway#readme",
+    "keywords": []
 }

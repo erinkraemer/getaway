@@ -1,8 +1,14 @@
+/********************************************
+|                                           |
+|            road.js                        |
+|                                           |
+********************************************/
+
 import Physics from "./physics";
 import Sprite from "./sprite";
 
 const roadImg = new Image();
-roadImg.src = "./assets/images/road.png";
+roadImg.src = "static/assets/images/road.png";
 
 class Road {
   constructor(physics) {
@@ -16,6 +22,7 @@ class Road {
 
   move() {
     this.physics.dDown = this.physics.speed;
+    console.log("Road speed: " + this.physics.speed)
   }
 
   addScore() {

@@ -1,49 +1,74 @@
 <div id="container-instructions">
-
+    
     <h1>Instructions</h1>
-
+    
     <hr />
-
-    <div class="instructions well">
-
-        <p>
-            This is the last page
-        </p>
+    
+    <center>
+        <div id="player"></div>
+        <script>
+            var tag = document.createElement('script');
+            //tag.id = 'iframe-demo';
+            tag.src = 'https://www.youtube.com/iframe_api';
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                    width : '850',
+                    height : '458',
+                    videoId: 'zCPKO3il7qM',
+                    playerVars: {
+                    	controls: 1
+                    },
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
+            // 4. The API will call this function when the video player is ready.
+            function onPlayerReady(event) {
+                event.target.playVideo();
+            }
+            
+            function onPlayerStateChange(event) {
+                if (event.data === YT.PlayerState.ENDED) {
+                    document.getElementById("next").style.visibility = "visible";
+                }
+            }
+        </script>
+    </center>
+    
+    
+    <hr />
+    
+    <div class="instructionsnav">
         
         <p>
-            You're going to start experiment now
+            Please watch the following video for instructions. Once you're done with the video press <i>Begin experiment</i> to progress to the game.
         </p>
-
-
-        <script type="text/javascript">
-        //console.log(psiTurk.getInstructionIndicator())
-        </script>
-
-    </div>
-
-    <hr />
-
-    <div class="instructionsnav">
         <div class="row">
             <div class="col-xs-2">
-            	<!--  Maybe not previous button on this screen? -->
-            	<!--
-                <button type="button" id="next" value="next" class="btn btn-primary btn-lg previous">
-                <span class="glyphicon glyphicon-arrow-left"></span> Previous
-                </button>
-            	-->
+                <!--  Maybe not previous button on this screen? -->
+                <!--
+                    <button type="button" id="next" value="next" class="btn btn-primary btn-lg previous">
+                        <span class="glyphicon glyphicon-arrow-left"></span> Previous
+                    </button>
+                -->
             </div>
             <div class="col-xs-8">
-            	<center>
-	                <button type="button" id="next" value="next" class="btn btn-success btn-lg continue">
-	                Begin experiment <span class="glyphicon glyphicon-arrow-right"></span>
-	                </button>
-	            </center>
+                <center>
+                    <button type="button" id="next" value="next" class="btn btn-success btn-lg continue" style="visibility: hidden;">
+                        Begin experiment <span class="glyphicon glyphicon-arrow-right"></span>
+                    </button>
+                </center>
             </div>
             <div class="col-xs-2">
-
+                
             </div>
         </div>
     </div>
-
+    
 </div>
