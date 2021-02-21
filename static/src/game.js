@@ -1320,9 +1320,9 @@ class Game {
 												//console.log("Asking Environment Query: " + (d.getTime() - this.timeOfLastEnvQuery).toString() + " at t = " + (d.getTime() - this.startTime));
 												this.timeOfLastEnvQuery = d.getTime();
 											}
-											else if (askAttQuery) {
-												//console.log("Asking Attention Query:" + (d.getTime() - this.timeOfLastAttQuery).toString() + " at t = " + (d.getTime() - this.startTime) );
-												this.timeOfLastAttQuery = d.getTime();
+											// else if (askAttQuery) {
+											// 	//console.log("Asking Attention Query:" + (d.getTime() - this.timeOfLastAttQuery).toString() + " at t = " + (d.getTime() - this.startTime) );
+											// 	this.timeOfLastAttQuery = d.getTime();
 											}
 											else {
 												//console.log("Creating No Response object:" + (d.getTime() - this.timeOfLastAttQuery).toString() + " at t = " + (d.getTime() - this.startTime) );
