@@ -1,16 +1,16 @@
 {
   "condition": 0,
   "counterbalance": 0,
-  "assignmentId": "3PMBY0YE2BS3YFHFBOMHRIUBCEY9C9",
-  "workerId": "AORHUXHTR6KQA",
-  "hitId": "37AQKJ12U0D0IRUA5EHMJ80BVS0TTH",
+  "assignmentId": "debugxHqoj",
+  "workerId": "debugI22bP",
+  "hitId": "debug50m83",
   "currenttrial": 3,
-  "bonus": null,
+  "bonus": 0.09964281560012012,
   "data": [
     {
-      "uniqueid": "AORHUXHTR6KQA:3PMBY0YE2BS3YFHFBOMHRIUBCEY9C9",
+      "uniqueid": "debugI22bP:debugxHqoj",
       "current_trial": 0,
-      "dateTime": 1611131314624,
+      "dateTime": 1611461312851,
       "trialdata": {
         "phase": "INSTRUCTIONS",
         "templates": ["instructions/instruct-ready.html"],
@@ -18,22 +18,22 @@
       }
     },
     {
-      "uniqueid": "AORHUXHTR6KQA:3PMBY0YE2BS3YFHFBOMHRIUBCEY9C9",
+      "uniqueid": "debugI22bP:debugxHqoj",
       "current_trial": 1,
-      "dateTime": 1611131326898,
+      "dateTime": 1611461623196,
       "trialdata": {
         "phase": "INSTRUCTIONS",
         "template": "instructions/instruct-ready.html",
         "indexOf": 0,
         "action": "FinishInstructions",
-        "viewTime": 12270
+        "viewTime": 310342
       }
     },
     {
-      "uniqueid": "AORHUXHTR6KQA:3PMBY0YE2BS3YFHFBOMHRIUBCEY9C9",
+      "uniqueid": "debugI22bP:debugxHqoj",
       "current_trial": 2,
-      "dateTime": 1611131389967,
-      "trialdata": "{'datetime': 1611131326906, 'eventtype': TREATMENT, 'eventdata': 0}, {'datetime': 1611131327963, 'eventtype': GAME_START, 'eventdata': }, {'datetime': 1611131332915, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131337966, 'eventtype': CREATE_ASSET, 'eventdata': C0}, {'datetime': 1611131337966, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131343016, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131347966, 'eventtype': CREATE_ASSET, 'eventdata': C1}, {'datetime': 1611131347966, 'eventtype': ENV_QUERY_CREATED, 'eventdata': C1:0.1}, {'datetime': 1611131348067, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131349003, 'eventtype': NEW_MAIN_QUERY, 'eventdata': C1}, {'datetime': 1611131350347, 'eventtype': WRONG_BOXED_RESPONSE, 'eventdata': L-C1}, {'datetime': 1611131353117, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131353839, 'eventtype': ASSET_CAR_COLLIDED, 'eventdata': C1}, {'datetime': 1611131357966, 'eventtype': CREATE_ASSET, 'eventdata': O2}, {'datetime': 1611131358166, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131363217, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131367967, 'eventtype': CREATE_ASSET, 'eventdata': C3}, {'datetime': 1611131367967, 'eventtype': ATT_QUERY_CREATED, 'eventdata': C3:0.1}, {'datetime': 1611131368266, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131369013, 'eventtype': NEW_MAIN_QUERY, 'eventdata': C3}, {'datetime': 1611131369655, 'eventtype': CORRECT_BOXED_RESPONSE, 'eventdata': C-C3}, {'datetime': 1611131373318, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131373849, 'eventtype': ASSET_CAR_COLLIDED, 'eventdata': C3}, {'datetime': 1611131377966, 'eventtype': CREATE_ASSET, 'eventdata': C4}, {'datetime': 1611131377967, 'eventtype': ENV_QUERY_CREATED, 'eventdata': C4:0.1}, {'datetime': 1611131378368, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131379003, 'eventtype': NEW_MAIN_QUERY, 'eventdata': C4}, {'datetime': 1611131380798, 'eventtype': WRONG_BOXED_RESPONSE, 'eventdata': L-C4}, {'datetime': 1611131383418, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611131383837, 'eventtype': ASSET_CAR_COLLIDED, 'eventdata': C4}, {'datetime': 1611131387967, 'eventtype': CREATE_ASSET, 'eventdata': C5}, {'datetime': 1611131387973, 'eventtype': Final BONUS, 'eventdata': NaN}, {'datetime': 1611131387973, 'eventtype': GAME_OVER, 'eventdata': }, "
+      "dateTime": 1611462233533,
+      "trialdata": "{'datetime': '1611461623214', 'eventtype': 'TREATMENT', 'eventdata': '0'}, {'datetime': '1611461631314', 'eventtype': 'GAME_START', 'eventdata': ''}, {'datetime': '1611461636268', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461641316', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L0'}, {'datetime': '1611461641317', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461646366', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461651798', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C1'}, {'datetime': '1611461651798', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C1:0.1'}, {'datetime': '1611461652765', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461658798', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461661819', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C2'}, {'datetime': '1611461661819', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'C2:0.1'}, {'datetime': '1611461664962', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461670733', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461672200', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L3'}, {'datetime': '1611461677011', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461682062', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C4'}, {'datetime': '1611461682062', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C4:0.1'}, {'datetime': '1611461683056', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461689960', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461691931', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C5'}, {'datetime': '1611461695897', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461700919', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461701319', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C6'}, {'datetime': '1611461701319', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'C6:0.1'}, {'datetime': '1611461701334', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C1'}, {'datetime': '1611461701418', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-C1'}, {'datetime': '1611461703350', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C1'}, {'datetime': '1611461703350', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C6'}, {'datetime': '1611461705217', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-C6'}, {'datetime': '1611461705968', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461707202', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C6'}, {'datetime': '1611461711018', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461711318', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O7'}, {'datetime': '1611461711318', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O7:0.1'}, {'datetime': '1611461712354', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O7'}, {'datetime': '1611461715218', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-O7'}, {'datetime': '1611461715317', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (5).png:static/assets/images/money/money (3).png:static/assets/images/obstacle/obstacle (4).png'}, {'datetime': '1611461716068', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461717191', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'O7'}, {'datetime': '1611461721118', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461721318', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C8'}, {'datetime': '1611461726168', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461731220', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461731318', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L9'}, {'datetime': '1611461731318', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'L9:0.1'}, {'datetime': '1611461732365', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L9'}, {'datetime': '1611461735219', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-L9'}, {'datetime': '1611461736269', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461737201', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'L9'}, {'datetime': '1611461741318', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L10'}, {'datetime': '1611461741318', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'L10:0.1'}, {'datetime': '1611461741319', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461742354', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L10'}, {'datetime': '1611461745219', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-L10'}, {'datetime': '1611461746369', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461749357', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'L10'}, {'datetime': '1611461751320', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O11'}, {'datetime': '1611461751419', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461756469', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461761319', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O12'}, {'datetime': '1611461761520', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461766570', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461771322', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C13'}, {'datetime': '1611461771322', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C13:0.1'}, {'datetime': '1611461771620', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461772370', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C13'}, {'datetime': '1611461773899', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'C-C13'}, {'datetime': '1611461776670', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611461777204', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C13'}, {'datetime': '1611461781320', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O14'}, {'datetime': '1611461781671', 'eventtype': 'TREATMENT', 'eventdata': '1'}, {'datetime': '1611461781672', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '57-49 = ???'}, {'datetime': '1611461783536', 'eventtype': 'WRONG_DIST_RESPONSE', 'eventdata': '57-49=9 encoding: undefined'}, {'datetime': '1611461788537', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '37-29 = ???'}, {'datetime': '1611461790672', 'eventtype': 'WRONG_DIST_RESPONSE', 'eventdata': '37-29=6 encoding: undefined'}, {'datetime': '1611461791320', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O15'}, {'datetime': '1611461791320', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'O15:0.1'}, {'datetime': '1611461792362', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O15'}, {'datetime': '1611461795221', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-O15'}, {'datetime': '1611461795673', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '83-75 = ???'}, {'datetime': '1611461799320', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (5).png:static/assets/images/money/money (1).png:static/assets/images/obstacle/obstacle (4).png'}, {'datetime': '1611461799365', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'O15'}, {'datetime': '1611461800671', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '83-75 = ???'}, {'datetime': '1611461801321', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O16'}, {'datetime': '1611461801321', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O16:0.1'}, {'datetime': '1611461802367', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O16'}, {'datetime': '1611461805221', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-O16'}, {'datetime': '1611461805673', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '53-50 = ???'}, {'datetime': '1611461807203', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'O16'}, {'datetime': '1611461810671', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '53-50 = ???'}, {'datetime': '1611461811385', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L17'}, {'datetime': '1611461815672', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '6-2 = ???'}, {'datetime': '1611461820671', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '6-2 = ???'}, {'datetime': '1611461821321', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C18'}, {'datetime': '1611461821321', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'C18:0.1'}, {'datetime': '1611461822360', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C18'}, {'datetime': '1611461825330', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-C18'}, {'datetime': '1611461825672', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '76-75 = ???'}, {'datetime': '1611461827362', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C18'}, {'datetime': '1611461830672', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '76-75 = ???'}, {'datetime': '1611461831321', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O19'}, {'datetime': '1611461831321', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O19:0.1'}, {'datetime': '1611461832365', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O19'}, {'datetime': '1611461835222', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-O19'}, {'datetime': '1611461835672', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '88-83 = ???'}, {'datetime': '1611461837201', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'O19'}, {'datetime': '1611461840672', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '88-83 = ???'}, {'datetime': '1611461841322', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C20'}, {'datetime': '1611461845675', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '67-62 = ???'}, {'datetime': '1611461850674', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '67-62 = ???'}, {'datetime': '1611461851322', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O21'}, {'datetime': '1611461855675', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '69-61 = ???'}, {'datetime': '1611461860672', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '69-61 = ???'}, {'datetime': '1611461861322', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C22'}, {'datetime': '1611461861322', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C22:0.1'}, {'datetime': '1611461862365', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C22'}, {'datetime': '1611461865273', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-C22'}, {'datetime': '1611461865673', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '42-37 = ???'}, {'datetime': '1611461869985', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'C22'}, {'datetime': '1611461870624', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '42-37 = ???'}, {'datetime': '1611461871333', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C23'}, {'datetime': '1611461875626', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '18-14 = ???'}, {'datetime': '1611461880736', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '18-14 = ???'}, {'datetime': '1611461881745', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O24'}, {'datetime': '1611461881745', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'O24:0.1'}, {'datetime': '1611461883942', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (4).png:static/assets/images/money/money (3).png:static/assets/images/obstacle/obstacle (3).png'}, {'datetime': '1611461885776', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '61-60 = ???'}, {'datetime': '1611461891024', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '61-60 = ???'}, {'datetime': '1611461891855', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O25'}, {'datetime': '1611461891855', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O25:0.1'}, {'datetime': '1611461896148', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '39-37 = ???'}, {'datetime': '1611461901851', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '39-37 = ???'}, {'datetime': '1611461901851', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L26'}, {'datetime': '1611461907027', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '34-34 = ???'}, {'datetime': '1611461911996', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '34-34 = ???'}, {'datetime': '1611461911997', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C27'}, {'datetime': '1611461917874', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '67-66 = ???'}, {'datetime': '1611461921877', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O28'}, {'datetime': '1611461921877', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O28:0.1'}, {'datetime': '1611461923113', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '67-66 = ???'}, {'datetime': '1611461928737', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '52-49 = ???'}, {'datetime': '1611461932080', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O29'}, {'datetime': '1611461933738', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611461938834', 'eventtype': 'TREATMENT', 'eventdata': '0'}, {'datetime': '1611461940170', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611461942207', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O30'}, {'datetime': '1611461945788', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611461951868', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611461951868', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L31'}, {'datetime': '1611461951869', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'L31:0.1'}, {'datetime': '1611461957965', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611461962160', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C32'}, {'datetime': '1611461964090', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611461967665', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (1).png:static/assets/images/money/money (1).png:static/assets/images/obstacle/obstacle (1).png'}, {'datetime': '1611461969125', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611461971329', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L33'}, {'datetime': '1611461974820', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611461980125', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611461983109', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L34'}, {'datetime': '1611461983109', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'L34:0.1'}, {'datetime': '1611461987108', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611461991871', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C35'}, {'datetime': '1611461991871', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'C35:0.1'}, {'datetime': '1611461993864', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462000008', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462002037', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O36'}, {'datetime': '1611462006069', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462011402', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O37'}, {'datetime': '1611462011402', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O37:0.1'}, {'datetime': '1611462011405', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L31'}, {'datetime': '1611462011428', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462011527', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-L31'}, {'datetime': '1611462015796', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'L31'}, {'datetime': '1611462015796', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L34'}, {'datetime': '1611462015827', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-L34'}, {'datetime': '1611462016477', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462021742', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C38'}, {'datetime': '1611462022771', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462028810', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462032214', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O39'}, {'datetime': '1611462034875', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462041058', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462042079', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L40'}, {'datetime': '1611462047022', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462052011', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O41'}, {'datetime': '1611462052011', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (2).png:static/assets/images/money/money (2).png:static/assets/images/obstacle/obstacle (3).png'}, {'datetime': '1611462053098', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462059078', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462061328', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L42'}, {'datetime': '1611462062215', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'L34'}, {'datetime': '1611462064130', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462071112', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462071978', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L43'}, {'datetime': '1611462071978', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'L43:0.1'}, {'datetime': '1611462077745', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '52-49 = ???'}, {'datetime': '1611462081815', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L44'}, {'datetime': '1611462082778', 'eventtype': 'TREATMENT', 'eventdata': '1'}, {'datetime': '1611462082779', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '67-62 = ???'}, {'datetime': '1611462087871', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '67-62 = ???'}, {'datetime': '1611462092243', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C45'}, {'datetime': '1611462092243', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'C45:0.1'}, {'datetime': '1611462094200', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '53-49 = ???'}, {'datetime': '1611462100152', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '53-49 = ???'}, {'datetime': '1611462102196', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O46'}, {'datetime': '1611462102197', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O46:0.1'}, {'datetime': '1611462106117', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '97-91 = ???'}, {'datetime': '1611462111070', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '97-91 = ???'}, {'datetime': '1611462112023', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O47'}, {'datetime': '1611462112023', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'O47:0.1'}, {'datetime': '1611462117114', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '21-21 = ???'}, {'datetime': '1611462121987', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C48'}, {'datetime': '1611462123118', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '21-21 = ???'}, {'datetime': '1611462128119', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '72-63 = ???'}, {'datetime': '1611462131339', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C49'}, {'datetime': '1611462131339', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C49:0.1'}, {'datetime': '1611462131348', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L43'}, {'datetime': '1611462131388', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-L43'}, {'datetime': '1611462133089', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '72-63 = ???'}, {'datetime': '1611462133796', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'L43'}, {'datetime': '1611462133797', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C49'}, {'datetime': '1611462135239', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-C49'}, {'datetime': '1611462135338', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (6).png:static/assets/images/money/money (6).png:static/assets/images/obstacle/obstacle (1).png'}, {'datetime': '1611462138090', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '57-52 = ???'}, {'datetime': '1611462139383', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'C49'}, {'datetime': '1611462141344', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C50'}, {'datetime': '1611462143089', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '57-52 = ???'}, {'datetime': '1611462148092', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '82-82 = ???'}, {'datetime': '1611462151340', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O51'}, {'datetime': '1611462151340', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'O51:0.1'}, {'datetime': '1611462153882', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '82-82 = ???'}, {'datetime': '1611462159204', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '85-77 = ???'}, {'datetime': '1611462162056', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O52'}, {'datetime': '1611462162056', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O52:0.1'}, {'datetime': '1611462163211', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O51'}, {'datetime': '1611462164194', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '85-77 = ???'}, {'datetime': '1611462166290', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-O51'}, {'datetime': '1611462168373', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'O51'}, {'datetime': '1611462168373', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O52'}, {'datetime': '1611462168392', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-O52'}, {'datetime': '1611462169195', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '30-23 = ???'}, {'datetime': '1611462169706', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'O52'}, {'datetime': '1611462171340', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C53'}, {'datetime': '1611462174946', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '30-23 = ???'}, {'datetime': '1611462180130', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '10-3 = ???'}, {'datetime': '1611462182125', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C54'}, {'datetime': '1611462186205', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '10-3 = ???'}, {'datetime': '1611462192051', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '56-56 = ???'}, {'datetime': '1611462192052', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L55'}, {'datetime': '1611462192052', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'L55:0.1'}, {'datetime': '1611462197122', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '56-56 = ???'}, {'datetime': '1611462201757', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C56'}, {'datetime': '1611462202757', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '48-45 = ???'}, {'datetime': '1611462207743', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '48-45 = ???'}, {'datetime': '1611462211341', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C57'}, {'datetime': '1611462211341', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'C57:0.1'}, {'datetime': '1611462212379', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C57'}, {'datetime': '1611462212744', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '38-38 = ???'}, {'datetime': '1611462215242', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-C57'}, {'datetime': '1611462217214', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C57'}, {'datetime': '1611462217741', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '38-38 = ???'}, {'datetime': '1611462219341', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (4).png:static/assets/images/money/money (3).png:static/assets/images/obstacle/obstacle (1).png'}, {'datetime': '1611462221341', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O58'}, {'datetime': '1611462221341', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O58:0.1'}, {'datetime': '1611462222384', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O58'}, {'datetime': '1611462222742', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '5-0 = ???'}, {'datetime': '1611462225242', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-O58'}, {'datetime': '1611462227219', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'O58'}, {'datetime': '1611462227742', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '5-0 = ???'}, {'datetime': '1611462231325', 'eventtype': 'Final BONUS', 'eventdata': '0.09964281560012012'}, {'datetime': '1611462231325', 'eventtype': 'GAME_OVER', 'eventdata': ''}, "
     }
   ],
   "questiondata": {},
@@ -41,65 +41,437 @@
     {
       "eventtype": "initialized",
       "value": null,
-      "timestamp": 1611131313509,
+      "timestamp": 1611461311900,
       "interval": 0
     },
     {
       "eventtype": "window_resize",
       "value": [1600, 917],
-      "timestamp": 1611131313509,
+      "timestamp": 1611461311900,
+      "interval": 0
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [937, 917],
+      "timestamp": 1611461321132,
+      "interval": 9232
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [937, 917],
+      "timestamp": 1611461321132,
       "interval": 0
     },
     {
       "eventtype": "focus",
       "value": "off",
-      "timestamp": 1611131316458,
-      "interval": 2949
+      "timestamp": 1611461322947,
+      "interval": 1815
     },
     {
       "eventtype": "focus",
       "value": "off",
-      "timestamp": 1611131316458,
+      "timestamp": 1611461322947,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461384731,
+      "interval": 61784
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461384731,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461388662,
+      "interval": 3931
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461388662,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461437411,
+      "interval": 48749
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461437411,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461451839,
+      "interval": 14428
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461451839,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461467778,
+      "interval": 15939
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461467778,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461478781,
+      "interval": 11003
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461478781,
       "interval": 0
     },
     {
       "eventtype": "window_resize",
       "value": [1600, 1000],
-      "timestamp": 1611131318221,
-      "interval": 1763
+      "timestamp": 1611461479676,
+      "interval": 895
     },
     {
       "eventtype": "window_resize",
       "value": [1600, 1000],
-      "timestamp": 1611131318227,
-      "interval": 6
+      "timestamp": 1611461479676,
+      "interval": 0
     },
     {
       "eventtype": "window_resize",
-      "value": [1600, 917],
-      "timestamp": 1611131320211,
-      "interval": 1984
+      "value": [937, 917],
+      "timestamp": 1611461487263,
+      "interval": 7587
     },
     {
       "eventtype": "window_resize",
-      "value": [1600, 917],
-      "timestamp": 1611131320212,
+      "value": [937, 917],
+      "timestamp": 1611461487263,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461623174,
+      "interval": 135911
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461623174,
+      "interval": 0
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1090, 917],
+      "timestamp": 1611461627938,
+      "interval": 4764
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1090, 917],
+      "timestamp": 1611461627938,
+      "interval": 0
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1202, 917],
+      "timestamp": 1611461628586,
+      "interval": 648
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1202, 917],
+      "timestamp": 1611461628588,
+      "interval": 2
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1233, 917],
+      "timestamp": 1611461628859,
+      "interval": 271
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1233, 917],
+      "timestamp": 1611461628859,
+      "interval": 0
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1322, 917],
+      "timestamp": 1611461629431,
+      "interval": 572
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1322, 917],
+      "timestamp": 1611461629431,
+      "interval": 0
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1362, 917],
+      "timestamp": 1611461630027,
+      "interval": 596
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1362, 917],
+      "timestamp": 1611461630027,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461648100,
+      "interval": 18073
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461648100,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461696226,
+      "interval": 48126
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461696226,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461811468,
+      "interval": 115242
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461811468,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461845895,
+      "interval": 34427
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461845895,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461870103,
+      "interval": 24208
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461870103,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461871064,
+      "interval": 961
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611461871065,
+      "interval": 1
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461876241,
+      "interval": 5176
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461876242,
       "interval": 1
     },
     {
       "eventtype": "focus",
       "value": "on",
-      "timestamp": 1611131326879,
-      "interval": 6667
+      "timestamp": 1611461967936,
+      "interval": 91694
     },
     {
       "eventtype": "focus",
       "value": "on",
-      "timestamp": 1611131326879,
+      "timestamp": 1611461967936,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461971634,
+      "interval": 3698
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611461971634,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611462011600,
+      "interval": 39966
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611462011601,
+      "interval": 1
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611462018370,
+      "interval": 6769
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611462018371,
+      "interval": 1
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611462061178,
+      "interval": 42807
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611462061178,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611462065374,
+      "interval": 4196
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611462065374,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611462125125,
+      "interval": 59751
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611462125125,
+      "interval": 0
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1226, 826],
+      "timestamp": 1611462130383,
+      "interval": 5258
+    },
+    {
+      "eventtype": "window_resize",
+      "value": [1226, 826],
+      "timestamp": 1611462130383,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611462152352,
+      "interval": 21969
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611462152352,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611462163483,
+      "interval": 11131
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611462163483,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611462172960,
+      "interval": 9477
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611462172960,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611462204164,
+      "interval": 31204
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611462204164,
       "interval": 0
     }
   ],
   "useragent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36",
-  "mode": "sandbox",
+  "mode": "debug",
   "status": "user data saved"
 }

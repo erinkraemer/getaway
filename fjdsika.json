@@ -1,16 +1,16 @@
 {
   "condition": 0,
   "counterbalance": 0,
-  "assignmentId": "3CP1TO84PXQ7ZAN1B5KU3PGNER5255",
-  "workerId": "AZ1LWLJ16X9OK",
-  "hitId": "3YD0MU1ND5Q85XYUMBN4J7I1I6B7AL",
+  "assignmentId": "3FFJ6VRIL5DCFOF2323YXK9XU5XI0F",
+  "workerId": "A2R75YFKVALBXE",
+  "hitId": "3538U0YQ2IJL05EFVFAU71YPHZZF3T",
   "currenttrial": 5,
-  "bonus": 3.1735422526199404,
+  "bonus": 1.946869332096103,
   "data": [
     {
-      "uniqueid": "AZ1LWLJ16X9OK:3CP1TO84PXQ7ZAN1B5KU3PGNER5255",
+      "uniqueid": "A2R75YFKVALBXE:3FFJ6VRIL5DCFOF2323YXK9XU5XI0F",
       "current_trial": 0,
-      "dateTime": 1611213521832,
+      "dateTime": 1611532622892,
       "trialdata": {
         "phase": "INSTRUCTIONS",
         "templates": ["instructions/instruct-ready.html"],
@@ -18,154 +18,130 @@
       }
     },
     {
-      "uniqueid": "AZ1LWLJ16X9OK:3CP1TO84PXQ7ZAN1B5KU3PGNER5255",
+      "uniqueid": "A2R75YFKVALBXE:3FFJ6VRIL5DCFOF2323YXK9XU5XI0F",
       "current_trial": 1,
-      "dateTime": 1611213551937,
+      "dateTime": 1611533110928,
       "trialdata": {
         "phase": "INSTRUCTIONS",
         "template": "instructions/instruct-ready.html",
         "indexOf": 0,
         "action": "FinishInstructions",
-        "viewTime": 30100
+        "viewTime": 488033
       }
     },
     {
-      "uniqueid": "AZ1LWLJ16X9OK:3CP1TO84PXQ7ZAN1B5KU3PGNER5255",
+      "uniqueid": "A2R75YFKVALBXE:3FFJ6VRIL5DCFOF2323YXK9XU5XI0F",
       "current_trial": 2,
-      "dateTime": 1611213691893,
-      "trialdata": "{'datetime': 1611213551945, 'eventtype': TREATMENT, 'eventdata': 0}, {'datetime': 1611213553293, 'eventtype': GAME_START, 'eventdata': }, {'datetime': 1611213558254, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611213563307, 'eventtype': CREATE_ASSET, 'eventdata': C0}, {'datetime': 1611213563310, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 0-0 = ???}, {'datetime': 1611213568321, 'eventtype': TREATMENT, 'eventdata': 1}, {'datetime': 1611213568322, 'eventtype': NEW_DIST_QUERY, 'eventdata': 51-50 = ???}, {'datetime': 1611213569600, 'eventtype': CORRECT_DIST_RESPONSE, 'eventdata': 51-50=1 encoding: undefined}, {'datetime': 1611213573304, 'eventtype': CREATE_ASSET, 'eventdata': C1}, {'datetime': 1611213573304, 'eventtype': ENV_QUERY_CREATED, 'eventdata': C1:0.1}, {'datetime': 1611213574343, 'eventtype': NEW_MAIN_QUERY, 'eventdata': C1}, {'datetime': 1611213574601, 'eventtype': NEW_DIST_QUERY, 'eventdata': 34-32 = ???}, {'datetime': 1611213575175, 'eventtype': CORRECT_BOXED_RESPONSE, 'eventdata': C-C1}, {'datetime': 1611213576942, 'eventtype': CORRECT_DIST_RESPONSE, 'eventdata': 34-32=2 encoding: undefined}, {'datetime': 1611213579196, 'eventtype': ASSET_CAR_COLLIDED, 'eventdata': C1}, {'datetime': 1611213581944, 'eventtype': NEW_DIST_QUERY, 'eventdata': 24-17 = ???}, {'datetime': 1611213583305, 'eventtype': CREATE_ASSET, 'eventdata': L2}, {'datetime': 1611213583305, 'eventtype': ATT_QUERY_CREATED, 'eventdata': L2:0.1}, {'datetime': 1611213583995, 'eventtype': WRONG_DIST_RESPONSE, 'eventdata': 24-17=8 encoding: undefined}, {'datetime': 1611213584348, 'eventtype': NEW_MAIN_QUERY, 'eventdata': L2}, {'datetime': 1611213585249, 'eventtype': CORRECT_BOXED_RESPONSE, 'eventdata': L-L2}, {'datetime': 1611213588995, 'eventtype': TREATMENT, 'eventdata': 0}, {'datetime': 1611213589005, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 24-17 = ???}, {'datetime': 1611213589202, 'eventtype': ASSET_CAR_COLLIDED, 'eventdata': L2}, {'datetime': 1611213593309, 'eventtype': CREATE_ASSET, 'eventdata': O3}, {'datetime': 1611213594055, 'eventtype': TIMEOUT_DIST_RESPONSE, 'eventdata': 24-17 = ???}, {'datetime': 1611213599059, 'eventtype': TREATMENT, 'eventdata': 1}, {'datetime': 1611213599060, 'eventtype': NEW_DIST_QUERY, 'eventdata': 31-24 = ???}, {'datetime': 1611213602282, 'eventtype': WRONG_DIST_RESPONSE, 'eventdata': 31-24=6 encoding: undefined}, {'datetime': 1611213603304, 'eventtype': CREATE_ASSET, 'eventdata': L4}, {'datetime': 1611213603304, 'eventtype': ENV_QUERY_CREATED, 'eventdata': L4:0.1}, {'datetime': 1611213604341, 'eventtype': NEW_MAIN_QUERY, 'eventdata': L4}, {'datetime': 1611213604985, 'eventtype': CORRECT_BOXED_RESPONSE, 'eventdata': L-L4}, {'datetime': 1611213607283, 'eventtype': NEW_DIST_QUERY, 'eventdata': 31-24 = ???}, {'datetime': 1611213609109, 'eventtype': WRONG_DIST_RESPONSE, 'eventdata': 31-24=5 encoding: undefined}, {'datetime': 1611213609199, 'eventtype': ASSET_CAR_COLLIDED, 'eventdata': L4}, {'datetime': 1611213613297, 'eventtype': Final BONUS, 'eventdata': 1.6735422526199404}, {'datetime': 1611213613297, 'eventtype': GAME_OVER, 'eventdata': }, "
+      "dateTime": 1611533722364,
+      "trialdata": "{'datetime': '1611533110967', 'eventtype': 'TREATMENT', 'eventdata': '0'}, {'datetime': '1611533118318', 'eventtype': 'GAME_START', 'eventdata': ''}, {'datetime': '1611533123290', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533128293', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533128319', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O0'}, {'datetime': '1611533133298', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533138306', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533138319', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O1'}, {'datetime': '1611533138319', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O1:0.1'}, {'datetime': '1611533139357', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O1'}, {'datetime': '1611533140073', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'O-O1'}, {'datetime': '1611533143319', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533146358', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'O1'}, {'datetime': '1611533148320', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C2'}, {'datetime': '1611533148367', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533153368', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533158319', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L3'}, {'datetime': '1611533158319', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'L3:0.1'}, {'datetime': '1611533158371', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533159361', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L3'}, {'datetime': '1611533159999', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'L-L3'}, {'datetime': '1611533163384', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533164245', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'L3'}, {'datetime': '1611533168319', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C4'}, {'datetime': '1611533168319', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C4:0.1'}, {'datetime': '1611533168434', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533169360', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C4'}, {'datetime': '1611533170553', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'C-C4'}, {'datetime': '1611533173436', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533174326', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C4'}, {'datetime': '1611533178319', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O5'}, {'datetime': '1611533178442', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533183451', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533188319', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O6'}, {'datetime': '1611533188319', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'O6:0.1'}, {'datetime': '1611533188503', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533189363', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O6'}, {'datetime': '1611533190643', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'O-O6'}, {'datetime': '1611533193512', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533196362', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'O6'}, {'datetime': '1611533198319', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L7'}, {'datetime': '1611533198319', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'L7:0.1'}, {'datetime': '1611533198518', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533199364', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L7'}, {'datetime': '1611533200192', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'L-L7'}, {'datetime': '1611533202315', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (2).png:static/assets/images/money/money (6).png:static/assets/images/obstacle/obstacle (5).png'}, {'datetime': '1611533203530', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533204198', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'L7'}, {'datetime': '1611533208318', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L8'}, {'datetime': '1611533208531', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533213536', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533218319', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O9'}, {'datetime': '1611533218586', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533223593', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533228320', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O10'}, {'datetime': '1611533228320', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O10:0.1'}, {'datetime': '1611533228595', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533229367', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O10'}, {'datetime': '1611533230782', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'O-O10'}, {'datetime': '1611533233646', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533236369', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'O10'}, {'datetime': '1611533238322', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O11'}, {'datetime': '1611533238322', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'O11:0.1'}, {'datetime': '1611533238649', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533239369', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O11'}, {'datetime': '1611533240021', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'O-O11'}, {'datetime': '1611533243656', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533246369', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'O11'}, {'datetime': '1611533248322', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O12'}, {'datetime': '1611533248662', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533253711', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533258324', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C13'}, {'datetime': '1611533258324', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C13:0.1'}, {'datetime': '1611533258712', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533259372', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C13'}, {'datetime': '1611533260583', 'eventtype': 'WRONG_BOXED_RESPONSE', 'eventdata': 'L-C13'}, {'datetime': '1611533263716', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '0-0 = ???'}, {'datetime': '1611533264205', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C13'}, {'datetime': '1611533268325', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O14'}, {'datetime': '1611533268716', 'eventtype': 'TREATMENT', 'eventdata': '1'}, {'datetime': '1611533268716', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '85-84 = ???'}, {'datetime': '1611533272411', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '85-84=1 encoding: undefined'}, {'datetime': '1611533277412', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '71-69 = ???'}, {'datetime': '1611533278327', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C15'}, {'datetime': '1611533278327', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'C15:0.1'}, {'datetime': '1611533279374', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C15'}, {'datetime': '1611533279987', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '71-69=2 encoding: undefined'}, {'datetime': '1611533282212', 'eventtype': 'TIMEOUT_BOXED_RESPONSE', 'eventdata': 'U-C15'}, {'datetime': '1611533284208', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C15'}, {'datetime': '1611533284989', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '54-45 = ???'}, {'datetime': '1611533286313', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (4).png:static/assets/images/money/money (3).png:static/assets/images/obstacle/obstacle (3).png'}, {'datetime': '1611533288327', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C16'}, {'datetime': '1611533288327', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C16:0.1'}, {'datetime': '1611533288423', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '54-45=9 encoding: undefined'}, {'datetime': '1611533289376', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C16'}, {'datetime': '1611533291661', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'C-C16'}, {'datetime': '1611533293422', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '100-94 = ???'}, {'datetime': '1611533294210', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C16'}, {'datetime': '1611533295557', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '100-94=6 encoding: undefined'}, {'datetime': '1611533298330', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O17'}, {'datetime': '1611533300557', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '60-53 = ???'}, {'datetime': '1611533302763', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '60-53=7 encoding: undefined'}, {'datetime': '1611533307764', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '53-47 = ???'}, {'datetime': '1611533308330', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C18'}, {'datetime': '1611533310788', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '53-47=6 encoding: undefined'}, {'datetime': '1611533315788', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '90-84 = ???'}, {'datetime': '1611533317715', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '90-84=6 encoding: undefined'}, {'datetime': '1611533318330', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L19'}, {'datetime': '1611533318330', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'L19:0.1'}, {'datetime': '1611533319381', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L19'}, {'datetime': '1611533320828', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'L-L19'}, {'datetime': '1611533322715', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '10-1 = ???'}, {'datetime': '1611533324216', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'L19'}, {'datetime': '1611533327275', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '10-1=9 encoding: undefined'}, {'datetime': '1611533328330', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C20'}, {'datetime': '1611533332275', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '69-60 = ???'}, {'datetime': '1611533336385', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '69-60=9 encoding: undefined'}, {'datetime': '1611533338331', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O21'}, {'datetime': '1611533341386', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '41-41 = ???'}, {'datetime': '1611533344713', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '41-41=0 encoding: undefined'}, {'datetime': '1611533348330', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O22'}, {'datetime': '1611533348330', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O22:0.1'}, {'datetime': '1611533349366', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O22'}, {'datetime': '1611533349713', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '78-75 = ???'}, {'datetime': '1611533350587', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'O-O22'}, {'datetime': '1611533353257', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '78-75=3 encoding: undefined'}, {'datetime': '1611533356367', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'O22'}, {'datetime': '1611533358258', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '17-8 = ???'}, {'datetime': '1611533358332', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L23'}, {'datetime': '1611533361121', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '17-8=9 encoding: undefined'}, {'datetime': '1611533366122', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '65-62 = ???'}, {'datetime': '1611533368333', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C24'}, {'datetime': '1611533368656', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '65-62=3 encoding: undefined'}, {'datetime': '1611533370310', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (4).png:static/assets/images/money/money (1).png:static/assets/images/obstacle/obstacle (2).png'}, {'datetime': '1611533373657', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '72-67 = ???'}, {'datetime': '1611533376001', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '72-67=5 encoding: undefined'}, {'datetime': '1611533378333', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C25'}, {'datetime': '1611533378333', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C25:0.1'}, {'datetime': '1611533379371', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C25'}, {'datetime': '1611533381003', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '78-75 = ???'}, {'datetime': '1611533381577', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'C-C25'}, {'datetime': '1611533383736', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '78-75=3 encoding: undefined'}, {'datetime': '1611533384221', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C25'}, {'datetime': '1611533388334', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C26'}, {'datetime': '1611533388737', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '10-9 = ???'}, {'datetime': '1611533393055', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '10-9=1 encoding: undefined'}, {'datetime': '1611533398056', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '95-93 = ???'}, {'datetime': '1611533398333', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C27'}, {'datetime': '1611533400187', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '95-93=2 encoding: undefined'}, {'datetime': '1611533405187', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '15-14 = ???'}, {'datetime': '1611533406631', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '15-14=1 encoding: undefined'}, {'datetime': '1611533408334', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C28'}, {'datetime': '1611533408334', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C28:0.1'}, {'datetime': '1611533409374', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C28'}, {'datetime': '1611533410313', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'C-C28'}, {'datetime': '1611533411631', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '87-80 = ???'}, {'datetime': '1611533414208', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C28'}, {'datetime': '1611533415215', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '87-80=7 encoding: undefined'}, {'datetime': '1611533418334', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O29'}, {'datetime': '1611533420215', 'eventtype': 'TREATMENT', 'eventdata': '0'}, {'datetime': '1611533420247', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533425254', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533428335', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O30'}, {'datetime': '1611533428335', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'O30:0.1'}, {'datetime': '1611533429377', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O30'}, {'datetime': '1611533430199', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'O-O30'}, {'datetime': '1611533430253', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533435263', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533436378', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'O30'}, {'datetime': '1611533438335', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O31'}, {'datetime': '1611533438335', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O31:0.1'}, {'datetime': '1611533439378', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O31'}, {'datetime': '1611533440313', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533441063', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'O-O31'}, {'datetime': '1611533445322', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533446379', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'O31'}, {'datetime': '1611533448335', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C32'}, {'datetime': '1611533450373', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533454308', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (1).png:static/assets/images/money/money (6).png:static/assets/images/obstacle/obstacle (2).png'}, {'datetime': '1611533455376', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533458335', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L33'}, {'datetime': '1611533460387', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533465390', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533468336', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L34'}, {'datetime': '1611533468336', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'L34:0.1'}, {'datetime': '1611533469384', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L34'}, {'datetime': '1611533470151', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'L-L34'}, {'datetime': '1611533470399', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533474218', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'L34'}, {'datetime': '1611533475406', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533478335', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O35'}, {'datetime': '1611533480410', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533485419', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533488336', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L36'}, {'datetime': '1611533490424', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533495476', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533498335', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C37'}, {'datetime': '1611533498335', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C37:0.1'}, {'datetime': '1611533499387', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C37'}, {'datetime': '1611533500260', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'C-C37'}, {'datetime': '1611533500524', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533504222', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C37'}, {'datetime': '1611533505526', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533508336', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O38'}, {'datetime': '1611533508336', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'O38:0.1'}, {'datetime': '1611533509371', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O38'}, {'datetime': '1611533510576', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533510982', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'O-O38'}, {'datetime': '1611533515580', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533516371', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'O38'}, {'datetime': '1611533518337', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L39'}, {'datetime': '1611533520585', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533525592', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533528337', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L40'}, {'datetime': '1611533528337', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'L40:0.1'}, {'datetime': '1611533529374', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L40'}, {'datetime': '1611533530277', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'L-L40'}, {'datetime': '1611533530600', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533534208', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'L40'}, {'datetime': '1611533535650', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533538305', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (3).png:static/assets/images/money/money (1).png:static/assets/images/obstacle/obstacle (2).png'}, {'datetime': '1611533538337', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L41'}, {'datetime': '1611533538337', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'L41:0.1'}, {'datetime': '1611533539374', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L41'}, {'datetime': '1611533540122', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'L-L41'}, {'datetime': '1611533540656', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533544208', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'L41'}, {'datetime': '1611533545662', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533548337', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C42'}, {'datetime': '1611533550712', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533555714', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533558337', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O43'}, {'datetime': '1611533558337', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O43:0.1'}, {'datetime': '1611533559378', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O43'}, {'datetime': '1611533560714', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533561514', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'O-O43'}, {'datetime': '1611533565725', 'eventtype': 'TIMEOUT_DIST_RESPONSE', 'eventdata': '87-80 = ???'}, {'datetime': '1611533566379', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'O43'}, {'datetime': '1611533568338', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L44'}, {'datetime': '1611533570725', 'eventtype': 'TREATMENT', 'eventdata': '1'}, {'datetime': '1611533570725', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '69-66 = ???'}, {'datetime': '1611533573083', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '69-66=3 encoding: undefined'}, {'datetime': '1611533578084', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '21-15 = ???'}, {'datetime': '1611533578339', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C45'}, {'datetime': '1611533580082', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '21-15=6 encoding: undefined'}, {'datetime': '1611533585083', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '65-60 = ???'}, {'datetime': '1611533586875', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '65-60=5 encoding: undefined'}, {'datetime': '1611533588339', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C46'}, {'datetime': '1611533588339', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C46:0.1'}, {'datetime': '1611533589382', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C46'}, {'datetime': '1611533590136', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'C-C46'}, {'datetime': '1611533591876', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '28-23 = ???'}, {'datetime': '1611533593905', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '28-23=5 encoding: undefined'}, {'datetime': '1611533594217', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C46'}, {'datetime': '1611533598339', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O47'}, {'datetime': '1611533598905', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '91-90 = ???'}, {'datetime': '1611533601321', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '91-90=1 encoding: undefined'}, {'datetime': '1611533606321', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '45-44 = ???'}, {'datetime': '1611533608329', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '45-44=1 encoding: undefined'}, {'datetime': '1611533608340', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L48'}, {'datetime': '1611533608340', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'L48:0.1'}, {'datetime': '1611533609385', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L48'}, {'datetime': '1611533610730', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'L-L48'}, {'datetime': '1611533613329', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '55-49 = ???'}, {'datetime': '1611533614302', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'L48'}, {'datetime': '1611533617378', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '55-49=6 encoding: undefined'}, {'datetime': '1611533618340', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O49'}, {'datetime': '1611533618340', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'O49:0.1'}, {'datetime': '1611533619385', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O49'}, {'datetime': '1611533620513', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'O-O49'}, {'datetime': '1611533622303', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (1).png:static/assets/images/money/money (6).png:static/assets/images/obstacle/obstacle (6).png'}, {'datetime': '1611533622378', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '11-11 = ???'}, {'datetime': '1611533624098', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '11-11=0 encoding: undefined'}, {'datetime': '1611533626386', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'O49'}, {'datetime': '1611533628339', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L50'}, {'datetime': '1611533629098', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '22-22 = ???'}, {'datetime': '1611533632272', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '22-22=0 encoding: undefined'}, {'datetime': '1611533637272', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '79-78 = ???'}, {'datetime': '1611533638339', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L51'}, {'datetime': '1611533639049', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '79-78=1 encoding: undefined'}, {'datetime': '1611533644050', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '15-10 = ???'}, {'datetime': '1611533645752', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '15-10=5 encoding: undefined'}, {'datetime': '1611533648342', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C52'}, {'datetime': '1611533648342', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'C52:0.1'}, {'datetime': '1611533649389', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C52'}, {'datetime': '1611533650023', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'C-C52'}, {'datetime': '1611533650752', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '29-23 = ???'}, {'datetime': '1611533654224', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C52'}, {'datetime': '1611533654271', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '29-23=6 encoding: undefined'}, {'datetime': '1611533658343', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C53'}, {'datetime': '1611533658343', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'C53:0.1'}, {'datetime': '1611533659272', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '22-20 = ???'}, {'datetime': '1611533659391', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'C53'}, {'datetime': '1611533660711', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'C-C53'}, {'datetime': '1611533662695', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '22-20=2 encoding: undefined'}, {'datetime': '1611533664223', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'C53'}, {'datetime': '1611533667696', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '103-95 = ???'}, {'datetime': '1611533668343', 'eventtype': 'CREATE_ASSET', 'eventdata': 'C54'}, {'datetime': '1611533669982', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '103-95=8 encoding: undefined'}, {'datetime': '1611533674983', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '93-87 = ???'}, {'datetime': '1611533678015', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '93-87=6 encoding: undefined'}, {'datetime': '1611533678343', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L55'}, {'datetime': '1611533678343', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'L55:0.1'}, {'datetime': '1611533679393', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L55'}, {'datetime': '1611533680191', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'L-L55'}, {'datetime': '1611533683014', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '54-48 = ???'}, {'datetime': '1611533684226', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'L55'}, {'datetime': '1611533686064', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '54-48=6 encoding: undefined'}, {'datetime': '1611533688343', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O56'}, {'datetime': '1611533691065', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '85-76 = ???'}, {'datetime': '1611533695550', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '85-76=9 encoding: undefined'}, {'datetime': '1611533698345', 'eventtype': 'CREATE_ASSET', 'eventdata': 'O57'}, {'datetime': '1611533698345', 'eventtype': 'ATT_QUERY_CREATED', 'eventdata': 'O57:0.1'}, {'datetime': '1611533699379', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'O57'}, {'datetime': '1611533700303', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'O-O57'}, {'datetime': '1611533700550', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '6-2 = ???'}, {'datetime': '1611533704023', 'eventtype': 'CORRECT_DIST_RESPONSE', 'eventdata': '6-2=4 encoding: undefined'}, {'datetime': '1611533706300', 'eventtype': 'RANDOMIZE_ICON', 'eventdata': 'static/assets/images/life/life (1).png:static/assets/images/money/money (2).png:static/assets/images/obstacle/obstacle (1).png'}, {'datetime': '1611533706379', 'eventtype': 'ASSET_PASSED_CANVAS', 'eventdata': 'O57'}, {'datetime': '1611533708346', 'eventtype': 'CREATE_ASSET', 'eventdata': 'L58'}, {'datetime': '1611533708346', 'eventtype': 'ENV_QUERY_CREATED', 'eventdata': 'L58:0.1'}, {'datetime': '1611533709023', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '37-33 = ???'}, {'datetime': '1611533709380', 'eventtype': 'NEW_MAIN_QUERY', 'eventdata': 'L58'}, {'datetime': '1611533710237', 'eventtype': 'CORRECT_BOXED_RESPONSE', 'eventdata': 'L-L58'}, {'datetime': '1611533712501', 'eventtype': 'WRONG_DIST_RESPONSE', 'eventdata': '37-33=5 encoding: undefined'}, {'datetime': '1611533714214', 'eventtype': 'ASSET_CAR_COLLIDED', 'eventdata': 'L58'}, {'datetime': '1611533717501', 'eventtype': 'NEW_DIST_QUERY', 'eventdata': '19-10 = ???'}, {'datetime': '1611533718333', 'eventtype': 'Final BONUS', 'eventdata': '1.946869332096103'}, {'datetime': '1611533718333', 'eventtype': 'GAME_OVER', 'eventdata': ''}, "
     },
     {
-      "uniqueid": "AZ1LWLJ16X9OK:3CP1TO84PXQ7ZAN1B5KU3PGNER5255",
+      "uniqueid": "A2R75YFKVALBXE:3FFJ6VRIL5DCFOF2323YXK9XU5XI0F",
       "current_trial": 3,
-      "dateTime": 1611213944019,
+      "dateTime": 1611533930734,
       "trialdata": {
         "phase": "postquestionnaire",
         "status": "back_from_qualtrics"
       }
     },
     {
-      "uniqueid": "AZ1LWLJ16X9OK:3CP1TO84PXQ7ZAN1B5KU3PGNER5255",
+      "uniqueid": "A2R75YFKVALBXE:3FFJ6VRIL5DCFOF2323YXK9XU5XI0F",
       "current_trial": 4,
-      "dateTime": 1611213944021,
+      "dateTime": 1611534107579,
       "trialdata": {
-        "phase": "bonusquestionnaire",
+        "phase": "postquestionnaire",
         "status": "back_from_qualtrics"
       }
     }
   ],
-  "questiondata": { "qualtrics_session_id": "FS_3EuT6aDoU4HP8X3" },
+  "questiondata": { "qualtrics_session_id": "FS_3L6zryxZ2YNEz1t" },
   "eventdata": [
     {
       "eventtype": "initialized",
       "value": null,
-      "timestamp": 1611213520148,
+      "timestamp": 1611532622300,
       "interval": 0
     },
     {
       "eventtype": "window_resize",
-      "value": [1422, 764],
-      "timestamp": 1611213520148,
-      "interval": 0
-    },
-    {
-      "eventtype": "focus",
-      "value": "off",
-      "timestamp": 1611213542420,
-      "interval": 22272
-    },
-    {
-      "eventtype": "focus",
-      "value": "off",
-      "timestamp": 1611213542420,
-      "interval": 0
-    },
-    {
-      "eventtype": "window_resize",
-      "value": [1422, 888],
-      "timestamp": 1611213543794,
-      "interval": 1374
-    },
-    {
-      "eventtype": "window_resize",
-      "value": [1422, 888],
-      "timestamp": 1611213543794,
-      "interval": 0
-    },
-    {
-      "eventtype": "window_resize",
-      "value": [1422, 764],
-      "timestamp": 1611213544874,
-      "interval": 1080
-    },
-    {
-      "eventtype": "window_resize",
-      "value": [1422, 764],
-      "timestamp": 1611213544874,
+      "value": [1440, 818],
+      "timestamp": 1611532622300,
       "interval": 0
     },
     {
       "eventtype": "focus",
       "value": "on",
-      "timestamp": 1611213551825,
-      "interval": 6951
+      "timestamp": 1611532622884,
+      "interval": 584
     },
     {
       "eventtype": "focus",
       "value": "on",
-      "timestamp": 1611213551825,
+      "timestamp": 1611532622884,
       "interval": 0
     },
     {
       "eventtype": "focus",
       "value": "off",
-      "timestamp": 1611213693854,
-      "interval": 142029
+      "timestamp": 1611532631415,
+      "interval": 8531
     },
     {
       "eventtype": "focus",
       "value": "off",
-      "timestamp": 1611213693854,
+      "timestamp": 1611532631415,
       "interval": 0
     },
     {
       "eventtype": "focus",
       "value": "on",
-      "timestamp": 1611213811714,
-      "interval": 117860
+      "timestamp": 1611532875697,
+      "interval": 244282
     },
     {
       "eventtype": "focus",
       "value": "on",
-      "timestamp": 1611213811714,
+      "timestamp": 1611532875698,
+      "interval": 1
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611533724856,
+      "interval": 849158
+    },
+    {
+      "eventtype": "focus",
+      "value": "off",
+      "timestamp": 1611533724856,
+      "interval": 0
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611533933630,
+      "interval": 208774
+    },
+    {
+      "eventtype": "focus",
+      "value": "on",
+      "timestamp": 1611533933630,
       "interval": 0
     },
     {
       "eventtype": "focus",
       "value": "off",
-      "timestamp": 1611213885875,
-      "interval": 74161
+      "timestamp": 1611533994910,
+      "interval": 61280
     },
     {
       "eventtype": "focus",
       "value": "off",
-      "timestamp": 1611213885875,
-      "interval": 0
-    },
-    {
-      "eventtype": "focus",
-      "value": "on",
-      "timestamp": 1611213947055,
-      "interval": 61180
-    },
-    {
-      "eventtype": "focus",
-      "value": "on",
-      "timestamp": 1611213947055,
-      "interval": 0
+      "timestamp": 1611533994911,
+      "interval": 1
     }
   ],
-  "useragent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36",
-  "mode": "sandbox",
+  "useragent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:84.0) Gecko/20100101 Firefox/84.0",
+  "mode": "live",
   "status": "user data saved"
 }
