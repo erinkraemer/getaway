@@ -38,7 +38,7 @@ const Kp_obs = 0.03; //Kp for x-tracker on car for obstacle avoidance
 const Kp_getter = 0.01; //Kp for x-tracker on car to get life or cash
 const obj_buf = 75+40; //constant for when object goes behind car (1/2 of car len) + buffer
 const OBJECTTYPE = Object.freeze({ "obstacle": "O", "cash": "C", "life": "L" });
-const QUERYTYPE = Object.freeze({ "attention": "A", "environment": "E"});
+const QUERYTYPE = Object.freeze({ "environment": "E"});
 
 const MIN_BOX_DISTANCE_RATIO = 0.1; //It will get boxed at a maximum distance of 0.3*Canvas Height from start
 const MAX_BOX_DISTANCE_RATIO = 0.1; //It will get boxed at a maximum distance of 0.3*Canvas Height from start
@@ -104,7 +104,7 @@ const EVENTTYPE = Object.freeze({
 	"GAME_START":"GAME_START"
 });
 
-var idToAskAttQuery = -200; 
+//var idToAskAttQuery = -200; 
 var postEnvQueryCounter= -403;
 
 var prev_time = null;
@@ -595,11 +595,11 @@ class Game {
 						&& !this.queryTimeElapsed
 						&& !this.queryUserResponded
 						) {
-							if (this.queryType == QUERYTYPE.attention) {
-								this.setRecognizedType(this.boxed[0], this.boxed[0][0]);
-								// Makes the controller act SAFE
-							}
-							else if(this.queryType == QUERYTYPE.environment) {
+							// if (this.queryType == QUERYTYPE.attention) {
+							// 	this.setRecognizedType(this.boxed[0], this.boxed[0][0]);
+							// 	// Makes the controller act SAFE
+							// }
+							if(this.queryType == QUERYTYPE.environment) {
 								this.setRecognizedType(this.boxed[0], this.boxed[0][0] == OBJECTTYPE.obstacle ? OBJECTTYPE.life : OBJECTTYPE.obstacle); 
 								// Makes the controller act EVIL
 							}
@@ -800,7 +800,7 @@ class Game {
 								//CHANGES: THIS.BOXED.LENGTH CHANGE remove and log behavior
 								// console.log("After adding");
 								// GAME_LOGIC:
-								if (this.boxed.length == 0 && (this.queryType == QUERYTYPE.environment || this.queryType == QUERYTYPE.attention)){ // Ensures that only one object is queried upon at a time, even if multiple objects are unrecognized
+								if (this.boxed.length == 0 && (this.queryType == QUERYTYPE.environment )){ //|| this.queryType == QUERYTYPE.attention)){ // Ensures that only one object is queried upon at a time, even if multiple objects are unrecognized
 									this.boxed.push(asset.assetid);
 									this.blinkCanvas(30, 300, "blue");
 									this.activeResponse = true;
@@ -973,9 +973,9 @@ class Game {
 						if (this.queryType == QUERYTYPE.environment) {
 							this.logEvent(EVENTTYPE.ENV_QUERY_CREATED, OBJECTTYPE.obstacle + this.assetidCounter.toString() + ":" + boxDist);
 						}
-						else if (this.queryType == QUERYTYPE.attention) {
-							this.logEvent(EVENTTYPE.ATT_QUERY_CREATED, OBJECTTYPE.obstacle + this.assetidCounter.toString() + ":" + boxDist);
-						}
+						// else if (this.queryType == QUERYTYPE.attention) {
+						// 	this.logEvent(EVENTTYPE.ATT_QUERY_CREATED, OBJECTTYPE.obstacle + this.assetidCounter.toString() + ":" + boxDist);
+						// }
 					};
 					
 					createLife(bool_marked) {
@@ -989,9 +989,9 @@ class Game {
 							if (this.queryType == QUERYTYPE.environment) {
 								this.logEvent(EVENTTYPE.ENV_QUERY_CREATED, OBJECTTYPE.life + this.assetidCounter.toString() + ":" + boxDist);
 							}
-							else if (this.queryType == QUERYTYPE.attention) {
-								this.logEvent(EVENTTYPE.ATT_QUERY_CREATED, OBJECTTYPE.life + this.assetidCounter.toString() + ":" + boxDist);
-							}
+							// else if (this.queryType == QUERYTYPE.attention) {
+							// 	this.logEvent(EVENTTYPE.ATT_QUERY_CREATED, OBJECTTYPE.life + this.assetidCounter.toString() + ":" + boxDist);
+							// }
 						};
 						
 						createCash(bool_marked) {
@@ -1006,9 +1006,9 @@ class Game {
 								if (this.queryType == QUERYTYPE.environment) {
 									this.logEvent(EVENTTYPE.ENV_QUERY_CREATED, OBJECTTYPE.cash + this.assetidCounter.toString() + ":" + boxDist);
 								}
-								else if (this.queryType == QUERYTYPE.attention) {
-									this.logEvent(EVENTTYPE.ATT_QUERY_CREATED, OBJECTTYPE.cash + this.assetidCounter.toString() + ":" + boxDist);
-								}
+								// else if (this.queryType == QUERYTYPE.attention) {
+								// 	this.logEvent(EVENTTYPE.ATT_QUERY_CREATED, OBJECTTYPE.cash + this.assetidCounter.toString() + ":" + boxDist);
+								// }
 								
 							};
 							
@@ -1323,7 +1323,7 @@ class Game {
 											// else if (askAttQuery) {
 											// 	//console.log("Asking Attention Query:" + (d.getTime() - this.timeOfLastAttQuery).toString() + " at t = " + (d.getTime() - this.startTime) );
 											// 	this.timeOfLastAttQuery = d.getTime();
-											}
+											//}
 											else {
 												//console.log("Creating No Response object:" + (d.getTime() - this.timeOfLastAttQuery).toString() + " at t = " + (d.getTime() - this.startTime) );
 												this.timeOfLastNoResponseObject = d.getTime();
@@ -1331,17 +1331,20 @@ class Game {
 											
 											// if (askAttQuery)
 											// this.queryType = QUERYTYPE.attention;
-											if (askEnvQuery)
-											this.queryType = QUERYTYPE.environment;
-											else
-											this.queryType = null;
+											if (askEnvQuery) {
+												this.queryType = QUERYTYPE.environment;
+											}
+											else {
+												this.queryType = null;
+											}
+											
 											
 											switch (this.objectTypeProbablityFunction()) {
-												case OBJECTTYPE.obstacle: this.createRock(askEnvQuery ) //|| askAttQuery);
+												case OBJECTTYPE.obstacle: this.createRock(askEnvQuery ); //|| askAttQuery);
 												break;
-												case OBJECTTYPE.life: this.createLife(askEnvQuery ) //|| askAttQuery);
+												case OBJECTTYPE.life: this.createLife(askEnvQuery ); //|| askAttQuery);
 												break;
-												case OBJECTTYPE.cash: this.createCash(askEnvQuery ) //|| askAttQuery);
+												case OBJECTTYPE.cash: this.createCash(askEnvQuery ); //|| askAttQuery);
 												break;
 											}
 											ctr++;
