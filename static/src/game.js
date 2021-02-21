@@ -1329,19 +1329,19 @@ class Game {
 												this.timeOfLastNoResponseObject = d.getTime();
 											}
 											
-											if (askAttQuery)
-											this.queryType = QUERYTYPE.attention;
-											else if (askEnvQuery)
+											// if (askAttQuery)
+											// this.queryType = QUERYTYPE.attention;
+											if (askEnvQuery)
 											this.queryType = QUERYTYPE.environment;
 											else
 											this.queryType = null;
 											
 											switch (this.objectTypeProbablityFunction()) {
-												case OBJECTTYPE.obstacle: this.createRock(askEnvQuery || askAttQuery);
+												case OBJECTTYPE.obstacle: this.createRock(askEnvQuery ) //|| askAttQuery);
 												break;
-												case OBJECTTYPE.life: this.createLife(askEnvQuery || askAttQuery);
+												case OBJECTTYPE.life: this.createLife(askEnvQuery ) //|| askAttQuery);
 												break;
-												case OBJECTTYPE.cash: this.createCash(askEnvQuery || askAttQuery);
+												case OBJECTTYPE.cash: this.createCash(askEnvQuery ) //|| askAttQuery);
 												break;
 											}
 											ctr++;
